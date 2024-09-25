@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeArk Japanese education: Katakana-Hiragana Matching</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #game-container {
+            height: 100vh;
+            width: 100%;
+            max-height: 1024px;
+            max-width: 576px;
+        }
+        #question-container {
+            height: calc(100vh - 120px);
+            padding: 60px 20px;
+            display: flex; 
+            flex: 1;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #result-container {
+            height: calc(100vh - 120px);
+            padding: 60px 20px;
+            display: none; 
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #question-number {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        #question {
+            font-size: 10em;
+            text-align: center;
+        }
+        #options {
+            text-align: center;
+        }
+        .option {
+            margin: 15px;
+            font-size: 1.5em;
+            text-align: center;
+            cursor: pointer;
+            border: 2px solid #ccc;
+            padding: 7px 0px;
+            width: 50px;
+            border-radius: 25px;
+            display: inline-block;
+        }
+        .correct {
+            background-color: green;
+            color: white;
+        }
+        .wrong {
+            background-color: red;
+            color: white;
+        }
+        #next-button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #9966ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #next-button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+        #score {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        #replay-button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #9966ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="question-container">
+            <div id="question-number"></div>
+            <div id="question"></div>
+            <div id="options">
+                <div class="option" onclick="checkAnswer(0)"></div>
+                <div class="option" onclick="checkAnswer(1)"></div>
+                <div class="option" onclick="checkAnswer(2)"></div>
+                <div class="option" onclick="checkAnswer(3)"></div>
+            </div>
+            <button id="next-button" onclick="nextQuestion()" disabled>Next</button>
+        </div>
+        <div id="result-container">
+            <div id="score"></div>
+            <button id="replay-button" onclick="replayGame()">Replay</button>
+        </div>
+    </div>
+
+    <script>
+        const itemData = {
+            0: { "katakana": "ア", "hiragana": "あ" },
+            1: { "katakana": "イ", "hiragana": "い" },
+            2: { "katakana": "ウ", "hiragana": "う" },
+            3: { "katakana": "エ", "hiragana": "え" },
+            4: { "katakana": "オ", "hiragana": "お" },
+            5: { "katakana": "カ", "hiragana": "か" },
+            6: { "katakana": "キ", "hiragana": "き" },
+            7: { "katakana": "ク", "hiragana": "く" },
+            8: { "katakana": "ケ", "hiragana": "け" },
+            9: { "katakana": "コ", "hiragana": "こ" },
+            10: { "katakana": "サ", "hiragana": "さ" },
+            11: { "katakana": "シ", "hiragana": "し" },
+            12: { "katakana": "ス", "hiragana": "す" },
+            13: { "katakana": "セ", "hiragana": "せ" },
+            14: { "katakana": "ソ", "hiragana": "そ" },
+            15: { "katakana": "タ", "hiragana": "た" },
+            16: { "katakana": "チ", "hiragana": "ち" },
+            17: { "katakana": "ツ", "hiragana": "つ" },
+            18: { "katakana": "テ", "hiragana": "て" },
+            19: { "katakana": "ト", "hiragana": "と" },
+            20: { "katakana": "ナ", "hiragana": "な" },
+            21: { "katakana": "ニ", "hiragana": "に" },
+            22: { "katakana": "ヌ", "hiragana": "ぬ" },
+            23: { "katakana": "ネ", "hiragana": "ね" },
+            24: { "katakana": "ノ", "hiragana": "の" },
+            25: { "katakana": "ハ", "hiragana": "は" },
+            26: { "katakana": "ヒ", "hiragana": "ひ" },
+            27: { "katakana": "フ", "hiragana": "ふ" },
+            28: { "katakana": "ヘ", "hiragana": "へ" },
+            29: { "katakana": "ホ", "hiragana": "ほ" },
+            30: { "katakana": "マ", "hiragana": "ま" },
+            31: { "katakana": "ミ", "hiragana": "み" },
+            32: { "katakana": "ム", "hiragana": "む" },
+            33: { "katakana": "メ", "hiragana": "め" },
+            34: { "katakana": "モ", "hiragana": "も" },
+            35: { "katakana": "ヤ", "hiragana": "や" },
+            36: { "katakana": "ユ", "hiragana": "ゆ" },
+            37: { "katakana": "ヨ", "hiragana": "よ" },
+            38: { "katakana": "ラ", "hiragana": "ら" },
+            39: { "katakana": "リ", "hiragana": "り" },
+            40: { "katakana": "ル", "hiragana": "る" },
+            41: { "katakana": "レ", "hiragana": "れ" },
+            42: { "katakana": "ロ", "hiragana": "ろ" },
+            43: { "katakana": "ワ", "hiragana": "わ" },
+            44: { "katakana": "ヲ", "hiragana": "を" },
+            45: { "katakana": "ン", "hiragana": "ん" }
+        };
+
+        const totalQuestions = 10;
+        let currentQuestion = 0;
+        let score = 0;
+
+        function getRandomItemNumbers() {
+            const numbers = Object.keys(itemData).map(Number);
+            const randomItemNumbers = [];
+            while (randomItemNumbers.length < totalQuestions) {
+                const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
+                if (!randomItemNumbers.includes(randomNumber)) {
+                    randomItemNumbers.push(randomNumber);
+                }
+            }
+            return randomItemNumbers;
+        }
+
+        function checkAnswer(selectedIndex) {
+            // Disable all options after selection
+            for (let i = 0; i < optionsEl.length; i++) {
+                optionsEl[i].style.pointerEvents = 'none'; // Disable further clicks
+            }
+
+            let selectedOption = optionsEl[selectedIndex];
+            let selectedAnswer = selectedOption.textContent;
+
+            if (selectedAnswer === currentItem.hiragana) {
+                // Correct answer
+                selectedOption.classList.add('correct');
+                score++;
+            } else {
+                // Wrong answer
+                selectedOption.classList.add('wrong');
+
+                // Find and highlight the correct option
+                for (let i = 0; i < optionsEl.length; i++) {
+                    if (optionsEl[i].textContent === currentItem.hiragana) {
+                        optionsEl[i].classList.add('correct');
+                        break;
+                    }
+                }
+            }
+
+            // Enable the Next button
+            nextBtn.disabled = false;
+        }
+
+        function getRandomOptions(currentItemNumber) {
+            const options = new Set();
+            
+            // Define range for options based on the correct number
+            const rangeStart = 0;
+            const rangeEnd = 45;
+
+            // Add the correct answer to options
+            options.add(currentItemNumber);
+            
+            // Generate random options
+            while (options.size < 4) {
+                const randomNum = Math.floor(Math.random() * (rangeEnd - rangeStart + 1)) + rangeStart;
+                options.add(randomNum);
+            }
+
+            // Convert Set to Array and shuffle it
+            return Array.from(options).sort(() => Math.random() - 0.5);
+        }
+
+        function nextQuestion() {
+            // Display question number
+            document.getElementById('question-number').textContent = `${currentQuestion + 1}/${totalQuestions}`;
+
+            // Load current question and options
+            const currentItemNumber = selectedItemNumbers[currentQuestion];
+            currentItem = itemData[currentItemNumber];
+
+            // Update question text
+            questionEl.textContent = currentItem.katakana;
+
+            // Get random options
+            const options = getRandomOptions(currentItemNumber);
+
+            // Update options in the DOM
+            options.forEach((optionItemNum, index) => {
+                optionsEl[index].textContent = itemData[optionItemNum].hiragana;
+                optionsEl[index].classList.remove('correct', 'wrong'); // Reset styles
+                optionsEl[index].style.pointerEvents = 'auto'; // Enable click
+            });
+
+            // Disabled the Next button
+            nextBtn.disabled = true;
+
+            currentQuestion++;
+            if (currentQuestion === totalQuestions) {
+                endGame();
+            }
+        }
+
+        function endGame() {
+            // hide question container
+            document.getElementById('question-container').style.display = 'none';
+
+            // Display the score
+            const scoreEl = document.getElementById('score');
+            scoreEl.textContent = `Your score: ${score}/${totalQuestions}`;
+            document.getElementById('result-container').style.display = 'flex';
+        }
+
+        function replayGame() {
+            // Reset game state
+            currentQuestion = 0;
+            score = 0;
+            selectedItemNumbers = getRandomItemNumbers();
+
+            // hide result container
+            document.getElementById('result-container').style.display = 'none';
+
+            // show question container
+            document.getElementById('question-container').style.display = 'flex';
+
+            // Start the game
+            nextQuestion();
+        }
+
+        // Initialize the game
+        let selectedItemNumbers = getRandomItemNumbers();
+        const questionEl = document.getElementById('question');
+        const optionsEl = document.querySelectorAll('.option');
+        const nextBtn = document.getElementById('next-button');
+        let currentItem = {};
+
+        // Start the game
+        replayGame();
+    </script>
+</body>
+</html>
