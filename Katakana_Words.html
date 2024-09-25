@@ -284,18 +284,15 @@
         }
 
         function getRandomOptions(currentItemNumber) {
+            const numbers = Object.keys(itemsData).map(Number);
             const options = new Set();
-            
-            // Define range for options based on the correct number
-            const rangeStart = 0;
-            const rangeEnd = 30;
 
-            // Add the correct answer to options
+            // Add the current question number to options
             options.add(currentItemNumber);
-            
+
             // Generate random options
             while (options.size < 4) {
-                const randomNum = Math.floor(Math.random() * (rangeEnd - rangeStart + 1)) + rangeStart;
+                const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
                 options.add(randomNum);
             }
 
@@ -304,6 +301,11 @@
         }
 
         function nextQuestion() {
+            if (currentQuestion === totalQuestions) {
+                endGame();
+                return;
+            }
+
             // Display question number
             document.getElementById('question-number').textContent = `${currentQuestion + 1}/${totalQuestions}`;
 
@@ -317,8 +319,6 @@
             // Get random options
             const options = getRandomOptions(currentItemNumber);
 
-            console.log("options", options);
-
             // Update options in the DOM
             options.forEach((option, index) => {
                 optionsEl[index].textContent = itemsData[option].katakana;
@@ -330,9 +330,6 @@
             nextBtn.disabled = true;
 
             currentQuestion++;
-            if (currentQuestion > totalQuestions) {
-                endGame();
-            }
         }
 
         function endGame() {

@@ -115,7 +115,7 @@
     </div>
 
     <script>
-        const itemData = {
+        const itemsData = {
             0: { "katakana": "ア", "hiragana": "あ" },
             1: { "katakana": "イ", "hiragana": "い" },
             2: { "katakana": "ウ", "hiragana": "う" },
@@ -169,7 +169,7 @@
         let score = 0;
 
         function getRandomItemNumbers() {
-            const numbers = Object.keys(itemData).map(Number);
+            const numbers = Object.keys(itemsData).map(Number);
             const randomItemNumbers = [];
             while (randomItemNumbers.length < totalQuestions) {
                 const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
@@ -211,18 +211,15 @@
         }
 
         function getRandomOptions(currentItemNumber) {
+            const numbers = Object.keys(itemsData).map(Number);
             const options = new Set();
-            
-            // Define range for options based on the correct number
-            const rangeStart = 0;
-            const rangeEnd = 45;
 
-            // Add the correct answer to options
+            // Add the current question number to options
             options.add(currentItemNumber);
-            
+
             // Generate random options
             while (options.size < 4) {
-                const randomNum = Math.floor(Math.random() * (rangeEnd - rangeStart + 1)) + rangeStart;
+                const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
                 options.add(randomNum);
             }
 
@@ -231,12 +228,17 @@
         }
 
         function nextQuestion() {
+            if (currentQuestion === totalQuestions) {
+                endGame();
+                return;
+            }
+
             // Display question number
             document.getElementById('question-number').textContent = `${currentQuestion + 1}/${totalQuestions}`;
 
             // Load current question and options
             const currentItemNumber = selectedItemNumbers[currentQuestion];
-            currentItem = itemData[currentItemNumber];
+            currentItem = itemsData[currentItemNumber];
 
             // Update question text
             questionEl.textContent = currentItem.katakana;
@@ -246,7 +248,7 @@
 
             // Update options in the DOM
             options.forEach((optionItemNum, index) => {
-                optionsEl[index].textContent = itemData[optionItemNum].hiragana;
+                optionsEl[index].textContent = itemsData[optionItemNum].hiragana;
                 optionsEl[index].classList.remove('correct', 'wrong'); // Reset styles
                 optionsEl[index].style.pointerEvents = 'auto'; // Enable click
             });
@@ -255,9 +257,6 @@
             nextBtn.disabled = true;
 
             currentQuestion++;
-            if (currentQuestion > totalQuestions) {
-                endGame();
-            }
         }
 
         function endGame() {
