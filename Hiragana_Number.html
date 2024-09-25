@@ -304,7 +304,7 @@
             nextBtn.disabled = true;
 
             currentQuestion++;
-            if (currentQuestion === totalQuestions) {
+            if (currentQuestion > totalQuestions) {
                 endGame();
             }
         }
