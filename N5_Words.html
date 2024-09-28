@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeArk Japanese education: N5 Words</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #game-container {
+            height: 100vh;
+            width: 100%;
+            max-height: 1024px;
+            max-width: 576px;
+        }
+        #question-container {
+            height: calc(100vh - 120px);
+            padding: 60px 20px;
+            display: flex; 
+            flex: 1;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #result-container {
+            height: calc(100vh - 120px);
+            padding: 60px 20px;
+            display: none; 
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #question-number {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        #question-img {
+            height: 150px; /* Fixed height */
+            overflow: hidden;
+            text-align: center;
+        }
+        #question-img img {
+            height: 100%;
+            object-fit: cover;
+        }
+        #question-caption {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+            color: #33cc33;
+        }
+        .option {
+            margin: 10px 0;
+            padding: 20px;
+            font-size: 1.5em;
+            text-align: center;
+            cursor: pointer;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        .correct {
+            background-color: green;
+            color: white;
+        }
+        .wrong {
+            background-color: red;
+            color: white;
+        }
+        #next-button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #9966ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #next-button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+        #score {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        #replay-button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: lightgray;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="words_list-container">
+
+        </div>
+        <div id="question-container">
+            <div id="question-number"></div>
+            <div>
+                <div id="question-img"></div>
+                <div id="question-caption"></div>
+            </div>
+            <div id="options">
+                <div class="option" onclick="checkAnswer(0)"></div>
+                <div class="option" onclick="checkAnswer(1)"></div>
+                <div class="option" onclick="checkAnswer(2)"></div>
+                <div class="option" onclick="checkAnswer(3)"></div>
+            </div>
+            <button id="next-button" onclick="nextQuestion()" disabled>Next</button>
+        </div>
+        <div id="result-container">
+            <div id="score"></div>
+            <button id="replay-button" onclick="replayGame()">Replay</button>
+            <button id="words_list-button" onclick="goToWordsList()">Words List</button>
+        </div>
+    </div>
+
+    <script>
+
+        const itemsData = {
+            0: {
+                "kana": "どうぶつ",
+                "english": "animal",
+                "category": "animal",
+                "exampleSentence": [
+                    "このどうぶつはとてもかわいいです。",
+                    "わたしはどうぶつえんにいきました。"
+                ]
+            },
+            1: {
+                "kana": "いぬ",
+                "english": "dog",
+                "category": "animal",
+                "exampleSentence": [
+                    "わたしのいぬはとてもおりこうです。",
+                    "いぬとさんぽするのがすきです。"
+                ]
+            },
+            2: {
+                "kana": "ねこ",
+                "english": "cat",
+                "category": "animal",
+                "exampleSentence": [
+                    "ねこはねていることがすきです。",
+                    "わたしのねこはさかながすきです。"
+                ]
+            },
+            3: {
+                "kana": "ぶた",
+                "english": "pig",
+                "category": "animal",
+                "exampleSentence": [
+                    "ぶたはどろのなかであそぶのがすきです。",
+                    "ぶたはとてもかしこいどうぶつです。"
+                ]
+            },
+            4: {
+                "kana": "うし",
+                "english": "cow",
+                "category": "animal",
+                "exampleSentence": [
+                    "うしはくさをたべています。",
+                    "のうじょうでうしをみました。"
+                ]
+            },
+            5: {
+                "kana": "にわとり",
+                "english": "chicken",
+                "category": "animal",
+                "exampleSentence": [
+                    "にわとりはたまごをうみます。",
+                    "にわとりがにわをあるいています。"
+                ]
+            },
+            6: {
+                "kana": "とり",
+                "english": "bird",
+                "category": "animal",
+                "exampleSentence": [
+                    "そらをとんでいるとりをみました。",
+                    "とりのさえずりがきこえます。"
+                ]
+            },
+            7: {
+                "kana": "ぎんこういん",
+                "english": "bank employee",
+                "category": "occupation",
+                "exampleSentence": [
+                    "ぎんこういんはおかねのかんりをします。",
+                    "かれはぎんこういんとしてはたらいています。"
+                ]
+            },
+            8: {
+                "kana": "かいしゃいん",
+                "english": "company employee",
+                "category": "occupation",
+                "exampleSentence": [
+                    "かいしゃいんはまいにちはたらきます。",
+                    "かのじょはおおきなかいしゃのかいしゃいんです。"
+                ]
+            },
+            9: {
+                "kana": "いしゃ",
+                "english": "doctor",
+                "category": "occupation",
+                "exampleSentence": [
+                    "いしゃはびょうきをなおすためにはたらきます。",
+                    "わたしのいしゃはとてもやさしいです。"
+                ]
+            },
+            10: {
+                "kana": "せんせい",
+                "english": "teacher",
+                "category": "occupation",
+                "exampleSentence": [
+                    "せんせいはせいとにおしえます。",
+                    "わたしのせんせいはれきしのせんもんかです。"
+                ]
+            },
+            11: {
+                "kana": "エンジニア",
+                "english": "engineer",
+                "category": "occupation",
+                "exampleSentence": [
+                    "かれはすごいエンジニアです。",
+                    "エンジニアはあたらしいソフトをつくります。"
+                ]
+            },
+            12: {
+                "kana": "てんいん",
+                "english": "clerk",
+                "category": "occupation",
+                "exampleSentence": [
+                    "てんいんはおきゃくさんにサービスをします。",
+                    "わたしはてんいんとしてではたらいています。"
+                ]
+            },
+            13: {
+                "kana": "かしゅ",
+                "english": "singer",
+                "category": "occupation",
+                "exampleSentence": [
+                    "かしゅはうたをうたっています。",
+                    "わたしのすきなかしゅはこうえんでコンサートをします。"
+                ]
+            },
+            14: {
+                "kana": "けいさつかん",
+                "english": "policeman",
+                "category": "occupation",
+                "exampleSentence": [
+                    "けいさつかんはまちをまもります。",
+                    "わたしはけいさつかんにあいました。"
+                ]
+            },
+            15: {
+                "kana": "がくせい",
+                "english": "student",
+                "category": "occupation",
+                "exampleSentence": [
+                    "がくせいはがっこうにいきます。",
+                    "わたしはがくせいで、まいにちべんきょうしています。"
+                ]
+            },
+            16: {
+                "kana": "しゅふ",
+                "english": "housewife",
+                "category": "occupation",
+                "exampleSentence": [
+                    "しゅふはいえのことをします。",
+                    "かのじょはしゅふとしていそがしいです。"
+                ]
+            },
+            17: {
+                "kana": "くに",
+                "english": "country",
+                "category": "country",
+                "exampleSentence": [
+                    "わたしのくにはとてもきれいです。",
+                    "くにのしゅうかんをまもっています。"
+                ]
+            },
+            18: {
+                "kana": "にほん",
+                "english": "Japan",
+                "category": "country",
+                "exampleSentence": [
+                    "にほんはさくらがゆうめいです。",
+                    "にほんにはたくさんのたべものがあります。"
+                ]
+            },
+            19: {
+                "kana": "かんこく",
+                "english": "Korea",
+                "category": "country",
+                "exampleSentence": [
+                    "かんこくはK-POPでしられています。",
+                    "わたしはかんこくのぶんかがすきです。"
+                ]
+            },
+            20: {
+                "kana": "ちゅうごく",
+                "english": "China",
+                "category": "country",
+                "exampleSentence": [
+                    "ちゅうごくはとてもおおきいくにです。",
+                    "ちゅうごくのたべものはおいしいです。"
+                ]
+            },
+            21: {
+                "kana": "フィリピン",
+                "english": "Philippines",
+                "category": "country",
+                "exampleSentence": [
+                    "フィリピンはうみがきれいです。",
+                    "フィリピンのひとはとてもやさしいです。"
+                ]
+            },
+            22: {
+                "kana": "アメリカ",
+                "english": "America",
+                "category": "country",
+                "exampleSentence": [
+                    "アメリカはたくさんのしんきょうがあります。",
+                    "アメリカにはさまざまなぶんかがあります。"
+                ]
+            },
+            23: {
+                "kana": "ドイツ",
+                "english": "Germany",
+                "category": "country",
+                "exampleSentence": [
+                    "ドイツはビールでしられています。",
+                    "ドイツのくにをりょこうしたいです。"
+                ]
+            },
+            24: {
+                "kana": "イギリス",
+                "english": "The United Kingdom",
+                "category": "country",
+                "exampleSentence": [
+                    "イギリスにはたくさんのれきしがあります。",
+                    "イギリスのこうこうはふるいです。"
+                ]
+            },
+            25: {
+                "kana": "にほんご",
+                "english": "Japanese language",
+                "category": "country",
+                "exampleSentence": [
+                    "にほんごはむずかしいです。",
+                    "わたしはにほんごをべんきょうしています。"
+                ]
+            },
+            26: {
+                "kana": "かんこくご",
+                "english": "Korean language",
+                "category": "country",
+                "exampleSentence": [
+                    "かんこくごをべんきょうするのがすきです。",
+                    "かんこくごはおもしろいです。"
+                ]
+            },
+            27: {
+                "kana": "ちゅうごくご",
+                "english": "Chinese language",
+                "category": "country",
+                "exampleSentence": [
+                    "ちゅうごくごをはなせますか？",
+                    "ちゅうごくごはとてもにんきがあります。"
+                ]
+            },
+            28: {
+                "kana": "えいご",
+                "english": "English",
+                "category": "country",
+                "exampleSentence": [
+                    "えいごはせかいでよくはなされています。",
+                    "えいごをべんきょうしています。"
+                ]
+            },
+            29: {
+                "kana": "ぎんこう",
+                "english": "bank",
+                "category": "place",
+                "exampleSentence": [
+                    "ぎんこうでおかねをおろします。",
+                    "ぎんこうはまちのなかにあります。"
+                ]
+            },
+            30: {
+                "kana": "ゆうびんきょく",
+                "english": "post office",
+                "category": "place",
+                "exampleSentence": [
+                    "ゆうびんきょくでてがみをだします。",
+                    "ゆうびんきょくはすぐそばです。"
+                ]
+            },
+            31: {
+                "kana": "くすりや",
+                "english": "drug store",
+                "category": "place",
+                "exampleSentence": [
+                    "くすりやでくすりをかいました。",
+                    "くすりやはまちのなかにあります。"
+                ]
+            },
+            32: {
+                "kana": "びょういん",
+                "english": "hospital",
+                "category": "place",
+                "exampleSentence": [
+                    "びょういんはここからちかいです。",
+                    "びょういんでけがをなおしました。"
+                ]
+            },
+            33: {
+                "kana": "かいしゃ",
+                "english": "company",
+                "category": "place",
+                "exampleSentence": [
+                    "わたしはかいしゃではたらいています。",
+                    "かいしゃはとてもきれいです。"
+                ]
+            },
+            34: {
+                "kana": "スーパー",
+                "english": "supermarket",
+                "category": "place",
+                "exampleSentence": [
+                    "スーパーでたべものをかいます。",
+                    "スーパーはあさやっているよ。"
+                ]
+            },
+            35: {
+                "kana": "きっさてん",
+                "english": "café",
+                "category": "place",
+                "exampleSentence": [
+                    "きっさてんでおちゃをのみました。",
+                    "きっさてんはとてもやすいです。"
+                ]
+            },
+            36: {
+                "kana": "レストラン",
+                "english": "restaurant",
+                "category": "place",
+                "exampleSentence": [
+                    "レストランでばんごはんをたべました。",
+                    "レストランはにぎやかです。"
+                ]
+            },
+            37: {
+                "kana": "デパート",
+                "english": "department store",
+                "category": "place",
+                "exampleSentence": [
+                    "デパートでかいものをしました。",
+                    "デパートはおおきいです。"
+                ]
+            },
+            38: {
+                "kana": "えいがかん",
+                "english": "cinema",
+                "category": "place",
+                "exampleSentence": [
+                    "えいがかんでえいがをみました。",
+                    "えいがかんはまちのそばにあります。"
+                ]
+            },
+            39: {
+                "kana": "ほんや",
+                "english": "book store",
+                "category": "place",
+                "exampleSentence": [
+                    "ほんやでほんをかいました。",
+                    "ほんやはしずかなばしょです。"
+                ]
+            },
+            40: {
+                "kana": "はなや",
+                "english": "flower shop",
+                "category": "place",
+                "exampleSentence": [
+                    "はなやではなをかいました。",
+                    "はなやのはなはきれいです。"
+                ]
+            },
+            41: {
+                "kana": "ケーキや",
+                "english": "cake shop",
+                "category": "place",
+                "exampleSentence": [
+                    "ケーキやでケーキをかいました。",
+                    "ケーキやのケーキはおいしいです。"
+                ]
+            },
+            42: {
+                "kana": "ラーメンや",
+                "english": "ramen shop",
+                "category": "place",
+                "exampleSentence": [
+                    "ラーメンやでラーメンをたべました。",
+                    "ラーメンやはとてもにぎやかです。"
+                ]
+            },
+            43: {
+                "kana": "カレーや",
+                "english": "curry shop",
+                "category": "place",
+                "exampleSentence": [
+                    "カレーやでカレーをたべました。",
+                    "カレーやのカレーはすごくおいしいです。"
+                ]
+            },
+            44: {
+                "kana": "コンビニ",
+                "english": "convenience store",
+                "category": "place",
+                "exampleSentence": [
+                    "コンビニでたべものをかいました。",
+                    "コンビニはあさからよるまであいています。"
+                ]
+            },
+            45: {
+                "kana": "うち",
+                "english": "home",
+                "category": "place",
+                "exampleSentence": [
+                    "わたしのうちはあたたかいです。",
+                    "うちでいっしょにばんごはんをたべましょう。"
+                ]
+            },
+            46: {
+                "kana": "がっこう",
+                "english": "school",
+                "category": "place",
+                "exampleSentence": [
+                    "がっこうはまいにちいきます。",
+                    "がっこうでともだちにあいました。"
+                ]
+            },
+            47: {
+                "kana": "だいがく",
+                "english": "university",
+                "category": "place",
+                "exampleSentence": [
+                    "だいがくでべんきょうしています。",
+                    "だいがくはとてもおおきいです。"
+                ]
+            },
+            48: {
+                "kana": "アパート",
+                "english": "apartment",
+                "category": "place",
+                "exampleSentence": [
+                    "わたしのアパートはここです。",
+                    "アパートはとてもきれいです。"
+                ]
+            },
+            49: {
+                "kana": "トイレ",
+                "english": "toilet",
+                "category": "place",
+                "exampleSentence": [
+                    "トイレはあちらです。",
+                    "トイレをつかってもいいですか。"
+                ]
+            },
+            50: {
+                "kana": "はくぶつかん",
+                "english": "museum",
+                "category": "place",
+                "exampleSentence": [
+                    "はくぶつかんにはたくさんのひがいがあります。",
+                    "はくぶつかんでアートをみました。"
+                ]
+            },
+            51: {
+                "kana": "こうえん",
+                "english": "park",
+                "category": "place",
+                "exampleSentence": [
+                    "こうえんであそびました。",
+                    "こうえんはとてもきれいです。"
+                ]
+            },
+            52: {
+                "kana": "たいしかん",
+                "english": "embassy",
+                "category": "place",
+                "exampleSentence": [
+                    "たいしかんはここにあります。",
+                    "たいしかんであいさつをしました。"
+                ]
+            },
+            53: {
+                "kana": "まち",
+                "english": "town",
+                "category": "place",
+                "exampleSentence": [
+                    "まちをさんぽしました。",
+                    "まちはにぎやかです。"
+                ]
+            },
+            54: {
+                "kana": "きたぐち",
+                "english": "north exit",
+                "category": "place",
+                "exampleSentence": [
+                    "きたぐちにいきます。",
+                    "きたぐちはあちらです。"
+                ]
+            },
+            55: {
+                "kana": "みなみぐち",
+                "english": "south exit",
+                "category": "place",
+                "exampleSentence": [
+                    "みなみぐちからでました。",
+                    "みなみぐちはにぎやかです。"
+                ]
+            },
+            56: {
+                "kana": "ひがしぐち",
+                "english": "east exit",
+                "category": "place",
+                "exampleSentence": [
+                    "ひがしぐちにむかいます。",
+                    "ひがしぐちでともだちにあいました。"
+                ]
+            },
+            57: {
+                "kana": "にしぐち",
+                "english": "west exit",
+                "category": "place",
+                "exampleSentence": [
+                    "にしぐちにいきましょう。",
+                    "にしぐちからひとがたくさんでてきます。"
+                ]
+            },
+            58: {
+                "kana": "きせつ",
+                "english": "season",
+                "category": "season",
+                "exampleSentence": [
+                    "きせつがかわります。",
+                    "きせつはとてもたのしいです。"
+                ]
+            },
+            59: {
+                "kana": "はる",
+                "english": "spring",
+                "category": "season",
+                "exampleSentence": [
+                    "はるにさくらがさきます。",
+                    "はるはあたたかいです。"
+                ]
+            },
+            60: {
+                "kana": "なつ",
+                "english": "summer",
+                "category": "season",
+                "exampleSentence": [
+                    "なつはあついです。",
+                    "なつやすみがたのしみです。"
+                ]
+            },
+            61: {
+                "kana": "あき",
+                "english": "autumn",
+                "category": "season",
+                "exampleSentence": [
+                    "あきにかぜがふきます。",
+                    "あきはきれいなきのみちです。"
+                ]
+            },
+            62: {
+                "kana": "ふゆ",
+                "english": "winter",
+                "category": "season",
+                "exampleSentence": [
+                    "ふゆにゆきがふります。",
+                    "ふゆはさむいです。"
+                ]
+            },
+            63: {
+                "kana": "かぞく",
+                "english": "family",
+                "category": "people",
+                "exampleSentence": [
+                    "かぞくといっしょにすごします。",
+                    "かぞくはたいせつです。"
+                ]
+            },
+            64: {
+                "kana": "ともだち",
+                "english": "friend",
+                "category": "people",
+                "exampleSentence": [
+                    "ともだちとあそびました。",
+                    "ともだちはわらっています。"
+                ]
+            },
+            65: {
+                "kana": "ちち",
+                "english": "(my) father",
+                "category": "people",
+                "exampleSentence": [
+                    "ちちはがんばっています。",
+                    "ちちがすきです。"
+                ]
+            },
+            66: {
+                "kana": "おとうさん",
+                "english": "father",
+                "category": "people",
+                "exampleSentence": [
+                    "おとうさんはやさしいです。",
+                    "おとうさんといっしょにいます。"
+                ]
+            },
+            67: {
+                "kana": "はは",
+                "english": "(my) mother",
+                "category": "people",
+                "exampleSentence": [
+                    "はははすごいです。",
+                    "ははにありがとうと言いました。"
+                ]
+            },
+            68: {
+                "kana": "おかあさん",
+                "english": "mother",
+                "category": "people",
+                "exampleSentence": [
+                    "おかあさんがはなをかいました。",
+                    "おかあさんはいつもつかれています。"
+                ]
+            },
+            69: {
+                "kana": "あに",
+                "english": "(my) older brother",
+                "category": "people",
+                "exampleSentence": [
+                "あにはすごい人です。",
+                "あにといっしょにあそびます。"
+                ]
+            },
+            70: {
+                "kana": "おにいさん",
+                "english": "older brother",
+                "category": "people",
+                "exampleSentence": [
+                "おにいさんはたくさんのともだちがいます。",
+                "おにいさんといっしょにいきます。"
+                ]
+            },
+            71: { 
+                "kana": "あね", 
+                "english": "(my) older sister", 
+                "category": "people", 
+                "exampleSentence": [
+                    "あねは大学生です。",
+                    "私のあねは料理が得意です。"
+                ] 
+            },
+            72: { 
+                "kana": "おねえさん", 
+                "english": "older sister", 
+                "category": "people", 
+                "exampleSentence": [
+                    "おねえさんは優しいです。",
+                    "おねえさんと一緒に買い物に行きました。"
+                ] 
+            },
+            73: { 
+                "kana": "おとうと", 
+                "english": "younger brother", 
+                "category": "people", 
+                "exampleSentence": [
+                    "おとうとはサッカーが好きです。",
+                    "私のおとうとは毎日ゲームをします。"
+                ] 
+            },
+            74: { 
+                "kana": "いもうと", 
+                "english": "younger sister", 
+                "category": "people", 
+                "exampleSentence": [
+                    "いもうとは学校に行っています。",
+                    "私のいもうとはかわいいです。"
+                ] 
+            },
+            75: { 
+                "kana": "きょうだい", 
+                "english": "sibling", 
+                "category": "people", 
+                "exampleSentence": [
+                    "私にはきょうだいが二人います。",
+                    "きょうだいと遊びました。"
+                ] 
+            },
+            76: { 
+                "kana": "むすこ", 
+                "english": "son", 
+                "category": "people", 
+                "exampleSentence": [
+                    "むすこはサッカーをしています。",
+                    "私のむすこは五歳です。"
+                ] 
+            },
+            77: { 
+                "kana": "むすめ", 
+                "english": "daughter", 
+                "category": "people", 
+                "exampleSentence": [
+                    "むすめは学校が大好きです。",
+                    "私のむすめは絵を描くのが得意です。"
+                ] 
+            },
+            78: { 
+                "kana": "おとこ", 
+                "english": "man", 
+                "category": "people", 
+                "exampleSentence": [
+                    "おとこは公園で走っています。",
+                    "そのおとこは優しいです。"
+                ] 
+            },
+            79: { 
+                "kana": "おんな", 
+                "english": "woman", 
+                "category": "people", 
+                "exampleSentence": [
+                    "おんなが花を持っています。",
+                    "そのおんなは教師です。"
+                ] 
+            },
+            80: { 
+                "kana": "おっと", 
+                "english": "(my) husband", 
+                "category": "people", 
+                "exampleSentence": [
+                    "おっとは料理が上手です。",
+                    "私のおっとは毎日働いています。"
+                ] 
+            },
+            81: { 
+                "kana": "ごしゅじん", 
+                "english": "husband", 
+                "category": "people", 
+                "exampleSentence": [
+                    "ごしゅじんは仕事に行っています。",
+                    "私のごしゅじんは優しい人です。"
+                ] 
+            },
+            82: { 
+                "kana": "つま", 
+                "english": "(my) wife", 
+                "category": "people", 
+                "exampleSentence": [
+                    "つまと一緒に映画を見ました。",
+                    "私のつまは料理が得意です。"
+                ] 
+            },
+            83: { 
+                "kana": "おくさん", 
+                "english": "wife", 
+                "category": "people", 
+                "exampleSentence": [
+                    "おくさんは美しいです。",
+                    "そのおくさんは本を読んでいます。"
+                ] 
+            },
+            84: { 
+                "kana": "りょうしん", 
+                "english": "parents", 
+                "category": "people", 
+                "exampleSentence": [
+                    "りょうしんは旅行に行きました。",
+                    "私のりょうしんは仲が良いです。"
+                ] 
+            },
+            85: { 
+                "kana": "こども", 
+                "english": "child", 
+                "category": "people", 
+                "exampleSentence": [
+                    "こどもが遊んでいます。",
+                    "私のこどもは二人います。"
+                ] 
+            },
+            86: { 
+                "kana": "そふ", 
+                "english": "(my) grandfather", 
+                "category": "people", 
+                "exampleSentence": [
+                    "そふはお話が好きです。",
+                    "私のそふは元気です。"
+                ] 
+            },
+            87: { 
+                "kana": "おじいさん", 
+                "english": "grandfather", 
+                "category": "people", 
+                "exampleSentence": [
+                    "おじいさんは庭で花を育てています。",
+                    "そのおじいさんはとても優しいです。"
+                ] 
+            },
+            88: { 
+                "kana": "そぼ", 
+                "english": "(my) grandmother", 
+                "category": "people", 
+                "exampleSentence": [
+                    "そぼはお菓子を作るのが得意です。",
+                    "私のそぼは元気です。"
+                ] 
+            },
+            89: { 
+                "kana": "おばあさん", 
+                "english": "grandmother", 
+                "category": "people", 
+                "exampleSentence": [
+                    "おばあさんは昔の話をよくします。",
+                    "そのおばあさんは優しいです。"
+                ] 
+            },
+            90: { 
+                "kana": "おじ", 
+                "english": "uncle", 
+                "category": "people", 
+                "exampleSentence": [
+                    "おじは毎年旅行に行きます。",
+                    "私のおじは料理が上手です。"
+                ] 
+            },
+            91: { 
+                "kana": "おば", 
+                "english": "aunt", 
+                "category": "people", 
+                "exampleSentence": [
+                    "おばはまいとしかぞくのあつまりにきます。",
+                    "わたしのおばはとてもおもしろいひとです。"
+                ] 
+            },
+            92: { 
+                "kana": "まご", 
+                "english": "grandchild", 
+                "category": "people", 
+                "exampleSentence": [
+                    "まごがあそびにきました。",
+                    "わたしのまごはとてもげんきです。"
+                ] 
+            },
+            93: { 
+                "kana": "ふく", 
+                "english": "clothes", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "ふくをせんたくしました。",
+                    "あたらしいふくをかいたいです。"
+                ] 
+            },
+            94: { 
+                "kana": "きもの", 
+                "english": "kimono", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "きものをきるのはとくべつなひです。",
+                    "かのじょはうつくしいきものをもっています。"
+                ] 
+            },
+            95: { 
+                "kana": "ぼうし", 
+                "english": "hat / cap", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "ぼうしをかぶるとひざしをふせげます。",
+                    "そのぼうしはとてもかわいいです。"
+                ] 
+            },
+            96: { 
+                "kana": "スーツ", 
+                "english": "suit", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "スーツをきてかいぎにいきました。",
+                    "かれはすてきなスーツをもっています。"
+                ] 
+            },
+            97: { 
+                "kana": "ジャケット", 
+                "english": "jacket", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "ジャケットをきるとあたたかいです。",
+                    "そのジャケットはわたしのおきにいりです。"
+                ] 
+            },
+            98: { 
+                "kana": "セーター", 
+                "english": "sweater", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "セーターをきるきせつになりました。",
+                    "このセーターはとてもやわらかいです。"
+                ] 
+            },
+            99: { 
+                "kana": "コート", 
+                "english": "coat", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "コートをきてそとにでます。",
+                    "そのコートはさむいひにさいてきです。"
+                ] 
+            },
+            100: { 
+                "kana": "Tシャツ", 
+                "english": "T-shirt", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "Tシャツはなつにぴったりです。",
+                    "かれはあたらしいTシャツをかいました。"
+                ] 
+            },
+            101: { 
+                "kana": "ドレス", 
+                "english": "dress", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "ドレスをきてぱーてぃーにいきます。",
+                    "かのじょはうつくしいドレスをもっています。"
+                ] 
+            },
+            102: { 
+                "kana": "したぎ", 
+                "english": "underwear", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "したぎをえらぶのはじゅうようです。",
+                    "わたしのしたぎはあたらしいです。"
+                ] 
+            },
+            103: { 
+                "kana": "イヤリング", 
+                "english": "earring", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "イヤリングをつけるとはなやかになります。",
+                    "かのじょはすてきなイヤリングをしています。"
+                ] 
+            },
+            104: { 
+                "kana": "ベルト", 
+                "english": "belt", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "ベルトをしめると、ぱんつがおちません。",
+                    "そのベルトはとてもおしゃれです。"
+                ] 
+            },
+            105: { 
+                "kana": "ネクタイ", 
+                "english": "necktie", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "ネクタイをむすぶのはむずかしいです。",
+                    "かれはあたらしいネクタイをかいました。"
+                ] 
+            },
+            106: { 
+                "kana": "てぶくろ", 
+                "english": "glove / mitten", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "てぶくろをはめるとてがあたたかいです。",
+                    "そのてぶくろはとてもかわいいです。"
+                ] 
+            },
+            107: { 
+                "kana": "めがね", 
+                "english": "glasses", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "めがねをかけるとみえやすいです。",
+                    "かのじょはあたらしいめがねをかいました。"
+                ] 
+            },
+            108: { 
+                "kana": "サングラス", 
+                "english": "sunglasses", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "サングラスをかけるとめがまもれます。",
+                    "かれはすたいるあっぷなサングラスをもっています。"
+                ] 
+            },
+            109: { 
+                "kana": "ズボン", 
+                "english": "pants", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "ズボンがぴったりです。",
+                    "そのズボンはとてもかいてきです。"
+                ] 
+            },
+            110: { 
+                "kana": "スカート", 
+                "english": "skirt", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "スカートをきるとじょせいらしいです。",
+                    "かのじょはうつくしいスカートをもっています。"
+                ] 
+            },
+            111: { 
+                "kana": "くつした", 
+                "english": "socks", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "くつしたをせんたくしました。",
+                    "あたらしいくつしたをかいました。"
+                ] 
+            },
+            112: { 
+                "kana": "くつ", 
+                "english": "shoes", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "くつをはくのがすきです。",
+                    "そのくつはとてもかいてきです。"
+                ] 
+            },
+            113: { 
+                "kana": "サンダル", 
+                "english": "sandals", 
+                "category": "clothes", 
+                "exampleSentence": [
+                    "サンダルをはくとあついひにぴったりです。",
+                    "かれはきれいなサンダルをもっています。"
+                ] 
+            },
+            114: { 
+                "kana": "うみ", 
+                "english": "sea", 
+                "category": "nature", 
+                "exampleSentence": [
+                    "うみでおよぐのがだいすきです。",
+                    "あしたうみにいきます。"
+                ] 
+            },
+            115: { 
+                "kana": "かわ", 
+                "english": "river", 
+                "category": "nature", 
+                "exampleSentence": [
+                    "かわのそばであそびました。",
+                    "このかわはとてもきれいです。"
+                ] 
+            },
+            116: { 
+                "kana": "やま", 
+                "english": "mountain", 
+                "category": "nature", 
+                "exampleSentence": [
+                    "やまにのぼるのはたのしいです。",
+                    "そのやまはとてもたかいです。"
+                ] 
+            },
+            117: { 
+                "kana": "かぜ", 
+                "english": "wind", 
+                "category": "nature", 
+                "exampleSentence": [
+                    "かぜがつよいひはあたらしいかざをします。",
+                    "かぜがふくと、きがゆれる。"
+                ] 
+            },
+            118: { 
+                "kana": "き", 
+                "english": "tree", 
+                "category": "nature", 
+                "exampleSentence": [
+                    "きのしたでかくれんぼをしました。",
+                    "そのきはとてもおおきいです。"
+                ] 
+            },
+            119: { 
+                "kana": "もり", 
+                "english": "forest", 
+                "category": "nature", 
+                "exampleSentence": [
+                    "もりのなかをさんぽしました。",
+                    "もりにはたくさんのどうぶつがいます。"
+                ] 
+            },
+            120: { 
+                "kana": "そら", 
+                "english": "sky", 
+                "category": "nature", 
+                "exampleSentence": [
+                    "そらがあおいです。",
+                    "そらにはくもがうかんでいます。"
+                ] 
+            },
+            121: { 
+                "kana": "くも", 
+                "english": "cloud", 
+                "category": "nature", 
+                "exampleSentence": [
+                    "くもがたくさんあります。",
+                    "あのくもはどうぶつのかたちにみえます。"
+                ] 
+            },
+            122: { 
+                "kana": "いけ", 
+                "english": "pond", 
+                "category": "nature", 
+                "exampleSentence": [
+                    "いけにはかっぱがいます。",
+                    "いけのそばでピクニックをしました。"
+                ] 
+            },
+            123: { 
+                "kana": "はな", 
+                "english": "flower", 
+                "category": "nature", 
+                "imgkey": "はな_", 
+                "exampleSentence": [
+                    "はながきれいにさきました。",
+                    "このはなはとてもいいにおいです。"
+                ] 
+            },
+            124: { 
+                "kana": "くさ", 
+                "english": "grass", 
+                "category": "nature", 
+                "exampleSentence": [
+                    "くさのうえにすわります。",
+                    "このくさはあかるいみどりいろです。"
+                ] 
+            },
+            125: { 
+                "kana": "からだ", 
+                "english": "body", 
+                "category": "body", 
+                "exampleSentence": [
+                    "からだをうごかすのはたいせつです。",
+                    "わたしはからだがげんきです。"
+                ] 
+            },
+            126: { 
+                "kana": "あたま", 
+                "english": "head", 
+                "category": "body", 
+                "exampleSentence": [
+                    "あたまがいたいときはやすみます。",
+                    "わたしのあたまはかんがえるのがすきです。"
+                ] 
+            },
+            127: { 
+                "kana": "くび", 
+                "english": "neck", 
+                "category": "body", 
+                "exampleSentence": [
+                    "くびにネックレスをしています。",
+                    "くびがかたいと、うごかしづらいです。"
+                ] 
+            },
+            128: { 
+                "kana": "うで", 
+                "english": "arm", 
+                "category": "body", 
+                "exampleSentence": [
+                    "うでをのばしてしんかんせんにのりました。",
+                    "うでがつかれるのでやすみます。"
+                ] 
+            },
+            129: { 
+                "kana": "ゆび", 
+                "english": "finger", 
+                "category": "body", 
+                "exampleSentence": [
+                    "ゆびであかりをつけました。",
+                    "ゆびがきんちょうして、しんぱいです。"
+                ] 
+            },
+            130: { 
+                "kana": "くち", 
+                "english": "mouth", 
+                "category": "body", 
+                "exampleSentence": [
+                    "くちをあけてはなします。",
+                    "くちがかわいたので、みずをのむ。"
+                ] 
+            },
+            131: { 
+                "kana": "みみ", 
+                "english": "ear", 
+                "category": "body", 
+                "exampleSentence": [
+                    "みみをふさいでおんがくをききました。",
+                    "そのみみはすごくききやすいです。"
+                ] 
+            },
+            132: { 
+                "kana": "め", 
+                "english": "eye", 
+                "category": "body", 
+                "exampleSentence": [
+                    "めがあかいのはねむいからです。",
+                    "そのめはすてきなあおいです。"
+                ] 
+            },
+            133: { 
+                "kana": "はな", 
+                "english": "nose", 
+                "category": "body", 
+                "exampleSentence": [
+                    "はなをかむと、くしゃみがでます。",
+                    "そのはなはいいにおいがします。"
+                ] 
+            },
+            134: { 
+                "kana": "かみ", 
+                "english": "hair", 
+                "category": "body", 
+                "exampleSentence": [
+                    "かみをきるのがすきです。",
+                    "かれはふかいかみをきっています。"
+                ] 
+            },
+            135: { 
+                "kana": "だんせい", 
+                "english": "man", 
+                "category": "people", 
+                "exampleSentence": [
+                    "だんせいはけっこんをけっていしました。",
+                    "そのだんせいはすごくたかいです。"
+                ] 
+            },
+            136: { 
+                "kana": "じょせい", 
+                "english": "woman", 
+                "category": "people", 
+                "exampleSentence": [
+                    "じょせいはかいしゃでいきいきしています。",
+                    "このじょせいはとてもゆうめいです。"
+                ] 
+            }
+        };
+
+        const totalQuestions = 10;
+        let currentQuestion = 0;
+        let score = 0;
+
+        function getRandomItemNumbers() {
+            const numbers = Object.keys(itemsData).map(Number);
+            const randomItemNumbers = [];
+            while (randomItemNumbers.length < totalQuestions) {
+                const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
+                if (!randomItemNumbers.includes(randomNumber)) {
+                    randomItemNumbers.push(randomNumber);
+                }
+            }
+            return randomItemNumbers;
+        }
+
+        function checkAnswer(selectedIndex) {
+            // Disable all options after selection
+            for (let i = 0; i < optionsEl.length; i++) {
+                optionsEl[i].style.pointerEvents = 'none'; // Disable further clicks
+            }
+
+            let selectedOption = optionsEl[selectedIndex];
+            let selectedAnswer = selectedOption.textContent;
+
+            if (selectedAnswer === currentItem.kana) {
+                // Correct answer
+                selectedOption.classList.add('correct');
+                score++;
+            } else {
+                // Wrong answer
+                selectedOption.classList.add('wrong');
+
+                // Find and highlight the correct option
+                for (let i = 0; i < optionsEl.length; i++) {
+                    if (optionsEl[i].textContent === currentItem.kana) {
+                        optionsEl[i].classList.add('correct');
+                        break;
+                    }
+                }
+            }
+
+            // Enable the Next button
+            nextBtn.disabled = false;
+        }
+
+        function getRandomOptions(currentItemNumber) {
+            const numbers = Object.keys(itemsData).map(Number);
+            const options = new Set();
+
+            // Add the current question number to options
+            options.add(currentItemNumber);
+
+            // Generate random options
+            while (options.size < 4) {
+                const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
+                options.add(randomNum);
+            }
+
+            // Convert Set to Array and shuffle it
+            return Array.from(options).sort(() => Math.random() - 0.5);
+        }
+
+        function nextQuestion() {
+            if (currentQuestion === totalQuestions) {
+                endGame();
+                return;
+            }
+
+            // Display question number
+            document.getElementById('question-number').textContent = `${currentQuestion + 1}/${totalQuestions}`;
+
+            // Load current question and options
+            const currentItemNumber = selectedItemNumbers[currentQuestion];
+            currentItem = itemsData[currentItemNumber];
+
+            // Update question image and caption
+            questionImgEl.innerHTML = `<img src="assets/image/N5_words/${currentItem.imgkey ? currentItem.imgkey : currentItem.kana}.jpg" alt="Image">`;
+            questionCaptionEl.textContent = currentItem.english;
+
+            // Get random options
+            const options = getRandomOptions(currentItemNumber);
+
+            // Update options in the DOM
+            options.forEach((option, index) => {
+                optionsEl[index].textContent = itemsData[option].kana;
+                optionsEl[index].classList.remove('correct', 'wrong'); // Reset styles
+                optionsEl[index].style.pointerEvents = 'auto'; // Enable click
+            });
+
+            // Disabled the Next button
+            nextBtn.disabled = true;
+
+            currentQuestion++;
+        }
+
+        function endGame() {
+            // hide question container
+            document.getElementById('question-container').style.display = 'none';
+
+            // Display the score
+            const scoreEl = document.getElementById('score');
+            scoreEl.textContent = `Your score: ${score}/${totalQuestions}`;
+            document.getElementById('result-container').style.display = 'flex';
+        }
+
+        function replayGame() {
+            // Reset game state
+            currentQuestion = 0;
+            score = 0;
+            selectedItemNumbers = getRandomItemNumbers();
+
+            // hide result container
+            document.getElementById('result-container').style.display = 'none';
+
+            // show question container
+            document.getElementById('question-container').style.display = 'flex';
+
+            // Start the game
+            nextQuestion();
+        }
+
+        // Initialize the game
+        let selectedItemNumbers = getRandomItemNumbers();
+        const questionImgEl = document.getElementById('question-img');
+        const questionCaptionEl = document.getElementById('question-caption');
+        const optionsEl = document.querySelectorAll('.option');
+        const nextBtn = document.getElementById('next-button');
+        let currentItem = {};
+
+        // Start the game
+        replayGame();
+    </script>
+</body>
+</html>
