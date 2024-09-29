@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LifeArk Japanese education: Katakana Words for begineers</title>
+    <title>LifeArk Japanese education: Katakana Words for beginners</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,10 +20,54 @@
             max-height: 1024px;
             max-width: 576px;
         }
-        #question-container {
+        .play-button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #9966ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        hr {
+            border: 1px solid grey;
+            width: 100%;
+        }
+        #words_list-container {
             height: calc(100vh - 120px);
             padding: 60px 20px;
             display: flex; 
+            flex: 1;
+            flex-direction: column;
+            gap: 20px;
+        }
+        #words_list-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #words_list-container td {
+            padding: 10px;
+            vertical-align: bottom;
+        }
+        #words_list-container .image-cell {
+            width: 100px;
+            overflow: hidden;
+        }
+        #words_list-container .image-cell img {
+            width: 100%;
+            max-height: 100px;
+            object-fit: contain;
+        }
+        #words_list-container .word-kana {
+            font-size: 1.5em;
+        }
+        #words_list-container .word-bangla {
+            font-size: 1.2em;
+        }
+        #question-container {
+            height: calc(100vh - 120px);
+            padding: 60px 20px;
+            display: none; 
             flex: 1;
             flex-direction: column;
             justify-content: space-between;
@@ -40,14 +84,20 @@
             font-size: 1.5em;
             margin-bottom: 20px;
         }
-        #question {
-            height: 200px; /* Fixed height */
+        #question-img {
+            height: 150px; /* Fixed height */
             overflow: hidden;
             text-align: center;
         }
-        #question img {
+        #question-img img {
             height: 100%;
             object-fit: cover;
+        }
+        #question-caption {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+            color: #33cc33;
         }
         .option {
             margin: 10px 0;
@@ -84,21 +134,20 @@
             text-align: center;
             margin-bottom: 60px;
         }
-        #replay-button {
-            padding: 10px 20px;
-            font-size: 1.5em;
-            background-color: lightgray;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
     <div id="game-container">
+        <div id="words_list-container">
+            <h1 style="text-align: center;">Katakana words<br>for beginners</h1>
+            <button class="play-button" onclick="replayGame()">Play Game</button>
+        </div>
         <div id="question-container">
             <div id="question-number"></div>
-            <div id="question"></div>
+            <div>
+                <div id="question-img"></div>
+                <div id="question-caption"></div>
+            </div>
             <div id="options">
                 <div class="option" onclick="checkAnswer(0)"></div>
                 <div class="option" onclick="checkAnswer(1)"></div>
@@ -109,103 +158,82 @@
         </div>
         <div id="result-container">
             <div id="score"></div>
-            <button id="replay-button" onclick="replayGame()">Replay</button>
+            <button class="play-button" onclick="replayGame()">Replay</button><br/>
+            <button class="play-button" onclick="displayWordsList()">Words List</button>
         </div>
     </div>
 
     <script>
         const itemsData = {
-            0: {
-                "katakana": "シャツ"
-            },
-            1: {
-                "katakana": "ズボン"
-            },
-            2: {
-                "katakana": "パンダ"
-            },
-            3: {
-                "katakana": "ブラウス"
-            },
-            4: {
-                "katakana": "ライオン"
-            },
-            5: {
-                "katakana": "キャベツ"
-            },
-            7: {
-                "katakana": "スカート"
-            },
-            8: {
-                "katakana": "ホッチキス"
-            },
-            9: {
-                "katakana": "はんズボン"
-            },
-            10: {
-                "katakana": "レモン"
-            },
-            11: {
-                "katakana": "ホットケーキ"
-            },
-            12: {
-                "katakana": "チョコレート"
-            },
-            13: {
-                "katakana": "オレンジ"
-            },
-            14: {
-                "katakana": "アイスクリーム"
-            },
-            15: {
-                "katakana": "ワンピース"
-            },
-            16: {
-                "katakana": "トマト"
-            },
-            17: {
-                "katakana": "テレビ"
-            },
-            18: {
-                "katakana": "パイナップル"
-            },
-            19: {
-                "katakana": "プリン"
-            },
-            20: {
-                "katakana": "セーター"
-            },
-            21: {
-                "katakana": "バナナ"
-            },
-            22: {
-                "katakana": "あなあけパンチ"
-            },
-            23: {
-                "katakana": "レタス"
-            },
-            24: {
-                "katakana": "サイ"
-            },
-            25: {
-                "katakana": "リュックサック"
-            },
-            26: {
-                "katakana": "キャンデー"
-            },
-            27: {
-                "katakana": "セロテープ"
-            },
-            28: {
-                "katakana": "サンドイッチ"
-            },
-            29: {
-                "katakana": "クッキー"
-            },
-            30: {
-                "katakana": "ユニフォーム"
-            }
+            0: { "katakana": "シャツ", "english": "shirt" },
+            1: { "katakana": "ズボン", "english": "pants" },
+            2: { "katakana": "パンダ", "english": "panda" },
+            3: { "katakana": "ブラウス", "english": "blouse" },
+            4: { "katakana": "ライオン", "english": "lion" },
+            5: { "katakana": "キャベツ", "english": "cabbage" },
+            7: { "katakana": "スカート", "english": "skirt" },
+            8: { "katakana": "ホッチキス", "english": "stapler" },
+            9: { "katakana": "はんズボン", "english": "shorts" },
+            10: { "katakana": "レモン", "english": "lemon" },
+            11: { "katakana": "ホットケーキ", "english": "pancake" },
+            12: { "katakana": "チョコレート", "english": "chocolate" },
+            13: { "katakana": "オレンジ", "english": "orange" },
+            14: { "katakana": "アイスクリーム", "english": "ice cream" },
+            15: { "katakana": "ワンピース", "english": "dress" },
+            16: { "katakana": "トマト", "english": "tomato" },
+            17: { "katakana": "テレビ", "english": "television" },
+            18: { "katakana": "パイナップル", "english": "pineapple" },
+            19: { "katakana": "プリン", "english": "pudding" },
+            20: { "katakana": "セーター", "english": "sweater" },
+            21: { "katakana": "バナナ", "english": "banana" },
+            22: { "katakana": "あなあけパンチ", "english": "hole punch machine" },
+            23: { "katakana": "レタス", "english": "lettuce" },
+            24: { "katakana": "サイ", "english": "rhinoceros" },
+            25: { "katakana": "リュックサック", "english": "backpack" },
+            26: { "katakana": "キャンデー", "english": "candy" },
+            27: { "katakana": "セロテープ", "english": "tape" },
+            28: { "katakana": "サンドイッチ", "english": "sandwich" },
+            29: { "katakana": "クッキー", "english": "cookie" },
+            30: { "katakana": "ユニフォーム", "english": "uniform" }
         };
+
+        function createWordsList() {
+            const container = document.getElementById('words_list-container');
+
+            Object.keys(itemsData).forEach(key => {
+                const item = itemsData[key];
+                const table = document.createElement('table');
+
+                // Create top row with image and text
+                const topRow = document.createElement('tr');
+                const imageCell = document.createElement('td');
+                imageCell.className = 'image-cell';
+                imageCell.innerHTML = `<img src="assets/image/Katakana_words/${item.imgkey ? item.imgkey : item.katakana}.png" alt="${item.katakana}">`;
+                const textCell = document.createElement('td');
+                textCell.innerHTML = `<span class="word-kana">${item.katakana}</span><br/><span class="word-bangla">${item.english}</span>`;
+
+                topRow.appendChild(imageCell);
+                topRow.appendChild(textCell);
+                table.appendChild(topRow);
+
+                container.appendChild(table);
+
+                const hr = document.createElement('hr');
+                container.appendChild(hr);
+            });
+
+        }
+
+        function displayWordsList() {
+            // hide question container
+            document.getElementById('question-container').style.display = 'none';
+
+            // hide result container
+            document.getElementById('result-container').style.display = 'none';
+
+            // hide words list container
+            document.getElementById('words_list-container').style.display = 'flex';
+        }
 
         const totalQuestions = 10;
         let currentQuestion = 0;
@@ -284,7 +312,8 @@
             currentItem = itemsData[currentItemNumber];
 
             // Update question text
-            questionEl.innerHTML = `<img src="assets/image/Katakana_words/${currentItem.katakana}.png" alt="${currentItem.katakana}">`;
+            questionImgEl.innerHTML = `<img src="assets/image/Katakana_words/${currentItem.katakana}.png" alt="${currentItem.katakana}">`;
+            questionCaptionEl.textContent = currentItem.bangla;
 
             // Get random options
             const options = getRandomOptions(currentItemNumber);
@@ -318,6 +347,9 @@
             score = 0;
             selectedItemNumbers = getRandomItemNumbers();
 
+            // hide words list container
+            document.getElementById('words_list-container').style.display = 'none';
+
             // hide result container
             document.getElementById('result-container').style.display = 'none';
 
@@ -330,13 +362,17 @@
 
         // Initialize the game
         let selectedItemNumbers = getRandomItemNumbers();
-        const questionEl = document.getElementById('question');
+        const questionImgEl = document.getElementById('question-img');
+        const questionCaptionEl = document.getElementById('question-caption');
         const optionsEl = document.querySelectorAll('.option');
         const nextBtn = document.getElementById('next-button');
         let currentItem = {};
 
+        // display words list
+        createWordsList();
+
         // Start the game
-        replayGame();
+        //replayGame();
     </script>
 </body>
 </html>
