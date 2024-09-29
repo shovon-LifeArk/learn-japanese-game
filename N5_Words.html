@@ -29,6 +29,10 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        hr {
+            border: 1px solid grey;
+            width: 100%;
+        }
         #words_list-container {
             height: calc(100vh - 120px);
             padding: 60px 20px;
@@ -62,7 +66,7 @@
         #words_list-container .word-kana {
             font-size: 1.5em;
         }
-        #words_list-container .word-english {
+        #words_list-container .word-bangla {
             font-size: 1.2em;
         }
         #question-container {
@@ -141,7 +145,7 @@
     <div id="game-container">
         <div id="words_list-container">
             <h1 style="text-align: center;">N5 words</h1>
-            <button class="play-button" onclick="replayGame()()">Play Game</button>
+            <button class="play-button" onclick="replayGame()">Play Game</button>
         </div>
         <div id="question-container">
             <div id="question-number"></div>
@@ -170,6 +174,7 @@
             0: {
                 "kana": "どうぶつ",
                 "english": "animal",
+                "bangla": "প্রাণী",
                 "category": "animal",
                 "exampleSentence": [
                     "この どうぶつ は とても かわいい です。",
@@ -179,6 +184,7 @@
             1: {
                 "kana": "いぬ",
                 "english": "dog",
+                "bangla": "কুকুর",
                 "category": "animal",
                 "exampleSentence": [
                     "わたし の いぬ は とても おりこう です。",
@@ -188,6 +194,7 @@
             2: {
                 "kana": "ねこ",
                 "english": "cat",
+                "bangla": "বিড়াল",
                 "category": "animal",
                 "exampleSentence": [
                     "ねこ は ねる こと が すき です。",
@@ -197,6 +204,7 @@
             3: {
                 "kana": "ぶた",
                 "english": "pig",
+                "bangla": "শূকর",
                 "category": "animal",
                 "exampleSentence": [
                     "ぶた は どろ の なか で あそぶ の が すき です。",
@@ -206,6 +214,7 @@
             4: {
                 "kana": "うし",
                 "english": "cow",
+                "bangla": "গরু",
                 "category": "animal",
                 "exampleSentence": [
                     "うし は くさ を たべて います。",
@@ -215,6 +224,7 @@
             5: {
                 "kana": "にわとり",
                 "english": "chicken",
+                "bangla": "মুরগি",
                 "category": "animal",
                 "exampleSentence": [
                     "にわとり は たまご を うみます。",
@@ -225,6 +235,7 @@
                 "kana": "とり",
                 "english": "bird",
                 "category": "animal",
+                "bangla": "পাখি",
                 "exampleSentence": [
                     "そら を とんで いる とり を みました。",
                     "とり の さえずり が きこえます。"
@@ -233,6 +244,7 @@
             7: {
                 "kana": "ぎんこういん",
                 "english": "bank employee",
+                "bangla": "ব্যাংক কর্মকর্তা",
                 "category": "occupation",
                 "exampleSentence": [
                     "ぎんこういん は おかね の かんり を します。",
@@ -242,6 +254,7 @@
             8: {
                 "kana": "かいしゃいん",
                 "english": "company employee",
+                "bangla": "কর্মচারী",
                 "category": "occupation",
                 "exampleSentence": [
                     "かいしゃいん は まいにち はたらきます。",
@@ -251,6 +264,7 @@
             9: {
                 "kana": "いしゃ",
                 "english": "doctor",
+                "bangla": "ডাক্তার",
                 "category": "occupation",
                 "exampleSentence": [
                     "いしゃ は びょうき を なおす ため に はたらきます。",
@@ -260,6 +274,7 @@
             10: {
                 "kana": "せんせい",
                 "english": "teacher",
+                "bangla": "শিক্ষক",
                 "category": "occupation",
                 "exampleSentence": [
                     "せんせい は せいと に おしえます。",
@@ -269,6 +284,7 @@
             11: {
                 "kana": "エンジニア",
                 "english": "engineer",
+                "bangla": "এঞ্জিনিয়ার",
                 "category": "occupation",
                 "exampleSentence": [
                     "かれ は すごい エンジニア です。",
@@ -278,6 +294,7 @@
             12: {
                 "kana": "てんいん",
                 "english": "clerk",
+                "bangla": "দোকানের কর্মচারী",
                 "category": "occupation",
                 "exampleSentence": [
                     "てんいん は おきゃくさん に サービス を します。",
@@ -287,6 +304,7 @@
             13: {
                 "kana": "かしゅ",
                 "english": "singer",
+                "bangla": "গায়ক",
                 "category": "occupation",
                 "exampleSentence": [
                     "かしゅ は うた を うたって います。",
@@ -296,6 +314,7 @@
             14: {
                 "kana": "けいさつかん",
                 "english": "policeman",
+                "bangla": "পুলিশ কর্মকর্তা",
                 "category": "occupation",
                 "exampleSentence": [
                     "けいさつかん は まち を まもります。",
@@ -305,6 +324,7 @@
             15: {
                 "kana": "がくせい",
                 "english": "student",
+                "bangla": "শিক্ষার্থী",
                 "category": "occupation",
                 "exampleSentence": [
                     "がくせい は がっこう に いきます。",
@@ -314,6 +334,7 @@
             16: {
                 "kana": "しゅふ",
                 "english": "housewife",
+                "bangla": "গৃহিণী",
                 "category": "occupation",
                 "exampleSentence": [
                     "しゅふ は いえ の しごと を します。",
@@ -323,6 +344,7 @@
             17: {
                 "kana": "くに",
                 "english": "country",
+                "bangla": "দেশ",
                 "category": "country",
                 "exampleSentence": [
                     "わたし の くに は とても きれい です。",
@@ -332,6 +354,7 @@
             18: {
                 "kana": "にほん",
                 "english": "Japan",
+                "bangla": "জাপান",
                 "category": "country",
                 "exampleSentence": [
                     "にほん は さくら が ゆうめい です。",
@@ -341,6 +364,7 @@
             19: {
                 "kana": "かんこく",
                 "english": "Korea",
+                "bangla": "দক্ষিণ কোরিয়া",
                 "category": "country",
                 "exampleSentence": [
                     "かんこく は K-POP で しられて います。",
@@ -350,6 +374,7 @@
             20: {
                 "kana": "ちゅうごく",
                 "english": "China",
+                "bangla": "চীন",
                 "category": "country",
                 "exampleSentence": [
                     "ちゅうごく は とても おおきい くに です。",
@@ -359,6 +384,7 @@
             21: {
                 "kana": "フィリピン",
                 "english": "Philippines",
+                "bangla": "ফিলিপাইন",
                 "category": "country",
                 "exampleSentence": [
                     "フィリピン は うみ が きれい です。",
@@ -368,6 +394,7 @@
             22: {
                 "kana": "アメリカ",
                 "english": "America",
+                "bangla": "আমেরিকা",
                 "category": "country",
                 "exampleSentence": [
                     "アメリカ は たくさん の かいしゃ が あります。",
@@ -377,6 +404,7 @@
             23: {
                 "kana": "ドイツ",
                 "english": "Germany",
+                "bangla": "জার্মানি",
                 "category": "country",
                 "exampleSentence": [
                     "ドイツ は ビール で しられて います。",
@@ -386,6 +414,7 @@
             24: {
                 "kana": "イギリス",
                 "english": "The United Kingdom",
+                "bangla": "ইংল্যান্ড",
                 "category": "country",
                 "exampleSentence": [
                     "イギリス に は たくさん の れきし が あります。",
@@ -395,6 +424,7 @@
             25: {
                 "kana": "にほんご",
                 "english": "Japanese language",
+                "bangla": "জাপানি ভাষা",
                 "category": "country",
                 "exampleSentence": [
                     "にほんご は むずかしい です。",
@@ -404,6 +434,7 @@
             26: {
                 "kana": "かんこくご",
                 "english": "Korean language",
+                "bangla": "কোরিয়ান ভাষা",
                 "category": "country",
                 "exampleSentence": [
                     "かんこくご を べんきょう する の が すき です。",
@@ -413,6 +444,7 @@
             27: {
                 "kana": "ちゅうごくご",
                 "english": "Chinese language",
+                "bangla": "চীনা ভাষা",
                 "category": "country",
                 "exampleSentence": [
                     "ちゅうごくご を はなせます か？",
@@ -422,6 +454,7 @@
             28: {
                 "kana": "えいご",
                 "english": "English",
+                "bangla": "ইংরেজি ভাষা",
                 "category": "country",
                 "exampleSentence": [
                     "えいご は せかい で よく はなされて います。",
@@ -431,6 +464,7 @@
             29: {
                 "kana": "ぎんこう",
                 "english": "bank",
+                "bangla": "ব্যাংক",
                 "category": "place",
                 "exampleSentence": [
                     "ぎんこう で おかね を おろします。",
@@ -440,6 +474,7 @@
             30: {
                 "kana": "ゆうびんきょく",
                 "english": "post office",
+                "bangla": "ডাকঘর",
                 "category": "place",
                 "exampleSentence": [
                     "ゆうびんきょく で てがみ を だします。",
@@ -449,6 +484,7 @@
             31: {
                 "kana": "くすりや",
                 "english": "drug store",
+                "bangla": "ফার্মেসি",
                 "category": "place",
                 "exampleSentence": [
                     "くすりや で くすり を かいました。",
@@ -458,6 +494,7 @@
             32: {
                 "kana": "びょういん",
                 "english": "hospital",
+                "bangla": "হাসপাতাল",
                 "category": "place",
                 "exampleSentence": [
                     "びょういん は ここ から ちかい です。",
@@ -467,6 +504,7 @@
             33: {
                 "kana": "かいしゃ",
                 "english": "company",
+                "bangla": "কোম্পানি",
                 "category": "place",
                 "exampleSentence": [
                     "わたし は かいしゃ で はたらいて います。",
@@ -476,6 +514,7 @@
             34: {
                 "kana": "スーパー",
                 "english": "supermarket",
+                "bangla": "সুপারমার্কেট",
                 "category": "place",
                 "exampleSentence": [
                     "スーパー で たべもの を かいます。",
@@ -485,6 +524,7 @@
             35: {
                 "kana": "きっさてん",
                 "english": "café",
+                "bangla": "ক্যাফে",
                 "category": "place",
                 "exampleSentence": [
                     "きっさてん で おちゃ を のみました。",
@@ -494,6 +534,7 @@
             36: {
                 "kana": "レストラン",
                 "english": "restaurant",
+                "bangla": "রেস্টুরেন্ট",
                 "category": "place",
                 "exampleSentence": [
                     "レストラン で ばんごはん を たべました。",
@@ -503,6 +544,7 @@
             37: {
                 "kana": "デパート",
                 "english": "department store",
+                "bangla": "ডিপার্টমেন্ট স্টোর",
                 "category": "place",
                 "exampleSentence": [
                     "デパート で かいもの を しました。",
@@ -512,6 +554,7 @@
             38: {
                 "kana": "えいがかん",
                 "english": "cinema",
+                "bangla": "সিনেমা হল",
                 "category": "place",
                 "exampleSentence": [
                     "えいがかん で えいが を みました。",
@@ -521,6 +564,7 @@
             39: {
                 "kana": "ほんや",
                 "english": "book store",
+                "bangla": "বইয়ের দোকান",
                 "category": "place",
                 "exampleSentence": [
                     "ほんや で ほん を かいました。",
@@ -530,6 +574,7 @@
             40: {
                 "kana": "はなや",
                 "english": "flower shop",
+                "bangla": "ফুলের দোকান",
                 "category": "place",
                 "exampleSentence": [
                     "はなや で はな を かいました。",
@@ -539,6 +584,7 @@
             41: {
                 "kana": "ケーキや",
                 "english": "cake shop",
+                "bangla": "কেকের দোকান",
                 "category": "place",
                 "exampleSentence": [
                     "ケーキや で ケーキ を かいました。",
@@ -548,6 +594,7 @@
             42: {
                 "kana": "ラーメンや",
                 "english": "ramen shop",
+                "bangla": "রামেন এর দোকান",
                 "category": "place",
                 "exampleSentence": [
                     "ラーメンや で ラーメン を たべました。",
@@ -557,6 +604,7 @@
             43: {
                 "kana": "カレーや",
                 "english": "curry shop",
+                "bangla": "কারি রেস্তোরাঁ",
                 "category": "place",
                 "exampleSentence": [
                     "カレーや で カレー を たべました。",
@@ -566,6 +614,7 @@
             44: {
                 "kana": "コンビニ",
                 "english": "convenience store",
+                "bangla": "কনভেনিয়েন্স স্টোর",
                 "category": "place",
                 "exampleSentence": [
                     "コンビニ で たべもの を かいました。",
@@ -575,6 +624,7 @@
             45: {
                 "kana": "うち",
                 "english": "home",
+                "bangla": "বাড়ি",
                 "category": "place",
                 "exampleSentence": [
                     "わたし の うち は あたたかい です。",
@@ -584,6 +634,7 @@
             46: {
                 "kana": "がっこう",
                 "english": "school",
+                "bangla": "স্কুল",
                 "category": "place",
                 "exampleSentence": [
                     "がっこう は まいにち いきます。",
@@ -593,6 +644,7 @@
             47: {
                 "kana": "だいがく",
                 "english": "university",
+                "bangla": "বিশ্ববিদ্যালয়",
                 "category": "place",
                 "exampleSentence": [
                     "だいがく で べんきょう して います。",
@@ -602,6 +654,7 @@
             48: {
                 "kana": "アパート",
                 "english": "apartment",
+                "bangla": "এপার্টমেন্ট",
                 "category": "place",
                 "exampleSentence": [
                     "わたし の アパート は ここ です。",
@@ -611,6 +664,7 @@
             49: {
                 "kana": "トイレ",
                 "english": "toilet",
+                "bangla": "টয়লেট",
                 "category": "place",
                 "exampleSentence": [
                     "トイレ は あちら です。",
@@ -620,6 +674,7 @@
             50: {
                 "kana": "はくぶつかん",
                 "english": "museum",
+                "bangla": "জাদুঘর",
                 "category": "place",
                 "exampleSentence": [
                     "はくぶつかん に は たくさん の ひがい が あります。",
@@ -629,6 +684,7 @@
             51: {
                 "kana": "こうえん",
                 "english": "park",
+                "bangla": "উদ্যান",
                 "category": "place",
                 "exampleSentence": [
                     "こうえん で あそびました。",
@@ -638,6 +694,7 @@
             52: {
                 "kana": "たいしかん",
                 "english": "embassy",
+                "bangla": "দূতাবাস",
                 "category": "place",
                 "exampleSentence": [
                     "たいしかん は ここ に あります。",
@@ -647,6 +704,7 @@
             53: {
                 "kana": "まち",
                 "english": "town",
+                "bangla": "শহর",
                 "category": "place",
                 "exampleSentence": [
                     "まち を さんぽ しました。",
@@ -656,6 +714,7 @@
             54: {
                 "kana": "きたぐち",
                 "english": "north exit",
+                "bangla": "উত্তর প্রবেশদ্বার",
                 "category": "place",
                 "exampleSentence": [
                     "きたぐち に いきます。",
@@ -665,6 +724,7 @@
             55: {
                 "kana": "みなみぐち",
                 "english": "south exit",
+                "bangla": "দক্ষিণ প্রবেশদ্বার",
                 "category": "place",
                 "exampleSentence": [
                     "みなみぐち から でました。",
@@ -674,6 +734,7 @@
             56: {
                 "kana": "ひがしぐち",
                 "english": "east exit",
+                "bangla": "পূর্ব প্রবেশদ্বার",
                 "category": "place",
                 "exampleSentence": [
                     "ひがしぐち に むかいます。",
@@ -683,6 +744,7 @@
             57: {
                 "kana": "にしぐち",
                 "english": "west exit",
+                "bangla": "পশ্চিম প্রবেশদ্বার",
                 "category": "place",
                 "exampleSentence": [
                     "にしぐち に いきましょう。",
@@ -692,6 +754,7 @@
             58: {
                 "kana": "きせつ",
                 "english": "season",
+                "bangla": "ঋতু",
                 "category": "season",
                 "exampleSentence": [
                     "きせつ が かわります。",
@@ -701,6 +764,7 @@
             59: {
                 "kana": "はる",
                 "english": "spring",
+                "bangla": "বসন্ত",
                 "category": "season",
                 "exampleSentence": [
                     "はる に さくら が さきます。",
@@ -711,6 +775,7 @@
                 "kana": "なつ",
                 "english": "summer",
                 "category": "season",
+                "bangla": "গ্রীষ্ম",
                 "exampleSentence": [
                     "なつ は あつい です。",
                     "なつやすみ が たのしみ です。"
@@ -719,6 +784,7 @@
             61: {
                 "kana": "あき",
                 "english": "autumn",
+                "bangla": "শরৎ",
                 "category": "season",
                 "exampleSentence": [
                     "あき に かぜ が ふきます。",
@@ -728,6 +794,7 @@
             62: {
                 "kana": "ふゆ",
                 "english": "winter",
+                "bangla": "শীত",
                 "category": "season",
                 "exampleSentence": [
                     "ふゆ に ゆき が ふります。",
@@ -737,6 +804,7 @@
             63: {
                 "kana": "かぞく",
                 "english": "family",
+                "bangla": "পরিবার",
                 "category": "people",
                 "exampleSentence": [
                     "かぞく と いっしょ に すごします。",
@@ -746,6 +814,7 @@
             64: {
                 "kana": "ともだち",
                 "english": "friend",
+                "bangla": "বন্ধু",
                 "category": "people",
                 "exampleSentence": [
                     "ともだち と あそびました。",
@@ -755,6 +824,7 @@
             65: {
                 "kana": "ちち",
                 "english": "(my) father",
+                "bangla": "(নিজের) বাবা",
                 "category": "people",
                 "exampleSentence": [
                     "ちち は がんばって います。",
@@ -764,6 +834,7 @@
             66: {
                 "kana": "おとうさん",
                 "english": "father",
+                "bangla": "বাবা",
                 "category": "people",
                 "exampleSentence": [
                     "おとうさん は やさしい です。",
@@ -773,6 +844,7 @@
             67: {
                 "kana": "はは",
                 "english": "(my) mother",
+                "bangla": "(নিজের) মা",
                 "category": "people",
                 "exampleSentence": [
                     "はは は すごい です。",
@@ -782,6 +854,7 @@
             68: {
                 "kana": "おかあさん",
                 "english": "mother",
+                "bangla": "মা",
                 "category": "people",
                 "exampleSentence": [
                     "おかあさん が はな を かいました。",
@@ -791,6 +864,7 @@
             69: {
                 "kana": "あに",
                 "english": "(my) older brother",
+                "bangla": "(নিজের) বড় ভাই",
                 "category": "people",
                 "exampleSentence": [
                     "あに は すごい ひと です。",
@@ -800,6 +874,7 @@
             70: {
                 "kana": "おにいさん",
                 "english": "older brother",
+                "bangla": "বড় ভাই",
                 "category": "people",
                 "exampleSentence": [
                     "おにいさん は たくさん の ともだち が います。",
@@ -808,7 +883,8 @@
             },
             71: { 
                 "kana": "あね", 
-                "english": "(my) older sister", 
+                "english": "(my) older sister",
+                "bangla": "(নিজের) বড় বোন",
                 "category": "people", 
                 "exampleSentence": [
                     "あね は だいがくせい です。",
@@ -818,6 +894,7 @@
             72: { 
                 "kana": "おねえさん", 
                 "english": "older sister", 
+                "bangla": "বড় বোন",
                 "category": "people", 
                 "exampleSentence": [
                     "おねえさん は やさしい です。",
@@ -827,6 +904,7 @@
             73: { 
                 "kana": "おとうと", 
                 "english": "younger brother", 
+                "bangla": "ছোট ভাই",
                 "category": "people", 
                 "exampleSentence": [
                     "おとうと は サッカー が すき です。",
@@ -836,6 +914,7 @@
             74: { 
                 "kana": "いもうと", 
                 "english": "younger sister", 
+                "bangla": "ছোট বোন",
                 "category": "people", 
                 "exampleSentence": [
                     "いもうと は がっこう に いって います。",
@@ -845,6 +924,7 @@
             75: { 
                 "kana": "きょうだい", 
                 "english": "sibling", 
+                "bangla": "ভাইবোন",
                 "category": "people", 
                 "exampleSentence": [
                     "わたし に は きょうだい が ふたり います。",
@@ -854,6 +934,7 @@
             76: { 
                 "kana": "むすこ", 
                 "english": "son", 
+                "bangla": "পুত্র",
                 "category": "people", 
                 "exampleSentence": [
                     "むすこ は サッカー を しています。",
@@ -863,6 +944,7 @@
             77: { 
                 "kana": "むすめ", 
                 "english": "daughter", 
+                "bangla": "কন্যা",
                 "category": "people", 
                 "exampleSentence": [
                     "むすめ は がっこう が だいすき です。",
@@ -872,6 +954,7 @@
             78: { 
                 "kana": "おとこ", 
                 "english": "man", 
+                "bangla": "পুরুষ",
                 "category": "people", 
                 "exampleSentence": [
                     "おとこ は  こうえん で はしって います。",
@@ -881,6 +964,7 @@
             79: { 
                 "kana": "おんな", 
                 "english": "woman", 
+                "bangla": "নারী",
                 "category": "people", 
                 "exampleSentence": [
                     "おんな が はな を もって います。",
@@ -890,6 +974,7 @@
             80: { 
                 "kana": "おっと", 
                 "english": "(my) husband", 
+                "bangla": "(নিজের) স্বামী",
                 "category": "people", 
                 "exampleSentence": [
                     "おっと は りょうり が じょうず です。",
@@ -899,6 +984,7 @@
             81: { 
                 "kana": "ごしゅじん", 
                 "english": "husband", 
+                "bangla": "স্বামী",
                 "category": "people", 
                 "exampleSentence": [
                     "ごしゅじん は しごと に いって います。",
@@ -908,6 +994,7 @@
             82: { 
                 "kana": "つま", 
                 "english": "(my) wife", 
+                "bangla": "(নিজের) স্ত্রী",
                 "category": "people", 
                 "exampleSentence": [
                     "つま と いっしょ に えいが を みました。",
@@ -917,6 +1004,7 @@
             83: { 
                 "kana": "おくさん", 
                 "english": "wife", 
+                "bangla": "স্ত্রী",
                 "category": "people", 
                 "exampleSentence": [
                     "おくさん は やさしい です。",
@@ -926,6 +1014,7 @@
             84: { 
                 "kana": "りょうしん", 
                 "english": "parents", 
+                "bangla": "পিতা-মাতা",
                 "category": "people", 
                 "exampleSentence": [
                     "りょうしん は りょこう に いきました。",
@@ -935,6 +1024,7 @@
             85: { 
                 "kana": "こども", 
                 "english": "child", 
+                "bangla": "শিশু",
                 "category": "people", 
                 "exampleSentence": [
                     "こども が あそんで います。",
@@ -944,6 +1034,7 @@
             86: { 
                 "kana": "そふ", 
                 "english": "(my) grandfather", 
+                "bangla": "(নিজের) দাদা / নানা",
                 "category": "people", 
                 "exampleSentence": [
                     "そふ は おはなし が すき です。",
@@ -953,6 +1044,7 @@
             87: { 
                 "kana": "おじいさん", 
                 "english": "grandfather", 
+                "bangla": "দাদা",
                 "category": "people", 
                 "exampleSentence": [
                     "おじいさん は にわ で はな を そだてて います。",
@@ -962,6 +1054,7 @@
             88: { 
                 "kana": "そぼ", 
                 "english": "(my) grandmother", 
+                "bangla": "(নিজের) দাদি / নানী",
                 "category": "people", 
                 "exampleSentence": [
                     "そぼ は おかし を つくる の が とくい です。",
@@ -971,6 +1064,7 @@
             89: { 
                 "kana": "おばあさん", 
                 "english": "grandmother", 
+                "bangla": "দাদি / নানী",
                 "category": "people", 
                 "exampleSentence": [
                     "おばあさん は 昔 の 話 を よく します。",
@@ -980,6 +1074,7 @@
             90: { 
                 "kana": "おじ", 
                 "english": "uncle", 
+                "bangla": "চাচা / মামা",
                 "category": "people", 
                 "exampleSentence": [
                     "おじ は まいとし りょこう に いきます。",
@@ -989,6 +1084,7 @@
             91: { 
                 "kana": "おば", 
                 "english": "aunt", 
+                "bangla": "খালা / ফুপু",
                 "category": "people", 
                 "exampleSentence": [
                     "おば は まいとし かぞく の あつまり に きます。",
@@ -997,7 +1093,8 @@
             },
             92: { 
                 "kana": "まご", 
-                "english": "grandchild", 
+                "english": "grandchild",
+                "bangla": "নাতি / নাতনি", 
                 "category": "people", 
                 "exampleSentence": [
                     "まご が あそび に きました。",
@@ -1007,6 +1104,7 @@
             93: { 
                 "kana": "ふく", 
                 "english": "clothes", 
+                "bangla": "কাপড়",
                 "category": "clothes", 
                 "exampleSentence": [
                     "ふく を せんたく しました。",
@@ -1016,6 +1114,7 @@
             94: { 
                 "kana": "きもの", 
                 "english": "kimono", 
+                "bangla": "কিমোনো",
                 "category": "clothes", 
                 "exampleSentence": [
                     "きもの を きる の は とくべつ な ひ です。",
@@ -1025,6 +1124,7 @@
             95: { 
                 "kana": "ぼうし", 
                 "english": "hat / cap", 
+                "bangla": "টুপি",
                 "category": "clothes", 
                 "exampleSentence": [
                     "ぼうし を かぶる と ひざし を ふせげます。",
@@ -1034,6 +1134,7 @@
             96: { 
                 "kana": "スーツ", 
                 "english": "suit", 
+                "bangla": "স্যুট",
                 "category": "clothes", 
                 "exampleSentence": [
                     "スーツ を きて かいぎ に いきました。",
@@ -1043,6 +1144,7 @@
             97: { 
                 "kana": "ジャケット", 
                 "english": "jacket", 
+                "bangla": "জ্যাকেট",
                 "category": "clothes", 
                 "exampleSentence": [
                     "ジャケット を きる と あたたかい です。",
@@ -1052,6 +1154,7 @@
             98: { 
                 "kana": "セーター", 
                 "english": "sweater", 
+                "bangla": "স্যুয়েটার",
                 "category": "clothes", 
                 "exampleSentence": [
                     "セーター を きる きせつ に なりました。",
@@ -1061,6 +1164,7 @@
             99: { 
                 "kana": "コート", 
                 "english": "coat", 
+                "bangla": "কোট",
                 "category": "clothes", 
                 "exampleSentence": [
                     "コート を きて そと に でます。",
@@ -1070,6 +1174,7 @@
             100: { 
                 "kana": "Tシャツ", 
                 "english": "T-shirt", 
+                "bangla": "টি-শার্ট",
                 "category": "clothes", 
                 "exampleSentence": [
                     "Tシャツ は なつ に ぴったり です。",
@@ -1079,6 +1184,7 @@
             101: { 
                 "kana": "ドレス", 
                 "english": "dress", 
+                "bangla": "ড্রেস",
                 "category": "clothes", 
                 "exampleSentence": [
                     "ドレス を きて パーティー に いきます。",
@@ -1088,6 +1194,7 @@
             102: { 
                 "kana": "したぎ", 
                 "english": "underwear", 
+                "bangla": "অন্তর্বাস",
                 "category": "clothes", 
                 "exampleSentence": [
                     "したぎ を えらぶ の は じゅうよう です。",
@@ -1097,6 +1204,7 @@
             103: { 
                 "kana": "イヤリング", 
                 "english": "earring", 
+                "bangla": "কানের দুল",
                 "category": "clothes", 
                 "exampleSentence": [
                     "イヤリング を つける と はなやか に なります。",
@@ -1106,6 +1214,7 @@
             104: { 
                 "kana": "ベルト", 
                 "english": "belt", 
+                "bangla": "বেল্ট",
                 "category": "clothes", 
                 "exampleSentence": [
                     "ベルト を しめる と、パンツ が おちません。",
@@ -1114,7 +1223,8 @@
             },
             105: { 
                 "kana": "ネクタイ", 
-                "english": "necktie", 
+                "english": "necktie",
+                "bangla": "নেকটাই", 
                 "category": "clothes", 
                 "exampleSentence": [
                     "ネクタイ を むすぶ の は むずかしい です。",
@@ -1124,6 +1234,7 @@
             106: { 
                 "kana": "てぶくろ", 
                 "english": "glove / mitten", 
+                "bangla": "গ্লাভস",
                 "category": "clothes", 
                 "exampleSentence": [
                     "てぶくろ を はめる と て が あたたかい です。",
@@ -1133,6 +1244,7 @@
             107: { 
                 "kana": "めがね", 
                 "english": "glasses", 
+                "bangla": "চশমা",
                 "category": "clothes", 
                 "exampleSentence": [
                     "めがね を かける と みえやすい です。",
@@ -1142,6 +1254,7 @@
             108: { 
                 "kana": "サングラス", 
                 "english": "sunglasses", 
+                "bangla": "সানগ্লাস",
                 "category": "clothes", 
                 "exampleSentence": [
                     "サングラス を かける と め が まもれます。",
@@ -1151,6 +1264,7 @@
             109: { 
                 "kana": "ズボン", 
                 "english": "pants", 
+                "bangla": "প্যান্ট",
                 "category": "clothes", 
                 "exampleSentence": [
                     "ズボン が ぴったり です。",
@@ -1160,6 +1274,7 @@
             110: { 
                 "kana": "スカート", 
                 "english": "skirt", 
+                "bangla": "স্কার্ট",
                 "category": "clothes", 
                 "exampleSentence": [
                     "スカート を きる と じょせいらしい です。",
@@ -1169,6 +1284,7 @@
             111: { 
                 "kana": "くつした", 
                 "english": "socks", 
+                "bangla": "মোজা",
                 "category": "clothes", 
                 "exampleSentence": [
                     "くつした を せんたく しました。",
@@ -1178,6 +1294,7 @@
             112: { 
                 "kana": "くつ", 
                 "english": "shoes", 
+                "bangla": "জুতো",
                 "category": "clothes", 
                 "exampleSentence": [
                     "くつ を はく の が すき です。",
@@ -1187,6 +1304,7 @@
             113: { 
                 "kana": "サンダル", 
                 "english": "sandals", 
+                "bangla": "স্যান্ডেল",
                 "category": "clothes", 
                 "exampleSentence": [
                     "サンダル を はく と あつい ひ に ぴったり です。",
@@ -1196,6 +1314,7 @@
             114: { 
                 "kana": "うみ", 
                 "english": "sea", 
+                "bangla": "সমুদ্র",
                 "category": "nature", 
                 "exampleSentence": [
                     "うみ で およぐ の が だいすき です。",
@@ -1205,6 +1324,7 @@
             115: { 
                 "kana": "かわ", 
                 "english": "river", 
+                "bangla": "নদী",
                 "category": "nature", 
                 "exampleSentence": [
                     "かわ の そば で あそびました。",
@@ -1214,6 +1334,7 @@
             116: { 
                 "kana": "やま", 
                 "english": "mountain", 
+                "bangla": "পাহাড়",
                 "category": "nature", 
                 "exampleSentence": [
                     "やま に のぼる の は たのしい です。",
@@ -1223,6 +1344,7 @@
             117: { 
                 "kana": "かぜ", 
                 "english": "wind", 
+                "bangla": "বাতাস",
                 "category": "nature", 
                 "exampleSentence": [
                     "かぜ が つよい ひ は あたらしい かざ を します。",
@@ -1232,6 +1354,7 @@
             118: { 
                 "kana": "き", 
                 "english": "tree", 
+                "bangla": "গাছ",
                 "category": "nature", 
                 "exampleSentence": [
                     "き の した で かくれんぼ を しました。",
@@ -1241,6 +1364,7 @@
             119: { 
                 "kana": "もり", 
                 "english": "forest", 
+                "bangla": "বন",
                 "category": "nature", 
                 "exampleSentence": [
                     "もり の なか を さんぽ しました。",
@@ -1250,6 +1374,7 @@
             120: { 
                 "kana": "そら", 
                 "english": "sky", 
+                "bangla": "আকাশ",
                 "category": "nature", 
                 "exampleSentence": [
                     "そら が あおい です。",
@@ -1259,6 +1384,7 @@
             121: { 
                 "kana": "くも", 
                 "english": "cloud", 
+                "bangla": "মেঘ",
                 "category": "nature", 
                 "exampleSentence": [
                     "くも が たくさん あります。",
@@ -1268,6 +1394,7 @@
             122: { 
                 "kana": "いけ", 
                 "english": "pond", 
+                "bangla": "পুকুর",
                 "category": "nature", 
                 "exampleSentence": [
                     "いけ に は かっぱ が います。",
@@ -1277,6 +1404,7 @@
             123: { 
                 "kana": "はな", 
                 "english": "flower", 
+                "bangla": "ফুল",
                 "category": "nature", 
                 "imgkey": "はな_", 
                 "exampleSentence": [
@@ -1287,6 +1415,7 @@
             124: { 
                 "kana": "くさ", 
                 "english": "grass", 
+                "bangla": "ঘাস",
                 "category": "nature", 
                 "exampleSentence": [
                     "くさ の うえ に すわります。",
@@ -1296,6 +1425,7 @@
             125: { 
                 "kana": "からだ", 
                 "english": "body", 
+                "bangla": "শরীর",
                 "category": "body", 
                 "exampleSentence": [
                     "からだ を うごかす の は たいせつ です。",
@@ -1305,6 +1435,7 @@
             126: { 
                 "kana": "あたま", 
                 "english": "head", 
+                "bangla": "মাথা",
                 "category": "body", 
                 "exampleSentence": [
                     "あたま が いたい とき は やすみます。",
@@ -1314,6 +1445,7 @@
             127: { 
                 "kana": "くび", 
                 "english": "neck", 
+                "bangla": "গলা",
                 "category": "body", 
                 "exampleSentence": [
                     "くび に ネックレス を して います。",
@@ -1323,6 +1455,7 @@
             128: { 
                 "kana": "うで", 
                 "english": "arm", 
+                "bangla": "বাহু",
                 "category": "body", 
                 "exampleSentence": [
                     "うで を のばして しんかんせん に のりました。",
@@ -1332,6 +1465,7 @@
             129: { 
                 "kana": "ゆび", 
                 "english": "finger", 
+                "bangla": "আঙুল",
                 "category": "body", 
                 "exampleSentence": [
                     "ゆび で あかり を つけました。",
@@ -1341,6 +1475,7 @@
             130: { 
                 "kana": "くち", 
                 "english": "mouth", 
+                "bangla": "মুখ",
                 "category": "body", 
                 "exampleSentence": [
                     "くち を あけて はなします。",
@@ -1350,6 +1485,7 @@
             131: { 
                 "kana": "みみ", 
                 "english": "ear", 
+                "bangla": "কান",
                 "category": "body", 
                 "exampleSentence": [
                     "みみ を ふさいで おんがく を ききました。",
@@ -1359,6 +1495,7 @@
             132: { 
                 "kana": "め", 
                 "english": "eye", 
+                "bangla": "চোখ",
                 "category": "body", 
                 "exampleSentence": [
                     "め が あかい の は ねむい から です。",
@@ -1368,6 +1505,7 @@
             133: { 
                 "kana": "はな", 
                 "english": "nose", 
+                "bangla": "নাক",
                 "category": "body", 
                 "exampleSentence": [
                     "かぜ を ひいた の で、はな が つまって います。",
@@ -1377,6 +1515,7 @@
             134: { 
                 "kana": "かみ", 
                 "english": "hair", 
+                "bangla": "চুল",
                 "category": "body", 
                 "exampleSentence": [
                     "わたし の かみ は ながい です。",
@@ -1386,6 +1525,7 @@
             135: { 
                 "kana": "だんせい", 
                 "english": "man", 
+                "bangla": "পুরুষ",
                 "category": "people", 
                 "exampleSentence": [
                     "だんせい は けっこん を けってい しました。",
@@ -1395,6 +1535,7 @@
             136: { 
                 "kana": "じょせい", 
                 "english": "woman", 
+                "bangla": "নারী",
                 "category": "people", 
                 "exampleSentence": [
                     "じょせい は かいしゃ で いきいき して います。",
@@ -1403,7 +1544,7 @@
             }
         };
 
-       function createWordsList() {
+        function createWordsList() {
             const categories = ["animal", "nature", "season", "country", "place", "body", "people", "clothes", "occupation"];
             const container = document.getElementById('words_list-container');
             
@@ -1426,7 +1567,7 @@
                     imageCell.className = 'image-cell';
                     imageCell.innerHTML = `<img src="assets/image/N5_words/${item.imgkey ? item.imgkey : item.kana}.jpg" alt="${item.kana}">`;
                     const textCell = document.createElement('td');
-                    textCell.innerHTML = `<span class="word-kana">${item.kana}</span><br/><span class="word-english">${item.english}</span>`;
+                    textCell.innerHTML = `<span class="word-kana">${item.kana}</span><br/><span class="word-bangla">${item.bangla}</span>`;
 
                     topRow.appendChild(imageCell);
                     topRow.appendChild(textCell);
@@ -1541,7 +1682,7 @@
 
             // Update question image and caption
             questionImgEl.innerHTML = `<img src="assets/image/N5_words/${currentItem.imgkey ? currentItem.imgkey : currentItem.kana}.jpg" alt="Image">`;
-            questionCaptionEl.textContent = currentItem.english;
+            questionCaptionEl.textContent = currentItem.bangla;
 
             // Get random options
             const options = getRandomOptions(currentItemNumber);
@@ -1599,8 +1740,6 @@
         // display words list
         createWordsList();
 
-        // Start the game
-        // replayGame();
     </script>
 </body>
 </html>

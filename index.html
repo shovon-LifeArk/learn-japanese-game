@@ -20,12 +20,36 @@
             max-height: 1024px;
             max-width: 576px;
         }
+        .play-button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #9966ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            text-decoration: none;
+        }
+        #game-link-container {
+            padding: 60px 20px;
+            display: flex; 
+            flex: 1;
+            flex-direction: column;
+            gap: 20px;
+        }
     </style>
 </head>
 <body>
     <div id="game-container">
-        <p>Hello Students!</p>
-        <p>Let's learn japanese playing games.</p>
+        <div id="game-link-container">
+            <h2>Let's learn japanese by playing games.</h2>
+            <a class="play-button" href="Hiragana_Words.html" target="_blank">Hiragana Words (Beginner)</a>
+            <a class="play-button" href="Katakana_Words.html" target="_blank">Katakana Words (Beginner)</a>
+            <a class="play-button" href="Hiragana_Katakana.html" target="_blank">Hiragana Katakana Matching</a>
+            <a class="play-button" href="Hiragana_Number.html" target="_blank">Counting Numbers</a>
+            <a class="play-button" href="N5_Words.html" target="_blank">N5 Words</a>
+        </div>
     </div>
 </body>
 </html>
