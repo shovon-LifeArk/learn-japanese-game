@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeArk Japanese education: N5 Kanji</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            max-height: 1024px;
+            max-width: 576px;
+        }
+        #game-container {
+            height: 100vh;
+        }
+        .play-button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #9966ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        hr {
+            border: 1px solid grey;
+            width: 100%;
+        }
+        #words_list-container,
+        #range_selection-container,
+        #question-container,
+        #result-container {
+            height: calc(100vh - 120px);
+            padding: 60px 20px;
+            display: none; 
+            flex: 1;
+            flex-direction: column;
+            gap: 20px;
+        }
+        #words_list-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #words_list-container td {
+            padding: 10px;
+            vertical-align: top;
+            position: relative;
+        }
+        #words_list-container .image-cell {
+            width: 100px;
+            font-size: 5.5em;
+            line-height: 100%;
+        }
+        #words_list-container .kanji-meaning {
+            font-size: 1.5em;
+        }
+        .sample-words {
+            table-layout: fixed;
+            margin-bottom: 20px;;
+        }
+        .sample-words th,
+        .sample-words td {
+            border: 1px solid black;
+        }
+        .kanji-num {
+            position: absolute;
+            top: 10px;
+            right: 0px;
+            height: 30px;
+            padding: 0px 10px;
+            border-radius: 15px;
+            background-color: #0066ff;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+        }
+        #range_selection-container input {
+            width: 80px;
+            padding: 10px;
+            font-size: 1.5em;;
+            text-align: center;
+        }
+        .alert {
+            font-size: 1em;
+            color: red;
+        }
+        #question-number {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        #question-img {
+            overflow: hidden;
+            text-align: center;
+            font-size: 4em;
+        }
+        #question-caption {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+            color: #33cc33;
+        }
+        #options {
+            text-align: center;
+        }
+        .option-line {
+            margin: 10px 0;
+            padding: 20px;
+            font-size: 1.5em;
+            text-align: center;
+            cursor: pointer;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+        .option-circle {
+            margin: 15px;
+            font-size: 1.5em;
+            text-align: center;
+            cursor: pointer;
+            border: 2px solid #ccc;
+            padding: 7px 0px;
+            width: 50px;
+            border-radius: 25px;
+            display: inline-block;
+        }
+        .correct {
+            background-color: green;
+            color: white;
+        }
+        .wrong {
+            background-color: red;
+            color: white;
+        }
+        #next-button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #9966ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: auto;
+        }
+        #next-button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+        #score {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="words_list-container">
+            <h1 style="text-align: center;">N5 Kanji</h1>
+            <button class="play-button" onclick="playWritingGame()">Play Writing Game</button>
+            <button class="play-button" onclick="playReadingGame()">Play Reading Game</button>
+        </div>
+        <div id="range_selection-container">
+            <h3 style="text-align: center;">Choose the question range</h3>
+            <div style="text-align: center;">
+                <input type="number" id="range-from" placeholder="from" min="1" max="90"> ~ <input type="number" id="range-to" placeholder="to" min="10" max="100">
+                <br><br>
+                <span class="alert" id="range-alert"></span>
+                <br>
+            </div>
+            <button class="play-button" onclick="startGame()">Start Game!</button>
+        </div>
+        <div id="question-container">
+            <div id="question-number"></div>
+            <div>
+                <div id="question-img"></div>
+                <div id="question-caption"></div>
+            </div>
+            <div id="options">
+                <div class="option" onclick="checkAnswer(0)"></div>
+                <div class="option" onclick="checkAnswer(1)"></div>
+                <div class="option" onclick="checkAnswer(2)"></div>
+                <div class="option" onclick="checkAnswer(3)"></div>
+            </div>
+            <button id="next-button" onclick="nextQuestion()" disabled>Next</button>
+        </div>
+        <div id="result-container">
+            <div id="score"></div>
+            <button class="play-button" onclick="replayGame()">Replay</button><br/>
+            <button class="play-button" onclick="showPage('words_list')">Words List</button>
+        </div>
+    </div>
+
+    <script>
+        let itemsData = {};
+        let gameData = {};
+        let gameType = "";
+
+        // game related data
+        const totalQuestions = 10;
+        let fromKanjiNum = null;
+        let toKanjiNum = null;
+        let gameItemNumbers = null;
+        let currentGameItem = {};
+        let currentQuestion = 0;
+        let score = 0;
+
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
+
+        function createKanjiList() {
+            const container = document.getElementById('words_list-container');
+
+            Object.keys(itemsData).forEach(key => {
+                const item = itemsData[key];
+                const table1 = document.createElement('table');
+
+                // Create top row with image and text
+                const topRow = document.createElement('tr');
+                const imageCell = document.createElement('td');
+                imageCell.className = 'image-cell';
+                imageCell.textContent = item.kanji;
+                const textCell = document.createElement('td');
+                textCell.innerHTML = `<span class="kanji-meaning">${item.meaning_bd}</span><br/>
+                                        音読み：${item.onyomi}<br/>
+                                        訓読み：${item.kunyomi}
+                                        <div class="kanji-num">${parseInt(key)+1}</div>`;
+
+                topRow.appendChild(imageCell);
+                topRow.appendChild(textCell);
+                table1.appendChild(topRow);
+
+                container.appendChild(table1);
+
+                const table2 = document.createElement('table');
+                table2.className = 'sample-words';
+                item.words.forEach(word => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td style="width: 80px;">${word[0]}</td><td>${word[1]}</td><td>${word[2]}</td>`;
+                    table2.appendChild(row);
+                });
+
+                container.appendChild(table2);
+            });
+        }
+
+        function prepareGameData() {
+            let idx = 0;
+            Object.keys(itemsData).forEach(key => {
+                if (parseInt(key) >= fromKanjiNum && parseInt(key) <= toKanjiNum) {
+                    const item = itemsData[key];
+                    item.words.forEach(word => {
+                        gameData[idx] = {
+                            "kanji_char": item.kanji,
+                            "kanji_word": word[0],
+                            "hiragana": word[1],
+                            "bangla": word[2]
+                        }
+                        idx++;
+                    });
+                }
+            });
+        }
+
+        function getRandomGameItemNumbers() {
+            let min = 0;
+            let max = Object.keys(gameData).length-1;
+
+            const randomItemNumbers = new Set();
+            while (randomItemNumbers.size < totalQuestions) {
+                let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+                randomItemNumbers.add(randomNumber);
+            }
+
+            return Array.from(randomItemNumbers);
+        }
+
+        function checkAnswer(selectedIndex) {
+            // Disable all options after selection
+            for (let i = 0; i < optionsEl.length; i++) {
+                optionsEl[i].style.pointerEvents = 'none'; // Disable further clicks
+            }
+
+            let selectedOption = optionsEl[selectedIndex];
+            let selectedAnswer = selectedOption.textContent;
+
+            let correctAnswer = "";
+            if (gameType === "writing") {
+                correctAnswer = currentGameItem.kanji_char;
+            } else {
+                correctAnswer = currentGameItem.hiragana;
+            }
+            if (selectedAnswer === correctAnswer) {
+                // Correct answer
+                selectedOption.classList.add('correct');
+                score++;
+            } else {
+                // Wrong answer
+                selectedOption.classList.add('wrong');
+
+                // Find and highlight the correct option
+                for (let i = 0; i < optionsEl.length; i++) {
+                    if (optionsEl[i].textContent === correctAnswer) {
+                        optionsEl[i].classList.add('correct');
+                        break;
+                    }
+                }
+            }
+
+            // Enable the Next button
+            nextBtn.disabled = false;
+        }
+
+        function getRandomOptions(currentItemNumber) {
+            const numbers = Object.keys(gameData).map(Number);
+            const options = new Set();
+
+            // Add the correct answer to options
+            if (gameType === "writing") {
+                options.add(gameData[currentItemNumber].kanji_char);
+            } else {
+                options.add(gameData[currentItemNumber].hiragana);
+            }
+
+            // Generate random options
+            while (options.size < 4) {
+                const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
+                if (gameType === "writing") {
+                    options.add(gameData[randomNum].kanji_char);
+                } else {
+                    options.add(gameData[randomNum].hiragana);
+                }
+            }
+
+            // Convert Set to Array and shuffle it
+            return Array.from(options).sort(() => Math.random() - 0.5);
+        }
+
+        function nextQuestion() {
+            if (currentQuestion === totalQuestions) {
+                endGame();
+                return;
+            }
+
+            // Display question number
+            document.getElementById('question-number').textContent = `${currentQuestion + 1}/${totalQuestions}`;
+
+            // Load current question and options
+            const currentItemNumber = gameItemNumbers[currentQuestion];
+            currentGameItem = gameData[currentItemNumber];
+
+            // Update question text
+            let qImage = "";
+            let qCaption = "";
+            if (gameType === "writing") {
+                qImage = currentGameItem.kanji_word.replace(currentGameItem.kanji_char, "◯");
+                qCaption = currentGameItem.hiragana;
+            } else {
+                qImage = currentGameItem.kanji_word;
+                qCaption = currentGameItem.bangla;
+            }
+            questionImgEl.textContent = qImage;
+            questionCaptionEl.textContent = qCaption;
+
+            // Get random options
+            const options = getRandomOptions(currentItemNumber);
+
+            // Update options in the DOM
+            options.forEach((optionText, index) => {
+                optionsEl[index].textContent = optionText;
+                optionsEl[index].classList.remove('correct', 'wrong'); // Reset styles
+                optionsEl[index].style.pointerEvents = 'auto'; // Enable click
+            });
+
+            // Disabled the Next button
+            nextBtn.disabled = true;
+
+            currentQuestion++;
+        }
+
+        function endGame() {
+            // Display the score
+            const scoreEl = document.getElementById('score');
+            scoreEl.textContent = `Your score: ${score}/${totalQuestions}`;
+
+            showPage('result');
+        }
+
+        function replayWritingGame() {
+            // Reset game state
+            currentQuestion = 0;
+            score = 0;
+            gameItemNumbers = getRandomGameItemNumbers();
+            console.log(gameItemNumbers);
+
+            // Change option design
+            optionsEl.forEach(optionItem => {
+                optionItem.classList.remove('option-line');
+                if (!optionItem.classList.contains('option-circle')) {
+                    optionItem.classList.add('option-circle');
+                }
+            });
+
+            showPage('question');
+
+            // Start the game
+            nextQuestion();
+        }
+
+        function replayReadingGame() {
+            // Reset game state
+            currentQuestion = 0;
+            score = 0;
+            gameItemNumbers = getRandomGameItemNumbers();
+
+            // Change option design
+            optionsEl.forEach(optionItem => {
+                optionItem.classList.remove('option-circle');
+                if (!optionItem.classList.contains('option-line')) {
+                    optionItem.classList.add('option-line');
+                }
+            });
+
+            showPage('question');
+
+            // Start the game
+            nextQuestion();
+        }
+
+        function replayGame() {
+            if (gameType === "writing") {
+                replayWritingGame();
+            } else {
+                replayReadingGame();
+            }
+        }
+
+        function playWritingGame() {
+            gameType = "writing";
+            showPage('range_selection');
+        }
+
+        function playReadingGame() {
+            gameType = "reading";
+            showPage('range_selection');
+            console.log("playReadingGame called");
+            console.log("gameType: " + gameType);
+        }
+
+        function startGame() {
+            const rangeFrom = parseInt(document.getElementById("range-from").value);
+            const rangeTo = parseInt(document.getElementById("range-to").value);
+
+            let min = 1;
+            let max = Object.keys(itemsData).length;
+
+            let alertMsg = "";
+            if (!rangeFrom || rangeFrom < min) {
+                alertMsg += "・Enter valid 'from' value<br>";
+            } else if (rangeFrom > max-totalQuestions+1) {
+                alertMsg += `・Maximum 'from' value is ${max-totalQuestions+1}<br>`;
+            }
+            if (!rangeTo || rangeTo < totalQuestions) {
+                alertMsg += "・Enter valid 'to' value<br>";
+            } else if (rangeTo > max) {
+                alertMsg += `・Maximum 'to' value is ${max}<br>`;
+            }
+
+            if (rangeFrom && rangeTo && rangeTo - rangeFrom < totalQuestions-1) {
+                alertMsg += "・'to' value should be at least 9 bigger than 'from' value<br>";
+            }
+
+            if (alertMsg) {
+                document.getElementById("range-alert").innerHTML = alertMsg;
+            } else {
+                fromKanjiNum = rangeFrom;
+                toKanjiNum = rangeTo;
+
+                prepareGameData();
+
+                // check from here tomorrow
+
+                if (gameType === "writing") {
+                    replayWritingGame();
+                } else {
+                    replayReadingGame();
+                }
+
+                document.getElementById("range-alert").innerHTML = "";
+            }
+
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/kanji_N5.json')
+                .then(response => response.json())
+                .then(data => {
+                    itemsData = data;
+                    createKanjiList();
+                    showPage('words_list');
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        });
+
+        // Initialize the game elements
+        const questionImgEl = document.getElementById('question-img');
+        const questionCaptionEl = document.getElementById('question-caption');
+        const optionsEl = document.querySelectorAll('.option');
+        const nextBtn = document.getElementById('next-button');
+        let currentQuestionItem = {};
+
+    </script>
+
+</body>
