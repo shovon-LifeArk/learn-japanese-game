@@ -20,21 +20,15 @@
             max-height: 1024px;
             max-width: 576px;
         }
-        #question-container {
-            height: calc(100vh - 120px);
-            padding: 60px 20px;
-            display: flex; 
-            flex: 1;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+        #question-container,
         #result-container {
-            height: calc(100vh - 120px);
-            padding: 60px 20px;
+            height: calc(100vh - 40px);
+            padding: 20px;
             display: none; 
             flex: 1;
             flex-direction: column;
-            justify-content: center;
+            gap: 20px;
+            overflow-y: scroll;
         }
         #question-number {
             font-size: 1.5em;
@@ -75,6 +69,7 @@
             border-radius: 5px;
             cursor: pointer;
             margin-top: auto;
+            margin-bottom: 40px;
         }
         #next-button:disabled {
             background-color: gray;
@@ -83,6 +78,7 @@
         #score {
             font-size: 2em;
             text-align: center;
+            margin-top: 100px;
             margin-bottom: 60px;
         }
         #replay-button {
@@ -168,6 +164,16 @@
         const totalQuestions = 10;
         let currentQuestion = 0;
         let score = 0;
+
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
 
         function getRandomItemNumbers() {
             const numbers = Object.keys(itemsData).map(Number);
@@ -261,13 +267,10 @@
         }
 
         function endGame() {
-            // hide question container
-            document.getElementById('question-container').style.display = 'none';
-
             // Display the score
             const scoreEl = document.getElementById('score');
             scoreEl.textContent = `Your score: ${score}/${totalQuestions}`;
-            document.getElementById('result-container').style.display = 'flex';
+            showPage('result');
         }
 
         function replayGame() {
@@ -276,11 +279,8 @@
             score = 0;
             selectedItemNumbers = getRandomItemNumbers();
 
-            // hide result container
-            document.getElementById('result-container').style.display = 'none';
-
             // show question container
-            document.getElementById('question-container').style.display = 'flex';
+            showPage('question');
 
             // Start the game
             nextQuestion();
