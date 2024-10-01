@@ -398,7 +398,6 @@
             currentQuestion = 0;
             score = 0;
             gameItemNumbers = getRandomGameItemNumbers();
-            console.log(gameItemNumbers);
 
             // Change option design
             optionsEl.forEach(optionItem => {
@@ -450,8 +449,7 @@
         function playReadingGame() {
             gameType = "reading";
             showPage('range_selection');
-            console.log("playReadingGame called");
-            console.log("gameType: " + gameType);
+            
         }
 
         function startGame() {
