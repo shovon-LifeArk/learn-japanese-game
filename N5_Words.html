@@ -33,10 +33,13 @@
             border: 1px solid grey;
             width: 100%;
         }
-        #words_list-container {
-            height: calc(100vh - 120px);
-            padding: 60px 20px;
-            display: flex; 
+        #words_list-container,
+        #range_selection-container,
+        #question-container,
+        #result-container {
+            height: calc(100vh - 40px);
+            padding: 20px;
+            display: none; 
             flex: 1;
             flex-direction: column;
             gap: 20px;
@@ -53,6 +56,7 @@
         #words_list-container td {
             padding: 10px;
             vertical-align: top;
+            position: relative;
         }
         #words_list-container .image-cell {
             width: 100px;
@@ -69,21 +73,27 @@
         #words_list-container .word-bangla {
             font-size: 1.2em;
         }
-        #question-container {
-            height: calc(100vh - 120px);
-            padding: 60px 20px;
-            display: none; 
-            flex: 1;
-            flex-direction: column;
-            justify-content: space-between;
+        #words_list-container .word-num {
+            position: absolute;
+            top: 10px;
+            right: 0px;
+            height: 30px;
+            padding: 0px 10px;
+            border-radius: 15px;
+            background-color: #0066ff;
+            color: white;
+            text-align: center;
+            line-height: 30px;
         }
-        #result-container {
-            height: calc(100vh - 120px);
-            padding: 60px 20px;
-            display: none; 
-            flex: 1;
-            flex-direction: column;
-            justify-content: center;
+        #range_selection-container input {
+            width: 80px;
+            padding: 10px;
+            font-size: 1.5em;;
+            text-align: center;
+        }
+        .alert {
+            font-size: 1em;
+            color: red;
         }
         #question-number {
             font-size: 1.5em;
@@ -129,6 +139,8 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: auto;
+            margin-bottom: 40px;
         }
         #next-button:disabled {
             background-color: gray;
@@ -137,6 +149,7 @@
         #score {
             font-size: 2em;
             text-align: center;
+            margin-top: 100px;
             margin-bottom: 60px;
         }
     </style>
@@ -145,7 +158,17 @@
     <div id="game-container">
         <div id="words_list-container">
             <h1 style="text-align: center;">N5 words</h1>
-            <button class="play-button" onclick="replayGame()">Play Game</button>
+            <button class="play-button" onclick="playGame()">Play Game</button>
+        </div>
+        <div id="range_selection-container">
+            <h3 style="text-align: center;">Choose the question range</h3>
+            <div style="text-align: center;">
+                <input type="number" id="range-from" placeholder="from" min="1" max="90"> ~ <input type="number" id="range-to" placeholder="to" min="10" max="100">
+                <br><br>
+                <span class="alert" id="range-alert"></span>
+                <br>
+            </div>
+            <button class="play-button" onclick="startGame()">Start Game!</button>
         </div>
         <div id="question-container">
             <div id="question-number"></div>
@@ -1544,9 +1567,29 @@
             }
         };
 
+        // game related data
+        const totalQuestions = 10;
+        let fromWordNum = null;
+        let toWordNum = null;
+        let gameItemNumbers = null;
+        let currentGameItem = {};
+        let currentQuestion = 0;
+        let score = 0;
+    
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
+        
         function createWordsList() {
             const categories = ["animal", "nature", "season", "country", "place", "body", "people", "clothes", "occupation"];
             const container = document.getElementById('words_list-container');
+            let wordNum = 1;
             
             categories.forEach(category => {
                 // Create a category section
@@ -1567,7 +1610,9 @@
                     imageCell.className = 'image-cell';
                     imageCell.innerHTML = `<img src="assets/image/N5_words/${item.imgkey ? item.imgkey : item.kana}.jpg" alt="${item.kana}">`;
                     const textCell = document.createElement('td');
-                    textCell.innerHTML = `<span class="word-kana">${item.kana}</span><br/><span class="word-bangla">${item.bangla}</span>`;
+                    textCell.innerHTML = `<span class="word-kana">${item.kana}</span><br/>
+                                        <span class="word-bangla">${item.bangla}</span>
+                                        <div class="word-num">${wordNum}</div>`;
 
                     topRow.appendChild(imageCell);
                     topRow.appendChild(textCell);
@@ -1586,6 +1631,8 @@
 
                     const hr = document.createElement('hr');
                     categoryDiv.appendChild(hr);
+
+                    wordNum++;
                 });
 
                 container.appendChild(categoryDiv);
@@ -1604,20 +1651,17 @@
             document.getElementById('words_list-container').style.display = 'flex';
         }
 
-        const totalQuestions = 10;
-        let currentQuestion = 0;
-        let score = 0;
-
         function getRandomItemNumbers() {
-            const numbers = Object.keys(itemsData).map(Number);
-            const randomItemNumbers = [];
-            while (randomItemNumbers.length < totalQuestions) {
-                const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
-                if (!randomItemNumbers.includes(randomNumber)) {
-                    randomItemNumbers.push(randomNumber);
-                }
+            let min = fromWordNum-1;
+            let max = toWordNum-1;
+
+            const randomItemNumbers = new Set();
+            while (randomItemNumbers.size < totalQuestions) {
+                let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+                randomItemNumbers.add(randomNumber);
             }
-            return randomItemNumbers;
+
+            return Array.from(randomItemNumbers);
         }
 
         function checkAnswer(selectedIndex) {
@@ -1629,7 +1673,7 @@
             let selectedOption = optionsEl[selectedIndex];
             let selectedAnswer = selectedOption.textContent;
 
-            if (selectedAnswer === currentItem.kana) {
+            if (selectedAnswer === currentGameItem.kana) {
                 // Correct answer
                 selectedOption.classList.add('correct');
                 score++;
@@ -1639,7 +1683,7 @@
 
                 // Find and highlight the correct option
                 for (let i = 0; i < optionsEl.length; i++) {
-                    if (optionsEl[i].textContent === currentItem.kana) {
+                    if (optionsEl[i].textContent === currentGameItem.kana) {
                         optionsEl[i].classList.add('correct');
                         break;
                     }
@@ -1650,17 +1694,17 @@
             nextBtn.disabled = false;
         }
 
-        function getRandomOptions(currentItemNumber) {
+        function getRandomOptions(currentGameItemNumber) {
             const numbers = Object.keys(itemsData).map(Number);
             const options = new Set();
 
             // Add the current question number to options
-            options.add(currentItemNumber);
+            options.add(itemsData[currentGameItemNumber].kana);
 
             // Generate random options
             while (options.size < 4) {
                 const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
-                options.add(randomNum);
+                options.add(itemsData[randomNum].kana);
             }
 
             // Convert Set to Array and shuffle it
@@ -1677,19 +1721,19 @@
             document.getElementById('question-number').textContent = `${currentQuestion + 1}/${totalQuestions}`;
 
             // Load current question and options
-            const currentItemNumber = selectedItemNumbers[currentQuestion];
-            currentItem = itemsData[currentItemNumber];
+            const currentGameItemNumber = gameItemNumbers[currentQuestion];
+            currentGameItem = itemsData[currentGameItemNumber];
 
             // Update question image and caption
-            questionImgEl.innerHTML = `<img src="assets/image/N5_words/${currentItem.imgkey ? currentItem.imgkey : currentItem.kana}.jpg" alt="Image">`;
-            questionCaptionEl.textContent = currentItem.bangla;
+            questionImgEl.innerHTML = `<img src="assets/image/N5_words/${currentGameItem.imgkey ? currentGameItem.imgkey : currentGameItem.kana}.jpg" alt="Image">`;
+            questionCaptionEl.textContent = currentGameItem.bangla;
 
             // Get random options
-            const options = getRandomOptions(currentItemNumber);
+            const options = getRandomOptions(currentGameItemNumber);
 
             // Update options in the DOM
-            options.forEach((option, index) => {
-                optionsEl[index].textContent = itemsData[option].kana;
+            options.forEach((optionText, index) => {
+                optionsEl[index].textContent = optionText;
                 optionsEl[index].classList.remove('correct', 'wrong'); // Reset styles
                 optionsEl[index].style.pointerEvents = 'auto'; // Enable click
             });
@@ -1701,44 +1745,73 @@
         }
 
         function endGame() {
-            // hide question container
-            document.getElementById('question-container').style.display = 'none';
-
             // Display the score
             const scoreEl = document.getElementById('score');
             scoreEl.textContent = `Your score: ${score}/${totalQuestions}`;
-            document.getElementById('result-container').style.display = 'flex';
+
+            showPage('result');
         }
 
         function replayGame() {
             // Reset game state
             currentQuestion = 0;
             score = 0;
-            selectedItemNumbers = getRandomItemNumbers();
+            gameItemNumbers = getRandomItemNumbers();
 
-            // hide words list container
-            document.getElementById('words_list-container').style.display = 'none';
-
-            // hide result container
-            document.getElementById('result-container').style.display = 'none';
-
-            // show question container
-            document.getElementById('question-container').style.display = 'flex';
+            showPage('question');
 
             // Start the game
             nextQuestion();
         }
 
+        function startGame() {
+            const rangeFrom = parseInt(document.getElementById("range-from").value);
+            const rangeTo = parseInt(document.getElementById("range-to").value);
+
+            let min = 1;
+            let max = Object.keys(itemsData).length;
+
+            let alertMsg = "";
+            if (!rangeFrom || rangeFrom < min) {
+                alertMsg += "・Enter valid 'from' value<br>";
+            } else if (rangeFrom > max-totalQuestions+1) {
+                alertMsg += `・Maximum 'from' value is ${max-totalQuestions+1}<br>`;
+            }
+            if (!rangeTo || rangeTo < totalQuestions) {
+                alertMsg += "・Enter valid 'to' value<br>";
+            } else if (rangeTo > max) {
+                alertMsg += `・Maximum 'to' value is ${max}<br>`;
+            }
+
+            if (rangeFrom && rangeTo && rangeTo - rangeFrom < totalQuestions-1) {
+                alertMsg += "・'to' value should be at least 9 bigger than 'from' value<br>";
+            }
+
+            if (alertMsg) {
+                document.getElementById("range-alert").innerHTML = alertMsg;
+            } else {
+                fromWordNum = rangeFrom;
+                toWordNum = rangeTo;
+
+                replayGame();
+
+                document.getElementById("range-alert").innerHTML = "";
+            }
+        }
+
+        function playGame() {
+            showPage('range_selection');
+        }
+
         // Initialize the game
-        let selectedItemNumbers = getRandomItemNumbers();
         const questionImgEl = document.getElementById('question-img');
         const questionCaptionEl = document.getElementById('question-caption');
         const optionsEl = document.querySelectorAll('.option');
         const nextBtn = document.getElementById('next-button');
-        let currentItem = {};
 
         // display words list
         createWordsList();
+        showPage('words_list');
 
     </script>
 </body>
