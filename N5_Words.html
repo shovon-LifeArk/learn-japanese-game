@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LifeArk Japanese education: N5 Words</title>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Klee One', sans-serif;
             margin: 0;
             height: 100vh;
             display: flex;
@@ -43,7 +44,6 @@
             flex: 1;
             flex-direction: column;
             gap: 20px;
-            overflow-y: scroll;
         }
         #words_list-container .category-title {
             padding: 10px;
@@ -186,7 +186,7 @@
         <div id="result-container">
             <div id="score"></div>
             <button class="play-button" onclick="replayGame()">Replay</button><br/>
-            <button class="play-button" onclick="displayWordsList()">Words List</button>
+            <button class="play-button" onclick="showPage('words_list')">Words List</button>
         </div>
     </div>
 
@@ -1621,6 +1621,7 @@
                     const bottomRow = document.createElement('tr');
                     const exampleCell = document.createElement('td');
                     exampleCell.colSpan = 2;
+                    exampleCell.style.padding = "10px 0px";
                     exampleCell.innerHTML = `・${item.exampleSentence[0]}<br>・${item.exampleSentence[1]}`;
 
                     bottomRow.appendChild(exampleCell);
@@ -1637,17 +1638,6 @@
                 container.appendChild(categoryDiv);
             });
 
-        }
-
-        function displayWordsList() {
-            // hide question container
-            document.getElementById('question-container').style.display = 'none';
-
-            // hide result container
-            document.getElementById('result-container').style.display = 'none';
-
-            // hide words list container
-            document.getElementById('words_list-container').style.display = 'flex';
         }
 
         function getRandomItemNumbers() {

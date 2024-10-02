@@ -20,21 +20,44 @@
             max-height: 1024px;
             max-width: 576px;
         }
-        #question-container {
-            min-height: calc(80vh - 40px);
-            padding: 60px 20px;
-            display: flex; 
-            flex: 1;
-            flex-direction: column;
-            justify-content: space-between;
+        .play-button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #9966ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
+        #words_list-container,
+        #question-container,
         #result-container {
             min-height: calc(80vh - 40px);
-            padding: 60px 20px;
+            padding: 20px;
             display: none; 
             flex: 1;
             flex-direction: column;
-            justify-content: center;
+            gap: 20px;
+        }
+        #words_list-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+        #words_list-container th {
+            padding: 10px;
+            vertical-align: middle;
+            border: 1px solid black;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: left;
+            background-color: lightgray;
+        }
+        #words_list-container td {
+            padding: 10px;
+            vertical-align: middle;
+            border: 1px solid black;
+            font-size: 1.2em;
         }
         #question-number {
             font-size: 1.5em;
@@ -68,6 +91,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: auto;
         }
         #next-button:disabled {
             background-color: gray;
@@ -76,20 +100,16 @@
         #score {
             font-size: 2em;
             text-align: center;
-            margin-bottom: 60px;
-        }
-        #replay-button {
-            padding: 10px 20px;
-            font-size: 1.5em;
-            background-color: lightgray;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+            margin-top: 100px;
         }
     </style>
 </head>
 <body>
     <div id="game-container">
+        <div id="words_list-container">
+            <h1 style="text-align: center;">Numbers</h1>
+            <button class="play-button" onclick="replayGame()">Play Game</button>
+        </div>
         <div id="question-container">
             <div id="question-number"></div>
             <div id="question"></div>
@@ -103,127 +123,74 @@
         </div>
         <div id="result-container">
             <div id="score"></div>
-            <button id="replay-button" onclick="replayGame()">Replay</button>
+            <button class="play-button" onclick="replayGame()">Replay</button>
+            <button class="play-button" onclick="showPage('words_list')">Numbers List</button>
         </div>
     </div>
 
     <script>
-        const numbersData = {
-            0: { "number": 0, "hiragana": "ゼロ" },
-            1: { "number": 1, "hiragana": "いち" },
-            2: { "number": 2, "hiragana": "に" },
-            3: { "number": 3, "hiragana": "さん" },
-            4: { "number": 4, "hiragana": "し" },
-            5: { "number": 5, "hiragana": "ご" },
-            6: { "number": 6, "hiragana": "ろく" },
-            7: { "number": 7, "hiragana": "しち" },
-            8: { "number": 8, "hiragana": "はち" },
-            9: { "number": 9, "hiragana": "きゅう" },
-            10: { "number": 10, "hiragana": "じゅう" },
-            11: { "number": 11, "hiragana": "じゅういち" },
-            12: { "number": 12, "hiragana": "じゅうに" },
-            13: { "number": 13, "hiragana": "じゅうさん" },
-            14: { "number": 14, "hiragana": "じゅうよん" },
-            15: { "number": 15, "hiragana": "じゅうご" },
-            16: { "number": 16, "hiragana": "じゅうろく" },
-            17: { "number": 17, "hiragana": "じゅうなな" },
-            18: { "number": 18, "hiragana": "じゅうはち" },
-            19: { "number": 19, "hiragana": "じゅうきゅう" },
-            20: { "number": 20, "hiragana": "にじゅう" },
-            21: { "number": 21, "hiragana": "にじゅういち" },
-            22: { "number": 22, "hiragana": "にじゅうに" },
-            23: { "number": 23, "hiragana": "にじゅうさん" },
-            24: { "number": 24, "hiragana": "にじゅうよん" },
-            25: { "number": 25, "hiragana": "にじゅうご" },
-            26: { "number": 26, "hiragana": "にじゅうろく" },
-            27: { "number": 27, "hiragana": "にじゅうなな" },
-            28: { "number": 28, "hiragana": "にじゅうはち" },
-            29: { "number": 29, "hiragana": "にじゅうきゅう" },
-            30: { "number": 30, "hiragana": "さんじゅう" },
-            31: { "number": 31, "hiragana": "さんじゅういち" },
-            32: { "number": 32, "hiragana": "さんじゅうに" },
-            33: { "number": 33, "hiragana": "さんじゅうさん" },
-            34: { "number": 34, "hiragana": "さんじゅうよん" },
-            35: { "number": 35, "hiragana": "さんじゅうご" },
-            36: { "number": 36, "hiragana": "さんじゅうろく" },
-            37: { "number": 37, "hiragana": "さんじゅうなな" },
-            38: { "number": 38, "hiragana": "さんじゅうはち" },
-            39: { "number": 39, "hiragana": "さんじゅうきゅう" },
-            40: { "number": 40, "hiragana": "よんじゅう" },
-            41: { "number": 41, "hiragana": "よんじゅういち" },
-            42: { "number": 42, "hiragana": "よんじゅうに" },
-            43: { "number": 43, "hiragana": "よんじゅうさん" },
-            44: { "number": 44, "hiragana": "よんじゅうよん" },
-            45: { "number": 45, "hiragana": "よんじゅうご" },
-            46: { "number": 46, "hiragana": "よんじゅうろく" },
-            47: { "number": 47, "hiragana": "よんじゅうなな" },
-            48: { "number": 48, "hiragana": "よんじゅうはち" },
-            49: { "number": 49, "hiragana": "よんじゅうきゅう" },
-            50: { "number": 50, "hiragana": "ごじゅう" },
-            51: { "number": 51, "hiragana": "ごじゅういち" },
-            52: { "number": 52, "hiragana": "ごじゅうに" },
-            53: { "number": 53, "hiragana": "ごじゅうさん" },
-            54: { "number": 54, "hiragana": "ごじゅうよん" },
-            55: { "number": 55, "hiragana": "ごじゅうご" },
-            56: { "number": 56, "hiragana": "ごじゅうろく" },
-            57: { "number": 57, "hiragana": "ごじゅうなな" },
-            58: { "number": 58, "hiragana": "ごじゅうはち" },
-            59: { "number": 59, "hiragana": "ごじゅうきゅう" },
-            60: { "number": 60, "hiragana": "ろくじゅう" },
-            61: { "number": 61, "hiragana": "ろくじゅういち" },
-            62: { "number": 62, "hiragana": "ろくじゅうに" },
-            63: { "number": 63, "hiragana": "ろくじゅうさん" },
-            64: { "number": 64, "hiragana": "ろくじゅうよん" },
-            65: { "number": 65, "hiragana": "ろくじゅうご" },
-            66: { "number": 66, "hiragana": "ろくじゅうろく" },
-            67: { "number": 67, "hiragana": "ろくじゅうなな" },
-            68: { "number": 68, "hiragana": "ろくじゅうはち" },
-            69: { "number": 69, "hiragana": "ろくじゅうきゅう" },
-            70: { "number": 70, "hiragana": "ななじゅう" },
-            71: { "number": 71, "hiragana": "ななじゅういち" },
-            72: { "number": 72, "hiragana": "ななじゅうに" },
-            73: { "number": 73, "hiragana": "ななじゅうさん" },
-            74: { "number": 74, "hiragana": "ななじゅうよん" },
-            75: { "number": 75, "hiragana": "ななじゅうご" },
-            76: { "number": 76, "hiragana": "ななじゅうろく" },
-            77: { "number": 77, "hiragana": "ななじゅうなな" },
-            78: { "number": 78, "hiragana": "ななじゅうはち" },
-            79: { "number": 79, "hiragana": "ななじゅうきゅう" },
-            80: { "number": 80, "hiragana": "はちじゅう" },
-            81: { "number": 81, "hiragana": "はちじゅういち" },
-            82: { "number": 82, "hiragana": "はちじゅうに" },
-            83: { "number": 83, "hiragana": "はちじゅうさん" },
-            84: { "number": 84, "hiragana": "はちじゅうよん" },
-            85: { "number": 85, "hiragana": "はちじゅうご" },
-            86: { "number": 86, "hiragana": "はちじゅうろく" },
-            87: { "number": 87, "hiragana": "はちじゅうなな" },
-            88: { "number": 88, "hiragana": "はちじゅうはち" },
-            89: { "number": 89, "hiragana": "はちじゅうきゅう" },
-            90: { "number": 90, "hiragana": "きゅうじゅう" },
-            91: { "number": 91, "hiragana": "きゅうじゅういち" },
-            92: { "number": 92, "hiragana": "きゅうじゅうに" },
-            93: { "number": 93, "hiragana": "きゅうじゅうさん" },
-            94: { "number": 94, "hiragana": "きゅうじゅうよん" },
-            95: { "number": 95, "hiragana": "きゅうじゅうご" },
-            96: { "number": 96, "hiragana": "きゅうじゅうろく" },
-            97: { "number": 97, "hiragana": "きゅうじゅうなな" },
-            98: { "number": 98, "hiragana": "きゅうじゅうはち" },
-            99: { "number": 99, "hiragana": "きゅうじゅうきゅう" },
-            100: { "number": 100, "hiragana": "ひゃく" }
-        };
+        let numbersData = {};
 
         const totalQuestions = 10;
         let currentQuestion = 0;
         let score = 0;
 
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
+
+        function createNumberList() {
+            const container = document.getElementById('words_list-container');
+            const table = document.createElement('table');
+
+            const topRow = document.createElement('tr');
+            topRow.innerHTML = `<th style="text-align:right;">すうじ</th><th>ひらがな</th>`;
+
+            table.appendChild(topRow);
+
+            const specialKanaNumbers = [300, 600, 800, 3000];
+
+            Object.keys(numbersData).forEach(key => {
+                const item = numbersData[key];
+                const number = key;
+
+                // Create top row with image and text
+                const row = document.createElement('tr');
+                const numberCell = document.createElement('td');
+                numberCell.style.textAlign = 'right';
+                numberCell.innerText = number;
+                const textCell = document.createElement('td');
+                textCell.innerText = item.kana;
+
+                if (specialKanaNumbers.includes(parseInt(number))) {
+                    textCell.style.backgroundColor = 'yellow';
+                }
+
+                row.appendChild(numberCell);
+                row.appendChild(textCell);
+                table.appendChild(row);
+            });
+            container.appendChild(table);
+        }
+
         function getRandomNumbers() {
             const numbers = Object.keys(numbersData).map(Number);
             const randomNumbers = [];
-            while (randomNumbers.length < totalQuestions) {
+
+            let loopCnt = 0;
+            while (randomNumbers.length < totalQuestions && loopCnt < 100) {
                 const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
                 if (!randomNumbers.includes(randomNumber)) {
                     randomNumbers.push(randomNumber);
                 }
+
+                loopCnt++;
             }
             return randomNumbers;
         }
@@ -237,7 +204,7 @@
             let selectedOption = optionsEl[selectedIndex];
             let selectedAnswer = selectedOption.textContent;
 
-            if (selectedAnswer === currentItem.hiragana) {
+            if (selectedAnswer === currentItem.kana) {
                 // Correct answer
                 selectedOption.classList.add('correct');
                 score++;
@@ -247,7 +214,7 @@
 
                 // Find and highlight the correct option
                 for (let i = 0; i < optionsEl.length; i++) {
-                    if (optionsEl[i].textContent === currentItem.hiragana) {
+                    if (optionsEl[i].textContent === currentItem.kana) {
                         optionsEl[i].classList.add('correct');
                         break;
                     }
@@ -258,20 +225,24 @@
             nextBtn.disabled = false;
         }
 
-        function getRandomOptions(currentNumber) {
+        function getRandomOptions() {
+            const currentCategory = currentItem.category;
             const options = new Set();
-            
-            // Define range for options based on the correct number
-            const rangeStart = (currentNumber <= 10) ? 0 : 11;
-            const rangeEnd = (currentNumber <= 10) ? 10 : 100;
 
             // Add the correct answer to options
-            options.add(currentNumber);
+            options.add(currentItem.kana);
+
+            // Filter items by category
+            const itemsInCategory = Object.keys(numbersData).filter(key => numbersData[key].category === currentCategory);
 
             // Generate random options
-            while (options.size < 4) {
-                const randomNum = Math.floor(Math.random() * (rangeEnd - rangeStart + 1)) + rangeStart;
-                options.add(randomNum);
+            let loopCnt = 0;
+            while (options.size < 4 && loopCnt < 100) {
+                const randomIdx = Math.floor(Math.random() * (itemsInCategory.length - 1));
+                const randomNum = itemsInCategory[randomIdx];
+                options.add(numbersData[randomNum].kana);
+
+                loopCnt++;
             }
 
             // Convert Set to Array and shuffle it
@@ -295,11 +266,11 @@
             questionEl.textContent = currentItem.number;
 
             // Get random options
-            const options = getRandomOptions(currentItem.number);
+            const options = getRandomOptions();
 
             // Update options in the DOM
-            options.forEach((option, index) => {
-                optionsEl[index].textContent = numbersData[option].hiragana;
+            options.forEach((optionText, index) => {
+                optionsEl[index].textContent = optionText;
                 optionsEl[index].classList.remove('correct', 'wrong'); // Reset styles
                 optionsEl[index].style.pointerEvents = 'auto'; // Enable click
             });
@@ -326,15 +297,22 @@
             score = 0;
             selectedNumbers = getRandomNumbers();
 
-            // hide result container
-            document.getElementById('result-container').style.display = 'none';
-
-            // show question container
-            document.getElementById('question-container').style.display = 'flex';
+            showPage('question');
 
             // Start the game
             nextQuestion();
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/number_count.json')
+                .then(response => response.json())
+                .then(data => {
+                    numbersData = data;
+                    createNumberList();
+                    showPage('words_list');
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        });
 
         // Initialize the game
         let selectedNumbers = getRandomNumbers();
@@ -343,8 +321,6 @@
         const nextBtn = document.getElementById('next-button');
         let currentItem = {};
 
-        // Start the game
-        replayGame();
     </script>
 </body>
 </html>
