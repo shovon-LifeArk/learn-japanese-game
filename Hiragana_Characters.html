@@ -87,6 +87,13 @@
             text-align: center;
             font-size: 4em;
         }
+        #question-img .sound-button {
+            width: 70px;
+            height: 70px;
+            padding: 10px;
+            border-radius: 40px;
+            font-size: 20px;
+        }
         #question-caption {
             font-size: 1.5em;
             text-align: center;
@@ -113,13 +120,33 @@
             background-color: red;
             color: white;
         }
+        #next-button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #9966ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: auto;
+        }
+        #next-button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+        #score {
+            font-size: 2em;
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 60px;
+        }
     </style>
 </head>
 <body>
     <div id="game-container">
         <div id="characters_list-container">
             <h1 style="text-align: center;">Hiragana letters</h1>
-            <button class="play-button" onclick="playGame()">Play Game</button>
+            <button class="play-button" onclick="playGame()">Play Game</button><br>
         </div>
         <div id="range_selection-container">
             <h3 style="text-align: center;">Choose the question range</h3>
@@ -151,7 +178,7 @@
             </div>
             <button class="play-button" onclick="startGame()">Start Game!</button>
         </div>
-        <div id="question-container"></div>
+        <div id="question-container">
             <div id="question-number"></div>
             <div>
                 <div id="question-img"></div>
@@ -167,7 +194,8 @@
         </div>
         <div id="result-container">
             <div id="score"></div>
-            <button id="replay-button" onclick="replayGame()">Replay</button>
+            <button class="play-button" onclick="replayGame()">Replay</button>
+            <button class="play-button" onclick="showPage('characters_list')">Characters List</button>
         </div>
     </div>
 
@@ -177,13 +205,16 @@
         let itemsData = {}; 
 
         // game related data
-        const totalQuestions = 10;
-        let fromItemNum = null;
-        let toItemNum = null;
-        let gameItemNumbers = null;
-        let currentGameItem = {};
-        let currentQuestion = 0;
-        let score = 0;
+        const totalQuestions = 10;      // total questions in a game
+        let fromRangeNum = null;         // questions should be chosen from this number in itemsData
+        let toRangeNum = null;           // questions should be chosen upto this number in itemsData
+        let gameItemIDs = null;         // hold item IDs within game range
+        let gameQuestionItemIDs = null; // hold index of itemsData (chosen randomly from gameItemIDs)
+        let currentQuestionItem = {};   // item for current question in game
+        let currentQuestionNum = 0;     // current question changes from 0 to 9
+        let score = 0;                  // number of correct answers
+
+        let skipItemIDs = ["37", "39", "47", "49"];         // these items should not appear in question
 
         function showPage(pageName) {
             const gameContainer = document.getElementById('game-container');
@@ -213,6 +244,7 @@
                     let charItem = charItems[r*colNum+c];
 
                     const charCell = document.createElement('td');
+                    charCell.id = `hiragana_cell_${charItem.sound_en}`;
                     if (charItem.hiragana) {
                         charCell.classList.add('hiragana-sound');
                         charCell.setAttribute("data-sound", `assets/audio/${charItem.hiragana}.mp3`);
@@ -264,13 +296,146 @@
             });
         }
 
+        function prepareGameData() {
+            gameItemIDs = [];
+            const from = fromRangeNum;
+            const to = toRangeNum;
+            Object.keys(itemsData).forEach(key => {
+                if (parseInt(key) >= from && parseInt(key) <= to && !skipItemIDs.includes(key)) {
+                    gameItemIDs.push(key);
+                }
+            });
+        }
+
+        function getRandomQuestionItemIDs() {
+            // Shuffle array
+            const shuffled = gameItemIDs.sort(() => 0.5 - Math.random());
+            // return first n elemets
+            return shuffled.slice(0, totalQuestions);
+        }
+
+        function getRandomOptions(currentQuestionItemID) {
+            const numbers = Object.keys(itemsData).map(Number);
+            const options = new Set();
+
+            // Add the current question number to options
+            options.add(itemsData[currentQuestionItemID].hiragana);
+
+            // Generate random options
+            while (options.size < 4) {
+                const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
+                const key = randomNum.toString();
+                if (!skipItemIDs.includes(key)) {
+                    options.add(itemsData[key].hiragana);
+                }
+            }
+
+            // Convert Set to Array and shuffle it
+            return Array.from(options).sort(() => Math.random() - 0.5);
+        }
+
+        function checkAnswer(selectedIndex) {
+            // Disable all options after selection
+            for (let i = 0; i < optionsEl.length; i++) {
+                optionsEl[i].style.pointerEvents = 'none'; // Disable further clicks
+            }
+
+            let selectedOption = optionsEl[selectedIndex];
+            let selectedAnswer = selectedOption.textContent;
+
+            if (selectedAnswer === currentQuestionItem.hiragana) {
+                // Correct answer
+                selectedOption.classList.add('correct');
+                score++;
+            } else {
+                // Wrong answer
+                selectedOption.classList.add('wrong');
+
+                // Find and highlight the correct option
+                for (let i = 0; i < optionsEl.length; i++) {
+                    if (optionsEl[i].textContent === currentQuestionItem.hiragana) {
+                        optionsEl[i].classList.add('correct');
+                        break;
+                    }
+                }
+            }
+
+            // Enable the Next button
+            nextBtn.disabled = false;
+        }
+
+        function nextQuestion() {
+            if (currentQuestionNum === totalQuestions) {
+                endGame();
+                return;
+            }
+
+            // Display question number
+            document.getElementById('question-number').textContent = `${currentQuestionNum + 1}/${totalQuestions}`;
+
+            // Load current question and options
+            const currentQuestionItemID = gameQuestionItemIDs[currentQuestionNum];
+            currentQuestionItem = itemsData[currentQuestionItemID];
+
+            // Update question image and caption
+            const soundButton = document.createElement("button");
+            soundButton.classList.add('sound-button');
+            soundButton.textContent = "🔊";
+            soundButton.addEventListener('click', () => {
+                const hiraganaCell = document.getElementById(`hiragana_cell_${currentQuestionItem.sound_en}`);
+                hiraganaCell.click();
+            });
+            questionImgEl.innerHTML = '';
+            questionImgEl.appendChild(soundButton);
+            questionCaptionEl.textContent = currentQuestionItem.sound_en;
+
+            // Get random options
+            const options = getRandomOptions(currentQuestionItemID);
+
+            // Update options in the DOM
+            options.forEach((optionText, index) => {
+                optionsEl[index].textContent = optionText;
+                optionsEl[index].classList.remove('correct', 'wrong'); // Reset styles
+                optionsEl[index].style.pointerEvents = 'auto'; // Enable click
+            });
+
+            // Disabled the Next button
+            nextBtn.disabled = true;
+
+            currentQuestionNum++;
+
+            // play the hiragana sound
+            soundButton.click();
+        }
+
+        function endGame() {
+            // Display the score
+            const scoreEl = document.getElementById('score');
+            scoreEl.textContent = `Your score: ${score}/${totalQuestions}`;
+
+            showPage('result');
+        }
+
+        function replayGame() {
+            // Reset game state
+            currentQuestionNum = 0;
+            score = 0;
+            gameQuestionItemIDs = getRandomQuestionItemIDs();
+
+            showPage('question');
+
+            // Start the game
+            nextQuestion();
+        }
+
         function startGame() {
             const rangeFrom = 1;
             const rangeTo = parseInt(document.querySelector('input[name="game_range"]:checked').value);
         
-            fromKanjiNum = rangeFrom;
-            toKanjiNum = rangeTo;
+            fromRangeNum = rangeFrom;
+            toRangeNum = rangeTo;
 
+            prepareGameData();
             replayGame();
         }
 
@@ -288,6 +453,12 @@
                 })
                 .catch(error => console.error('Error loading JSON:', error));
         });
+
+        // Initialize the game elements
+        const questionImgEl = document.getElementById('question-img');
+        const questionCaptionEl = document.getElementById('question-caption');
+        const optionsEl = document.querySelectorAll('.option');
+        const nextBtn = document.getElementById('next-button');
 
     </script>
 
