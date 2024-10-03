@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeArk Japanese education: Hiragana Characters</title>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Klee One', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #game-container {
+            height: 100vh;
+            width: 100%;
+            max-height: 1024px;
+            max-width: 576px;
+        }
+        .play-button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #9966ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .radio-button {
+            display: block;
+            padding: 10px 20px;
+            font-size: 1.5em;
+            border: 1px solid #9966ff;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0px;
+        }
+        hr {
+            border: 1px solid grey;
+            width: 100%;
+        }
+        #characters_list-container,
+        #range_selection-container,
+        #question-container,
+        #result-container {
+            min-height: calc(80vh - 40px);
+            padding: 20px;
+            display: none; 
+            flex: 1;
+            gap: 20px;
+            flex-direction: column;
+        }
+        #characters_list-container h3 {
+            line-height: 100%;
+            font-weight: bold;
+            font-family: sans-serif;
+            font-size: 1.5em;
+            margin: 0px;
+        }
+        #characters_list-container table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        #characters_list-container td {
+            padding: 10px;
+            vertical-align: center;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .hiragana-letter {
+            font-weight: bold;
+            font-size: 2.5em;
+        }
+        .hiragana-sound:hover {
+            background-color: green;
+            color: white;
+        }
+        #question-number {
+            font-size: 1.5em;
+        }
+        #question-img {
+            overflow: hidden;
+            text-align: center;
+            font-size: 4em;
+        }
+        #question-caption {
+            font-size: 1.5em;
+            text-align: center;
+        }
+        #options {
+            text-align: center;
+        }
+        .option {
+            margin: 15px;
+            font-size: 1.5em;
+            text-align: center;
+            cursor: pointer;
+            border: 2px solid #ccc;
+            padding: 7px 0px;
+            width: 50px;
+            border-radius: 25px;
+            display: inline-block;
+        }
+        .correct {
+            background-color: green;
+            color: white;
+        }
+        .wrong {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="characters_list-container">
+            <h1 style="text-align: center;">Hiragana letters</h1>
+            <button class="play-button" onclick="playGame()">Play Game</button>
+        </div>
+        <div id="range_selection-container">
+            <h3 style="text-align: center;">Choose the question range</h3>
+            <div>
+                <label class="radio-button">
+                    <input type="radio" id="range_all" name="game_range" value="108" checked> All
+                </label>
+                <label class="radio-button">
+                    <input type="radio" id="range_ko" name="game_range" value="10"> upto「か」ぎょう
+                </label>
+                <label class="radio-button">
+                    <input type="radio" id="range_to" name="game_range" value="20"> upto「た」ぎょう
+                </label>
+                <label class="radio-button">
+                    <input type="radio" id="range_ho" name="game_range" value="30"> upto「は」ぎょう
+                </label>
+                <label class="radio-button">
+                    <input type="radio" id="range_yo" name="game_range" value="40"> upto「や」ぎょう
+                </label>
+                <label class="radio-button">
+                    <input type="radio" id="range_n" name="game_range" value="50"> upto「わ」ぎょう
+                </label>
+                <label class="radio-button">
+                    <input type="radio" id="range_dakuon" name="game_range" value="75"> upto だくおん
+                </label>
+                <label class="radio-button">
+                    <input type="radio" id="range_yoon" name="game_range" value="108"> upto ようおん
+                </label>
+            </div>
+            <button class="play-button" onclick="startGame()">Start Game!</button>
+        </div>
+        <div id="question-container"></div>
+            <div id="question-number"></div>
+            <div>
+                <div id="question-img"></div>
+                <div id="question-caption"></div>
+            </div>
+            <div id="options">
+                <div class="option" onclick="checkAnswer(0)"></div>
+                <div class="option" onclick="checkAnswer(1)"></div>
+                <div class="option" onclick="checkAnswer(2)"></div>
+                <div class="option" onclick="checkAnswer(3)"></div>
+            </div>
+            <button id="next-button" onclick="nextQuestion()" disabled>Next</button>
+        </div>
+        <div id="result-container">
+            <div id="score"></div>
+            <button id="replay-button" onclick="replayGame()">Replay</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        let itemsData = {}; 
+
+        // game related data
+        const totalQuestions = 10;
+        let fromItemNum = null;
+        let toItemNum = null;
+        let gameItemNumbers = null;
+        let currentGameItem = {};
+        let currentQuestion = 0;
+        let score = 0;
+
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
+
+        // Function to play sound
+        function playSound(soundFile) {
+            const audio = new Audio(soundFile);
+            audio.play();
+        }
+
+        function createTableForCharacters(charItems, itemType) {
+            const table = document.createElement('table');
+
+            let colNum = itemType === 'yoon' ? 3 : 5;
+            console.log('colNum: ' + colNum);
+            
+            for (let r = 0; r < charItems.length/colNum; r++) {
+                const row = document.createElement('tr');
+                for (let c = 0; c < colNum; c++) {
+                    let charItem = charItems[r*colNum+c];
+
+                    const charCell = document.createElement('td');
+                    if (charItem.hiragana) {
+                        charCell.classList.add('hiragana-sound');
+                        charCell.setAttribute("data-sound", `assets/audio/${charItem.hiragana}.mp3`);
+                        charCell.innerHTML = `${charItem.sound_en}<br><span class="hiragana-letter">${charItem.hiragana}`;
+                    }
+                    
+                    row.appendChild(charCell);
+                }
+                table.appendChild(row);
+            }
+
+            return table;
+        }
+
+        function createHiraganaList() {
+            const container = document.getElementById('characters_list-container');
+
+            let seionItems = Object.values(itemsData).filter(item => item.category === 'seion');
+            let dakuonItems = Object.values(itemsData).filter(item => item.category === 'dakuon');
+            let yoonItems = Object.values(itemsData).filter(item => item.category === 'yoon');
+            
+            const seionTable = createTableForCharacters(seionItems, 'seion');
+            const dakuonTable = createTableForCharacters(dakuonItems, 'dakuon');
+            const yoonTable = createTableForCharacters(yoonItems, 'yoon');
+
+            let heading1 = document.createElement("h3");
+            heading1.textContent = "せいおん";
+            container.appendChild(heading1);
+            container.appendChild(seionTable);
+
+            let heading2 = document.createElement("h3");
+            heading2.textContent = "だくおん";
+            container.appendChild(heading2);
+            container.appendChild(dakuonTable);
+
+            let heading3 = document.createElement("h3");
+            heading3.textContent = "ようおん";
+            container.appendChild(heading3);
+            container.appendChild(yoonTable);
+
+            const soundButtons = document.querySelectorAll('.hiragana-sound');
+
+            // Add click event listener to each hiragana div
+            soundButtons.forEach(element => {
+                element.addEventListener('click', () => {
+                    const soundFile = element.getAttribute('data-sound');
+                    playSound(soundFile);
+                });
+            });
+        }
+
+        function startGame() {
+            const rangeFrom = 1;
+            const rangeTo = parseInt(document.querySelector('input[name="game_range"]:checked').value);
+        
+            fromKanjiNum = rangeFrom;
+            toKanjiNum = rangeTo;
+
+            replayGame();
+        }
+
+        function playGame() {
+            showPage('range_selection');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/japanese_chars.json')
+                .then(response => response.json())
+                .then(data => {
+                    itemsData = data;
+                    createHiraganaList();
+                    showPage('characters_list');
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        });
+
+    </script>
+
+</body>
+</html>
