@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LifeArk Japanese education: Alphabet (Hiragana)</title>
+    <title>LifeArk Japanese education: Alphabet (Katakana)</title>
     <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -71,31 +71,19 @@
             text-align: center;
             border: 1px solid black;
         }
-        .hiragana-letter {
+        .katakana-letter {
             font-weight: bold;
             font-size: 2.5em;
         }
-        .hiragana-sound:hover {
+        .katakana-sound:hover {
             background-color: green;
             color: white;
         }
         #question-number {
             font-size: 1.5em;
         }
-        #question-img {
-            overflow: hidden;
-            text-align: center;
-            font-size: 4em;
-        }
-        #question-img .sound-button {
-            width: 70px;
-            height: 70px;
-            padding: 10px;
-            border-radius: 40px;
-            font-size: 20px;
-        }
-        #question-caption {
-            font-size: 1.5em;
+        #question {
+            font-size: 10em;
             text-align: center;
         }
         #options {
@@ -145,7 +133,7 @@
 <body>
     <div id="game-container">
         <div id="characters_list-container">
-            <h1 style="text-align: center;">Hiragana letters</h1>
+            <h1 style="text-align: center;">Katakana letters</h1>
             <button class="play-button" onclick="playGame()">Play Game</button><br>
         </div>
         <div id="range_selection-container">
@@ -155,19 +143,19 @@
                     <input type="radio" id="range_all" name="game_range" value="108" checked> All
                 </label>
                 <label class="radio-button">
-                    <input type="radio" id="range_ko" name="game_range" value="10"> upto「か」ぎょう
+                    <input type="radio" id="range_ko" name="game_range" value="10"> upto「カ」ぎょう
                 </label>
                 <label class="radio-button">
-                    <input type="radio" id="range_to" name="game_range" value="20"> upto「た」ぎょう
+                    <input type="radio" id="range_to" name="game_range" value="20"> upto「タ」ぎょう
                 </label>
                 <label class="radio-button">
-                    <input type="radio" id="range_ho" name="game_range" value="30"> upto「は」ぎょう
+                    <input type="radio" id="range_ho" name="game_range" value="30"> upto「ハ」ぎょう
                 </label>
                 <label class="radio-button">
-                    <input type="radio" id="range_yo" name="game_range" value="40"> upto「や」ぎょう
+                    <input type="radio" id="range_yo" name="game_range" value="40"> upto「ヤ」ぎょう
                 </label>
                 <label class="radio-button">
-                    <input type="radio" id="range_n" name="game_range" value="50"> upto「わ」ぎょう
+                    <input type="radio" id="range_n" name="game_range" value="50"> upto「ワ」ぎょう
                 </label>
                 <label class="radio-button">
                     <input type="radio" id="range_dakuon" name="game_range" value="75"> upto だくおん
@@ -180,10 +168,7 @@
         </div>
         <div id="question-container">
             <div id="question-number"></div>
-            <div>
-                <div id="question-img"></div>
-                <div id="question-caption"></div>
-            </div>
+            <div id="question"></div>
             <div id="options">
                 <div class="option" onclick="checkAnswer(0)"></div>
                 <div class="option" onclick="checkAnswer(1)"></div>
@@ -206,8 +191,8 @@
 
         // game related data
         const totalQuestions = 10;      // total questions in a game
-        let fromRangeNum = null;         // questions should be chosen from this number in itemsData
-        let toRangeNum = null;           // questions should be chosen upto this number in itemsData
+        let fromRangeNum = null;        // questions should be chosen from this number in itemsData
+        let toRangeNum = null;          // questions should be chosen upto this number in itemsData
         let gameItemIDs = null;         // hold item IDs within game range
         let gameQuestionItemIDs = null; // hold index of itemsData (chosen randomly from gameItemIDs)
         let currentQuestionItem = {};   // item for current question in game
@@ -243,11 +228,11 @@
                     let charItem = charItems[r*colNum+c];
 
                     const charCell = document.createElement('td');
-                    charCell.id = `hiragana_cell_${charItem.sound_en}`;
-                    if (charItem.hiragana) {
-                        charCell.classList.add('hiragana-sound');
+                    charCell.id = `katakana_cell_${charItem.sound_en}`;
+                    if (charItem.katakana) {
+                        charCell.classList.add('katakana-sound');
                         charCell.setAttribute("data-sound", `assets/audio/${charItem.hiragana}.mp3`);
-                        charCell.innerHTML = `${charItem.sound_en}<br><span class="hiragana-letter">${charItem.hiragana}`;
+                        charCell.innerHTML = `${charItem.sound_en}<br><span class="katakana-letter">${charItem.katakana}`;
                     }
                     
                     row.appendChild(charCell);
@@ -258,7 +243,7 @@
             return table;
         }
 
-        function createHiraganaList() {
+        function createKatakanaList() {
             const container = document.getElementById('characters_list-container');
 
             let seionItems = Object.values(itemsData).filter(item => item.category === 'seion');
@@ -284,9 +269,9 @@
             container.appendChild(heading3);
             container.appendChild(yoonTable);
 
-            const soundButtons = document.querySelectorAll('.hiragana-sound');
+            const soundButtons = document.querySelectorAll('.katakana-sound');
 
-            // Add click event listener to each hiragana div
+            // Add click event listener to each katakana div
             soundButtons.forEach(element => {
                 element.addEventListener('click', () => {
                     const soundFile = element.getAttribute('data-sound');
@@ -377,16 +362,7 @@
             currentQuestionItem = itemsData[currentQuestionItemID];
 
             // Update question image and caption
-            const soundButton = document.createElement("button");
-            soundButton.classList.add('sound-button');
-            soundButton.textContent = "🔊";
-            soundButton.addEventListener('click', () => {
-                const hiraganaCell = document.getElementById(`hiragana_cell_${currentQuestionItem.sound_en}`);
-                hiraganaCell.click();
-            });
-            questionImgEl.innerHTML = '';
-            questionImgEl.appendChild(soundButton);
-            questionCaptionEl.textContent = currentQuestionItem.sound_en;
+            questionEl.textContent = currentQuestionItem.katakana;
 
             // Get random options
             const options = getRandomOptions(currentQuestionItemID);
@@ -402,9 +378,6 @@
             nextBtn.disabled = true;
 
             currentQuestionNum++;
-
-            // play the hiragana sound
-            soundButton.click();
         }
 
         function endGame() {
@@ -447,15 +420,14 @@
                 .then(response => response.json())
                 .then(data => {
                     itemsData = data;
-                    createHiraganaList();
+                    createKatakanaList();
                     showPage('characters_list');
                 })
                 .catch(error => console.error('Error loading JSON:', error));
         });
 
         // Initialize the game elements
-        const questionImgEl = document.getElementById('question-img');
-        const questionCaptionEl = document.getElementById('question-caption');
+        const questionEl = document.getElementById('question');
         const optionsEl = document.querySelectorAll('.option');
         const nextBtn = document.getElementById('next-button');
 
