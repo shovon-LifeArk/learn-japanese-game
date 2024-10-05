@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeArk Japanese education: Alphabet (Hiragana)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Klee One', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #game-container {
+            height: 100vh;
+            width: 100%;
+            max-height: 1024px;
+            max-width: 576px;
+        }
+        .play-button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #9966ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .play-button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+        .checkbox-button {
+            display: block;
+            padding: 10px 20px;
+            font-size: 1.5em;
+            border: 1px solid #9966ff;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0px;
+        }
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+        }
+        #words_list-container,
+        #range_selection-container,
+        #question-container,
+        #result-container {
+            min-height: calc(80vh - 40px);
+            padding: 20px;
+            display: none; 
+            flex: 1;
+            gap: 20px;
+            flex-direction: column;
+        }
+        #words_list-container {
+            font-size: 1.2em !important;
+        }
+        #words_list-container h3, h4 {
+            line-height: 100%;
+            font-weight: bold;
+            font-family: sans-serif;
+            font-size: 1.5em;
+            margin: 0px;
+        }
+        #words_list-container h4 {
+            font-size: 1.0em  !important;
+        }
+        #words_list-container table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        #words_list-container td, th {
+            padding: 10px;
+            border: 1px solid black;
+        }
+        #words_list-container th {
+            font-weight: bold;
+            text-align: left;
+            background-color: #333333;
+            color: white;
+        }
+        #question-number {
+            font-size: 1.5em;
+        }
+        #question {
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .option {
+            margin: 10px 0;
+            padding: 20px;
+            font-size: 1.2em;
+            text-align: left;
+            cursor: pointer;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            word-break: keep-all;
+            white-space: normal; 
+        }
+        .correct {
+            background-color: green;
+            color: white;
+        }
+        .wrong {
+            background-color: red;
+            color: white;
+        }
+        #next-button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #9966ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: auto;
+        }
+        #next-button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+        #score {
+            font-size: 2em;
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="words_list-container">
+            <h1 style="text-align: center;">Forms of Verbs</h1>
+            <button class="play-button" onclick="playGame()">Play Game</button><br>
+        </div>
+        <div id="range_selection-container">
+            <h3 style="text-align: center;">Choose the question range</h3>
+            <div>
+                <label class="checkbox-button">
+                    <input type="checkbox" id="range_all"> All
+                </label>
+                <label class="checkbox-button">
+                    <input type="checkbox" name="game_range" value="辞書形"> じしょ形
+                </label>
+                <label class="checkbox-button">
+                    <input type="checkbox" name="game_range" value="ます形"> ます形
+                </label>
+                <label class="checkbox-button">
+                    <input type="checkbox" name="game_range" value="ません形"> ません形
+                </label>
+                <label class="checkbox-button">
+                    <input type="checkbox" name="game_range" value="ました形"> ました形
+                </label>
+                <label class="checkbox-button">
+                    <input type="checkbox" name="game_range" value="ませんでした形"> ませんでした形
+                </label>
+                <label class="checkbox-button">
+                    <input type="checkbox" name="game_range" value="て形"> て形
+                </label>
+                <label class="checkbox-button">
+                    <input type="checkbox" name="game_range" value="ない形"> ない形
+                </label>
+                <label class="checkbox-button">
+                    <input type="checkbox" name="game_range" value="た形"> た形
+                </label>
+                <label class="checkbox-button">
+                    <input type="checkbox" name="game_range" value="なかった形"> なかった形
+                </label>
+            </div>
+            <button class="play-button disabled" id="range_confirm-button" onclick="startGame()" disabled>Start Game!</button>
+        </div>
+        <div id="question-container">
+            <div id="question-number"></div>
+            <div id="question"></div>
+            <div id="options">
+                <div class="option" onclick="checkAnswer(0)"></div>
+                <div class="option" onclick="checkAnswer(1)"></div>
+                <div class="option" onclick="checkAnswer(2)"></div>
+                <div class="option" onclick="checkAnswer(3)"></div>
+            </div>
+            <button id="next-button" onclick="nextQuestion()" disabled>Next</button>
+        </div>
+        <div id="result-container">
+            <div id="score"></div>
+            <button class="play-button" onclick="replayGame()">Replay</button><br/>
+            <button class="play-button" onclick="showPage('words_list')">Verbs List</button>
+        </div>
+    </div>
+
+    <script>
+
+        let itemsData = {};
+
+        const verbForms = ["辞書形","ます形","ません形","ました形","ませんでした形","て形","ない形","た形","なかった形"];
+        const formsDisplayOrder = {
+            "ます形": ["meaning_bd","辞書形","ます形"],
+            "ません形": ["ます形","ません形"],
+            "ました形": ["ます形","ました形"],
+            "ませんでした形": ["ません形","ませんでした形"],
+            "て形": ["辞書形","て形"],
+            "ない形": ["辞書形","ない形"],
+            "た形": ["辞書形","た形"],
+            "なかった形": ["辞書形","なかった形"]
+        };
+
+        // game related data
+        const totalQuestions = 10;      // total questions in a game
+        let selectedForms = null;       // questions should be chosen from this form of verbs
+        let gameItemIDs = null;         // hold item IDs within game range
+        let gameQuestionItemIDs = null; // hold index of itemsData (chosen randomly from gameItemIDs)
+        let currentQuestionItem = {};   // item for current question in game
+        let currentQuestionForm = null; // verb form for current question
+        let currentQuestionNum = 0;     // current question changes from 0 to 9
+        let score = 0;                  // number of correct answers
+
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
+
+        function createTableForVerbs(formName) {
+            const verbs = Object.keys(itemsData.verbs);
+
+            const table = document.createElement('table');
+
+            const headerRow = document.createElement('tr');
+            let headerHTML = "";
+            formsDisplayOrder[formName].forEach(dispForm => {
+                if (dispForm  === "meaning_bd") dispForm  = "ক্রিয়াপদ";
+                headerHTML += `<th>${dispForm}</th>`;
+            });
+            headerRow.innerHTML = headerHTML;
+            table.appendChild(headerRow);
+
+            verbs.forEach(verbKey => {
+                const verbData = itemsData.verbs[verbKey];
+                const row = document.createElement('tr');
+                let rowHTML = "";
+                formsDisplayOrder[formName].forEach(dispForm => {
+                    const cellText = dispForm ===  "meaning_bd" ? verbData[dispForm] : verbData[dispForm].word;
+                    rowHTML += `<td>${cellText}</td>`;
+                });
+                row.innerHTML = rowHTML;
+                table.appendChild(row);
+            });
+
+            return table;
+        }
+
+        function createExampleSentencesForVerbForms(formName) {
+            const list = document.createElement("ul");
+
+            itemsData.forms[formName].sentences.forEach(sentence => {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `${sentence.jp}<br>${sentence.bd}`;
+
+                list.appendChild(listItem);
+            });
+
+            return list;
+        }
+
+        function createVerbsList() {
+            const container = document.getElementById('words_list-container');
+
+            Object.keys(formsDisplayOrder).forEach(formName => {
+                // title
+                const heading = document.createElement("h3");
+                heading.textContent = formName === "ます形" ? "辞書形・ます形" : formName;
+                container.appendChild(heading);
+
+                // definition
+                if (formName === "ます形") {
+                    const definition_ = document.createElement("span");
+                    definition_.textContent = itemsData.forms["辞書形"].definition_bd;
+                    container.appendChild(definition_);
+                }
+                const definition = document.createElement("span");
+                definition.textContent = itemsData.forms[formName].definition_bd;
+                container.appendChild(definition);
+
+                // verbs form table
+                const table = createTableForVerbs(formName);
+                container.appendChild(table);
+
+                // example sentences
+                const exampleDiv = document.createElement("div");
+                if (formName === "ます形") {
+                    const exampleHeading_ = document.createElement("h4");
+                    exampleHeading_.innerHTML = `Example (辞書形):`;
+                    exampleDiv.appendChild(exampleHeading_);
+
+                    const example_ = createExampleSentencesForVerbForms("辞書形");
+                    exampleDiv.appendChild(example_);
+
+                }
+                const exampleHeading = document.createElement("h4");
+                exampleHeading.innerHTML = `Example (${formName}):`;
+                exampleDiv.appendChild(exampleHeading);
+
+                const example = createExampleSentencesForVerbForms(formName);
+                exampleDiv.appendChild(example);
+
+                container.appendChild(exampleDiv);
+            });
+        }
+
+        function nextQuestion() {
+            if (currentQuestionNum === totalQuestions) {
+                endGame();
+                return;
+            }
+
+            // Display question number
+            document.getElementById('question-number').textContent = `${currentQuestionNum + 1}/${totalQuestions}`;
+
+            // Load current question and options
+            const currentQuestionItemID = gameQuestionItemIDs[currentQuestionNum];
+            currentQuestionItem = itemsData.verbs[currentQuestionItemID];
+
+            const questionVerbForm = selectedForms[Math.floor(Math.random() * selectedForms.length)];
+            currentQuestionForm = questionVerbForm;
+
+            // Update question
+            questionEl.innerHTML = currentQuestionItem[questionVerbForm].sentence.bd;
+
+            // Get random options
+            const options = getRandomOptions(currentQuestionItem, questionVerbForm);
+
+            // Update options in the DOM
+            options.forEach((optionText, index) => {
+                optionsEl[index].textContent = optionText;
+                optionsEl[index].classList.remove('correct', 'wrong'); // Reset styles
+                optionsEl[index].style.pointerEvents = 'auto'; // Enable click
+            });
+
+            // Disabled the Next button
+            nextBtn.disabled = true;
+
+            currentQuestionNum++;
+        }
+
+        function getRandomQuestionItemIDs() {
+            // Shuffle array
+            const shuffled = Object.keys(itemsData.verbs).sort(() => 0.5 - Math.random());
+            // return first n elemets
+            return shuffled.slice(0, totalQuestions);
+        }
+
+        function getRandomOptions(currentQuestionItem, verbForm) {
+            const optionForms = new Set();
+
+            // Add the current question number to options
+            optionForms.add(verbForm);
+
+            // Generate random options
+            while (optionForms.size < 4) {
+                const randomForm = verbForms[Math.floor(Math.random() * verbForms.length)];
+                optionForms.add(randomForm);
+            }
+
+            // Convert Set to Array and shuffle it
+            const optionFormsShuffled = Array.from(optionForms).sort(() => Math.random() - 0.5);
+
+            // get option sentences
+            let options = [];
+            optionFormsShuffled.forEach(form => {
+                options.push(currentQuestionItem[form].sentence.jp);
+            });
+
+            return options;
+        }
+
+        function checkAnswer(selectedIndex) {
+            // Disable all options after selection
+            for (let i = 0; i < optionsEl.length; i++) {
+                optionsEl[i].style.pointerEvents = 'none'; // Disable further clicks
+            }
+
+            const selectedOption = optionsEl[selectedIndex];
+            const selectedAnswer = selectedOption.textContent;
+            const correctAnswer = currentQuestionItem[currentQuestionForm].sentence.jp;
+
+            if (selectedAnswer === correctAnswer) {
+                // Correct answer
+                selectedOption.classList.add('correct');
+                score++;
+            } else {
+                // Wrong answer
+                selectedOption.classList.add('wrong');
+
+                // Find and highlight the correct option
+                for (let i = 0; i < optionsEl.length; i++) {
+                    if (optionsEl[i].textContent === correctAnswer) {
+                        optionsEl[i].classList.add('correct');
+                        break;
+                    }
+                }
+            }
+
+            // Enable the Next button
+            nextBtn.disabled = false;
+        }
+
+        function endGame() {
+            // Display the score
+            const scoreEl = document.getElementById('score');
+            scoreEl.textContent = `Your score: ${score}/${totalQuestions}`;
+
+            showPage('result');
+        }
+
+        function replayGame() {
+            // Reset game state
+            currentQuestionNum = 0;
+            score = 0;
+            gameQuestionItemIDs = getRandomQuestionItemIDs();
+
+            showPage('question');
+
+            // Start the game
+            nextQuestion();
+        }
+
+        function startGame() {
+            selectedForms = [...individualCheckboxes]
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.value);
+
+            replayGame();
+        }
+
+        function playGame() {
+            showPage('range_selection');
+        }
+
+        function updateRangeConfirmButtonState() {
+            let hasChecked = false;
+            individualCheckboxes.forEach(checkbox => {
+                if (!hasChecked & checkbox.checked) hasChecked = true;
+            });
+
+            if (hasChecked) {
+                rangeConfirmButton.classList.remove('disabled');
+                rangeConfirmButton.disabled = false;
+            } else {
+                rangeConfirmButton.classList.add('disabled');
+                rangeConfirmButton.disabled = true;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/verb_form.json')
+                .then(response => response.json())
+                .then(data => {
+                    itemsData = data;
+
+                    //console.log(itemsData);
+
+                    createVerbsList();
+                    showPage('words_list');
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        });
+
+        // game range selection functionality
+        const allCheckboxButton = document.getElementById('range_all');
+        const individualCheckboxes = document.querySelectorAll('input[name="game_range"]');
+        const rangeConfirmButton = document.getElementById('range_confirm-button');
+
+        allCheckboxButton.addEventListener('change', function() {
+            individualCheckboxes.forEach(checkbox => {
+                checkbox.checked = this.checked;
+            });
+            updateRangeConfirmButtonState();
+        });
+
+        individualCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const allChecked = [...individualCheckboxes].every(checkbox => checkbox.checked);
+                allCheckboxButton.checked = allChecked;
+
+                updateRangeConfirmButtonState();
+            });
+        });
+
+        // Initialize the game
+        const questionEl = document.getElementById('question');
+        const optionsEl = document.querySelectorAll('.option');
+        const nextBtn = document.getElementById('next-button');
+
+    </script>
+</body>
+</html>

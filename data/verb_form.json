@@ -1,0 +1,1411 @@
+{
+    "verbs": {
+        "する": {
+            "辞書形": {
+                "word": "する",
+                "sentence": {
+                    "jp": "わたし　は　しゅくだい　を　する",
+                    "en": "I do my homework",
+                    "bd": "আমি আমার বাড়ির কাজ করি"
+                }
+            },
+            "ます形": {
+                "word": "します",
+                "sentence": {
+                    "jp": "かれ　は　れんしゅう　を　します",
+                    "en": "He practices",
+                    "bd": "সে অনুশীলন করে"
+                }
+            },
+            "ない形": {
+                "word": "しない",
+                "sentence": {
+                    "jp": "わたし　は　スポーツ　を　しない",
+                    "en": "I don’t play sports",
+                    "bd": "আমি খেলাধুলা করি না"
+                }
+            },
+            "ません形": {
+                "word": "しません",
+                "sentence": {
+                    "jp": "かのじょ　は　しごと　を　しません",
+                    "en": "She doesn’t work",
+                    "bd": "সে কাজ করে না"
+                }
+            },
+            "た形": {
+                "word": "した",
+                "sentence": {
+                    "jp": "わたし　は　きのう　そうじ　を　した",
+                    "en": "I cleaned yesterday",
+                    "bd": "আমি গতকাল পরিষ্কার করেছিলাম"
+                }
+            },
+            "ました形": {
+                "word": "しました",
+                "sentence": {
+                    "jp": "かれ　は　しゅくだい　を　しました",
+                    "en": "He did his homework",
+                    "bd": "সে তার বাড়ির কাজ করেছিল"
+                }
+            },
+            "なかった形": {
+                "word": "しなかった",
+                "sentence": {
+                    "jp": "わたし　は　テスト　を　しなかった",
+                    "en": "I didn’t take the test",
+                    "bd": "আমি পরীক্ষাটি দিইনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "しませんでした",
+                "sentence": {
+                    "jp": "かのじょ　は　テスト　を　しませんでした",
+                    "en": "She didn’t take the test",
+                    "bd": "সে পরীক্ষাটি দেয়নি"
+                }
+            },
+            "て形": {
+                "word": "して",
+                "sentence": {
+                    "jp": "しごと　を　して　ください",
+                    "en": "Please work",
+                    "bd": "অনুগ্রহ করে কাজ করুন"
+                }
+            },
+            "meaning_en": "to do",
+            "meaning_bd": "করা"
+        },
+        "寝る": {
+            "辞書形": {
+                "word": "ねる",
+                "sentence": {
+                    "jp": "わたし　は　ねる　こと　が　すき　です",
+                    "en": "I like to sleep",
+                    "bd": "আমি ঘুমাতে পছন্দ করি"
+                }
+            },
+            "ます形": {
+                "word": "ねます",
+                "sentence": {
+                    "jp": "わたし　は　まいにち　10じ　に　ねます",
+                    "en": "I sleep at 10 o'clock every day",
+                    "bd": "আমি প্রতিদিন রাত দশটায় ঘুমাই"
+                }
+            },
+            "ない形": {
+                "word": "ねない",
+                "sentence": {
+                    "jp": "私は　早く　ねない",
+                    "en": "I don't sleep early",
+                    "bd": "আমি তাড়াতাড়ি ঘুমাই না"
+                }
+            },
+            "ません形": {
+                "word": "ねません",
+                "sentence": {
+                    "jp": "かれ　は　いま　ねません",
+                    "en": "He will not sleep now",
+                    "bd": "সে এখন ঘুমাবে না।"
+                }
+            },
+            "た形": {
+                "word": "ねた",
+                "sentence": {
+                    "jp": "わたし　は　もう　ねた",
+                    "en": "I have already slept",
+                    "bd": "আমি ইতিমধ্যে ঘুমিয়েছি"
+                }
+            },
+            "ました形": {
+                "word": "ねました",
+                "sentence": {
+                    "jp": "きのう　は　9じ　に　ねました",
+                    "en": "I slept at 9 o'clock yesterday",
+                    "bd": "গতকাল আমি রাত ৯টায় ঘুমিয়েছি"
+                }
+            },
+            "なかった形": {
+                "word": "ねなかった",
+                "sentence": {
+                    "jp": "きのう　は　ぜんぜん　ねなかった",
+                    "en": "I didn’t sleep at all yesterday",
+                    "bd": "গতকাল আমি একেবারেই ঘুমাইনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "ねませんでした",
+                "sentence": {
+                    "jp": "かれ　は　さくばん　ねませんでした",
+                    "en": "He didn’t sleep last night",
+                    "bd": "সে গতরাতে ঘুমায়নি"
+                }
+            },
+            "て形": {
+                "word": "ねて",
+                "sentence": {
+                    "jp": "はやく　ねて　ください",
+                    "en": "Please sleep early",
+                    "bd": "অনুগ্রহ করে তাড়াতাড়ি ঘুমিয়ে পড়ুন"
+                }
+            },
+            "meaning_en": "to sleep",
+            "meaning_bd": "ঘুমানো"
+        },
+        "食べる": {
+            "辞書形": {
+                "word": "たべる",
+                "sentence": {
+                    "jp": "わたし　は　すし　を　たべる",
+                    "en": "I eat sushi",
+                    "bd": "আমি সুশি খাই"
+                }
+            },
+            "ます形": {
+                "word": "たべます",
+                "sentence": {
+                    "jp": "わたし　は　よく　すし　を　たべます",
+                    "en": "I often eat sushi",
+                    "bd": "আমি প্রায়ই সুশি খাই"
+                }
+            },
+            "ない形": {
+                "word": "たべない",
+                "sentence": {
+                    "jp": "わたし　は　あさごはん　を　たべない",
+                    "en": "I don’t eat breakfast",
+                    "bd": "আমি সকালের নাস্তা খাই না"
+                }
+            },
+            "ません形": {
+                "word": "たべません",
+                "sentence": {
+                    "jp": "かれ　は　にく　を　たべません",
+                    "en": "He doesn’t eat meat",
+                    "bd": "সে মাংস খায় না"
+                }
+            },
+            "た形": {
+                "word": "たべた",
+                "sentence": {
+                    "jp": "わたし　は　もう　ひるごはん　を　たべた",
+                    "en": "I have already eaten lunch",
+                    "bd": "আমি ইতিমধ্যে দুপুরের খাবার খেয়ে নিয়েছি"
+                }
+            },
+            "ました形": {
+                "word": "たべました",
+                "sentence": {
+                    "jp": "きのう　すし　を　たべました",
+                    "en": "I ate sushi yesterday",
+                    "bd": "গতকাল আমি সুশি খেয়েছিলাম"
+                }
+            },
+            "なかった形": {
+                "word": "たべなかった",
+                "sentence": {
+                    "jp": "きのう　は　なにも　たべなかった",
+                    "en": "I didn’t eat anything yesterday",
+                    "bd": "গতকাল আমি কিছুই খাইনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "たべませんでした",
+                "sentence": {
+                    "jp": "かれ　は　あさごはん　を　たべませんでした",
+                    "en": "He didn’t eat breakfast",
+                    "bd": "সে সকালের নাস্তা খায়নি"
+                }
+            },
+            "て形": {
+                "word": "たべて",
+                "sentence": {
+                    "jp": "もっと　たべて　ください",
+                    "en": "Please eat more",
+                    "bd": "অনুগ্রহ করে আরও খান"
+                }
+            },
+            "meaning_en": "to eat",
+            "meaning_bd": "খাওয়া"
+        },
+        "走る": {
+            "辞書形": {
+                "word": "はしる",
+                "sentence": {
+                    "jp": "わたし　は　まいにち　こうえん　で　はしる",
+                    "en": "I run in the park every day",
+                    "bd": "আমি প্রতিদিন পার্কে দৌড়াই"
+                }
+            },
+            "ます形": {
+                "word": "はしります",
+                "sentence": {
+                    "jp": "わたし　は　あさ　はやく　はしります",
+                    "en": "I run early in the morning",
+                    "bd": "আমি সকালে তাড়াতাড়ি দৌড়াই"
+                }
+            },
+            "ない形": {
+                "word": "はしらない",
+                "sentence": {
+                    "jp": "わたし　は　きょう　はしらない",
+                    "en": "I won’t run today",
+                    "bd": "আমি আজ দৌড়াব না"
+                }
+            },
+            "ません形": {
+                "word": "はしりません",
+                "sentence": {
+                    "jp": "かれ　は　ぜんぜん　はしりません",
+                    "en": "He doesn’t run at all",
+                    "bd": "সে একেবারেই দৌড়ায় না"
+                }
+            },
+            "た形": {
+                "word": "はしった",
+                "sentence": {
+                    "jp": "きのう　がっこう　まで　はしった",
+                    "en": "I ran to school yesterday",
+                    "bd": "গতকাল আমি স্কুল পর্যন্ত দৌড়েছিলাম"
+                }
+            },
+            "ました形": {
+                "word": "はしりました",
+                "sentence": {
+                    "jp": "わたし　は　とても　はやく　はしりました",
+                    "en": "I ran very fast",
+                    "bd": "আমি খুব দ্রুত দৌড়িয়েছিলাম"
+                }
+            },
+            "なかった形": {
+                "word": "はしらなかった",
+                "sentence": {
+                    "jp": "きのう　は　いっしょに　はしらなかった",
+                    "en": "I didn’t run together yesterday",
+                    "bd": "গতকাল আমি একসাথে দৌড়াইনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "はしりませんでした",
+                "sentence": {
+                    "jp": "かれ　は　きのう　はしりませんでした",
+                    "en": "He didn’t run yesterday",
+                    "bd": "সে গতকাল দৌড়ায়নি"
+                }
+            },
+            "て形": {
+                "word": "はしって",
+                "sentence": {
+                    "jp": "もっと　はやく　はしって　ください",
+                    "en": "Please run faster",
+                    "bd": "অনুগ্রহ করে আরও দ্রুত দৌড়ান"
+                }
+            },
+            "meaning_en": "to run",
+            "meaning_bd": "দৌড়ানো"
+        },
+        "分かる": {
+            "辞書形": {
+                "word": "わかる",
+                "sentence": {
+                    "jp": "わたし　は　にほんご　が　わかる",
+                    "en": "I understand Japanese",
+                    "bd": "আমি জাপানি বুঝি"
+                }
+            },
+            "ます形": {
+                "word": "わかります",
+                "sentence": {
+                    "jp": "かのじょ　は　すうがく　が　よく　わかります",
+                    "en": "She understands math well",
+                    "bd": "সে গণিত ভাল বুঝে"
+                }
+            },
+            "ない形": {
+                "word": "わからない",
+                "sentence": {
+                    "jp": "わたし　は　その　もんだい　が　わからない",
+                    "en": "I don’t understand that problem",
+                    "bd": "আমি ঐ সমস্যাটি বুঝতে পারি না"
+                }
+            },
+            "ません形": {
+                "word": "わかりません",
+                "sentence": {
+                    "jp": "かれ　は　まだ　きょうかしょ　を　わかりません",
+                    "en": "He still doesn’t understand the textbook",
+                    "bd": "সে এখনও পাঠ্যবইটি বুঝতে পারেনা"
+                }
+            },
+            "た形": {
+                "word": "わかった",
+                "sentence": {
+                    "jp": "わたし　は　すぐ　こたえ　が　わかった",
+                    "en": "I immediately understood the answer",
+                    "bd": "আমি সঙ্গে সঙ্গে উত্তরটি বুঝতে পেরেছিলাম"
+                }
+            },
+            "ました形": {
+                "word": "わかりました",
+                "sentence": {
+                    "jp": "せんせい　の　せつめい　が　わかりました",
+                    "en": "I understood the teacher’s explanation",
+                    "bd": "শিক্ষকের ব্যাখ্যা আমি বুঝেছি"
+                }
+            },
+            "なかった形": {
+                "word": "わからなかった",
+                "sentence": {
+                    "jp": "きのう　の　にほんご　の　じゅぎょう　が　わからなかった",
+                    "en": "I didn’t understand yesterday’s Japanese class",
+                    "bd": "গতকালের জাপানি ক্লাস আমি বুঝিনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "わかりませんでした",
+                "sentence": {
+                    "jp": "かのじょ　は　その　しつもん　が　わかりませんでした",
+                    "en": "She didn’t understand that question",
+                    "bd": "সে সেই প্রশ্নটি বুঝতে পারেনি"
+                }
+            },
+            "て形": {
+                "word": "わかって",
+                "sentence": {
+                    "jp": "この　ろんぶん　は　まだ　わかって　いません",
+                    "en": "I still don’t understand this article",
+                    "bd": "এই প্রবন্ধটি এখনও বুঝিনি"
+                }
+            },
+            "meaning_en": "to understand",
+            "meaning_bd": "বুঝতে পারা"
+        },
+        "歩く": {
+            "辞書形": {
+                "word": "あるく",
+                "sentence": {
+                    "jp": "わたし　は　まいにち　がっこう　まで　あるく",
+                    "en": "I walk to school every day",
+                    "bd": "আমি প্রতিদিন স্কুল পর্যন্ত হেঁটে যাই"
+                }
+            },
+            "ます形": {
+                "word": "あるきます",
+                "sentence": {
+                    "jp": "かれ　は　はやく　あるきます",
+                    "en": "He walks fast",
+                    "bd": "সে দ্রুত হাঁটে"
+                }
+            },
+            "ない形": {
+                "word": "あるかない",
+                "sentence": {
+                    "jp": "わたし　は　きょう　がっこう　まで　あるかない",
+                    "en": "I will not walk to school today",
+                    "bd": "আমি আজ স্কুল পর্যন্ত হাঁটব না"
+                }
+            },
+            "ません形": {
+                "word": "あるきません",
+                "sentence": {
+                    "jp": "かれ　は　きょう　は　あるきません",
+                    "en": "He will not walk today",
+                    "bd": "সে আজ হাঁটবে না"
+                }
+            },
+            "た形": {
+                "word": "あるいた",
+                "sentence": {
+                    "jp": "わたし　は　きのう　ともだち　と　えき　まで　あるいた",
+                    "en": "I walked to the station with my friend yesterday",
+                    "bd": "আমি গতকাল বন্ধুর সঙ্গে স্টেশন পর্যন্ত হেঁটেছিলাম"
+                }
+            },
+            "ました形": {
+                "word": "あるきました",
+                "sentence": {
+                    "jp": "かのじょ　は　ちかく　の　みせ　まで　あるきました",
+                    "en": "She walked to the nearby shop",
+                    "bd": "সে কাছের দোকান পর্যন্ত হেঁটেছিল"
+                }
+            },
+            "なかった形": {
+                "word": "あるかなかった",
+                "sentence": {
+                    "jp": "わたし　は　きのう　ぜんぜん　あるかなかった",
+                    "en": "I didn’t walk at all yesterday",
+                    "bd": "আমি গতকাল একেবারেই হাঁটিনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "あるきませんでした",
+                "sentence": {
+                    "jp": "かれ　は　きのう　あるきませんでした",
+                    "en": "He didn’t walk yesterday",
+                    "bd": "সে গতকাল হাঁটেনি"
+                }
+            },
+            "て形": {
+                "word": "あるいて",
+                "sentence": {
+                    "jp": "もっと　はやく　あるいて　ください",
+                    "en": "Please walk faster",
+                    "bd": "অনুগ্রহ করে আরও দ্রুত হাঁটুন"
+                }
+            },
+            "meaning_en": "to walk",
+            "meaning_bd": "হাঁটা"
+        },
+        "聞く": {
+            "辞書形": {
+                "word": "きく",
+                "sentence": {
+                    "jp": "わたし　は　せんせい　の　はなし　を　きく",
+                    "en": "I listen to the teacher's talk",
+                    "bd": "আমি শিক্ষকের কথা শুনি"
+                }
+            },
+            "ます形": {
+                "word": "ききます",
+                "sentence": {
+                    "jp": "わたし　は　まいにち　おんがく　を　ききます",
+                    "en": "I listen to music every day",
+                    "bd": "আমি প্রতিদিন গান শুনি"
+                }
+            },
+            "ない形": {
+                "word": "きかない",
+                "sentence": {
+                    "jp": "かれ　は　わたし　の　はなし　を　きかない",
+                    "en": "He doesn’t listen to me",
+                    "bd": "সে আমার কথা শোনে না"
+                }
+            },
+            "ません形": {
+                "word": "ききません",
+                "sentence": {
+                    "jp": "かのじょ　は　ニュース　を　ききません",
+                    "en": "She doesn’t listen to the news",
+                    "bd": "সে খবর শোনে না"
+                }
+            },
+            "た形": {
+                "word": "きいた",
+                "sentence": {
+                    "jp": "わたし　は　ともだち　の　そうだん　を　きいた",
+                    "en": "I listened to my friend's advice",
+                    "bd": "আমি বন্ধুর পরামর্শ শুনেছি"
+                }
+            },
+            "ました形": {
+                "word": "ききました",
+                "sentence": {
+                    "jp": "かれ　は　せんせい　の　はなし　を　ききました",
+                    "en": "He listened to the teacher's talk",
+                    "bd": "সে শিক্ষকের কথা শুনেছে"
+                }
+            },
+            "なかった形": {
+                "word": "きかなかった",
+                "sentence": {
+                    "jp": "わたし　は　きのう　おんがく　を　きかなかった",
+                    "en": "I didn’t listen to music yesterday",
+                    "bd": "আমি গতকাল গান শুনিনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "ききませんでした",
+                "sentence": {
+                    "jp": "かれ　は　その　はなし　を　ききませんでした",
+                    "en": "He didn’t listen to that story",
+                    "bd": "সে সেই গল্পটি শুনেনি"
+                }
+            },
+            "て形": {
+                "word": "きいて",
+                "sentence": {
+                    "jp": "わたし　の　はなし　を　きいて　ください",
+                    "en": "Please listen to what I’m saying",
+                    "bd": "অনুগ্রহ করে আমার কথা শুনুন"
+                }
+            },
+            "meaning_en": "to listen",
+            "meaning_bd": "শোনা"
+        },
+        "書く": {
+            "辞書形": {
+                "word": "かく",
+                "sentence": {
+                    "jp": "わたし　は　にほんご　で　てがみ　を　かく",
+                    "en": "I write a letter in Japanese",
+                    "bd": "আমি জাপানিতে একটি চিঠি লিখি"
+                }
+            },
+            "ます形": {
+                "word": "かきます",
+                "sentence": {
+                    "jp": "かれ　は　まいにち　にっきを　かきます",
+                    "en": "He writes a diary every day",
+                    "bd": "সে প্রতিদিন ডায়েরি লিখে"
+                }
+            },
+            "ない形": {
+                "word": "かかない",
+                "sentence": {
+                    "jp": "わたし　は　きょう　レポート　を　かかない",
+                    "en": "I won’t write the report today",
+                    "bd": "আমি আজ রিপোর্ট লিখব না"
+                }
+            },
+            "ません形": {
+                "word": "かきません",
+                "sentence": {
+                    "jp": "かのじょ　は　しょうせつ　を　かきません",
+                    "en": "She doesn’t write novels",
+                    "bd": "সে উপন্যাস লেখে না"
+                }
+            },
+            "た形": {
+                "word": "かいた",
+                "sentence": {
+                    "jp": "わたし　は　せんせい　に　てがみ　を　かいた",
+                    "en": "I wrote a letter to my teacher",
+                    "bd": "আমি শিক্ষকের কাছে একটি চিঠি লিখেছিলাম"
+                }
+            },
+            "ました形": {
+                "word": "かきました",
+                "sentence": {
+                    "jp": "かれ　は　きのう　レポート　を　かきました",
+                    "en": "He wrote the report yesterday",
+                    "bd": "সে গতকাল রিপোর্ট লিখেছিল"
+                }
+            },
+            "なかった形": {
+                "word": "かかなかった",
+                "sentence": {
+                    "jp": "わたし　は　きのう　にっき　を　かかなかった",
+                    "en": "I didn’t write my diary yesterday",
+                    "bd": "আমি গতকাল আমার ডায়েরি লিখিনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "かきませんでした",
+                "sentence": {
+                    "jp": "かのじょ　は　レポート　を　かきませんでした",
+                    "en": "She didn’t write the report",
+                    "bd": "সে রিপোর্টটি লেখেনি"
+                }
+            },
+            "て形": {
+                "word": "かいて",
+                "sentence": {
+                    "jp": "じぶん　の　なまえ　を　かいて　ください",
+                    "en": "Please write your name",
+                    "bd": "দয়া করে আপনার নাম লিখুন"
+                }
+            },
+            "meaning_en": "to write",
+            "meaning_bd": "লেখা"
+        },
+        "住む": {
+            "辞書形": {
+                "word": "すむ",
+                "sentence": {
+                    "jp": "わたし　は　とうきょう　に　すんでいます",
+                    "en": "I live in Tokyo",
+                    "bd": "আমি টোকিওতে থাকি"
+                }
+            },
+            "ます形": {
+                "word": "すみます",
+                "sentence": {
+                    "jp": "かれ　は　いま　あそこ　で　すみます",
+                    "en": "He lives there now",
+                    "bd": "সে এখন সেখানে থাকে"
+                }
+            },
+            "ない形": {
+                "word": "すまない",
+                "sentence": {
+                    "jp": "わたし　は　にほん　に　すまない",
+                    "en": "I do not live in Japan",
+                    "bd": "আমি জাপানে থাকি না"
+                }
+            },
+            "ません形": {
+                "word": "すみません",
+                "sentence": {
+                    "jp": "かのじょ　は　がっこう　に　すみません",
+                    "en": "She doesn’t live at school",
+                    "bd": "সে স্কুলে থাকে না"
+                }
+            },
+            "た形": {
+                "word": "すんだ",
+                "sentence": {
+                    "jp": "わたし　は　ちゅうごく　に　すんだ",
+                    "en": "I lived in China",
+                    "bd": "আমি চীনে বাস করতাম"
+                }
+            },
+            "ました形": {
+                "word": "すみました",
+                "sentence": {
+                    "jp": "かれ　は　ふるい　いえ　に　すみました",
+                    "en": "He lived in an old house",
+                    "bd": "সে একটি পুরানো বাড়িতে বসবাস করেছিল"
+                }
+            },
+            "なかった形": {
+                "word": "すまなかった",
+                "sentence": {
+                    "jp": "わたし　は　かんこく　に　すまなかった",
+                    "en": "I didn’t live in Korea",
+                    "bd": "আমি কোরিয়াতে থাকিনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "すみませんでした",
+                "sentence": {
+                    "jp": "かのじょ　は　その　いえ　に　すみませんでした",
+                    "en": "She didn’t live in that house",
+                    "bd": "সে সেই বাড়িতে থাকেনি"
+                }
+            },
+            "て形": {
+                "word": "すんで",
+                "sentence": {
+                    "jp": "わたし　は　にほん　に　すんで　います",
+                    "en": "I am living in Japan",
+                    "bd": "আমি জাপানে বাস করছি"
+                }
+            },
+            "meaning_en": "to live",
+            "meaning_bd": "বাস করা"
+        },
+        "飲む": {
+            "辞書形": {
+                "word": "のむ",
+                "sentence": {
+                    "jp": "わたし　は　みず　を　のむ",
+                    "en": "I drink water",
+                    "bd": "আমি পানি পান করি"
+                }
+            },
+            "ます形": {
+                "word": "のみます",
+                "sentence": {
+                    "jp": "かれ　は　おちゃ　を　のみます",
+                    "en": "He drinks tea",
+                    "bd": "সে চা পান করে"
+                }
+            },
+            "ない形": {
+                "word": "のまない",
+                "sentence": {
+                    "jp": "わたし　は　おさけ　を　のまない",
+                    "en": "I don’t drink alcohol",
+                    "bd": "আমি মদ পান করি না"
+                }
+            },
+            "ません形": {
+                "word": "のみません",
+                "sentence": {
+                    "jp": "かのじょ　は　じゅーす　を　のみません",
+                    "en": "She doesn’t drink juice",
+                    "bd": "সে জুস পান করে না"
+                }
+            },
+            "た形": {
+                "word": "のんだ",
+                "sentence": {
+                    "jp": "わたし　は　きのう　みず　を　のんだ",
+                    "en": "I drank water yesterday",
+                    "bd": "আমি গতকাল পানি পান করেছি"
+                }
+            },
+            "ました形": {
+                "word": "のみました",
+                "sentence": {
+                    "jp": "かれ　は　せんせい　と　おさけ　を　のみました",
+                    "en": "He drank alcohol with the teacher",
+                    "bd": "সে শিক্ষকের সঙ্গে মদ পান করেছিল"
+                }
+            },
+            "なかった形": {
+                "word": "のまなかった",
+                "sentence": {
+                    "jp": "わたし　は　きのう　おちゃ　を　のまなかった",
+                    "en": "I didn’t drink tea yesterday",
+                    "bd": "আমি গতকাল চা পান করিনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "のみませんでした",
+                "sentence": {
+                    "jp": "かのじょ　は　その　みず　を　のみませんでした",
+                    "en": "She didn’t drink that water",
+                    "bd": "সে সেই পানি পান করেনি"
+                }
+            },
+            "て形": {
+                "word": "のんで",
+                "sentence": {
+                    "jp": "みず　を　のんで　ください",
+                    "en": "Please drink water",
+                    "bd": "অনুগ্রহ করে পানি পান করুন"
+                }
+            },
+            "meaning_en": "to drink",
+            "meaning_bd": "পান করা"
+        },
+        "買う": {
+            "辞書形": {
+                "word": "かう",
+                "sentence": {
+                    "jp": "わたし　は　ほん　を　かう",
+                    "en": "I buy a book",
+                    "bd": "আমি একটি বই কিনি"
+                }
+            },
+            "ます形": {
+                "word": "かいます",
+                "sentence": {
+                    "jp": "かれ　は　ねこ　を　かいます",
+                    "en": "He will buy a cat",
+                    "bd": "সে একটি বিড়াল কিনবে"
+                }
+            },
+            "ない形": {
+                "word": "かわない",
+                "sentence": {
+                    "jp": "わたし　は　きょう　なに　も　かわない",
+                    "en": "I won’t buy anything today",
+                    "bd": "আমি আজ কিছু কিনব না"
+                }
+            },
+            "ません形": {
+                "word": "かいません",
+                "sentence": {
+                    "jp": "かのじょ　は　じてんしゃ　を　かいません",
+                    "en": "She will not buy a bicycle",
+                    "bd": "সে সাইকেল কিনবে না"
+                }
+            },
+            "た形": {
+                "word": "かった",
+                "sentence": {
+                    "jp": "わたし　は　きのう　りんご　を　かった",
+                    "en": "I bought an apple yesterday",
+                    "bd": "আমি গতকাল একটি আপেল কিনেছিলাম"
+                }
+            },
+            "ました形": {
+                "word": "かいました",
+                "sentence": {
+                    "jp": "かれ　は　あたらしい　くるま　を　かいました",
+                    "en": "He bought a new car",
+                    "bd": "সে একটি নতুন গাড়ি কিনেছিল"
+                }
+            },
+            "なかった形": {
+                "word": "かわなかった",
+                "sentence": {
+                    "jp": "わたし　は　きのう　えんぴつ　を　かわなかった",
+                    "en": "I did not buy pencil yesterday",
+                    "bd": "আমি গতকাল পেন্সিল কিনিনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "かいませんでした",
+                "sentence": {
+                    "jp": "かのじょ　は　その　ドレス　を　かいませんでした",
+                    "en": "She didn’t buy that dress",
+                    "bd": "সে পোশাকটি কেনেনি"
+                }
+            },
+            "て形": {
+                "word": "かって",
+                "sentence": {
+                    "jp": "パン　を　かって　ください",
+                    "en": "Please buy bread",
+                    "bd": "দয়া করে পাউরুটি কিনুন"
+                }
+            },
+            "meaning_en": "to buy",
+            "meaning_bd": "কেনা"
+        },
+        "歌う": {
+            "辞書形": {
+                "word": "うたう",
+                "sentence": {
+                    "jp": "わたし　は　うたう　こと　が　すき　です",
+                    "en": "I like to sing",
+                    "bd": "আমি গান গাইতে পছন্দ করি"
+                }
+            },
+            "ます形": {
+                "word": "うたいます",
+                "sentence": {
+                    "jp": "かれ　は　うた　を　うたいます",
+                    "en": "He sings a song",
+                    "bd": "সে একটি গান গায়"
+                }
+            },
+            "ない形": {
+                "word": "うたわない",
+                "sentence": {
+                    "jp": "わたし　は　かれ　の　うた　を　うたわない",
+                    "en": "I don’t sing his song",
+                    "bd": "আমি তার গান গাই না"
+                }
+            },
+            "ません形": {
+                "word": "うたいます",
+                "sentence": {
+                    "jp": "かのじょ　は　みんな　の　ために　うたいません",
+                    "en": "She doesn’t sing for everyone",
+                    "bd": "সে সবার জন্য গান গায় না"
+                }
+            },
+            "た形": {
+                "word": "うたった",
+                "sentence": {
+                    "jp": "わたし　は　きのう　うたった",
+                    "en": "I sang yesterday",
+                    "bd": "আমি গতকাল গান গেয়েছিলাম"
+                }
+            },
+            "ました形": {
+                "word": "うたいました",
+                "sentence": {
+                    "jp": "かれ　は　ライブ　で　うたいました",
+                    "en": "He sang at the live concert",
+                    "bd": "সে লাইভ কনসার্টে গান গেয়েছিল"
+                }
+            },
+            "なかった形": {
+                "word": "うたわなかった",
+                "sentence": {
+                    "jp": "わたし　は　パーティー　で　うたわなかった",
+                    "en": "I didn’t sing at the party",
+                    "bd": "আমি পার্টিতে গান গাইনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "うたいませんでした",
+                "sentence": {
+                    "jp": "かのじょ　は　その　うた　を　うたいませんでした",
+                    "en": "She didn’t sing that song",
+                    "bd": "সে সেই গানটি গায়নি"
+                }
+            },
+            "て形": {
+                "word": "うたって",
+                "sentence": {
+                    "jp": "この　うた　を　うたって　ください",
+                    "en": "Please sing this song",
+                    "bd": "অনুগ্রহ করে এই গানটি গান"
+                }
+            },
+            "meaning_en": "to sing",
+            "meaning_bd": "গান গাওয়া"
+        },
+        "待つ": {
+            "辞書形": {
+                "word": "まつ",
+                "sentence": {
+                    "jp": "わたし　は　ともだち　を　まつ",
+                    "en": "I wait for my friend",
+                    "bd": "আমি আমার বন্ধুর জন্য অপেক্ষা করি"
+                }
+            },
+            "ます形": {
+                "word": "まちます",
+                "sentence": {
+                    "jp": "かれ　は　えき　で　まちます",
+                    "en": "He waits at the station",
+                    "bd": "সে স্টেশনে অপেক্ষা করে"
+                }
+            },
+            "ない形": {
+                "word": "またない",
+                "sentence": {
+                    "jp": "わたし　は　だれ　も　またない",
+                    "en": "I don’t wait for anyone",
+                    "bd": "আমি কাউকে অপেক্ষা করি না"
+                }
+            },
+            "ません形": {
+                "word": "まちません",
+                "sentence": {
+                    "jp": "かのじょ　は　ここ　で　まちません",
+                    "en": "She doesn’t wait here",
+                    "bd": "সে এখানে অপেক্ষা করে না"
+                }
+            },
+            "た形": {
+                "word": "まった",
+                "sentence": {
+                    "jp": "わたし　は　きのう　まった",
+                    "en": "I waited yesterday",
+                    "bd": "আমি গতকাল অপেক্ষা করেছিলাম"
+                }
+            },
+            "ました形": {
+                "word": "まちました",
+                "sentence": {
+                    "jp": "かれ　は　いえ　の　まえ　で　まちました",
+                    "en": "He waited in front of the house",
+                    "bd": "সে বাড়ির সামনে অপেক্ষা করেছিল"
+                }
+            },
+            "なかった形": {
+                "word": "またなかった",
+                "sentence": {
+                    "jp": "わたし　は　おおきい　いえ　で　またなかった",
+                    "en": "I didn’t wait at the big house",
+                    "bd": "আমি বড় বাড়িতে অপেক্ষা করিনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "まちませんでした",
+                "sentence": {
+                    "jp": "かのじょ　は　その　ひと　を　まちませんでした",
+                    "en": "She didn’t wait for that person",
+                    "bd": "সে সেই ব্যক্তির জন্য অপেক্ষা করেনি"
+                }
+            },
+            "て形": {
+                "word": "まって",
+                "sentence": {
+                    "jp": "まって　ください",
+                    "en": "Please wait",
+                    "bd": "অনুগ্রহ করে অপেক্ষা করুন"
+                }
+            },
+            "meaning_en": "to wait",
+            "meaning_bd": "অপেক্ষা করা"
+        },
+        "持つ": {
+            "辞書形": {
+                "word": "もつ",
+                "sentence": {
+                    "jp": "わたし　は　かばん　を　もつ",
+                    "en": "I hold a bag",
+                    "bd": "আমি একটি ব্যাগ ধরি"
+                }
+            },
+            "ます形": {
+                "word": "もちます",
+                "sentence": {
+                    "jp": "かれ　は　いす　を　もちます",
+                    "en": "He holds a chair",
+                    "bd": "সে একটি চেয়ার ধরে"
+                }
+            },
+            "ない形": {
+                "word": "もたない",
+                "sentence": {
+                    "jp": "わたし　は　おかね　を　もたない",
+                    "en": "I don’t have money",
+                    "bd": "আমার কাছে টাকা নেই"
+                }
+            },
+            "ません形": {
+                "word": "もちません",
+                "sentence": {
+                    "jp": "かのじょ　は　それ　を　もちません",
+                    "en": "She doesn’t hold that",
+                    "bd": "সে সেটা ধরে না"
+                }
+            },
+            "た形": {
+                "word": "もった",
+                "sentence": {
+                    "jp": "わたし　は　きのう　かばん　を　もった",
+                    "en": "I held a bag yesterday",
+                    "bd": "আমি গতকাল একটি ব্যাগ ধরেছিলাম"
+                }
+            },
+            "ました形": {
+                "word": "もちました",
+                "sentence": {
+                    "jp": "かれ　は　あたらしい　かばん　を　もちました",
+                    "en": "He held a new bag",
+                    "bd": "সে একটি নতুন ব্যাগ ধরেছিল"
+                }
+            },
+            "なかった形": {
+                "word": "もたなかった",
+                "sentence": {
+                    "jp": "わたし　は　きのう　なにも　もたなかった",
+                    "en": "I didn’t hold anything yesterday",
+                    "bd": "আমি গতকাল কিছুই ধরিনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "もちませんでした",
+                "sentence": {
+                    "jp": "かのじょ　は　その　じてんしゃ　を　もちませんでした",
+                    "en": "She didn’t hold that bicycle",
+                    "bd": "সে সেই সাইকেলটি ধরেনি"
+                }
+            },
+            "て形": {
+                "word": "もって",
+                "sentence": {
+                    "jp": "かばん　を　もって　ください",
+                    "en": "Please hold the bag",
+                    "bd": "অনুগ্রহ করে ব্যাগটি ধরুন"
+                }
+            },
+            "meaning_en": "to hold",
+            "meaning_bd": "ধরা"
+        },
+        "押す": {
+            "辞書形": {
+                "word": "おす",
+                "sentence": {
+                    "jp": "わたし　は　その　ドア　を　おす",
+                    "en": "I push the door",
+                    "bd": "আমি দরজাটি ঠেলা দেই"
+                }
+            },
+            "ます形": {
+                "word": "おします",
+                "sentence": {
+                    "jp": "かれ　は　ボタン　を　おします",
+                    "en": "He pushes the button",
+                    "bd": "সে বোতামটি চাপ দেয়"
+                }
+            },
+            "ない形": {
+                "word": "おさない",
+                "sentence": {
+                    "jp": "わたし　は　その　ボタン　を　おさない",
+                    "en": "I don’t push that butoon",
+                    "bd": "আমি ঐ বোতামটি চাপি না"
+                }
+            },
+            "ません形": {
+                "word": "おしません",
+                "sentence": {
+                    "jp": "かのじょ　は　その　ドア　を　おしません",
+                    "en": "She doesn’t push that door",
+                    "bd": "সে দরজাটি ঠেলা দেয় না"
+                }
+            },
+            "た形": {
+                "word": "おした",
+                "sentence": {
+                    "jp": "わたし　は　ボタン　を　おした",
+                    "en": "I pushed the button",
+                    "bd": "আমি বোতামটি চাপ দিয়েছিলাম"
+                }
+            },
+            "ました形": {
+                "word": "おしました",
+                "sentence": {
+                    "jp": "かれ　は　ドア　を　おしました",
+                    "en": "He pushed the door",
+                    "bd": "সে দরজাটিতে ঠেলা দিয়েছিল"
+                }
+            },
+            "なかった形": {
+                "word": "おさなかった",
+                "sentence": {
+                    "jp": "わたし　は　その　ボタン　を　おさなかった",
+                    "en": "I didn’t push that button",
+                    "bd": "আমি সেই বোতামটি চাপিনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "おしませんでした",
+                "sentence": {
+                    "jp": "かのじょ　は　その　ドア　を　おしませんでした",
+                    "en": "She didn’t push that door",
+                    "bd": "সে সেই দরজাটি ঠেলা দেয়নি"
+                }
+            },
+            "て形": {
+                "word": "おして",
+                "sentence": {
+                    "jp": "ボタン　を　おして　ください",
+                    "en": "Please push the button",
+                    "bd": "অনুগ্রহ করে বোতামটি চাপুন"
+                }
+            },
+            "meaning_en": "to push",
+            "meaning_bd": "চাপ দেওয়া, ঠেলা দেওয়া"
+        },
+        "消す": {
+            "辞書形": {
+                "word": "けす",
+                "sentence": {
+                    "jp": "わたし　は　でんき　を　けす",
+                    "en": "I turn off the light",
+                    "bd": "আমি লাইট অফ করি"
+                }
+            },
+            "ます形": {
+                "word": "けします",
+                "sentence": {
+                    "jp": "かれ　は　テレビ　を　けします",
+                    "en": "He turns off the TV",
+                    "bd": "সে টিভি বন্ধ করে"
+                }
+            },
+            "ない形": {
+                "word": "けさない",
+                "sentence": {
+                    "jp": "せんせい　は　ホワイトボード　を　けさない",
+                    "en": "Teacher does not erase the whiteboard",
+                    "bd": "শিক্ষক হোয়াইটবোর্ড মুছেন না"
+                }
+            },
+            "ません形": {
+                "word": "けしません",
+                "sentence": {
+                    "jp": "かのじょ　は　その　メール　を　けしません",
+                    "en": "She will not erase that email",
+                    "bd": "সে সেই ইমেইলটি মুছে ফেলবে না"
+                }
+            },
+            "た形": {
+                "word": "けした",
+                "sentence": {
+                    "jp": "わたし　は　きのう　でんきを　けした",
+                    "en": "I turned off the light yesterday",
+                    "bd": "আমি গতকাল লাইট বন্ধ করেছিলাম"
+                }
+            },
+            "ました形": {
+                "word": "けしました",
+                "sentence": {
+                    "jp": "かのじょ　は　きのう　ホワイトボード　を　けしました",
+                    "en": "She erased the whiteboard yesterday",
+                    "bd": "সে গতকাল হোয়াইটবোর্ড মুছেছিল"
+                }
+            },
+            "なかった形": {
+                "word": "けさなかった",
+                "sentence": {
+                    "jp": "わたし　は　でんき　を　けさなかった",
+                    "en": "I didn’t turn off the light",
+                    "bd": "আমি লাইট বন্ধ করিনি"
+                }
+            },
+            "ませんでした形": {
+                "word": "けしませんでした",
+                "sentence": {
+                    "jp": "かのじょ　は　その　メール　を　けしませんでした",
+                    "en": "She didn’t erase that email",
+                    "bd": "সে সেই মেইলটি মুছে ফেলেনি"
+                }
+            },
+            "て形": {
+                "word": "けして",
+                "sentence": {
+                    "jp": "でんきを　けして　ください",
+                    "en": "Please turn off the light",
+                    "bd": " অনুগ্রহ করে লাইটটি বন্ধ করুন"
+                }
+            },
+            "meaning_en": "to turn off, to erase",
+            "meaning_bd": "বন্ধ করা, মুছে ফেলা"
+        }
+    },
+    "forms": {
+        "辞書形": {
+            "definition_bd": "辞書形 (じしょ型) হলো ক্রিয়াপদের মৌলিক রূপ, যা কোনও ক্রিয়া বা কাজ সম্পাদনের জন্য সাধারণভাবে ব্যবহৃত হয়। এটি 'basic' বা 'informal' রূপ হিসেবে বিবেচিত হয় এবং কথোপকথনে সহজেই ব্যবহার করা হয়।",
+            "definition_en": "The dictionary form (辞書形) is the basic form of the verb, typically used to express an action in its most neutral state. It’s often regarded as the ‘informal’ or ‘plain’ form and is commonly used in conversation.",
+            "sentences": [
+                {
+                    "jp": "わたし　は　たべる。",
+                    "en": "I eat.",
+                    "bd": "আমি খাই।"
+                },
+                {
+                    "jp": "かれ　は　うたう。",
+                    "en": "He sings.",
+                    "bd": "সে গান গায়।"
+                },
+                {
+                    "jp": "わたしたち　は　あるく。",
+                    "en": "We walk.",
+                    "bd": "আমরা হাঁটি।"
+                }
+            ]
+        },
+        "ます形": {
+            "definition_bd": "ます形 ক্রিয়াপদের ভদ্র বা সম্মানসূচক রূপ। এটি সাধারণত কথোপকথনে বা আনুষ্ঠানিক পরিস্থিতিতে ব্যবহৃত হয় এবং শ্রোতাকে সম্মান জানানোর জন্য ব্যবহৃত হয়।",
+            "definition_en": "The ます形 (polite form) is the polite version of a verb. It is commonly used in conversations or formal situations to show respect towards the listener.",
+            "sentences": [
+                {
+                    "jp": "わたし　は　たべます。",
+                    "en": "I eat (politely).",
+                    "bd": "আমি খাই (ভদ্রভাবে বলা)।"
+                },
+                {
+                    "jp": "かれ　は　うたいます。",
+                    "en": "He sings (politely).",
+                    "bd": "সে গান গায় (ভদ্রভাবে বলা)।"
+                },
+                {
+                    "jp": "わたしたち　は　あるきます。",
+                    "en": "We walk (politely).",
+                    "bd": "আমরা হাঁটি (ভদ্রভাবে বলা)।"
+                }
+            ]
+        },
+        "ない形": {
+            "definition_bd": "ない形 হলো ক্রিয়াপদের না-বোধক রূপ, যা কোনও কাজ না করার বা ঘটতে না দেওয়ার নির্দেশ করে। এটি কথোপকথনে বা অনানুষ্ঠানিক পরিস্থিতিতে ব্যবহার করা হয়।",
+            "definition_en": "The ない形 (negative form) is used to express the negation of an action, indicating that something does not happen or someone does not do something. It’s used in informal or conversational contexts.",
+            "sentences": [
+                {
+                    "jp": "わたし　は　たべない。",
+                    "en": "I don’t eat.",
+                    "bd": "আমি খাই না।"
+                },
+                {
+                    "jp": "かれ　は　うたわない。",
+                    "en": "He doesn’t sing.",
+                    "bd": "সে গান গায় না।"
+                },
+                {
+                    "jp": "わたしたち　は　あるかない。",
+                    "en": "We don’t walk.",
+                    "bd": "আমরা হাঁটি না।"
+                }
+            ]
+        },
+        "ません形": {
+            "definition_bd": "ません形 হলো ক্রিয়াপদের ভদ্র না-বোধক রূপ, যা কোনও কাজ না করার বা কোনও কিছু না ঘটার কথা নির্দেশ করে। এটি সাধারণত আনুষ্ঠানিক বা সম্মানজনক কথোপকথনে ব্যবহৃত হয়।",
+            "definition_en": "The ません形 (negative polite form) is the polite way to negate a verb, indicating that something does not happen or someone does not do something. It is used in formal or respectful conversations.",
+            "sentences": [
+                {
+                    "jp": "わたし　は　たべません。",
+                    "en": "I don’t eat (politely).",
+                    "bd": "আমি খাই না (ভদ্রভাবে বলা)।"
+                },
+                {
+                    "jp": "かれ　は　うたいません。",
+                    "en": "He doesn’t sing (politely).",
+                    "bd": "সে গান গায় না (ভদ্রভাবে বলা)।"
+                },
+                {
+                    "jp": "わたしたち　は　あるきません。",
+                    "en": "We don’t walk (politely).",
+                    "bd": "আমরা হাঁটি না (ভদ্রভাবে বলা)।"
+                }
+            ]
+        },
+        "た形": {
+            "definition_bd": "た形 হলো ক্রিয়াপদের অতীত রূপ, যা নির্দেশ করে যে কোনও কাজ বা ঘটনা ইতিমধ্যে ঘটে গেছে বা সম্পন্ন হয়েছে। এটি দৈনন্দিন কথোপকথনে বা অনানুষ্ঠানিক পরিস্থিতিতে ব্যবহৃত হয়।",
+            "definition_en": "The た形 (past tense form) is used to express that an action or event has already happened or been completed. It is used in casual or conversational contexts.",
+            "sentences": [
+                {
+                    "jp": "わたし　は　たべた。",
+                    "en": "I ate.",
+                    "bd": "আমি খেয়েছি।"
+                },
+                {
+                    "jp": "かれ　は　うたった。",
+                    "en": "He sang.",
+                    "bd": "সে গান গেয়েছে।"
+                },
+                {
+                    "jp": "わたしたち　は　あるいた。",
+                    "en": "We walked.",
+                    "bd": "আমরা হেঁটেছি।"
+                }
+            ]
+        },
+        "ました形": {
+            "definition_bd": "ました形 হলো ক্রিয়াপদের ভদ্র অতীত রূপ, যা নির্দেশ করে যে কোনও কাজ ইতিমধ্যে সম্পন্ন হয়েছে। এটি সাধারণত আনুষ্ঠানিক বা সম্মানজনক কথোপকথনে ব্যবহৃত হয়।",
+            "definition_en": "The ました形 (polite past form) is the polite way to express that an action has already been completed. It is used to speak respectfully, commonly in formal conversations.",
+            "sentences": [
+                {
+                    "jp": "わたし　は　たべました。",
+                    "en": "I ate (politely).",
+                    "bd": "আমি খেয়েছি (ভদ্রভাবে বলা)।"
+                },
+                {
+                    "jp": "かれ　は　うたいました。",
+                    "en": "He sang (politely).",
+                    "bd": "সে গান গেয়েছে (ভদ্রভাবে বলা)।"
+                },
+                {
+                    "jp": "わたしたち　は　あるきました。",
+                    "en": "We walked (politely).",
+                    "bd": "আমরা হেঁটেছি (ভদ্রভাবে বলা)।"
+                }
+            ]
+        },
+        "なかった形": {
+            "definition_bd": "なかった形 হলো ক্রিয়াপদের অতীত নেতিবাচক রূপ, যা নির্দেশ করে যে কোনও কাজ অতীতে ঘটেনি বা সম্পন্ন হয়নি। এটি সাধারণত দৈনন্দিন বা অনানুষ্ঠানিক কথোপকথনে ব্যবহৃত হয়।",
+            "definition_en": "The なかった形 (negative past form) is used to express that an action did not happen or was not completed in the past. It is commonly used in informal conversations.",
+            "sentences": [
+                {
+                    "jp": "わたし　は　たべなかった。",
+                    "en": "I did not eat.",
+                    "bd": "আমি খাইনি।"
+                },
+                {
+                    "jp": "かれ　は　うたわなかった。",
+                    "en": "He did not sing.",
+                    "bd": "সে গান গায়নি।"
+                },
+                {
+                    "jp": "わたしたち　は　あるかなかった。",
+                    "en": "We did not walk.",
+                    "bd": "আমরা হাঁটিনি।"
+                }
+            ]
+        },
+        "ませんでした形": {
+            "definition_bd": "ませんでした形 হলো ক্রিয়াপদের ভদ্র নেতিবাচক অতীত রূপ, যা নির্দেশ করে যে কোনও কাজ অতীতে ঘটেনি বা সম্পন্ন হয়নি। এটি সাধারণত আনুষ্ঠানিক বা সম্মানজনক কথোপকথনে ব্যবহৃত হয়।",
+            "definition_en": "The ませんでした形 (negative polite past form) is the polite way to express that an action did not happen or was not completed in the past. It is commonly used in formal conversations.",
+            "sentences": [
+                {
+                    "jp": "わたし　は　たべませんでした。",
+                    "en": "I did not eat (politely).",
+                    "bd": "আমি খাইনি (ভদ্রভাবে বলা)।"
+                },
+                {
+                    "jp": "かれ　は　うたいませんでした。",
+                    "en": "He did not sing (politely).",
+                    "bd": "সে গান গায়নি (ভদ্রভাবে বলা)।"
+                },
+                {
+                    "jp": "わたしたち　は　あるきませんでした。",
+                    "en": "We did not walk (politely).",
+                    "bd": "আমরা হাঁটিনি (ভদ্রভাবে বলা)।"
+                }
+            ]
+        },
+        "て形": {
+            "definition_bd": "て形 হলো ক্রিয়াপদের এক রূপ যা ক্রিয়া বা ঘটনার ধারাবাহিকতা, নির্দেশ বা আবেদন জানাতে ব্যবহৃত হয়। এটি অন্যান্য ক্রিয়াপদের সঙ্গে মিলিয়ে যৌগিক বাক্য গঠনে এবং নির্ধারণকৃত আদেশ বা অনুরোধ বোঝাতে ব্যবহৃত হয়।",
+            "definition_en": "The て形 (te-form) is used to connect verbs for sequential actions, give instructions, or make requests. It is commonly used in forming compound sentences and expressing actions in progress.",
+            "sentences": [
+                {
+                    "jp": "わたし　は　ごはん　を　たべて、　ねました。",
+                    "en": "I ate food and then slept.",
+                    "bd": "আমি ভাত খেয়ে ঘুমালাম।"
+                },
+                {
+                    "jp": "かれ　は　ドア　を　あけて、　でかけました。",
+                    "en": "He opened the door and went out.",
+                    "bd": "সে দরজা খুলে বাইরে গেল।"
+                },
+                {
+                    "jp": "おちゃ　を　のんで　ください。",
+                    "en": "Please drink some tea.",
+                    "bd": "অনুগ্রহ করে চা খান।"
+                }
+            ]
+        }
+    }
+}
