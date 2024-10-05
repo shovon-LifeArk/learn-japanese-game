@@ -1219,7 +1219,7 @@
     },
     "forms": {
         "辞書形": {
-            "definition_bd": "辞書形 (じしょ型) হলো ক্রিয়াপদের মৌলিক রূপ, যা কোনও ক্রিয়া বা কাজ সম্পাদনের জন্য সাধারণভাবে ব্যবহৃত হয়। এটি 'basic' বা 'informal' রূপ হিসেবে বিবেচিত হয় এবং কথোপকথনে সহজেই ব্যবহার করা হয়।",
+            "definition_bd": "辞書形 (じしょ型) হলো ক্রিয়াপদের মৌলিক রূপ, যা কোনও ক্রিয়া বা কাজ সম্পাদনের কথা বোঝাতে ব্যবহৃত হয়। এটি 'basic' বা 'informal' রূপ হিসেবে বিবেচিত হয় এবং কথোপকথনে সহজেই ব্যবহার করা হয়।",
             "definition_en": "The dictionary form (辞書形) is the basic form of the verb, typically used to express an action in its most neutral state. It’s often regarded as the ‘informal’ or ‘plain’ form and is commonly used in conversation.",
             "sentences": [
                 {
@@ -1240,7 +1240,7 @@
             ]
         },
         "ます形": {
-            "definition_bd": "ます形 ক্রিয়াপদের ভদ্র বা সম্মানসূচক রূপ। এটি সাধারণত কথোপকথনে বা আনুষ্ঠানিক পরিস্থিতিতে ব্যবহৃত হয় এবং শ্রোতাকে সম্মান জানানোর জন্য ব্যবহৃত হয়।",
+            "definition_bd": "ます形 ক্রিয়াপদের ভদ্র বা সম্মানসূচক রূপ। এটি সাধারণত আনুষ্ঠানিক কথোপকথনে ব্যবহৃত হয়।",
             "definition_en": "The ます形 (polite form) is the polite version of a verb. It is commonly used in conversations or formal situations to show respect towards the listener.",
             "sentences": [
                 {
@@ -1261,7 +1261,7 @@
             ]
         },
         "ない形": {
-            "definition_bd": "ない形 হলো ক্রিয়াপদের না-বোধক রূপ, যা কোনও কাজ না করার বা ঘটতে না দেওয়ার নির্দেশ করে। এটি কথোপকথনে বা অনানুষ্ঠানিক পরিস্থিতিতে ব্যবহার করা হয়।",
+            "definition_bd": "ない形 হলো ক্রিয়াপদের না-বোধক রূপ, যা কোনও কাজ না সংঘটিত হবার ব্যাপার নির্দেশ করে। এটি দৈনন্দিন কথোপকথনে বা অনানুষ্ঠানিক পরিস্থিতিতে ব্যবহার করা হয়।",
             "definition_en": "The ない形 (negative form) is used to express the negation of an action, indicating that something does not happen or someone does not do something. It’s used in informal or conversational contexts.",
             "sentences": [
                 {

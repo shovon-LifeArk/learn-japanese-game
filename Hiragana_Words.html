@@ -22,6 +22,13 @@
             max-height: 1024px;
             max-width: 576px;
         }
+        .header-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header-image img {
+            max-width: 70%;
+        }
         .play-button {
             padding: 10px 20px;
             font-size: 1.5em;
@@ -126,7 +133,10 @@
 <body>
     <div id="game-container">
         <div id="words_list-container">
-            <h1 style="text-align: center;">Hiragana words<br>for beginners</h1>
+            <div class="header-image">
+                <img src="assets/image/LifeArk_Nihongo_logo.png" />
+                <h2 style="text-align: center; margin: 0px;">হিরাগানা'র শব্দাবলী</h2>
+            </div>
             <button class="play-button" onclick="replayGame()">Play Game</button>
         </div>
         <div id="question-container">
