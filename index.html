@@ -29,23 +29,53 @@
         .header-image img {
             max-width: 70%;
         }
-        .play-button {
-            padding: 10px 20px;
-            font-size: 1.5em;
-            background-color: #9966ff;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: left;
-            text-decoration: none;
+        .app-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);  /* 3 items per row */
         }
-        #game-link-container {
+
+        .app-item {
+            max-width: calc(100% - 40px); 
             padding: 20px;
-            display: flex; 
-            flex: 1;
-            flex-direction: column;
-            gap: 20px;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .app-item:hover {
+            transform: scale(1.05);
+        }
+
+        .app-item img {
+            max-width: 120px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            object-fit: contain;
+        }
+
+        .app-item p {
+            font-size: 1.2em;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Responsive design for small screens */
+        @media (max-width: 600px) {
+            .app-grid {
+                width:100%;
+                grid-template-columns: repeat(2, 1fr);  /* 2 items per row on small screens */
+            }
+
+            .app-item img {
+                max-width: 120px;
+                object-fit: contain;
+            }
+
+            .app-item p {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
@@ -55,15 +85,39 @@
             <img src="assets/image/LifeArk_Nihongo_logo.png" />
             <h3>খেলায় খেলায় জাপানিজ ভাষা শিক্ষা ...</h3>
         </div>
-        <div id="game-link-container">
-            <a class="play-button" href="Hiragana_Characters.html" target="_blank">Alphabet (Hiragana)</a>
-            <a class="play-button" href="Hiragana_Words.html" target="_blank">Hiragana Words (Beginner)</a>
-            <a class="play-button" href="Katakana_Characters.html" target="_blank">Alphabet (Katakana)</a>
-            <a class="play-button" href="Katakana_Words.html" target="_blank">Katakana Words (Beginner)</a>
-            <a class="play-button" href="Hiragana_Number.html" target="_blank">Counting Numbers</a>
-            <a class="play-button" href="Verb_Forms.html" target="_blank">Forms of Verbs</a>
-            <a class="play-button" href="N5_Words.html" target="_blank">N5 Words</a>
-            <a class="play-button" href="N5_Kanji.html" target="_blank">N5 Kanji</a>
+        <div class="app-grid">
+            <a href="Hiragana_Characters.html" class="app-item" target="_blank">
+                <img src="assets/image/app_icons/icon-hiragana_letters.png" alt="বর্নমালা (হিরাগানা)">
+                <p>বর্নমালা (হিরাগানা)</p>
+            </a>
+            <a href="Hiragana_Words.html" class="app-item" target="_blank">
+                <img src="assets/image/app_icons/icon-hiragana_words.png" alt="হিরাগানা'র শব্দাবলী">
+                <p>হিরাগানা'র শব্দাবলী</p>
+            </a>
+            <a href="Katakana_Characters.html" class="app-item" target="_blank">
+                <img src="assets/image/app_icons/icon-katakana_letters.png" alt="বর্নমালা (কাতাকানা)">
+                <p>বর্নমালা (কাতাকানা)</p>
+            </a>
+            <a href="Katakana_Words.html" class="app-item" target="_blank">
+                <img src="assets/image/app_icons/icon-katakana_words.png" alt="কাতাকানা'র শব্দাবলী">
+                <p>কাতাকানা'র শব্দাবলী</p>
+            </a>
+            <a href="Hiragana_Number.html" class="app-item" target="_blank">
+                <img src="assets/image/app_icons/icon-hiragana_numbers.png" alt="গণনা">
+                <p>গণনা</p>
+            </a>
+            <a href="Verb_Forms.html" class="app-item" target="_blank">
+                <img src="assets/image/app_icons/icon-verb_forms.png" alt="ক্রিয়াপদের রূপ">
+                <p>ক্রিয়াপদের রূপ</p>
+            </a>
+            <a href="N5_Words.html" class="app-item" target="_blank">
+                <img src="assets/image/app_icons/icon-N5_words.png" alt="N5 শব্দাবলী">
+                <p>N5 শব্দাবলী</p>
+            </a>
+            <a href="N5_Kanji.html" class="app-item" target="_blank">
+                <img src="assets/image/app_icons/icon-N5_kanji.png" alt="N5 Kanji">
+                <p>N5 Kanji</p>
+            </a>
         </div>
     </div>
 </body>
