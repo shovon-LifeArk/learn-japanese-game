@@ -41,6 +41,23 @@
             cursor: pointer;
             margin: 10px 0px;
         }
+        .back-button {
+            height: 50px;
+            width: 50px;
+            padding: 10px;
+            border-radius: 35px;
+            border: 2px solid #9966ff;
+            color: #9966ff;
+            font-size: 26px;
+            line-height: 100%;
+            background-color: white;
+            cursor: pointer;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
         hr {
             border: 1px solid grey;
             width: 100%;
@@ -178,7 +195,10 @@
                     <input type="radio" id="range_yoon" name="game_range" value="108"> upto ようおん
                 </label>
             </div>
-            <button class="play-button" onclick="startGame()">Start Game!</button>
+            <div class="button-container">
+                <button class="back-button" onclick="showPage('characters_list')">←</button>
+                <button class="play-button" style="flex-grow: 1;" onclick="startGame()">Start Game!</button>
+            </div>
         </div>
         <div id="question-container">
             <div id="question-number"></div>

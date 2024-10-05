@@ -332,8 +332,8 @@
             "ません形": {
                 "word": "わかりません",
                 "sentence": {
-                    "jp": "かれ　は　まだ　きょうかしょ　を　わかりません",
-                    "en": "He still doesn’t understand the textbook",
+                    "jp": "かれ　は　まだ　その　きょうかしょ　を　わかりません",
+                    "en": "He still doesn’t understand that textbook",
                     "bd": "সে এখনও পাঠ্যবইটি বুঝতে পারেনা"
                 }
             },
@@ -712,7 +712,7 @@
             "ません形": {
                 "word": "のみません",
                 "sentence": {
-                    "jp": "かのじょ　は　じゅーす　を　のみません",
+                    "jp": "かのじょ　は　ジュース　を　のみません",
                     "en": "She doesn’t drink juice",
                     "bd": "সে জুস পান করে না"
                 }

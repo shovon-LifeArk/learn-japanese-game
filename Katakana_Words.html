@@ -35,10 +35,12 @@
             border: 1px solid grey;
             width: 100%;
         }
-        #words_list-container {
+        #words_list-container,
+        #question-container,
+        #result-container {
             height: calc(100vh - 120px);
             padding: 60px 20px;
-            display: flex; 
+            display: none; 
             flex: 1;
             flex-direction: column;
             gap: 20px;
@@ -65,22 +67,6 @@
         }
         #words_list-container .word-bangla {
             font-size: 1.2em;
-        }
-        #question-container {
-            min-height: calc(80vh - 40px);
-            padding: 60px 20px;
-            display: none; 
-            flex: 1;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        #result-container {
-            min-height: calc(80vh - 40px);
-            padding: 60px 20px;
-            display: none; 
-            flex: 1;
-            flex-direction: column;
-            justify-content: center;
         }
         #question-number {
             font-size: 1.5em;
@@ -160,7 +146,7 @@
         <div id="result-container">
             <div id="score"></div>
             <button class="play-button" onclick="replayGame()">Replay</button><br/>
-            <button class="play-button" onclick="displayWordsList()">Words List</button>
+            <button class="play-button" onclick="showPage('words_list')">Words List</button>
         </div>
     </div>
 
@@ -198,6 +184,16 @@
             30: { "katakana": "ユニフォーム", "english": "uniform" }
         };
 
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
+
         function createWordsList() {
             const container = document.getElementById('words_list-container');
 
@@ -223,17 +219,6 @@
                 container.appendChild(hr);
             });
 
-        }
-
-        function displayWordsList() {
-            // hide question container
-            document.getElementById('question-container').style.display = 'none';
-
-            // hide result container
-            document.getElementById('result-container').style.display = 'none';
-
-            // hide words list container
-            document.getElementById('words_list-container').style.display = 'flex';
         }
 
         const totalQuestions = 10;
@@ -348,14 +333,8 @@
             score = 0;
             selectedItemNumbers = getRandomItemNumbers();
 
-            // hide words list container
-            document.getElementById('words_list-container').style.display = 'none';
-
-            // hide result container
-            document.getElementById('result-container').style.display = 'none';
-
             // show question container
-            document.getElementById('question-container').style.display = 'flex';
+            showPage('question')
 
             // Start the game
             nextQuestion();
@@ -371,9 +350,8 @@
 
         // display words list
         createWordsList();
+        showPage('words_list');
 
-        // Start the game
-        //replayGame();
     </script>
 </body>
 </html>

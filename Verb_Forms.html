@@ -36,6 +36,23 @@
             background-color: gray;
             cursor: not-allowed;
         }
+        .back-button {
+            height: 50px;
+            width: 50px;
+            padding: 10px;
+            border-radius: 35px;
+            border: 2px solid #9966ff;
+            color: #9966ff;
+            font-size: 26px;
+            line-height: 100%;
+            background-color: white;
+            cursor: pointer;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
         .checkbox-button {
             display: block;
             padding: 10px 20px;
@@ -176,7 +193,10 @@
                     <input type="checkbox" name="game_range" value="なかった形"> なかった形
                 </label>
             </div>
-            <button class="play-button disabled" id="range_confirm-button" onclick="startGame()" disabled>Start Game!</button>
+            <div class="button-container">
+                <button class="back-button" onclick="showPage('words_list')">←</button>
+                <button class="play-button disabled" id="range_confirm-button" onclick="startGame()" disabled>Start Game!</button>
+            </div>
         </div>
         <div id="question-container">
             <div id="question-number"></div>
