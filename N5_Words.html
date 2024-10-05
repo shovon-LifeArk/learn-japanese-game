@@ -196,10 +196,11 @@
 
         // game related data
         const totalQuestions = 10;  // total questions in a game
-        let fromWordNum = null;     // questions should be chosen from this number in itemsData
-        let toWordNum = null;       // questions should be chosen upto this number in itemsData
+        let gameData = {}           // Store data for game (in suitable format)
+        let fromWordNum = null;     // questions should be chosen from this number in gameData
+        let toWordNum = null;       // questions should be chosen upto this number in gameData
         let gameItemIDs = null;     // hold item IDs within game range
-        let gameQuestionItemIDs = null; // hold index of itemsData (chosen randomly from gameItemIDs)
+        let gameQuestionItemIDs = null; // hold index of gameData (chosen randomly from gameItemIDs)
         let currentQuestionItem = {};   // item for current question in game
         let currentQuestionNum = 0;    // current question changes from 0 to 9
         let score = 0;              // number of correct answers
@@ -218,9 +219,6 @@
             const categories = ["animal", "nature", "season", "country", "place", "body", "people", "clothes", "occupation"];
             const container = document.getElementById('words_list-container');
             let wordNum = 1;
-
-            // save sorted items to select game range purpose
-            const displayItemsData = {};
             
             categories.forEach(category => {
                 // Create a category section
@@ -264,22 +262,21 @@
                     const hr = document.createElement('hr');
                     categoryDiv.appendChild(hr);
 
-                    displayItemsData[wordNum] = item;
+                    // store game data (start from 0 index)
+                    gameData[wordNum-1] = item;
 
                     wordNum++;
                 });
 
                 container.appendChild(categoryDiv);
             });
-
-            itemsData = displayItemsData;
         }
 
         function prepareGameData() {
             gameItemIDs = [];
             const from = fromWordNum-1;
             const to = toWordNum-1;
-            Object.keys(itemsData).forEach(key => {
+            Object.keys(gameData).forEach(key => {
                 if (parseInt(key) >= from && parseInt(key) <= to) {
                     gameItemIDs.push(key);
                 }
@@ -324,16 +321,16 @@
         }
 
         function getRandomOptions(currentQuestionItemID) {
-            const numbers = Object.keys(itemsData).map(Number);
+            const numbers = Object.keys(gameData).map(Number);
             const options = new Set();
 
             // Add the current question number to options
-            options.add(itemsData[currentQuestionItemID].kana);
+            options.add(gameData[currentQuestionItemID].kana);
 
             // Generate random options
             while (options.size < 4) {
                 const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
-                options.add(itemsData[randomNum].kana);
+                options.add(gameData[randomNum].kana);
             }
 
             // Convert Set to Array and shuffle it
@@ -351,7 +348,7 @@
 
             // Load current question and options
             const currentQuestionItemID = gameQuestionItemIDs[currentQuestionNum];
-            currentQuestionItem = itemsData[currentQuestionItemID];
+            currentQuestionItem = gameData[currentQuestionItemID];
 
             // Update question image and caption
             questionImgEl.innerHTML = `<img src="assets/image/N5_words/${currentQuestionItem.imgkey ? currentQuestionItem.imgkey : currentQuestionItem.kana}.jpg" alt="Image">`;
@@ -398,7 +395,7 @@
             const rangeTo = parseInt(document.getElementById("range-to").value);
 
             let min = 1;
-            let max = Object.keys(itemsData).length;
+            let max = Object.keys(gameData).length;
 
             let alertMsg = "";
             if (!rangeFrom || rangeFrom < min) {
