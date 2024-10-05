@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Shovon Hasan">
+    <meta name="copyright" content="©2024 株式会社LifeArk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LifeArk Japanese education</title>
     <style>
@@ -20,6 +22,13 @@
             max-height: 1024px;
             max-width: 576px;
         }
+        .header-image {
+            padding: 30px 60px;
+            text-align: center;
+        }
+        .header-image img {
+            max-width: 70%;
+        }
         .play-button {
             padding: 10px 20px;
             font-size: 1.5em;
@@ -32,7 +41,7 @@
             text-decoration: none;
         }
         #game-link-container {
-            padding: 60px 20px;
+            padding: 20px;
             display: flex; 
             flex: 1;
             flex-direction: column;
@@ -42,8 +51,11 @@
 </head>
 <body>
     <div id="game-container">
+        <div class="header-image">
+            <img src="assets/image/LifeArk_Nihongo_logo.png" />
+            <h3>খেলায় খেলায় জাপানিজ ভাষা শিক্ষা ...</h3>
+        </div>
         <div id="game-link-container">
-            <h2>Let's learn japanese by playing games.</h2>
             <a class="play-button" href="Hiragana_Characters.html" target="_blank">Alphabet (Hiragana)</a>
             <a class="play-button" href="Hiragana_Words.html" target="_blank">Hiragana Words (Beginner)</a>
             <a class="play-button" href="Katakana_Characters.html" target="_blank">Alphabet (Katakana)</a>
