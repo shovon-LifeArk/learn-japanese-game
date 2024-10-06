@@ -226,7 +226,7 @@
                 <div id="question-img"></div>
                 <div id="question-caption"></div>
             </div>
-            <div class="option-container_circle" id="options">
+            <div id="options">
                 <div class="option" onclick="checkAnswer(0)"></div>
                 <div class="option" onclick="checkAnswer(1)"></div>
                 <div class="option" onclick="checkAnswer(2)"></div>
@@ -449,6 +449,8 @@
             gameItemNumbers = getRandomGameItemNumbers();
 
             // Change option design
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.classList.add('option-container_circle');
             optionsEl.forEach(optionItem => {
                 optionItem.classList.remove('option-line');
                 if (!optionItem.classList.contains('option-circle')) {
@@ -469,6 +471,8 @@
             gameItemNumbers = getRandomGameItemNumbers();
 
             // Change option design
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.classList.remove('option-container_circle');
             optionsEl.forEach(optionItem => {
                 optionItem.classList.remove('option-circle');
                 if (!optionItem.classList.contains('option-line')) {

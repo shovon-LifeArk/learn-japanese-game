@@ -124,18 +124,24 @@
             font-size: 1.5em;
             text-align: center;
         }
-        #options {
-            text-align: center;
+        .option-container_circle {
+            margin: 60px auto;
+            padding: 10px;
+            width: 80%;
+            min-width: 286px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
         }
         .option {
-            margin: 15px;
             font-size: 1.5em;
             text-align: center;
             cursor: pointer;
             border: 2px solid #ccc;
             padding: 7px 0px;
             width: 50px;
-            border-radius: 25px;
+            border-radius: 32px;
             display: inline-block;
         }
         .correct {
@@ -147,17 +153,20 @@
             color: white;
         }
         #next-button {
-            padding: 10px 20px;
-            font-size: 1.5em;
-            background-color: #9966ff;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
+            height: 50px;
+            width: 50px;
+            padding: 10px;
+            border-radius: 35px;
+            border: 2px solid #9966ff;
+            color: #9966ff;
+            font-size: 26px;
+            line-height: 100%;
+            background-color: white;
             cursor: pointer;
-            margin-top: auto;
         }
         #next-button:disabled {
-            background-color: gray;
+            border-color: gray;
+            color: gray;
             cursor: not-allowed;
         }
         #score {
@@ -211,22 +220,24 @@
             </div>
         </div>
         <div id="question-container">
-            <div id="question-number"></div>
+            <div class="button-container">
+                <div id="question-number"></div>
+                <button id="next-button" onclick="nextQuestion()" disabled>&#10132;</button>
+            </div>
             <div>
                 <div id="question-img"></div>
                 <div id="question-caption"></div>
             </div>
-            <div id="options">
+            <div id="options" class="option-container_circle">
                 <div class="option" onclick="checkAnswer(0)"></div>
                 <div class="option" onclick="checkAnswer(1)"></div>
                 <div class="option" onclick="checkAnswer(2)"></div>
                 <div class="option" onclick="checkAnswer(3)"></div>
             </div>
-            <button id="next-button" onclick="nextQuestion()" disabled>Next</button>
         </div>
         <div id="result-container">
             <div id="score"></div>
-            <button class="play-button" onclick="replayGame()">Replay</button>
+            <button class="play-button" onclick="replayGame()">Replay</button><br/>
             <button class="play-button" onclick="showPage('characters_list')">Characters List</button>
         </div>
     </div>
