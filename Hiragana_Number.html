@@ -38,6 +38,11 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
         #words_list-container,
         #question-container,
         #result-container {
@@ -93,23 +98,27 @@
             color: white;
         }
         #next-button {
-            padding: 10px 20px;
-            font-size: 1.5em;
-            background-color: #9966ff;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
+            height: 50px;
+            width: 50px;
+            padding: 10px;
+            border-radius: 35px;
+            border: 2px solid #9966ff;
+            color: #9966ff;
+            font-size: 26px;
+            line-height: 100%;
+            background-color: white;
             cursor: pointer;
-            margin-top: auto;
         }
         #next-button:disabled {
-            background-color: gray;
+            border-color: gray;
+            color: gray;
             cursor: not-allowed;
         }
         #score {
             font-size: 2em;
             text-align: center;
             margin-top: 100px;
+            margin-bottom: 60px;
         }
     </style>
 </head>
@@ -123,7 +132,10 @@
             <button class="play-button" onclick="replayGame()">Play Game</button>
         </div>
         <div id="question-container">
-            <div id="question-number"></div>
+            <div class="button-container">
+                <div id="question-number"></div>
+                <button id="next-button" onclick="nextQuestion()" disabled>&#10132;</button>
+            </div>
             <div id="question"></div>
             <div id="options">
                 <div class="option" onclick="checkAnswer(0)"></div>
@@ -131,11 +143,10 @@
                 <div class="option" onclick="checkAnswer(2)"></div>
                 <div class="option" onclick="checkAnswer(3)"></div>
             </div>
-            <button id="next-button" onclick="nextQuestion()" disabled>Next</button>
         </div>
         <div id="result-container">
             <div id="score"></div>
-            <button class="play-button" onclick="replayGame()">Replay</button>
+            <button class="play-button" onclick="replayGame()">Replay</button><br/>
             <button class="play-button" onclick="showPage('words_list')">Numbers List</button>
         </div>
     </div>
