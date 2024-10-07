@@ -5,7 +5,7 @@
     <meta name="author" content="Shovon Hasan">
     <meta name="copyright" content="©2024 株式会社LifeArk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LifeArk Japanese education: Alphabet (Hiragana)</title>
+    <title>LifeArk Japanese education: 助詞</title>
     <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -87,37 +87,40 @@
         #words_list-container {
             font-size: 1.2em !important;
         }
-        #words_list-container h3, h4 {
+        #words_list-container h3{
             line-height: 100%;
             font-weight: bold;
             font-family: sans-serif;
-            font-size: 1.5em;
+            font-size: 1.3em;
             margin: 0px;
         }
         #words_list-container h4 {
-            font-size: 1.0em  !important;
+            margin: 10px auto;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        #words_list-container .particle-name {
+            border-bottom: 2px solid #9966ff;
         }
         #words_list-container table {
             width: 100%;
             border-collapse: collapse;
             table-layout: fixed;
+            margin-bottom: 20px;
         }
-        #words_list-container td, th {
+        #words_list-container td {
             padding: 10px;
             border: 1px solid black;
-        }
-        #words_list-container th {
-            font-weight: bold;
-            text-align: left;
-            background-color: #333333;
-            color: white;
         }
         #question-number {
             font-size: 1.5em;
         }
         #question {
+            margin-top: 60px;
+            padding: 20px;
             font-size: 1.5em;
             text-align: center;
+            word-break: keep-all;
         }
         .option {
             margin: 10px 0;
@@ -168,7 +171,7 @@
         <div id="words_list-container">
             <div class="header-image">
                 <img src="assets/image/LifeArk_Nihongo_logo.png" />
-                <h2 style="text-align: center; margin: 0px;">ক্রিয়াপদের রূপ</h2>
+                <h2 style="text-align: center; margin: 0px;">অব্যয়</h2>
             </div>
             <button class="play-button" onclick="playGame()">Play Game</button><br>
         </div>
@@ -179,31 +182,22 @@
                     <input type="checkbox" id="range_all"> All
                 </label>
                 <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="辞書形"> じしょ形
+                    <input type="checkbox" name="game_range" value="係助詞"> けいじょし
                 </label>
                 <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="ます形"> ます形
+                    <input type="checkbox" name="game_range" value="格助詞"> かくじょし
                 </label>
                 <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="ません形"> ません形
+                    <input type="checkbox" name="game_range" value="接続助詞"> せつぞくじょし
                 </label>
                 <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="ました形"> ました形
+                    <input type="checkbox" name="game_range" value="副助詞"> ふくじょし
                 </label>
                 <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="ませんでした形"> ませんでした形
+                    <input type="checkbox" name="game_range" value="終助詞"> しゅうじょし
                 </label>
                 <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="て形"> て形
-                </label>
-                <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="ない形"> ない形
-                </label>
-                <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="た形"> た形
-                </label>
-                <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="なかった形"> なかった形
+                    <input type="checkbox" name="game_range" value="取り立て助詞"> とりたてじょし
                 </label>
             </div>
             <div class="button-container">
@@ -227,33 +221,21 @@
         <div id="result-container">
             <div id="score"></div>
             <button class="play-button" onclick="replayGame()">Replay</button><br/>
-            <button class="play-button" onclick="showPage('words_list')">Verbs List</button>
+            <button class="play-button" onclick="showPage('words_list')">Particles List</button>
         </div>
     </div>
 
     <script>
 
         let itemsData = {};
-
-        const verbForms = ["辞書形","ます形","ません形","ました形","ませんでした形","て形","ない形","た形","なかった形"];
-        const formsDisplayOrder = {
-            "ます形": ["meaning_bd","辞書形","ます形"],
-            "ません形": ["ます形","ません形"],
-            "ました形": ["ます形","ました形"],
-            "ませんでした形": ["ません形","ませんでした形"],
-            "て形": ["辞書形","て形"],
-            "ない形": ["辞書形","ない形"],
-            "た形": ["辞書形","た形"],
-            "なかった形": ["辞書形","なかった形"]
-        };
+        let gameData = {};
 
         // game related data
         const totalQuestions = 10;      // total questions in a game
-        let selectedForms = null;       // questions should be chosen from this form of verbs
+        let selectedCategories = null;       // questions should be chosen from this form of verbs
         let gameItemIDs = null;         // hold item IDs within game range
         let gameQuestionItemIDs = null; // hold index of itemsData (chosen randomly from gameItemIDs)
         let currentQuestionItem = {};   // item for current question in game
-        let currentQuestionForm = null; // verb form for current question
         let currentQuestionNum = 0;     // current question changes from 0 to 9
         let score = 0;                  // number of correct answers
 
@@ -267,28 +249,18 @@
             document.getElementById(`${pageName}-container`).style.display = 'flex';
         }
 
-        function createTableForVerbs(formName) {
-            const verbs = Object.keys(itemsData.verbs);
-
+        function createTableForParticles(category) {
             const table = document.createElement('table');
 
-            const headerRow = document.createElement('tr');
-            let headerHTML = "";
-            formsDisplayOrder[formName].forEach(dispForm => {
-                if (dispForm  === "meaning_bd") dispForm  = "ক্রিয়াপদ";
-                headerHTML += `<th>${dispForm}</th>`;
-            });
-            headerRow.innerHTML = headerHTML;
-            table.appendChild(headerRow);
+            const particleKeys = Object.keys(itemsData[category].particles);
 
-            verbs.forEach(verbKey => {
-                const verbData = itemsData.verbs[verbKey];
+            particleKeys.forEach(particleKey => {
+                const particleData = itemsData[category].particles[particleKey];
+
                 const row = document.createElement('tr');
-                let rowHTML = "";
-                formsDisplayOrder[formName].forEach(dispForm => {
-                    const cellText = dispForm ===  "meaning_bd" ? verbData[dispForm] : verbData[dispForm].word;
-                    rowHTML += `<td>${cellText}</td>`;
-                });
+                let rowHTML = `<td><h4><span class="particle-name">${particleKey}</span></h4>${particleData.useCase.bd}
+                                <ul><li>${particleData.sentence.jp}<br/>${particleData.sentence.bd}</li></ul>
+                                </td>`;
                 row.innerHTML = rowHTML;
                 table.appendChild(row);
             });
@@ -296,61 +268,23 @@
             return table;
         }
 
-        function createExampleSentencesForVerbForms(formName) {
-            const list = document.createElement("ul");
-
-            itemsData.forms[formName].sentences.forEach(sentence => {
-                const listItem = document.createElement("li");
-                listItem.innerHTML = `${sentence.jp}<br>${sentence.bd}`;
-
-                list.appendChild(listItem);
-            });
-
-            return list;
-        }
-
-        function createVerbsList() {
+        function createParticlesList() {
             const container = document.getElementById('words_list-container');
 
-            Object.keys(formsDisplayOrder).forEach(formName => {
+            Object.keys(itemsData).forEach(category => {
                 // title
                 const heading = document.createElement("h3");
-                heading.textContent = formName === "ます形" ? "辞書形・ます形" : formName;
+                heading.textContent = category;
                 container.appendChild(heading);
 
                 // definition
-                if (formName === "ます形") {
-                    const definition_ = document.createElement("span");
-                    definition_.textContent = itemsData.forms["辞書形"].definition_bd;
-                    container.appendChild(definition_);
-                }
                 const definition = document.createElement("span");
-                definition.textContent = itemsData.forms[formName].definition_bd;
+                definition.textContent = itemsData[category].definition.bd;
                 container.appendChild(definition);
 
-                // verbs form table
-                const table = createTableForVerbs(formName);
+                // particles list table
+                const table = createTableForParticles(category);
                 container.appendChild(table);
-
-                // example sentences
-                const exampleDiv = document.createElement("div");
-                if (formName === "ます形") {
-                    const exampleHeading_ = document.createElement("h4");
-                    exampleHeading_.innerHTML = `Example (辞書形):`;
-                    exampleDiv.appendChild(exampleHeading_);
-
-                    const example_ = createExampleSentencesForVerbForms("辞書形");
-                    exampleDiv.appendChild(example_);
-
-                }
-                const exampleHeading = document.createElement("h4");
-                exampleHeading.innerHTML = `Example (${formName}):`;
-                exampleDiv.appendChild(exampleHeading);
-
-                const example = createExampleSentencesForVerbForms(formName);
-                exampleDiv.appendChild(example);
-
-                container.appendChild(exampleDiv);
             });
         }
 
@@ -365,16 +299,13 @@
 
             // Load current question and options
             const currentQuestionItemID = gameQuestionItemIDs[currentQuestionNum];
-            currentQuestionItem = itemsData.verbs[currentQuestionItemID];
-
-            const questionVerbForm = selectedForms[Math.floor(Math.random() * selectedForms.length)];
-            currentQuestionForm = questionVerbForm;
+            currentQuestionItem = gameData[currentQuestionItemID];
 
             // Update question
-            questionEl.innerHTML = currentQuestionItem[questionVerbForm].sentence.bd;
+            questionEl.innerHTML = currentQuestionItem.sentence;
 
             // Get random options
-            const options = getRandomOptions(currentQuestionItem, questionVerbForm);
+            const options = getRandomOptions(currentQuestionItem);
 
             // Update options in the DOM
             options.forEach((optionText, index) => {
@@ -390,34 +321,34 @@
         }
 
         function getRandomQuestionItemIDs() {
+            const filteredKeys = Object.keys(gameData).filter(id => {
+                return selectedCategories.includes(gameData[id].category);
+            });
             // Shuffle array
-            const shuffled = Object.keys(itemsData.verbs).sort(() => 0.5 - Math.random());
+            const shuffled = filteredKeys.sort(() => 0.5 - Math.random());
             // return first n elemets
             return shuffled.slice(0, totalQuestions);
         }
 
-        function getRandomOptions(currentQuestionItem, verbForm) {
-            const optionForms = new Set();
+        function getRandomOptions(currentQuestionItem) {
+            const options = new Set();
 
             // Add the current question number to options
-            optionForms.add(verbForm);
+            options.add(currentQuestionItem.particle);
+
+            const questionIndexes = Object.keys(gameData); 
 
             // Generate random options
-            while (optionForms.size < 4) {
-                const randomForm = verbForms[Math.floor(Math.random() * verbForms.length)];
-                optionForms.add(randomForm);
+            while (options.size < 4) {
+                const randomIndex = questionIndexes[Math.floor(Math.random() * questionIndexes.length)];
+                if (gameData[randomIndex].category !== currentQuestionItem.category) {
+                    options.add(gameData[randomIndex].particle);
+                }
+                
             }
 
             // Convert Set to Array and shuffle it
-            const optionFormsShuffled = Array.from(optionForms).sort(() => Math.random() - 0.5);
-
-            // get option sentences
-            let options = [];
-            optionFormsShuffled.forEach(form => {
-                options.push(currentQuestionItem[form].sentence.jp);
-            });
-
-            return options;
+            return Array.from(options).sort(() => Math.random() - 0.5);
         }
 
         function checkAnswer(selectedIndex) {
@@ -428,7 +359,7 @@
 
             const selectedOption = optionsEl[selectedIndex];
             const selectedAnswer = selectedOption.textContent;
-            const correctAnswer = currentQuestionItem[currentQuestionForm].sentence.jp;
+            const correctAnswer = currentQuestionItem.particle;
 
             if (selectedAnswer === correctAnswer) {
                 // Correct answer
@@ -472,7 +403,7 @@
         }
 
         function startGame() {
-            selectedForms = [...individualCheckboxes]
+            selectedCategories = [...individualCheckboxes]
                 .filter(checkbox => checkbox.checked)
                 .map(checkbox => checkbox.value);
 
@@ -499,15 +430,21 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('data/verb_form.json')
+            fetch('data/particles.json')
                 .then(response => response.json())
                 .then(data => {
                     itemsData = data;
 
-                    //console.log(itemsData);
-
-                    createVerbsList();
+                    createParticlesList();
                     showPage('words_list');
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+
+            // fetch game data
+            fetch('data/particles_quiz.json')
+                .then(response => response.json())
+                .then(data => {
+                    gameData = data;
                 })
                 .catch(error => console.error('Error loading JSON:', error));
         });
