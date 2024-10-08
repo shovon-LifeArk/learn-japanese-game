@@ -101,8 +101,8 @@
     "99": {"particle": "わ", "category": "終助詞", "sentence": "きょう　は　ほんとう　に　たのしかった　◯"},
     "100": {"particle": "わ", "category": "終助詞", "sentence": "あの　みせ　の　ケーキ　は　おいしい　◯"},
     "101": {"particle": "わ", "category": "終助詞", "sentence": "もう　しごと　が　おわった　◯"},
-    "102": {"particle": "ても", "category": "接続助詞", "sentence": "たくさん　べんきょう　しても　なかなか　おぼえられない"},
-    "103": {"particle": "ても", "category": "接続助詞", "sentence": "あめ　が　ふっても　そと　で　あそびます"},
-    "104": {"particle": "ても", "category": "接続助詞", "sentence": "いくら　たべても　おなか　が　すきます"}
+    "102": {"particle": "ても", "category": "接続助詞", "sentence": "たくさん　べんきょう　し◯　なかなか　おぼえられない"},
+    "103": {"particle": "ても", "category": "接続助詞", "sentence": "あめ　が　ふっ◯　そと　で　あそびます"},
+    "104": {"particle": "ても", "category": "接続助詞", "sentence": "いくら　たべ◯　おなか　が　すきます"}
 }
 
