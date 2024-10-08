@@ -289,7 +289,7 @@
                     charCell.id = `hiragana_cell_${charItem.sound_en}`;
                     if (charItem.hiragana) {
                         charCell.classList.add('hiragana-sound');
-                        charCell.setAttribute("data-sound", `assets/audio/${charItem.hiragana}.mp3`);
+                        charCell.setAttribute("data-sound", `assets/audio/alphabet/${charItem.hiragana}.mp3`);
                         charCell.innerHTML = `${charItem.sound_en}<br><span class="hiragana-letter">${charItem.hiragana}`;
                     }
                     

@@ -5,7 +5,7 @@
     <meta name="author" content="Shovon Hasan">
     <meta name="copyright" content="©2024 株式会社LifeArk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LifeArk Japanese education: Alphabet (Katakana)</title>
+    <title>LifeArk Japanese education: Listening for beginners</title>
     <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -39,15 +39,6 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .radio-button {
-            display: block;
-            padding: 10px 20px;
-            font-size: 1.5em;
-            border: 1px solid #9966ff;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 10px 0px;
-        }
         .back-button {
             height: 50px;
             width: 50px;
@@ -65,72 +56,63 @@
             justify-content: space-between;
             gap: 20px;
         }
-        hr {
-            border: 1px solid grey;
-            width: 100%;
-        }
-        #characters_list-container,
+        #listening_list-container,
         #range_selection-container,
         #question-container,
         #result-container {
-            min-height: calc(80vh - 40px);
             padding: 20px;
             display: none; 
             flex: 1;
-            gap: 20px;
             flex-direction: column;
+            gap: 20px;
         }
-        #characters_list-container h3 {
-            line-height: 100%;
-            font-weight: bold;
-            font-family: sans-serif;
-            font-size: 1.5em;
-            margin: 0px;
-        }
-        #characters_list-container table {
+        #listening_list-container table {
+            margin-top: 30px;;
             width: 100%;
-            margin-bottom: 20px;
+            border-collapse: collapse;
         }
-        #characters_list-container td {
+        #listening_list-container td {
             padding: 10px;
-            vertical-align: center;
-            text-align: center;
+            vertical-align: top;
             border: 1px solid black;
+            word-break: keep-all;
+            font-size: 1em;
+            line-height: 150%;
         }
-        .katakana-letter {
-            font-weight: bold;
-            font-size: 2.5em;
+        .listening-sound {
+            cursor: pointer;
         }
-        .katakana-sound:hover {
-            background-color: green;
-            color: white;
+        .listening-sound:hover {
+            background-color: #e6e6ff;
+        }
+        #range_selection-container input {
+            width: 80px;
+            padding: 10px;
+            font-size: 1.5em;;
+            text-align: center;
         }
         #question-number {
             font-size: 1.5em;
         }
         #question {
-            font-size: 10em;
             text-align: center;
         }
-        .option-container_circle {
-            margin: 60px auto;
+        #question .sound-button {
+            width: 70px;
+            height: 70px;
             padding: 10px;
-            width: 80%;
-            min-width: 286px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-between;
+            border-radius: 40px;
+            font-size: 20px;
         }
         .option {
-            font-size: 1.5em;
-            text-align: center;
+            margin: 10px 0;
+            padding: 20px;
+            font-size: 1em;
+            text-align: left;
+            word-break: keep-all;
             cursor: pointer;
             border: 2px solid #ccc;
-            padding: 7px 0px;
-            width: 50px;
-            border-radius: 32px;
-            display: inline-block;
+            border-radius: 5px;
         }
         .correct {
             background-color: green;
@@ -167,43 +149,23 @@
 </head>
 <body>
     <div id="game-container">
-        <div id="characters_list-container">
+        <div id="listening_list-container">
             <div class="header-image">
                 <img src="assets/image/LifeArk_Nihongo_logo.png" />
-                <h2 style="text-align: center; margin: 0px;">বর্নমালা (কাতাকানা)</h2>
+                <h2 style="text-align: center; margin: 0px;">শ্রুতিলিখন</h2>
             </div>
-            <button class="play-button" onclick="playGame()">Play Game</button><br>
+            <button class="play-button" onclick="playGame()">Play Game</button>
         </div>
         <div id="range_selection-container">
             <h3 style="text-align: center;">Choose the question range</h3>
-            <div>
-                <label class="radio-button">
-                    <input type="radio" id="range_all" name="game_range" value="108" checked> All
-                </label>
-                <label class="radio-button">
-                    <input type="radio" id="range_ko" name="game_range" value="10"> upto「カ」ぎょう
-                </label>
-                <label class="radio-button">
-                    <input type="radio" id="range_to" name="game_range" value="20"> upto「タ」ぎょう
-                </label>
-                <label class="radio-button">
-                    <input type="radio" id="range_ho" name="game_range" value="30"> upto「ハ」ぎょう
-                </label>
-                <label class="radio-button">
-                    <input type="radio" id="range_yo" name="game_range" value="40"> upto「ヤ」ぎょう
-                </label>
-                <label class="radio-button">
-                    <input type="radio" id="range_n" name="game_range" value="50"> upto「ワ」ぎょう
-                </label>
-                <label class="radio-button">
-                    <input type="radio" id="range_dakuon" name="game_range" value="75"> upto だくおん
-                </label>
-                <label class="radio-button">
-                    <input type="radio" id="range_yoon" name="game_range" value="108"> upto ようおん
-                </label>
+            <div style="text-align: center;">
+                <input type="number" id="range-from" placeholder="from" min="1" max="90"> ~ <input type="number" id="range-to" placeholder="to" min="10" max="100">
+                <br><br>
+                <span class="alert" id="range-alert"></span>
+                <br>
             </div>
             <div class="button-container">
-                <button class="back-button" onclick="showPage('characters_list')">←</button>
+                <button class="back-button" onclick="showPage('listening_list')">←</button>
                 <button class="play-button" style="flex-grow: 1;" onclick="startGame()">Start Game!</button>
             </div>
         </div>
@@ -213,7 +175,7 @@
                 <button id="next-button" onclick="nextQuestion()" disabled>&#10132;</button>
             </div>
             <div id="question"></div>
-            <div id="options" class="option-container_circle">
+            <div id="options">
                 <div class="option" onclick="checkAnswer(0)"></div>
                 <div class="option" onclick="checkAnswer(1)"></div>
                 <div class="option" onclick="checkAnswer(2)"></div>
@@ -223,14 +185,12 @@
         <div id="result-container">
             <div id="score"></div>
             <button class="play-button" onclick="replayGame()">Replay</button><br/>
-            <button class="play-button" onclick="showPage('characters_list')">Characters List</button>
+            <button class="play-button" onclick="showPage('listening_list')">Listening List</button>
         </div>
     </div>
 
-
     <script>
-
-        let itemsData = {}; 
+        let itemsData = {};
 
         // game related data
         const totalQuestions = 10;      // total questions in a game
@@ -241,8 +201,6 @@
         let currentQuestionItem = {};   // item for current question in game
         let currentQuestionNum = 0;     // current question changes from 0 to 9
         let score = 0;                  // number of correct answers
-
-        let skipItemIDs = ["37", "39", "47", "49"];         // these items should not appear in question
 
         function showPage(pageName) {
             const gameContainer = document.getElementById('game-container');
@@ -260,62 +218,36 @@
             audio.play();
         }
 
-        function createTableForCharacters(charItems, itemType) {
+        function createListeningItemsList() {
+            const container = document.getElementById('listening_list-container');
             const table = document.createElement('table');
 
-            let colNum = itemType === 'yoon' ? 3 : 5;
-            
-            for (let r = 0; r < charItems.length/colNum; r++) {
+            let num = 1;
+
+            Object.keys(itemsData).forEach(key => {
+                // Create top row with image and text
                 const row = document.createElement('tr');
-                for (let c = 0; c < colNum; c++) {
-                    let charItem = charItems[r*colNum+c];
+                const numCell = document.createElement('td');
+                numCell.innerText = num;
 
-                    const charCell = document.createElement('td');
-                    charCell.id = `katakana_cell_${charItem.sound_en}`;
-                    if (charItem.katakana) {
-                        charCell.classList.add('katakana-sound');
-                        charCell.setAttribute("data-sound", `assets/audio/alphabet/${charItem.hiragana}.mp3`);
-                        charCell.innerHTML = `${charItem.sound_en}<br><span class="katakana-letter">${charItem.katakana}`;
-                    }
-                    
-                    row.appendChild(charCell);
-                }
+                const textCell = document.createElement('td');
+                textCell.id = `listening_sentence-${key}`;
+                textCell.classList.add('listening-sound');
+                textCell.setAttribute("data-sound", `assets/audio/listening_beginner/${key}.mp3`);
+                textCell.innerText = itemsData[key] + "(🔉)";
+
+                row.appendChild(numCell);
+                row.appendChild(textCell);
                 table.appendChild(row);
-            }
 
-            return table;
-        }
+                num++;
+            });
 
-        function createKatakanaList() {
-            const container = document.getElementById('characters_list-container');
+            container.appendChild(table);
 
-            let seionItems = Object.values(itemsData).filter(item => item.category === 'seion');
-            let dakuonItems = Object.values(itemsData).filter(item => item.category === 'dakuon');
-            let yoonItems = Object.values(itemsData).filter(item => item.category === 'yoon');
-            
-            const seionTable = createTableForCharacters(seionItems, 'seion');
-            const dakuonTable = createTableForCharacters(dakuonItems, 'dakuon');
-            const yoonTable = createTableForCharacters(yoonItems, 'yoon');
-
-            let heading1 = document.createElement("h3");
-            heading1.textContent = "せいおん";
-            container.appendChild(heading1);
-            container.appendChild(seionTable);
-
-            let heading2 = document.createElement("h3");
-            heading2.textContent = "だくおん";
-            container.appendChild(heading2);
-            container.appendChild(dakuonTable);
-
-            let heading3 = document.createElement("h3");
-            heading3.textContent = "ようおん";
-            container.appendChild(heading3);
-            container.appendChild(yoonTable);
-
-            const soundButtons = document.querySelectorAll('.katakana-sound');
-
-            // Add click event listener to each katakana div
-            soundButtons.forEach(element => {
+            // Add click event listener to each hiragana div
+            const sounds = document.querySelectorAll('.listening-sound');
+            sounds.forEach(element => {
                 element.addEventListener('click', () => {
                     const soundFile = element.getAttribute('data-sound');
                     playSound(soundFile);
@@ -323,42 +255,14 @@
             });
         }
 
-        function prepareGameData() {
-            gameItemIDs = [];
-            const from = fromRangeNum;
-            const to = toRangeNum;
-            Object.keys(itemsData).forEach(key => {
-                if (parseInt(key) >= from && parseInt(key) <= to && !skipItemIDs.includes(key)) {
-                    gameItemIDs.push(key);
-                }
-            });
-        }
+        function getRandomItemNumbers() {
+            const keyNums = Object.keys(itemsData).map(Number);
+            let keyNumsInRange = keyNums.slice(fromRangeNum-1, toRangeNum);
 
-        function getRandomQuestionItemIDs() {
             // Shuffle array
-            const shuffled = gameItemIDs.sort(() => 0.5 - Math.random());
+            const shuffled = keyNumsInRange.sort(() => 0.5 - Math.random());
             // return first n elemets
             return shuffled.slice(0, totalQuestions);
-        }
-
-        function getRandomOptions(currentQuestionItemID) {
-            const numbers = Object.keys(itemsData).map(Number);
-            const options = new Set();
-
-            // Add the current question number to options
-            options.add(itemsData[currentQuestionItemID].hiragana);
-
-            // Generate random options
-            while (options.size < 4) {
-                const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
-                const key = randomNum.toString();
-                if (!skipItemIDs.includes(key)) {
-                    options.add(itemsData[key].hiragana);
-                }
-            }
-
-            // Convert Set to Array and shuffle it
-            return Array.from(options).sort(() => Math.random() - 0.5);
         }
 
         function checkAnswer(selectedIndex) {
@@ -370,7 +274,7 @@
             let selectedOption = optionsEl[selectedIndex];
             let selectedAnswer = selectedOption.textContent;
 
-            if (selectedAnswer === currentQuestionItem.hiragana) {
+            if (selectedAnswer === currentItem) {
                 // Correct answer
                 selectedOption.classList.add('correct');
                 score++;
@@ -380,7 +284,7 @@
 
                 // Find and highlight the correct option
                 for (let i = 0; i < optionsEl.length; i++) {
-                    if (optionsEl[i].textContent === currentQuestionItem.hiragana) {
+                    if (optionsEl[i].textContent === currentItem) {
                         optionsEl[i].classList.add('correct');
                         break;
                     }
@@ -391,28 +295,53 @@
             nextBtn.disabled = false;
         }
 
+        function getRandomOptions(currentItemNumber) {
+            const numbers = Object.keys(itemsData).map(Number);
+            const options = new Set();
+
+            // Add the current question number to options
+            options.add(currentItemNumber);
+
+            // Generate random options
+            while (options.size < 4) {
+                const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
+                options.add(randomNum);
+            }
+
+            // Convert Set to Array and shuffle it
+            return Array.from(options).sort(() => Math.random() - 0.5);
+        }
+
         function nextQuestion() {
-            if (currentQuestionNum === totalQuestions) {
+            if (currentQuestion === totalQuestions) {
                 endGame();
                 return;
             }
 
             // Display question number
-            document.getElementById('question-number').textContent = `${currentQuestionNum + 1}/${totalQuestions}`;
+            document.getElementById('question-number').textContent = `${currentQuestion + 1}/${totalQuestions}`;
 
             // Load current question and options
-            const currentQuestionItemID = gameQuestionItemIDs[currentQuestionNum];
-            currentQuestionItem = itemsData[currentQuestionItemID];
+            const currentItemNumber = selectedItemNumbers[currentQuestion];
+            currentItem = itemsData[currentItemNumber];
 
-            // Update question image and caption
-            questionEl.textContent = currentQuestionItem.katakana;
+            // Update question text
+            const soundButton = document.createElement("button");
+            soundButton.classList.add('sound-button');
+            soundButton.textContent = "🔊";
+            soundButton.addEventListener('click', () => {
+                const listeningCell = document.getElementById(`listening_sentence-${currentItemNumber}`);
+                listeningCell.click();
+            });
+            questionEl.innerHTML = '';
+            questionEl.appendChild(soundButton);
 
             // Get random options
-            const options = getRandomOptions(currentQuestionItemID);
+            const options = getRandomOptions(currentItemNumber);
 
             // Update options in the DOM
-            options.forEach((optionText, index) => {
-                optionsEl[index].textContent = optionText;
+            options.forEach((option, index) => {
+                optionsEl[index].textContent = itemsData[option];
                 optionsEl[index].classList.remove('correct', 'wrong'); // Reset styles
                 optionsEl[index].style.pointerEvents = 'auto'; // Enable click
             });
@@ -420,7 +349,12 @@
             // Disabled the Next button
             nextBtn.disabled = true;
 
-            currentQuestionNum++;
+            currentQuestion++;
+
+            // play the listening sound
+            setTimeout(() => {
+                soundButton.click();
+            }, 600);
         }
 
         function endGame() {
@@ -433,10 +367,11 @@
 
         function replayGame() {
             // Reset game state
-            currentQuestionNum = 0;
+            currentQuestion = 0;
             score = 0;
-            gameQuestionItemIDs = getRandomQuestionItemIDs();
+            selectedItemNumbers = getRandomItemNumbers();
 
+            // show question container
             showPage('question');
 
             // Start the game
@@ -444,14 +379,38 @@
         }
 
         function startGame() {
-            const rangeFrom = 1;
-            const rangeTo = parseInt(document.querySelector('input[name="game_range"]:checked').value);
-        
-            fromRangeNum = rangeFrom;
-            toRangeNum = rangeTo;
+            const rangeFrom = parseInt(document.getElementById("range-from").value);
+            const rangeTo = parseInt(document.getElementById("range-to").value);
 
-            prepareGameData();
-            replayGame();
+            let min = 1;
+            let max = Object.keys(itemsData).length;
+
+            let alertMsg = "";
+            if (!rangeFrom || rangeFrom < min) {
+                alertMsg += "・Enter valid 'from' value<br>";
+            } else if (rangeFrom > max-totalQuestions+1) {
+                alertMsg += `・Maximum 'from' value is ${max-totalQuestions+1}<br>`;
+            }
+            if (!rangeTo || rangeTo < totalQuestions) {
+                alertMsg += "・Enter valid 'to' value<br>";
+            } else if (rangeTo > max) {
+                alertMsg += `・Maximum 'to' value is ${max}<br>`;
+            }
+
+            if (rangeFrom && rangeTo && rangeTo - rangeFrom < totalQuestions-1) {
+                alertMsg += "・'to' value should be at least 9 bigger than 'from' value<br>";
+            }
+
+            if (alertMsg) {
+                document.getElementById("range-alert").innerHTML = alertMsg;
+            } else {
+                fromRangeNum = rangeFrom;
+                toRangeNum = rangeTo;
+
+                replayGame();
+
+                document.getElementById("range-alert").innerHTML = "";
+            }
         }
 
         function playGame() {
@@ -459,12 +418,12 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('data/japanese_chars.json')
+            fetch('data/listening_beginner.json')
                 .then(response => response.json())
                 .then(data => {
                     itemsData = data;
-                    createKatakanaList();
-                    showPage('characters_list');
+                    createListeningItemsList();
+                    showPage('listening_list');
                 })
                 .catch(error => console.error('Error loading JSON:', error));
         });
@@ -475,6 +434,5 @@
         const nextBtn = document.getElementById('next-button');
 
     </script>
-
 </body>
 </html>
