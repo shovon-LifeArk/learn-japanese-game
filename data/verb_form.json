@@ -73,6 +73,14 @@
                     "bd": "অনুগ্রহ করে কাজ করুন"
                 }
             },
+            "可能形": {
+                "word": "できます",
+                "sentence": {
+                    "jp": "あなた は なにでも する こと が できます",
+                    "en": "You can do anything.",
+                    "bd": "আপনি যেকোনো কিছু করতে পারেন।"
+                }
+            },
             "meaning_en": "to do",
             "meaning_bd": "করা"
         },
@@ -147,6 +155,14 @@
                     "jp": "はやく　ねて　ください",
                     "en": "Please sleep early",
                     "bd": "অনুগ্রহ করে তাড়াতাড়ি ঘুমিয়ে পড়ুন"
+                }
+            },
+            "可能形": {
+                "word": "ねられます",
+                "sentence": {
+                    "jp": "ここ で ゆっくり ねられます",
+                    "en": "You can sleep here peacefully.",
+                    "bd": "আপনি এখানে শান্তিতে ঘুমাতে পারেন।"
                 }
             },
             "meaning_en": "to sleep",
@@ -225,6 +241,14 @@
                     "bd": "অনুগ্রহ করে আরও খান"
                 }
             },
+            "可能形": {
+                "word": "たべられます",
+                "sentence": {
+                    "jp": "この レストラン で は どんな りょうり も たべられます",
+                    "en": "You can eat any dish at this restaurant.",
+                    "bd": "এই রেস্টুরেন্টে আপনি যেকোনো খাবার খেতে পারেন।"
+                }
+            },
             "meaning_en": "to eat",
             "meaning_bd": "খাওয়া"
         },
@@ -299,6 +323,14 @@
                     "jp": "もっと　はやく　はしって　ください",
                     "en": "Please run faster",
                     "bd": "অনুগ্রহ করে আরও দ্রুত দৌড়ান"
+                }
+            },
+            "可能形": {
+                "word": "はしれます",
+                "sentence": {
+                    "jp": "かれ は とても はやく はしれます",
+                    "en": "He can run very fast.",
+                    "bd": "সে খুব দ্রুত দৌড়াতে পারে।"
                 }
             },
             "meaning_en": "to run",
@@ -377,6 +409,14 @@
                     "bd": "এই প্রবন্ধটি এখনও বুঝিনি"
                 }
             },
+            "可能形": {
+                "word": "わかります",
+                "sentence": {
+                    "jp": "にほんご が わかります",
+                    "en": "I can understand Japanese.",
+                    "bd": "আমি জাপানি ভাষা বুঝতে পারি।"
+                }
+            },
             "meaning_en": "to understand",
             "meaning_bd": "বুঝতে পারা"
         },
@@ -451,6 +491,14 @@
                     "jp": "もっと　はやく　あるいて　ください",
                     "en": "Please walk faster",
                     "bd": "অনুগ্রহ করে আরও দ্রুত হাঁটুন"
+                }
+            },
+            "可能形": {
+                "word": "あるけます",
+                "sentence": {
+                    "jp": "わたし　は　ながい　きょり　を　あるけます",
+                    "en": "I can walk long distances.",
+                    "bd": "আমি দীর্ঘ দূরত্ব হাঁটতে পারি।"
                 }
             },
             "meaning_en": "to walk",
@@ -529,6 +577,14 @@
                     "bd": "অনুগ্রহ করে আমার কথা শুনুন"
                 }
             },
+            "可能形": {
+                "word": "きけます",
+                "sentence": {
+                    "jp": "おんがく　を　きけます",
+                    "en": "I can listen to music.",
+                    "bd": "আমি গান শুনতে পারি।"
+                }
+            },
             "meaning_en": "to listen",
             "meaning_bd": "শোনা"
         },
@@ -603,6 +659,14 @@
                     "jp": "じぶん　の　なまえ　を　かいて　ください",
                     "en": "Please write your name",
                     "bd": "দয়া করে আপনার নাম লিখুন"
+                }
+            },
+            "可能形": {
+                "word": "かけます",
+                "sentence": {
+                    "jp": "てがみ　を　かけます",
+                    "en": "I can write a letter.",
+                    "bd": "আমি চিঠি লিখতে পারি।"
                 }
             },
             "meaning_en": "to write",
@@ -681,6 +745,14 @@
                     "bd": "আমি জাপানে বাস করছি"
                 }
             },
+            "可能形": {
+                "word": "すめます",
+                "sentence": {
+                    "jp": "この　まち　に　すめます",
+                    "en": "I can live in this town.",
+                    "bd": "আমি এই শহরে বসবাস করতে পারি।"
+                }
+            },
             "meaning_en": "to live",
             "meaning_bd": "বাস করা"
         },
@@ -755,6 +827,14 @@
                     "jp": "みず　を　のんで　ください",
                     "en": "Please drink water",
                     "bd": "অনুগ্রহ করে পানি পান করুন"
+                }
+            },
+            "可能形": {
+                "word": "のめます",
+                "sentence": {
+                    "jp": "おさけ　が　のめます",
+                    "en": "I can drink alcohol.",
+                    "bd": "আমি মদ পান করতে পারি।"
                 }
             },
             "meaning_en": "to drink",
@@ -833,6 +913,14 @@
                     "bd": "দয়া করে পাউরুটি কিনুন"
                 }
             },
+            "可能形": {
+                "word": "かえます",
+                "sentence": {
+                    "jp": "その　ほん　が　かえます",
+                    "en": "I can buy that book.",
+                    "bd": "আমি সেই বইটি কিনতে পারি।"
+                }
+            },
             "meaning_en": "to buy",
             "meaning_bd": "কেনা"
         },
@@ -907,6 +995,14 @@
                     "jp": "この　うた　を　うたって　ください",
                     "en": "Please sing this song",
                     "bd": "অনুগ্রহ করে এই গানটি গান"
+                }
+            },
+            "可能形": {
+                "word": "うたえます",
+                "sentence": {
+                    "jp": "かのじょ　は　きれい　に　うたえます",
+                    "en": "She can sing beautifully.",
+                    "bd": "সে সুন্দরভাবে গান গাইতে পারে।"
                 }
             },
             "meaning_en": "to sing",
@@ -985,6 +1081,14 @@
                     "bd": "অনুগ্রহ করে অপেক্ষা করুন"
                 }
             },
+            "可能形": {
+                "word": "まてます",
+                "sentence": {
+                    "jp": "わたし　は　もう　すこし　まてます",
+                    "en": "I can wait a little longer.",
+                    "bd": "আমি আরেকটু অপেক্ষা করতে পারি।"
+                }
+            },
             "meaning_en": "to wait",
             "meaning_bd": "অপেক্ষা করা"
         },
@@ -1059,6 +1163,14 @@
                     "jp": "かばん　を　もって　ください",
                     "en": "Please hold the bag",
                     "bd": "অনুগ্রহ করে ব্যাগটি ধরুন"
+                }
+            },
+            "可能形": {
+                "word": "もてます",
+                "sentence": {
+                    "jp": "この　にもつ　を　もてます",
+                    "en": "I can carry this luggage.",
+                    "bd": "আমি এই বোঝাটি বহন করতে পারি।"
                 }
             },
             "meaning_en": "to hold",
@@ -1137,6 +1249,14 @@
                     "bd": "অনুগ্রহ করে বোতামটি চাপুন"
                 }
             },
+            "可能形": {
+                "word": "おせます",
+                "sentence": {
+                    "jp": "この　ボタン　を　おせます",
+                    "en": "I can press this button.",
+                    "bd": "আমি এই বোতামটি চাপতে পারি।"
+                }
+            },
             "meaning_en": "to push",
             "meaning_bd": "চাপ দেওয়া, ঠেলা দেওয়া"
         },
@@ -1208,9 +1328,17 @@
             "て形": {
                 "word": "けして",
                 "sentence": {
-                    "jp": "でんきを　けして　ください",
+                    "jp": "でんき　を　けして　ください",
                     "en": "Please turn off the light",
                     "bd": " অনুগ্রহ করে লাইটটি বন্ধ করুন"
+                }
+            },
+            "可能形": {
+                "word": "けせます",
+                "sentence": {
+                    "jp": "ひ　を　けせます",
+                    "en": "I can put out the fire.",
+                    "bd": "আমি আগুন নিভাতে পারি।"
                 }
             },
             "meaning_en": "to turn off, to erase",
@@ -1404,6 +1532,27 @@
                     "jp": "おちゃ　を　のんで　ください。",
                     "en": "Please drink some tea.",
                     "bd": "অনুগ্রহ করে চা খান।"
+                }
+            ]
+        },
+        "可能形": {
+            "definition_bd": "可能形 (かのうけい) হলো ক্রিয়াপদের একটি রূপ, যা কোনো কাজ সম্পন্ন করতে সক্ষম হওয়ার ধারণা বোঝাতে ব্যবহৃত হয়। এটি ক্রিয়ার সম্ভাবনা বা সক্ষমতার উপর জোর দেয়।",
+            "definition_en": "The potential form (可能形) is a verb form used to express the ability or possibility of doing something. It emphasizes whether the action can be performed.",
+            "sentences": [
+                {
+                    "jp": "わたし　は　たべられます。",
+                    "en": "I can eat.",
+                    "bd": "আমি খেতে পারি।"
+                },
+                {
+                    "jp": "かれ　は　うたえます。",
+                    "en": "He can sing.",
+                    "bd": "সে গান গাইতে পারে।"
+                },
+                {
+                    "jp": "わたしたち　は　あるけます。",
+                    "en": "We can walk.",
+                    "bd": "আমরা হাঁটতে পারি।"
                 }
             ]
         }

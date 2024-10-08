@@ -194,6 +194,9 @@
                     <input type="checkbox" name="game_range" value="ませんでした形"> ませんでした形
                 </label>
                 <label class="checkbox-button">
+                    <input type="checkbox" name="game_range" value="可能形"> かのう形
+                </label>
+                <label class="checkbox-button">
                     <input type="checkbox" name="game_range" value="て形"> て形
                 </label>
                 <label class="checkbox-button">
@@ -235,12 +238,13 @@
 
         let itemsData = {};
 
-        const verbForms = ["辞書形","ます形","ません形","ました形","ませんでした形","て形","ない形","た形","なかった形"];
+        const verbForms = ["辞書形","ます形","ません形","ました形","ませんでした形","可能形","て形","ない形","た形","なかった形"];
         const formsDisplayOrder = {
             "ます形": ["meaning_bd","辞書形","ます形"],
             "ません形": ["ます形","ません形"],
             "ました形": ["ます形","ました形"],
             "ませんでした形": ["ません形","ませんでした形"],
+            "可能形": ["ます形","可能形"],
             "て形": ["辞書形","て形"],
             "ない形": ["辞書形","ない形"],
             "た形": ["辞書形","た形"],
