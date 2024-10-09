@@ -1,0 +1,1164 @@
+{
+    "adjectives": {
+        "0": {
+            "kana": "おおきい",
+            "english": "big",
+            "bangla": "বড়",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "おおきい いぬ が います。",
+                "この へや は おおきい です。"
+            ]
+        },
+        "1": {
+            "kana": "ちいさい",
+            "english": "small",
+            "bangla": "ছোট",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "ちいさい ねこ が います。",
+                "この へや は ちいさい です。"
+            ]
+        },
+        "2": {
+            "kana": "おおい",
+            "english": "many",
+            "bangla": "অনেক",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "ここ は ひと が おおい です。",
+                "にほん は じしん が おおい です。"
+            ]
+        },
+        "3": {
+            "kana": "すくない",
+            "english": "few, scarce",
+            "bangla": "কম",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "ここ は ひと が すくない です。",
+                "すくない かず の どうぶつ が います。"
+            ]
+        },
+        "4": {
+            "kana": "たかい",
+            "english": "high, expensive",
+            "bangla": "উচ্চ, দামী",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "この いえ は たかい です。",
+                "たかい かばん を かいました。"
+            ]
+        },
+        "5": {
+            "kana": "せがたかい",
+            "english": "tall (person)",
+            "bangla": "লম্বা (মানুষ)",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "せ が たかい ひと が います。",
+                "せ が たかい かれ は スポーツマン です。"
+            ]
+        },
+        "6": {
+            "kana": "やすい",
+            "english": "cheap, inexpensive",
+            "bangla": "সস্তা",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "やすい いえ を みつけました。",
+                "この たべもの は やすい です。"
+            ]
+        },
+        "7": {
+            "kana": "ひくい",
+            "english": "low",
+            "bangla": "নিম্ন",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "この いえ は ひくい です。",
+                "ひくい せんせい です。"
+            ]
+        },
+        "8": {
+            "kana": "せがひくい",
+            "english": "short (person)",
+            "bangla": "ছোট (মানুষ)",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "せ が ひくい かれ は とても かわいい。",
+                "せ が ひくい ひと が すき です。"
+            ]
+        },
+        "9": {
+            "kana": "いい",
+            "english": "good",
+            "bangla": "ভালো",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "いい おてんき です。",
+                "いい えいが を みました。"
+            ]
+        },
+        "10": {
+            "kana": "よい",
+            "english": "good (formal)",
+            "bangla": "ভালো (আনুষ্ঠানিক)",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "よい せいせき が とれました。",
+                "よい しごと を みつけたい。"
+            ]
+        },
+        "11": {
+            "kana": "わるい",
+            "english": "bad",
+            "bangla": "খারাপ",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "わるい くせ が あります。",
+                "かれ の せいかく は わるい です。"
+            ]
+        },
+        "12": {
+            "kana": "とおい",
+            "english": "far",
+            "bangla": "দূরে",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "とおい みせ に いきます。",
+                "とおい ところ に すんでいます。"
+            ]
+        },
+        "13": {
+            "kana": "ちかい",
+            "english": "near",
+            "bangla": "নিকটে",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "ちかい みせ に いきます。",
+                "ちかい こうえん が すき です。"
+            ]
+        },
+        "14": {
+            "kana": "あたらしい",
+            "english": "new",
+            "bangla": "নতুন",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "あたらしい くるま を かいました。",
+                "あたらしい ほん が きました。"
+            ]
+        },
+        "15": {
+            "kana": "ふるい",
+            "english": "old",
+            "bangla": "পুরানো",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "この ほん は ふるい です。",
+                "ふるい いえ に すんでいます。"
+            ]
+        },
+        "16": {
+            "kana": "おいしい",
+            "english": "delicious",
+            "bangla": "সুস্বাদু",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "おいしい りんご を たべました。",
+                "おいしい たべもの が すき です。"
+            ]
+        },
+        "17": {
+            "kana": "まずい",
+            "english": "bad-tasting",
+            "bangla": "স্বাদহীন",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "この たべもの は まずい です。",
+                "まずい おちゃ は のまない。"
+            ]
+        },
+        "18": {
+            "kana": "からい",
+            "english": "spicy",
+            "bangla": "মশলাদার/ঝাল",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "からい りょうり が すき です。",
+                "この たべもの は からい です。"
+            ]
+        },
+        "19": {
+            "kana": "あまい",
+            "english": "sweet",
+            "bangla": "মিষ্টি",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "あまい おかし が すき です。",
+                "この ケーキ は あまい です。"
+            ]
+        },
+        "20": {
+            "kana": "にがい",
+            "english": "bitter",
+            "bangla": "তিতা",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "この かんきつ は にがい です。",
+                "にがい かんじ が します。"
+            ]
+        },
+        "21": {
+            "kana": "すっぱい",
+            "english": "sour",
+            "bangla": "টক",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "すっぱい みかん を たべました。",
+                "すっぱい りょうり は きらい です。"
+            ]
+        },
+        "22": {
+            "kana": "しょっぱい",
+            "english": "salty",
+            "bangla": "নোনা",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "この たべもの は しょっぱい です。",
+                "しょっぱい すし が すき です。"
+            ]
+        },
+        "23": {
+            "kana": "むずかしい",
+            "english": "difficult",
+            "bangla": "কঠিন",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "この もんだい は むずかしい です。",
+                "むずかしい しゅくだい を しました。"
+            ]
+        },
+        "24": {
+            "kana": "わかい",
+            "english": "young",
+            "bangla": "যুবক",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "わかい ひと が すき です。",
+                "わかい おんがく が とても いい。"
+            ]
+        },
+        "25": {
+            "kana": "ながい",
+            "english": "long",
+            "bangla": "দীর্ঘ",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "ながい みち を あるきます。",
+                "ながい はなし を ききました。"
+            ]
+        },
+        "26": {
+            "kana": "みじかい",
+            "english": "short",
+            "bangla": "ছোট",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "みじかい かみ が すき です。",
+                "みじかい みち を あるきます。"
+            ]
+        },
+        "27": {
+            "kana": "はやい",
+            "english": "fast, early",
+            "bangla": "দ্রুত, দ্রুত",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "はやい くるま が すき です。",
+                "はやい じかん に おきました。"
+            ]
+        },
+        "28": {
+            "kana": "おそい",
+            "english": "slow, late",
+            "bangla": "ধীর, দেরি",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "おそい くるま が います。",
+                "おそい じかん に ねました。"
+            ]
+        },
+        "29": {
+            "kana": "おもい",
+            "english": "heavy",
+            "bangla": "ভারি",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "おもい にもつ を もちます。",
+                "おもい ほん を よみます。"
+            ]
+        },
+        "30": {
+            "kana": "かるい",
+            "english": "light",
+            "bangla": "হালকা",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "かるい にもつ が あります。",
+                "かるい かばん が ほしい。"
+            ]
+        },
+        "31": {
+            "kana": "うるさい",
+            "english": "noisy",
+            "bangla": "শোরগোল",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "うるさい おんがく が きこえます。",
+                "うるさい へや です。"
+            ]
+        },
+        "32": {
+            "kana": "あかるい",
+            "english": "bright",
+            "bangla": "উজ্জ্বল",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "あかるい へや です。",
+                "あかるい ひかり が さしています。"
+            ]
+        },
+        "33": {
+            "kana": "くらい",
+            "english": "dark",
+            "bangla": "অন্ধকার",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "くらい へや に はいります。",
+                "くらい ところ です。"
+            ]
+        },
+        "34": {
+            "kana": "きたない",
+            "english": "dirty",
+            "bangla": "নোংড়া",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "きたない へや は きらい です。",
+                "きたない みず を のまない。"
+            ]
+        },
+        "35": {
+            "kana": "うれしい",
+            "english": "happy",
+            "bangla": "আনন্দিত",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "うれしい ニュース です。",
+                "うれしい きもち です。"
+            ]
+        },
+        "36": {
+            "kana": "かなしい",
+            "english": "sad",
+            "bangla": "দুঃখিত",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "かなしい はなし を ききました。",
+                "かなしい きもち です。"
+            ]
+        },
+        "37": {
+            "kana": "おもしろい",
+            "english": "interesting",
+            "bangla": "আকর্ষণীয়",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "おもしろい えいが を みました。",
+                "おもしろい はなし です。"
+            ]
+        },
+        "38": {
+            "kana": "つまらない",
+            "english": "boring",
+            "bangla": "বিরক্তিকর",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "つまらない じかん が ありました。",
+                "つまらない えいが を みた。"
+            ]
+        },
+        "39": {
+            "kana": "たのしい",
+            "english": "fun, enjoyable",
+            "bangla": "মজার",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "たのしい パーティー に いきました。",
+                "たのしい じかん を すごしました。"
+            ]
+        },
+        "40": {
+            "kana": "さびしい",
+            "english": "lonely, sad",
+            "bangla": "একাকী",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "さびしい きもち です。",
+                "さびしい とき に かぞく を おもいだします。"
+            ]
+        },
+        "41": {
+            "kana": "こわい",
+            "english": "scary",
+            "bangla": "ভয়ঙ্কর",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "こわい はなし を ききました。",
+                "こわい えいが が すき では ありません。"
+            ]
+        },
+        "42": {
+            "kana": "あつい",
+            "english": "hot",
+            "bangla": "গরম",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "あつい ひ が つづいています。",
+                "あつい コーヒー を のみました。"
+            ]
+        },
+        "43": {
+            "kana": "むしあつい",
+            "english": "humid, muggy",
+            "bangla": "আর্দ্র গরম",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "きのう は むしあつい ひ でした。",
+                "きょう は むしあつい いちにち でした。"
+            ]
+        },
+        "44": {
+            "kana": "あたたかい",
+            "english": "warm",
+            "bangla": "গরম, উষ্ণ",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "あたたかい かぜ が ふいています。",
+                "あたたかい ふく を きています。"
+            ]
+        },
+        "45": {
+            "kana": "すずしい",
+            "english": "cool",
+            "bangla": "শীতল",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "すずしい かぜ が きもち いい。",
+                "すずしい ひが すき です。"
+            ]
+        },
+        "46": {
+            "kana": "さむい",
+            "english": "cold",
+            "bangla": "ঠান্ডা",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "さむい ひ が きました。",
+                "さむい みず を のみません。"
+            ]
+        },
+        "47": {
+            "kana": "つめたい",
+            "english": "cold (to the touch)",
+            "bangla": "ঠান্ডা",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "つめたい みず が ほしい。",
+                "つめたい かんきつ を たべました。"
+            ]
+        },
+        "48": {
+            "kana": "いそがしい",
+            "english": "busy",
+            "bangla": "ব্যস্ত",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "いそがしい じかん を すごしています。",
+                "いそがしい とき に ねます。"
+            ]
+        },
+        "49": {
+            "kana": "めずらしい",
+            "english": "rare, unusual",
+            "bangla": "অস্বাভাবিক",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "めずらしい こと が おきました。",
+                "めずらしい ほん を よみました。"
+            ]
+        },
+        "50": {
+            "kana": "やわらかい",
+            "english": "soft",
+            "bangla": "নরম",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "やわらかい くつした を はいています。",
+                "やわらかい かみ が すき です。"
+            ]
+        },
+        "51": {
+            "kana": "かたい",
+            "english": "hard",
+            "bangla": "কঠোর/শক্ত",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "かたい かみ を かきます。",
+                "かたい まくら を つかいます。"
+            ]
+        },
+        "52": {
+            "kana": "ふかい",
+            "english": "deep",
+            "bangla": "গভীর",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "ふかい みず に はいります。",
+                "ふかい けいけん が あります。"
+            ]
+        },
+        "53": {
+            "kana": "あさい",
+            "english": "shallow",
+            "bangla": "অতল",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "あさい みず で あそびます。",
+                "あさい みず は こわく ありません。"
+            ]
+        },
+        "54": {
+            "kana": "ひろい",
+            "english": "wide, spacious",
+            "bangla": "প্রশস্ত",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "ひろい へや が あります。",
+                "ひろい にわ が すき です。"
+            ]
+        },
+        "55": {
+            "kana": "せまい",
+            "english": "narrow, small",
+            "bangla": "সংকীর্ন",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "せまい へや に います。",
+                "せまい みち を あるきます。"
+            ]
+        },
+        "56": {
+            "kana": "いたい",
+            "english": "painful",
+            "bangla": "ব্যথা",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "いたい ところ が あります。",
+                "いたい けが を しました。"
+            ]
+        },
+        "57": {
+            "kana": "ただしい",
+            "english": "correct",
+            "bangla": "সঠিক",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "ただしい こたえ を いいます。",
+                "ただしい みち を おしえて ください。"
+            ]
+        },
+        "58": {
+            "kana": "ねむい",
+            "english": "sleepy",
+            "bangla": "ঘুমানো",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "ねむい です。",
+                "ねむい とき は はやく ねます。"
+            ]
+        },
+        "59": {
+            "kana": "きびしい",
+            "english": "strict, severe",
+            "bangla": "কঠোর",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "せんせい は きびしい です。",
+                "きびしい ルール が あります。"
+            ]
+        },
+        "60": {
+            "kana": "つよい",
+            "english": "strong",
+            "bangla": "শক্তিশালী",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "つよい かぜ が ふいています。",
+                "つよい おもい を かんじます。"
+            ]
+        },
+        "61": {
+            "kana": "よわい",
+            "english": "weak",
+            "bangla": "দুর্বল",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "よわい かみ を つかいます。",
+                "よわい からだ です。"
+            ]
+        },
+        "62": {
+            "kana": "ひどい",
+            "english": "terrible, awful",
+            "bangla": "ভয়ঙ্কর",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "ひどい けが を しました。",
+                "ひどい お天気 でした。"
+            ]
+        },
+        "63": {
+            "kana": "まるい",
+            "english": "round",
+            "bangla": "গোল",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "まるい だいこん を みました。",
+                "まるい たまご が すき です。"
+            ]
+        },
+        "64": {
+            "kana": "すごい",
+            "english": "amazing, awesome",
+            "bangla": "অভূতপূর্ব",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "すごい しょうせつ を よみました。",
+                "すごい おとしより に あいました。"
+            ]
+        },
+        "65": {
+            "kana": "うらやましい",
+            "english": "envy, jealous",
+            "bangla": "কামনা করা",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "かれ は うらやましい ひと です。",
+                "かのじょ は うらやましい せいかく です。"
+            ]
+        },
+        "66": {
+            "kana": "はずかしい",
+            "english": "embarrassing, shy",
+            "bangla": "লজ্জাজনক",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "はずかしい じかん でした。",
+                "はずかしい おもい を しました。"
+            ]
+        },
+        "67": {
+            "kana": "あかい",
+            "english": "red",
+            "bangla": "লাল",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "あかい はな が さきました。",
+                "あかい かさ を かいました。"
+            ]
+        },
+        "68": {
+            "kana": "あおい",
+            "english": "blue",
+            "bangla": "নীল",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "あおい そら が みえます。",
+                "あおい ふく を きています。"
+            ]
+        },
+        "69": {
+            "kana": "くろい",
+            "english": "black",
+            "bangla": "কালো",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "くろい ねこ が います。",
+                "くろい かばん を もっています。"
+            ]
+        },
+        "70": {
+            "kana": "しろい",
+            "english": "white",
+            "bangla": "সাদা",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "しろい くつ を はいています。",
+                "しろい ゆき が ふっています。"
+            ]
+        },
+        "71": {
+            "kana": "ちゃいろい",
+            "english": "brown",
+            "bangla": "বাদামী",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "ちゃいろい かみ が すき です。",
+                "ちゃいろい ふく を きています。"
+            ]
+        },
+        "72": {
+            "kana": "きいろい",
+            "english": "yellow",
+            "bangla": "হলুদ",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "きいろい はな が さいています。",
+                "きいろい かさ を もっています。"
+            ]
+        },
+        "73": {
+            "kana": "あたまがいい",
+            "english": "smart, clever",
+            "bangla": "বুদ্ধিমান",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "あたまがいい ひと が すき です。",
+                "あたまがいい せんせい に ならいます。"
+            ]
+        },
+        "74": {
+            "kana": "かっこいい",
+            "english": "cool, stylish",
+            "bangla": "সুন্দর",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "かっこいい ふく を きました。",
+                "かっこいい ひと が すき です。"
+            ]
+        },
+        "75": {
+            "kana": "かわいい",
+            "english": "cute",
+            "bangla": "প্রীতিময়",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "かわいい いぬ が います。",
+                "かわいい ねこ が すき です。"
+            ]
+        },
+        "76": {
+            "kana": "つごうがわるい",
+            "english": "inconvenient",
+            "bangla": "অসুবিধাজনক",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "つごう が わるい とき に はなしません。",
+                "つごう が わるい じかん です。"
+            ]
+        },
+        "77": {
+            "kana": "きぶんがわるい",
+            "english": "feeling sick, unwell",
+            "bangla": "অস্বস্তি",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "きぶん が わるい です。",
+                "きぶん が わるい とき に ゆっくり します。"
+            ]
+        },
+        "78": {
+            "kana": "なかがいい",
+            "english": "good relationship",
+            "bangla": "ভাল সম্পর্ক",
+            "type": "イ形容詞",
+            "exampleSentence": [
+                "なか が いい かぞく です。",
+                "なか が いい ともだち が います。"
+            ]
+        },
+        "79": {
+            "kana": "げんき",
+            "english": "healthy, energetic",
+            "bangla": "সুস্থ, প্রাণবন্ত",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "かれ は げんき です。",
+                "こどもたち は とても げんき に あそんで います。"
+            ]
+        },
+        "80": {
+            "kana": "しんせつ",
+            "english": "kind, gentle",
+            "bangla": "দয়ালু, নম্র",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "かのじょ は しんせつ な ひと です。",
+                "せんせい は しんせつ に おしえて くれます。"
+            ]
+        },
+        "81": {
+            "kana": "かんたん",
+            "english": "easy, simple",
+            "bangla": "সহজ, সরল",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "この しけん は かんたん です。",
+                "かんたん な もんだい から はじめます。"
+            ]
+        },
+        "82": {
+            "kana": "きれい",
+            "english": "beautiful, clean",
+            "bangla": "সুন্দর, পরিষ্কার",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "この へや は とても きれい です。",
+                "うみ の けしき は きれい でした。"
+            ]
+        },
+        "83": {
+            "kana": "ゆうめい",
+            "english": "famous",
+            "bangla": "বিখ্যাত",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "この まちは ゆうめい な かんこうち です。",
+                "かれ は ゆうめい な かしゅ です。"
+            ]
+        },
+        "84": {
+            "kana": "べんり",
+            "english": "convenient",
+            "bangla": "সুবিধাজনক",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "この アプリ は とても べんり です。",
+                "えき の ちかく に すむ の は べんり です。"
+            ]
+        },
+        "85": {
+            "kana": "ふべん",
+            "english": "inconvenient",
+            "bangla": "অসুবিধাজনক",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "ここ は すこし ふべん な ばしょ です。",
+                "バス が ない の は ふ"
+            ]
+        },
+        "86": {
+            "kana": "ハンサム",
+            "english": "handsome",
+            "bangla": "হ্যান্ডসাম",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "かれ は とても ハンサム です。",
+                "ハンサム な せいと が おおい。"
+            ]
+        },
+        "87": {
+            "kana": "にぎやか",
+            "english": "lively, bustling",
+            "bangla": "জীবন্ত, জমজমাট",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "この まちは にぎやか です。",
+                "にぎやか な ばしょ が すき です。"
+            ]
+        },
+        "88": {
+            "kana": "しずか",
+            "english": "quiet, peaceful",
+            "bangla": "নিরিবিলি, শান্ত",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "ここ は しずか な こうえん です。",
+                "しずか に してください。"
+            ]
+        },
+        "89": {
+            "kana": "ひま",
+            "english": "free time, not busy",
+            "bangla": "অবসর, ব্যস্ত না",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "きょう は ひま です。",
+                "ひま な とき に あそび に きてください。"
+            ]
+        },
+        "90": {
+            "kana": "ていねい",
+            "english": "polite, careful",
+            "bangla": "ভদ্র, সাবধানী",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "かれ は ていねい な はなしかた を します。",
+                "ていねい に せつめい します。"
+            ]
+        },
+        "91": {
+            "kana": "しつれい",
+            "english": "rude, impolite",
+            "bangla": "অশিষ্ট",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "しつれい な こと を いって は いけません。",
+                "しつれい します が、いま なんじ ですか？"
+            ]
+        },
+        "92": {
+            "kana": "すき",
+            "english": "like, fond of",
+            "bangla": "পছন্দ করা",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "わたし は すし が すき です。",
+                "ねこ が すき な ひと が おおい。"
+            ]
+        },
+        "93": {
+            "kana": "きらい",
+            "english": "dislike, hate",
+            "bangla": "অপছন্দ করা",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "かれ は たばこ が きらい です。",
+                "わたし は きらい な たべもの が ありません。"
+            ]
+        },
+        "94": {
+            "kana": "いろいろ",
+            "english": "various, different kinds of",
+            "bangla": "বিভিন্ন",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "いろいろ な ほん を よみます。",
+                "いろいろ な ひと が います。"
+            ]
+        },
+        "95": {
+            "kana": "たいせつ",
+            "english": "important, valuable",
+            "bangla": "গুরুত্বপূর্ণ, মূল্যবান",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "たいせつ な もの を わすれないで。",
+                "これは たいせつ な もんだい です。"
+            ]
+        },
+        "96": {
+            "kana": "だいじ",
+            "english": "important, serious",
+            "bangla": "গুরুত্বপূর্ণ, সিরিয়াস",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "じんせい で だいじ な こと を まもりましょう。",
+                "だいじ な ようじ が あります。"
+            ]
+        },
+        "97": {
+            "kana": "あんぜん",
+            "english": "safe",
+            "bangla": "নিরাপদ",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "あんぜん な ところ に すんでいます。",
+                "あんぜん に うんてん してください。"
+            ]
+        },
+        "98": {
+            "kana": "きけん",
+            "english": "dangerous",
+            "bangla": "বিপজ্জনক",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "ここ は きけん な ばしょ です。",
+                "きけん な こうどう は しないで ください。"
+            ]
+        },
+        "99": {
+            "kana": "ばか",
+            "english": "stupid, foolish",
+            "bangla": "বোকা, নির্বোধ",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "ばか な こと を いわないで ください。",
+                "かれ は ばか な まちがい を しました。"
+            ]
+        },
+        "100": {
+            "kana": "じょうず",
+            "english": "skillful, good at",
+            "bangla": "কুশলী, পারদর্শী",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "かのじょ は うた が じょうず です。",
+                "かれ は にほんご が じょうず です。"
+            ]
+        },
+        "101": {
+            "kana": "へた",
+            "english": "unskillful, bad at",
+            "bangla": "অদক্ষ, অপটু",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "わたし は スポーツ が へた です。",
+                "かれ は えいご が へた です。"
+            ]
+        },
+        "102": {
+            "kana": "たいへん",
+            "english": "hard, tough, difficult",
+            "bangla": "কঠিন, কঠোর",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "たいへん な しごと を しています。",
+                "きょう は たいへん な いちにち でした。"
+            ]
+        },
+        "103": {
+            "kana": "だめ",
+            "english": "no good, useless",
+            "bangla": "অকার্যকর, নিষ্ফল",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "だめ な こと は しないで ください。",
+                "この けいかく は だめ でした。"
+            ]
+        },
+        "104": {
+            "kana": "けち",
+            "english": "stingy, cheap",
+            "bangla": "কৃপণ",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "かれ は けち な ひと です。",
+                "けち な はなし を しないで ください。"
+            ]
+        },
+        "105": {
+            "kana": "まじめ",
+            "english": "serious, earnest",
+            "bangla": "গম্ভীর, আন্তরিক",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "かのじょ は まじめ に べんきょう しています。",
+                "まじめ な せいと です。"
+            ]
+        },
+        "106": {
+            "kana": "いじわる",
+            "english": "mean, spiteful",
+            "bangla": "কুৎসিত, দুষ্ট",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "いじわる な こと を いわないで。",
+                "かれ は いじわる な せんせい です。"
+            ]
+        },
+        "107": {
+            "kana": "めちゃくちゃな",
+            "english": "messy, chaotic",
+            "bangla": "অগোছালো, বিশৃঙ্খল",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "へや が めちゃくちゃ な じょうたい です。",
+                "かれ の かんがえ は めちゃくちゃ です。"
+            ]
+        },
+        "108": {
+            "kana": "しんぱい",
+            "english": "worried, anxious",
+            "bangla": "উদ্বিগ্ন, চিন্তিত",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "しんぱい な こと が あります。",
+                "かれ は いつも しんぱい して います。"
+            ]
+        },
+        "109": {
+            "kana": "びんぼう",
+            "english": "poor, impoverished",
+            "bangla": "গরীব, দরিদ্র",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "びんぼう な せいかつ を しています。",
+                "かれ は びんぼう です が、しあわせ です。"
+            ]
+        },
+        "110": {
+            "kana": "ぺらぺら",
+            "english": "fluent",
+            "bangla": "সাবলীলভাবে কথা বলা",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "かのじょ は えいご が ぺらぺら です。",
+                "ぺらぺら に にほんご を はなせます。"
+            ]
+        },
+        "111": {
+            "kana": "らく",
+            "english": "comfortable, easy",
+            "bangla": "আরামদায়ক, সহজ",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "この いす は とても らく です。",
+                "らく な しごと が ほしい。"
+            ]
+        },
+        "112": {
+            "kana": "へん",
+            "english": "strange, weird",
+            "bangla": "অদ্ভুত",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "へん な こと が おこりました。",
+                "かれ の かんがえ は へん です。"
+            ]
+        },
+        "113": {
+            "kana": "すてき",
+            "english": "lovely, wonderful",
+            "bangla": "চমৎকার, মনোরম",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "すてき な プレゼント を もらいました。",
+                "すてき な ひと に あいました。"
+            ]
+        },
+        "114": {
+            "kana": "ふくざつ",
+            "english": "complicated, complex",
+            "bangla": "জটিল",
+            "type": "ナ形容詞",
+            "exampleSentence": [
+                "ふくざつ な もんだい です。",
+                "この きかい は ふくざつ です。"
+            ]
+        }
+    },
+    "types": {
+        "イ形容詞": {
+            "definition_bd": "イ形容詞 (イ-けいようし) বিশেষণ হলো সেই বিশেষণগুলো যেগুলোর শেষে 'い' থাকে এবং যা সরাসরি কোনো বস্তু বা বিষয়ের গুণ বা অবস্থা প্রকাশ করে। উদাহরণ: たかい, あたらしい, おおきい",
+            "definition_en": "イ形容詞 (イ-けいようし) are adjectives that end with 'い' and directly describe the quality or state of a noun. Examples: たかい (high), あたらしい (new), おおきい (big)."
+        },
+        "ナ形容詞": {
+            "definition_bd": "ナ形容詞 (ナ-けいようし) বিশেষণ হলো সেই বিশেষণগুলো যেগুলো সাধারণত 'な' যোগ করে ব্যবহৃত হয় এবং কোনো বস্তু বা বিষয়ের গুণ বা অবস্থা প্রকাশ করে। উদাহরণ: しずか な, きれい な, べんり な",
+            "definition_en": "ナ形容詞 (ナ-けいようし) are adjectives that are usually followed by 'な' when describing a noun, and they express the quality or state of the noun. Examples: しずか な (quiet), きれい な (clean/beautiful), べんり な (convenient)."
+        }
+    }
+}

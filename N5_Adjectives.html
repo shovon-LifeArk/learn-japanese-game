@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Shovon Hasan">
+    <meta name="copyright" content="©2024 株式会社LifeArk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeArk Japanese education: N5 Words</title>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Klee One', sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #game-container {
+            height: 100vh;
+            width: 100%;
+            max-height: 1024px;
+            max-width: 576px;
+        }
+        .header-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header-image img {
+            max-width: 70%;
+        }
+        .play-button {
+            padding: 10px 20px;
+            font-size: 1.5em;
+            background-color: #9966ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button {
+            height: 50px;
+            width: 50px;
+            padding: 10px;
+            border-radius: 35px;
+            border: 2px solid #9966ff;
+            color: #9966ff;
+            font-size: 26px;
+            line-height: 100%;
+            background-color: white;
+            cursor: pointer;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        hr {
+            border: 1px solid grey;
+            width: 100%;
+        }
+        #words_list-container {
+            min-height: calc(80vh - 40px);
+            padding: 20px;
+            display: none; 
+            flex: 1;
+            flex-direction: column;
+            gap: 20px;
+        }
+        #words_list-container .category-title {
+            padding: 10px;
+            background-color: #3399ff;
+            color: white;
+        }
+        #words_list-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #words_list-container td {
+            padding: 10px;
+            vertical-align: top;
+            position: relative;
+        }
+        #words_list-container .word-highlight {
+            height: 30px;
+            padding: 0px 10px;
+            border-radius: 15px;
+            background-color: orange;
+            font-weight: bold;
+            text-align: center;
+            line-height: 150%;
+        }
+        #words_list-container .word-num {
+            height: 30px;
+            padding: 0px 7px;
+            border-radius: 12px;
+            background-color: grey;
+            color: white;
+            text-align: center;
+            font-size: 0.8em;
+        }
+        #next-button {
+            height: 50px;
+            width: 50px;
+            padding: 10px;
+            border-radius: 35px;
+            border: 2px solid #9966ff;
+            color: #9966ff;
+            font-size: 26px;
+            line-height: 100%;
+            background-color: white;
+            cursor: pointer;
+        }
+        #next-button:disabled {
+            border-color: gray;
+            color: gray;
+            cursor: not-allowed;
+        }
+        #score {
+            font-size: 2em;
+            text-align: center;
+            margin-top: 100px;
+            margin-bottom: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="words_list-container">
+            <div class="header-image">
+                <img src="assets/image/LifeArk_Nihongo_logo.png" />
+                <h2 style="text-align: center; margin: 0px;">N5 বিশেষণ</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let itemsData = {};
+
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
+        
+        function createWordsList() {
+            const categories = ["イ形容詞", "ナ形容詞"];
+            const container = document.getElementById('words_list-container');
+            let wordNum = 1;
+            
+            categories.forEach(category => {
+                // Create a category section
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'category';
+                categoryDiv.innerHTML = `<h2 class="category-title">${category}</h2>
+                                        <p>${itemsData.types[category].definition_bd}</p>`;
+
+                // Filter items by category
+                const adjectives = itemsData.adjectives;
+                const itemsInCategory = Object.keys(adjectives).filter(key => adjectives[key].type === category);
+
+                itemsInCategory.forEach(key => {
+                    const item = adjectives[key];
+                    const table = document.createElement('table');
+
+                    // Create top row with image and text
+                    const topRow = document.createElement('tr');
+                    const textCell = document.createElement('td');
+                    textCell.innerHTML = `<span class="word-highlight">${item.kana}</span> (${item.bangla})`;
+                    const numCell = document.createElement('td');
+                    numCell.innerHTML = `<span class="word-num">${wordNum}</span>`;
+                    numCell.style.textAlign = "right";
+
+                    topRow.appendChild(textCell);
+                    topRow.appendChild(numCell);
+                    table.appendChild(topRow);
+
+                    // Create bottom row with example sentences
+                    const bottomRow = document.createElement('tr');
+                    const exampleCell = document.createElement('td');
+                    exampleCell.colSpan = 2;
+                    exampleCell.style.padding = "10px 0px";
+                    exampleCell.innerHTML = `・${item.exampleSentence[0]}<br>・${item.exampleSentence[1]}`;
+
+                    bottomRow.appendChild(exampleCell);
+                    table.appendChild(bottomRow);
+
+                    categoryDiv.appendChild(table);
+
+                    const hr = document.createElement('hr');
+                    categoryDiv.appendChild(hr);
+
+                    wordNum++;
+                });
+
+                container.appendChild(categoryDiv);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/adjectives_N5.json')
+                .then(response => response.json())
+                .then(data => {
+                    itemsData = data;
+                    // display words list
+                    createWordsList();
+                    showPage('words_list');
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        });
+
+    </script>
+</body>
+</html>
