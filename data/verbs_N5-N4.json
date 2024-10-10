@@ -1,0 +1,3197 @@
+{
+    "verbs": {
+        "0": {
+            "kanji": "行く",
+            "kana": "いく",
+            "english": "to go",
+            "bangla": "যাওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は がっこう に いく",
+                "かれ は にほん に いく"
+            ]
+        },
+        "1": {
+            "kanji": "帰る",
+            "kana": "かえる",
+            "english": "to return",
+            "bangla": "ফিরে আসা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は いえ に かえる",
+                "ともだち は くるま で かえる"
+            ]
+        },
+        "2": {
+            "kanji": "飲む",
+            "kana": "のむ",
+            "english": "to drink",
+            "bangla": "পান করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は みず を のむ",
+                "かれ は コーヒー を のむ"
+            ]
+        },
+        "3": {
+            "kanji": "書く",
+            "kana": "かく",
+            "english": "to write",
+            "bangla": "লেখা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は てがみ を かく",
+                "かのじょ は ノート に かく"
+            ]
+        },
+        "4": {
+            "kanji": "描く",
+            "kana": "かく",
+            "english": "to draw",
+            "bangla": "আঁকা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は え を かく",
+                "かれ は くるま を かく"
+            ]
+        },
+        "5": {
+            "kanji": "話す",
+            "kana": "はなす",
+            "english": "to speak",
+            "bangla": "কথা বলা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は ともだち と はなす",
+                "かれ は にほんご で はなす"
+            ]
+        },
+        "6": {
+            "kanji": "言う",
+            "kana": "いう",
+            "english": "to say",
+            "bangla": "বলা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は ほんとう の こと を いう",
+                "かのじょ は なまえ を いう"
+            ]
+        },
+        "7": {
+            "kanji": "読む",
+            "kana": "よむ",
+            "english": "to read",
+            "bangla": "পড়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は ほん を よむ",
+                "かのじょ は しんぶん を よむ"
+            ]
+        },
+        "8": {
+            "kanji": "会う",
+            "kana": "あう",
+            "english": "to meet",
+            "bangla": "দেখা করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は ともだち に あう",
+                "かれ は きょう せんせい に あう"
+            ]
+        },
+        "9": {
+            "kanji": "ある",
+            "kana": "ある",
+            "english": "to exist (inanimate)",
+            "bangla": "আছে (জড় বস্তু)",
+            "type": "Group-1",
+            "exampleSentence": [
+                "いえ に ほん が ある",
+                "テーブル の うえ に かぎ が ある"
+            ]
+        },
+        "10": {
+            "kanji": "買う",
+            "kana": "かう",
+            "english": "to buy",
+            "bangla": "কেনা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は ほん を かう",
+                "かのじょ は ふく を かう"
+            ]
+        },
+        "11": {
+            "kanji": "飼う",
+            "kana": "かう",
+            "english": "to keep (a pet)",
+            "bangla": "পোষা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は いぬ を かう",
+                "わたし は ねこ を かう"
+            ]
+        },
+        "12": {
+            "kanji": "売る",
+            "kana": "うる",
+            "english": "to sell",
+            "bangla": "বিক্রি করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は くるま を うる",
+                "わたし は いえ を うる"
+            ]
+        },
+        "13": {
+            "kanji": "待つ",
+            "kana": "まつ",
+            "english": "to wait",
+            "bangla": "অপেক্ষা করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は ともだち を まつ",
+                "わたし は バス を まつ"
+            ]
+        },
+        "14": {
+            "kanji": "撮る",
+            "kana": "とる",
+            "english": "to take (a photo)",
+            "bangla": "ছবি তোলা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は しゃしん を とる",
+                "かれ は えいが を とる"
+            ]
+        },
+        "15": {
+            "kanji": "取る",
+            "kana": "とる",
+            "english": "to take (an object)",
+            "bangla": "নেওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は えんぴつ を とる",
+                "わたし は ざっし を とる"
+            ]
+        },
+        "16": {
+            "kanji": "わかる",
+            "kana": "わかる",
+            "english": "to understand",
+            "bangla": "বোঝা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は にほんご が わかる",
+                "かれ は その いみ が わかる"
+            ]
+        },
+        "17": {
+            "kanji": "歩く",
+            "kana": "あるく",
+            "english": "to walk",
+            "bangla": "হাঁটা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は こうえん を あるく",
+                "かのじょ は いえ まで あるく"
+            ]
+        },
+        "18": {
+            "kanji": "走る",
+            "kana": "はしる",
+            "english": "to run",
+            "bangla": "দৌড়ানো",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は みち を はしる",
+                "わたし は しごと まで はしる"
+            ]
+        },
+        "19": {
+            "kanji": "泳ぐ",
+            "kana": "およぐ",
+            "english": "to swim",
+            "bangla": "সাঁতার কাটা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は かわ で およぐ",
+                "わたし は プール で およぐ"
+            ]
+        },
+        "20": {
+            "kanji": "聞く",
+            "kana": "きく",
+            "english": "to listen / to ask",
+            "bangla": "শোনা / জিজ্ঞাসা করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は おんがく を きく",
+                "かれ は せんせい に しつもん を きく"
+            ]
+        },
+        "21": {
+            "kanji": "乗る",
+            "kana": "のる",
+            "english": "to ride",
+            "bangla": "আরোহন করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は でんしゃ に のる",
+                "かれ は じてんしゃ に のる"
+            ]
+        },
+        "22": {
+            "kanji": "やる",
+            "kana": "やる",
+            "english": "to do / to give",
+            "bangla": "করা / দেওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は しごと を やる",
+                "かれ は いぬ に えさ を やる"
+            ]
+        },
+        "23": {
+            "kanji": "遊ぶ",
+            "kana": "あそぶ",
+            "english": "to play",
+            "bangla": "খেলা করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "こどもたち は こうえん で あそぶ",
+                "かれ は ともだち と あそぶ"
+            ]
+        },
+        "24": {
+            "kanji": "急ぐ",
+            "kana": "いそぐ",
+            "english": "to hurry",
+            "bangla": "তাড়াহুড়ো করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は えき に いそぐ",
+                "わたし は かいぎ に いそぐ"
+            ]
+        },
+        "25": {
+            "kanji": "お風呂に入る",
+            "kana": "おふろ に はいる",
+            "english": "to take a bath",
+            "bangla": "গোসল করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は まいにち おふろ に はいる",
+                "かれ は よる おふろ に はいる"
+            ]
+        },
+        "26": {
+            "kanji": "返す",
+            "kana": "かえす",
+            "english": "to return (an object)",
+            "bangla": "ফিরিয়ে দেওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は ほん を かえす",
+                "わたし は ともだち に ペン を かえす"
+            ]
+        },
+        "27": {
+            "kanji": "消す",
+            "kana": "けす",
+            "english": "to turn off / to erase",
+            "bangla": "বন্ধ করা / মুছে ফেলা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は テレビ を けす",
+                "わたし は まど を けす"
+            ]
+        },
+        "28": {
+            "kanji": "死ぬ",
+            "kana": "しぬ",
+            "english": "to die",
+            "bangla": "মারা যাওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "しぬ の が こわい です",
+                "かれ は しぬ"
+            ]
+        },
+        "29": {
+            "kanji": "立つ",
+            "kana": "たつ",
+            "english": "to stand",
+            "bangla": "দাঁড়ানো",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かのじょ は つくえ の まえ に たつ",
+                "わたし は いす から たつ"
+            ]
+        },
+        "30": {
+            "kanji": "座る",
+            "kana": "すわる",
+            "english": "to sit",
+            "bangla": "বসা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は いす に すわる",
+                "わたし は ソファー に すわる"
+            ]
+        },
+        "31": {
+            "kanji": "たばこを吸う",
+            "kana": "たばこ を すう",
+            "english": "to smoke (a cigarette)",
+            "bangla": "ধূমপান করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は たばこ を すう",
+                "わたし は きっさてん で たばこ を すう"
+            ]
+        },
+        "32": {
+            "kanji": "使う",
+            "kana": "つかう",
+            "english": "to use",
+            "bangla": "ব্যবহার করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は コンピュータ を つかう",
+                "わたし は じしょ を つかう"
+            ]
+        },
+        "33": {
+            "kanji": "手伝う",
+            "kana": "てつだう",
+            "english": "to help",
+            "bangla": "সাহায্য করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は ともだち を てつだう",
+                "わたし は はは の しごと を てつだう"
+            ]
+        },
+        "34": {
+            "kanji": "入る",
+            "kana": "はいる",
+            "english": "to enter",
+            "bangla": "প্রবেশ করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は きっさてん に はいる",
+                "わたし は へや に はいる"
+            ]
+        },
+        "35": {
+            "kanji": "持つ",
+            "kana": "もつ",
+            "english": "to hold / to have",
+            "bangla": "ধরা / থাকা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は かさ を もつ",
+                "わたし は かばん を もつ"
+            ]
+        },
+        "36": {
+            "kanji": "休む",
+            "kana": "やすむ",
+            "english": "to rest / to take a break",
+            "bangla": "বিশ্রাম নেওয়া / বিরতি নেওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は いちにち やすむ",
+                "わたし は しごと を やすむ"
+            ]
+        },
+        "37": {
+            "kanji": "働く",
+            "kana": "はたらく",
+            "english": "to work",
+            "bangla": "কাজ করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かいしゃ で はたらく",
+                "かれ は コンビニ で はたらく"
+            ]
+        },
+        "38": {
+            "kanji": "歌う",
+            "kana": "うたう",
+            "english": "to sing",
+            "bangla": "গাওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は うた を うたう",
+                "わたし は カラオケ で うたう"
+            ]
+        },
+        "39": {
+            "kanji": "踊る",
+            "kana": "おどる",
+            "english": "to dance",
+            "bangla": "নাচা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かのじょ は ひろば で おどる",
+                "こどもたち は おんがく に あわせて おどる"
+            ]
+        },
+        "40": {
+            "kanji": "弾く",
+            "kana": "ひく",
+            "english": "to play (an instrument)",
+            "bangla": "বাদ্যযন্ত্র বাজানো",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は ピアノ を ひく",
+                "わたし は ギター を ひく"
+            ]
+        },
+        "41": {
+            "kanji": "かぶる",
+            "kana": "かぶる",
+            "english": "to wear (on the head)",
+            "bangla": "মাথায় পরা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は ぼうし を かぶる",
+                "わたし は あかい ぼうし を かぶる"
+            ]
+        },
+        "42": {
+            "kanji": "知る",
+            "kana": "しる",
+            "english": "to know",
+            "bangla": "জানা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は じじょう を しる",
+                "わたし は せんせい の なまえ を しる"
+            ]
+        },
+        "43": {
+            "kanji": "知っている",
+            "kana": "しっている",
+            "english": "to know (in present continuous form)",
+            "bangla": "জানা আছে",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は すべて を しっている",
+                "わたし は かのじょ の じゅうしょ を しっている"
+            ]
+        },
+        "44": {
+            "kanji": "知らない",
+            "kana": "しらない",
+            "english": "not to know",
+            "bangla": "জানা নেই",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かれ を しらない",
+                "かのじょ は この しょくぶつ を しらない"
+            ]
+        },
+        "45": {
+            "kanji": "住む",
+            "kana": "すむ",
+            "english": "to live (reside)",
+            "bangla": "বাস করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は とうきょう に すむ",
+                "かれ は バングラデシュ に すむ"
+            ]
+        },
+        "46": {
+            "kanji": "はく",
+            "kana": "はく",
+            "english": "to wear (clothes, shoes, etc. below the waist)",
+            "bangla": "পরা (কোমরের নিচের পোশাক)",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は ジーンズ を はく",
+                "かれ は くつ を はく"
+            ]
+        },
+        "47": {
+            "kanji": "太る",
+            "kana": "ふとる",
+            "english": "to gain weight",
+            "bangla": "মোটা হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は さいきん ふとった",
+                "わたし は たべすぎて ふとる"
+            ]
+        },
+        "48": {
+            "kanji": "降る",
+            "kana": "ふる",
+            "english": "to fall (rain, snow, etc.)",
+            "bangla": "পড়া (বৃষ্টি, তুষার ইত্যাদি)",
+            "type": "Group-1",
+            "exampleSentence": [
+                "あめ が ふる",
+                "ゆき が ふる"
+            ]
+        },
+        "49": {
+            "kanji": "洗う",
+            "kana": "あらう",
+            "english": "to wash",
+            "bangla": "ধোয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は て を あらう",
+                "かれ は さら を あらう"
+            ]
+        },
+        "50": {
+            "kanji": "いる",
+            "kana": "いる",
+            "english": "to exist (animate), to need",
+            "bangla": "থাকা / প্রয়োজন হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "ねこ が いる",
+                "わたし は すいか が いる"
+            ]
+        },
+        "51": {
+            "kanji": "遅くなる",
+            "kana": "おそくなる",
+            "english": "to be late",
+            "bangla": "দীর্ঘ সময় নেয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は ぜったい おそく なる",
+                "わたし は おそくなる かもしれない"
+            ]
+        },
+        "52": {
+            "kanji": "思う",
+            "kana": "おもう",
+            "english": "to think",
+            "bangla": "মনে করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は そう おもう",
+                "かれ は その じけん の こと を おもう"
+            ]
+        },
+        "53": {
+            "kanji": "切る",
+            "kana": "きる",
+            "english": "to cut",
+            "bangla": "কাটা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は りんご を きる",
+                "わたし は かみ を きる"
+            ]
+        },
+        "54": {
+            "kanji": "作る",
+            "kana": "つくる",
+            "english": "to make",
+            "bangla": "তৈরি করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は ばんごはん を つくる",
+                "かれ は おもちゃ を つくる"
+            ]
+        },
+        "55": {
+            "kanji": "持っていく",
+            "kana": "もっていく",
+            "english": "to take (something)",
+            "bangla": "কিছু নিয়ে যাওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かばん を もっていく",
+                "かれ は ともだち に おみやげ を もっていく"
+            ]
+        },
+        "56": {
+            "kanji": "始まる",
+            "kana": "はじまる",
+            "english": "to begin",
+            "bangla": "শুরু হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "しゅくだい が はじまる",
+                "かいぎ は ９じ に はじまる"
+            ]
+        },
+        "57": {
+            "kanji": "終わる",
+            "kana": "おわる",
+            "english": "to end",
+            "bangla": "শেষ হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "えいが は おわる",
+                "わたし の じかん は おわる"
+            ]
+        },
+        "58": {
+            "kanji": "人気がある",
+            "kana": "にんきがある",
+            "english": "to be popular",
+            "bangla": "জনপ্রিয় হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "この アニメ は にんきがある",
+                "あの しゅくだい は にんきがある"
+            ]
+        },
+        "59": {
+            "kanji": "もらう",
+            "kana": "もらう",
+            "english": "to receive",
+            "bangla": "পাওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は プレゼント を もらう",
+                "かれ は ねこ を もらう"
+            ]
+        },
+        "60": {
+            "kanji": "かかる",
+            "kana": "かかる",
+            "english": "to take (time, money), to be needed",
+            "bangla": "লেগে থাকা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "この しごと は じかんが かかる",
+                "その りょこう は おかねが かかる"
+            ]
+        },
+        "61": {
+            "kanji": "泊まる",
+            "kana": "とまる",
+            "english": "to stay (overnight)",
+            "bangla": "রাত্রি যাপন করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は ホテル に とまる",
+                "かれ は いえ に とまる"
+            ]
+        },
+        "62": {
+            "kanji": "なる",
+            "kana": "なる",
+            "english": "to become",
+            "bangla": "হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は おとな に なる",
+                "かれ は せんせい に なる"
+            ]
+        },
+        "63": {
+            "kanji": "払う",
+            "kana": "はらう",
+            "english": "to pay",
+            "bangla": "পেমেন্ট করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は びょういん に はらう",
+                "かれ は かいぎ に はらう"
+            ]
+        },
+        "64": {
+            "kanji": "サボる",
+            "kana": "サボる",
+            "english": "to slack off, to skip (class, work)",
+            "bangla": "অলসতা করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は がっこう を サボる",
+                "わたし は しごと を サボる"
+            ]
+        },
+        "65": {
+            "kanji": "習う",
+            "kana": "ならう",
+            "english": "to learn",
+            "bangla": "শিখা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は 日本語 を ならう",
+                "かれ は おんがく を ならう"
+            ]
+        },
+        "66": {
+            "kanji": "登る",
+            "kana": "のぼる",
+            "english": "to climb",
+            "bangla": "চড়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は やま を のぼる",
+                "わたし は はし を のぼる"
+            ]
+        },
+        "67": {
+            "kanji": "なくす",
+            "kana": "なくす",
+            "english": "to lose (something)",
+            "bangla": "হারানো",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は けいたい を なくす",
+                "かれ は じしょ を なくす"
+            ]
+        },
+        "68": {
+            "kanji": "編む",
+            "kana": "あむ",
+            "english": "to knit, to weave",
+            "bangla": "বুনা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "おばあさん は かばん を あむ",
+                "かれ は きもの を あむ"
+            ]
+        },
+        "69": {
+            "kanji": "貸す",
+            "kana": "かす",
+            "english": "to lend",
+            "bangla": "ধার দেওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は ほん を かす",
+                "かれ は かさ を かす"
+            ]
+        },
+        "70": {
+            "kanji": "頑張る",
+            "kana": "がんばる",
+            "english": "to do one's best, to persevere",
+            "bangla": "পরিশ্রম করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は がんばる",
+                "かれ は しごと を がんばる"
+            ]
+        },
+        "71": {
+            "kanji": "泣く",
+            "kana": "なく",
+            "english": "to cry",
+            "bangla": "কাঁদা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "こども が なく",
+                "かれ は うれし くて なく"
+            ]
+        },
+        "72": {
+            "kanji": "笑う",
+            "kana": "わらう",
+            "english": "to laugh, to smile",
+            "bangla": "হাসা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は おもしろい こと で わらう",
+                "かれ は ねこ を みて わらう"
+            ]
+        },
+        "73": {
+            "kanji": "怒る",
+            "kana": "おこる",
+            "english": "to get angry",
+            "bangla": "রাগ করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かれ に おこる",
+                "かのじょ は あなた に おこる"
+            ]
+        },
+        "74": {
+            "kanji": "磨く",
+            "kana": "みがく",
+            "english": "to polish, to brush (teeth)",
+            "bangla": "পোলিশ করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は は を みがく",
+                "かれ は くつ を みがく"
+            ]
+        },
+        "75": {
+            "kanji": "守る",
+            "kana": "まもる",
+            "english": "to protect, to guard",
+            "bangla": "রক্ষা করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かぞく を まもる",
+                "かれ は やくそく を まもる"
+            ]
+        },
+        "76": {
+            "kanji": "押す",
+            "kana": "おす",
+            "english": "to push",
+            "bangla": "দুরে ঠেলা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は ドア を おす",
+                "わたし は くるま を おす"
+            ]
+        },
+        "77": {
+            "kanji": "引く",
+            "kana": "ひく",
+            "english": "to pull",
+            "bangla": "টানা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は いす を ひく",
+                "かれ は かばん を ひく"
+            ]
+        },
+        "78": {
+            "kanji": "呼ぶ",
+            "kana": "よぶ",
+            "english": "to call, to invite",
+            "bangla": "ডাকা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かれ を よぶ",
+                "せんせい は がくせい を よぶ"
+            ]
+        },
+        "79": {
+            "kanji": "送る",
+            "kana": "おくる",
+            "english": "to send, to escort",
+            "bangla": "পাঠানো",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は メール を おくる",
+                "かれ は かぞく を おくる"
+            ]
+        },
+        "80": {
+            "kanji": "似合う",
+            "kana": "にあう",
+            "english": "to suit, to match",
+            "bangla": "অনুকূল হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "その ふく は あなた に にあう",
+                "あの かばん は よく にあう"
+            ]
+        },
+        "81": {
+            "kanji": "下ろす",
+            "kana": "おろす",
+            "english": "to lower, to take down",
+            "bangla": "নিচে নামানো",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は かばん を おろす",
+                "わたし は くつ を おろす"
+            ]
+        },
+        "82": {
+            "kanji": "探す",
+            "kana": "さがす",
+            "english": "to search, to look for",
+            "bangla": "অনুসন্ধান করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は しごと を さがす",
+                "かれ は かぎ を さがす"
+            ]
+        },
+        "83": {
+            "kanji": "誘う",
+            "kana": "さそう",
+            "english": "to invite",
+            "bangla": "নিমন্ত্রণ করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "ともだち を さそう",
+                "かれ は わたし を さそう"
+            ]
+        },
+        "84": {
+            "kanji": "付き合う",
+            "kana": "つきあう",
+            "english": "to date, to associate with",
+            "bangla": "সম্পর্ক রাখা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かのじょ と つきあう",
+                "かれ は ともだち と つきあう"
+            ]
+        },
+        "85": {
+            "kanji": "着く",
+            "kana": "つく",
+            "english": "to arrive",
+            "bangla": "পৌঁছানো",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は うち に つく",
+                "かれ は えき に つく"
+            ]
+        },
+        "86": {
+            "kanji": "起こす",
+            "kana": "おこす",
+            "english": "to wake (someone) up",
+            "bangla": "জাগানো",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は こども を おこす",
+                "かれ は せんせい を おこす"
+            ]
+        },
+        "87": {
+            "kanji": "おごる",
+            "kana": "おごる",
+            "english": "to treat (someone)",
+            "bangla": "মিলানো",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かれ を おごる",
+                "かれ は ともだち を おごる"
+            ]
+        },
+        "88": {
+            "kanji": "落ち込む",
+            "kana": "おちこむ",
+            "english": "to get depressed, to feel down",
+            "bangla": "বিধ্বস্ত হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は しごと で おちこむ",
+                "わたし は おちこんで いる"
+            ]
+        },
+        "89": {
+            "kanji": "困る",
+            "kana": "こまる",
+            "english": "to be troubled, to be in difficulty",
+            "bangla": "দূর্ভোগে পড়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は お金 が なくて こまる",
+                "かれ は じかん が なくて こまる"
+            ]
+        },
+        "90": {
+            "kanji": "出す",
+            "kana": "だす",
+            "english": "to take out, to put out",
+            "bangla": "বের করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かばん から ほん を だす",
+                "かれ は ごみ を だす"
+            ]
+        },
+        "91": {
+            "kanji": "連れていく",
+            "kana": "つれていく",
+            "english": "to take (someone) along",
+            "bangla": "কোনোকে নিয়ে যাওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かのじょ を つれていく",
+                "かれ は いぬ を つれていく"
+            ]
+        },
+        "92": {
+            "kanji": "直す",
+            "kana": "なおす",
+            "english": "to fix, to correct",
+            "bangla": "সংশোধন করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は きかい を なおす",
+                "かれ は えいご を なおす"
+            ]
+        },
+        "93": {
+            "kanji": "訳す",
+            "kana": "やくす",
+            "english": "to translate",
+            "bangla": "অনুবাদ করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は ほん を やくす",
+                "かれ は にほんご を やくす"
+            ]
+        },
+        "94": {
+            "kanji": "選ぶ",
+            "kana": "えらぶ",
+            "english": "to choose, to select",
+            "bangla": "বাছাই করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は いろ を えらぶ",
+                "かれ は りんご を えらぶ"
+            ]
+        },
+        "95": {
+            "kanji": "込む",
+            "kana": "こむ",
+            "english": "to be crowded, to be packed",
+            "bangla": "ভিড় করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "えき は ひと で こむ",
+                "まち は よる に こむ"
+            ]
+        },
+        "96": {
+            "kanji": "脱ぐ",
+            "kana": "ぬぐ",
+            "english": "to take off (clothes)",
+            "bangla": "চামড়া ছাড়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は ふく を ぬぐ",
+                "かれ は くつ を ぬぐ"
+            ]
+        },
+        "97": {
+            "kanji": "剃る",
+            "kana": "そる",
+            "english": "to shave",
+            "bangla": "শেভ করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は ひげ を そる",
+                "わたし は あたま を そる"
+            ]
+        },
+        "98": {
+            "kanji": "開く",
+            "kana": "あく",
+            "english": "to open",
+            "bangla": "খোলা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "まど が あく",
+                "ドア を あけて あがる"
+            ]
+        },
+        "99": {
+            "kanji": "謝る",
+            "kana": "あやまる",
+            "english": "to apologize",
+            "bangla": "মাফ চাওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かれ に あやまる",
+                "かれ は せんせい に あやまる"
+            ]
+        },
+        "100": {
+            "kanji": "落とす",
+            "kana": "おとす",
+            "english": "to drop, to let fall",
+            "bangla": "পড়িয়ে দেওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は ボール を おとす",
+                "かれ は かぎ を おとす"
+            ]
+        },
+        "101": {
+            "kanji": "転ぶ",
+            "kana": "ころぶ",
+            "english": "to fall down",
+            "bangla": "পড়ে যাওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は みち で ころぶ",
+                "かれ は ゆき で ころぶ"
+            ]
+        },
+        "102": {
+            "kanji": "壊す",
+            "kana": "こわす",
+            "english": "to break",
+            "bangla": "ভেঙে ফেলা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は おもちゃ を こわす",
+                "かれ は きが こわれる"
+            ]
+        },
+        "103": {
+            "kanji": "咲く",
+            "kana": "さく",
+            "english": "to bloom",
+            "bangla": "ফুল ফোটানো",
+            "type": "Group-1",
+            "exampleSentence": [
+                "はな が さく",
+                "さくら が さく"
+            ]
+        },
+        "104": {
+            "kanji": "頼む",
+            "kana": "たのむ",
+            "english": "to ask, to request",
+            "bangla": "অনুরোধ করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かれ に たのむ",
+                "かれ は せんせい に たのむ"
+            ]
+        },
+        "105": {
+            "kanji": "汚す",
+            "kana": "よごす",
+            "english": "to dirty",
+            "bangla": "ময়লা করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は ふく を よごす",
+                "かれ は てを よごす"
+            ]
+        },
+        "106": {
+            "kanji": "助かる",
+            "kana": "たすかる",
+            "english": "to be saved, to be helped",
+            "bangla": "উদ্ধার হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は いけん を たすかる",
+                "わたし は あなた に たすかる"
+            ]
+        },
+        "107": {
+            "kanji": "閉まる",
+            "kana": "しまる",
+            "english": "to close",
+            "bangla": "বন্ধ হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "まど が しまる",
+                "ドア が しまる"
+            ]
+        },
+        "108": {
+            "kanji": "つく",
+            "kana": "つく",
+            "english": "to arrive, to be attached",
+            "bangla": "পৌঁছানো, সংযুক্ত হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "うち に つく",
+                "あさ に つく"
+            ]
+        },
+        "109": {
+            "kanji": "寄る",
+            "kana": "よる",
+            "english": "to approach, to come near",
+            "bangla": "নিকটবর্তী হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かれ に よる",
+                "ともだち に よる"
+            ]
+        },
+        "110": {
+            "kanji": "引っ越す",
+            "kana": "ひっこす",
+            "english": "to move (to a different place)",
+            "bangla": "অন্য জায়গায় স্থানান্তরিত হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は あたらしい いえ に ひっこす",
+                "かれ は としょかん に ひっこす"
+            ]
+        },
+        "111": {
+            "kanji": "置く",
+            "kana": "おく",
+            "english": "to put, to place",
+            "bangla": "রাখা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "テーブル に はこ を おく",
+                "かばん を おく"
+            ]
+        },
+        "112": {
+            "kanji": "気が付く",
+            "kana": "きがつく",
+            "english": "to notice, to become aware",
+            "bangla": "বুঝতে পারা, লক্ষ্য করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かれ に きがつく",
+                "あなた は じかん に きがつく"
+            ]
+        },
+        "113": {
+            "kanji": "噛む",
+            "kana": "かむ",
+            "english": "to bite, to chew",
+            "bangla": "কাটা, চিবানো",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は りんご を かむ",
+                "いぬ は かみを かむ"
+            ]
+        },
+        "114": {
+            "kanji": "踏む",
+            "kana": "ふむ",
+            "english": "to step on, to tread",
+            "bangla": "পদক্ষেপ নেওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は みち を ふむ",
+                "かれ は くつ を ふむ"
+            ]
+        },
+        "115": {
+            "kanji": "運ぶ",
+            "kana": "はこぶ",
+            "english": "to carry, to transport",
+            "bangla": "বহন করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は かばん を はこぶ",
+                "わたし は えんぴつ を はこぶ"
+            ]
+        },
+        "116": {
+            "kanji": "吹く",
+            "kana": "ふく",
+            "english": "to blow",
+            "bangla": "হওয়া, ঝড়ে আসা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かぜ が ふく",
+                "いぬ が ふいて いる"
+            ]
+        },
+        "117": {
+            "kanji": "間に合う",
+            "kana": "まにあう",
+            "english": "to be in time",
+            "bangla": "সময়ে পৌঁছানো",
+            "type": "Group-1",
+            "exampleSentence": [
+                "がっこう に まにあう",
+                "いえ に まにあう"
+            ]
+        },
+        "118": {
+            "kanji": "蹴る",
+            "kana": "ける",
+            "english": "to kick",
+            "bangla": "লাথি মারা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は ボール を ける",
+                "いぬ を ける"
+            ]
+        },
+        "119": {
+            "kanji": "刺す",
+            "kana": "さす",
+            "english": "to stab, to pierce",
+            "bangla": "গেঁথে দেওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "はり が さす",
+                "かれ は さかな を さす"
+            ]
+        },
+        "120": {
+            "kanji": "殴る",
+            "kana": "なぐる",
+            "english": "to hit, to punch",
+            "bangla": "মারতে থাকা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は かみ を なぐる",
+                "いぬ を なぐる"
+            ]
+        },
+        "121": {
+            "kanji": "貼る",
+            "kana": "はる",
+            "english": "to stick, to paste",
+            "bangla": "লেগে থাকা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "シール を はる",
+                "かみ を はる"
+            ]
+        },
+        "122": {
+            "kanji": "曲がる",
+            "kana": "まがる",
+            "english": "to bend, to turn",
+            "bangla": "কাত হওয়া, মোড় নেওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かど を まがる",
+                "かれ は みち を まがる"
+            ]
+        },
+        "123": {
+            "kanji": "決まる",
+            "kana": "きまる",
+            "english": "to be decided",
+            "bangla": "নিশ্চিত হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "けっこん が きまる",
+                "しごと が きまる"
+            ]
+        },
+        "124": {
+            "kanji": "楽しむ",
+            "kana": "たのしむ",
+            "english": "to enjoy",
+            "bangla": "আনন্দিত হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は パーティー を たのしむ",
+                "かれ は えいが を たのしむ"
+            ]
+        },
+        "125": {
+            "kanji": "包む",
+            "kana": "つつむ",
+            "english": "to wrap, to enclose",
+            "bangla": "মুড়িয়ে দেওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "プレゼント を つつむ",
+                "かばん を つつむ"
+            ]
+        },
+        "126": {
+            "kanji": "盗む",
+            "kana": "ぬすむ",
+            "english": "to steal",
+            "bangla": "চুরি করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は お金 を ぬすむ",
+                "ねこ が たべもの を ぬすむ"
+            ]
+        },
+        "127": {
+            "kanji": "釣る",
+            "kana": "つる",
+            "english": "to fish",
+            "bangla": "মাছ ধরা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は いけ で つる",
+                "わたし は さかな を つる"
+            ]
+        },
+        "128": {
+            "kanji": "勝つ",
+            "kana": "かつ",
+            "english": "to win",
+            "bangla": "জেতা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は しあい に かつ",
+                "かれ は コンペ に かつ"
+            ]
+        },
+        "129": {
+            "kanji": "祈る",
+            "kana": "いのる",
+            "english": "to pray",
+            "bangla": "প্রার্থনা করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かみ に いのる",
+                "ともだち の ため に いのる"
+            ]
+        },
+        "130": {
+            "kanji": "飛ぶ",
+            "kana": "とぶ",
+            "english": "to fly, to jump",
+            "bangla": "উড়ানো, লাফানো",
+            "type": "Group-1",
+            "exampleSentence": [
+                "とり が とぶ",
+                "かれ は たかく とぶ"
+            ]
+        },
+        "131": {
+            "kanji": "騒ぐ",
+            "kana": "さわぐ",
+            "english": "to make noise, to disturb",
+            "bangla": "হট্টগোল করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "こどもたち が さわぐ",
+                "パーティー で さわぐ"
+            ]
+        },
+        "132": {
+            "kanji": "動く",
+            "kana": "うごく",
+            "english": "to move",
+            "bangla": "চলতে থাকা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "うごいて ください",
+                "はなが うごく"
+            ]
+        },
+        "133": {
+            "kanji": "打つ",
+            "kana": "うつ",
+            "english": "to hit, to strike",
+            "bangla": "মারতে থাকা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "ボール を うつ",
+                "かれ は て を うつ"
+            ]
+        },
+        "134": {
+            "kanji": "触る",
+            "kana": "さわる",
+            "english": "to touch",
+            "bangla": "স্পর্শ করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "ねこ を さわる",
+                "かれ は ドア を さわる"
+            ]
+        },
+        "135": {
+            "kanji": "乾く",
+            "kana": "かわく",
+            "english": "to dry",
+            "bangla": "শুকানো",
+            "type": "Group-1",
+            "exampleSentence": [
+                "ふく が かわく",
+                "いぬ の け が かわく"
+            ]
+        },
+        "136": {
+            "kanji": "驚く",
+            "kana": "おどろく",
+            "english": "to be surprised",
+            "bangla": "আশ্চর্য হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は おどろく",
+                "かれ は びっくりして おどろく"
+            ]
+        },
+        "137": {
+            "kanji": "通う",
+            "kana": "かよう",
+            "english": "to commute, to go back and forth",
+            "bangla": "গমন করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "がっこう に かよう",
+                "かれ は しごと に かよう"
+            ]
+        },
+        "138": {
+            "kanji": "折る",
+            "kana": "おる",
+            "english": "to fold, to break",
+            "bangla": "ভেঙে ফেলা, ভাঁজ করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かみ を おる",
+                "えんぴつ を おる"
+            ]
+        },
+        "139": {
+            "kanji": "飾る",
+            "kana": "かざる",
+            "english": "to decorate",
+            "bangla": "সজ্জিত করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "へや を かざる",
+                "クリスマス に かざる"
+            ]
+        },
+        "140": {
+            "kanji": "塗る",
+            "kana": "ぬる",
+            "english": "to paint, to apply",
+            "bangla": "রাঙানো, প্রয়োগ করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "ぺんき を ぬる",
+                "クリーム を ぬる"
+            ]
+        },
+        "141": {
+            "kanji": "並ぶ",
+            "kana": "ならぶ",
+            "english": "to line up",
+            "bangla": "সারি করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "ぎんこう に ならぶ",
+                "ひと が ならぶ"
+            ]
+        },
+        "142": {
+            "kanji": "拾う",
+            "kana": "ひろう",
+            "english": "to pick up",
+            "bangla": "তোলা, উঁচু করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "ごみ を ひろう",
+                "お金 を ひろう"
+            ]
+        },
+        "143": {
+            "kanji": "取り消す",
+            "kana": "とりけす",
+            "english": "to cancel",
+            "bangla": "বাতিল করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "よやく を とりけす",
+                "いけん を とりけす"
+            ]
+        },
+        "144": {
+            "kanji": "嘘をつく",
+            "kana": "うそをつく",
+            "english": "to tell a lie",
+            "bangla": "মিথ্যা বলা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "かれ は うそ を つく",
+                "わたし は うそ を つく"
+            ]
+        },
+        "145": {
+            "kanji": "お腹がすく",
+            "kana": "おなかがすく",
+            "english": "to be hungry",
+            "bangla": "ভোজন হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は おなかが すく",
+                "かれ は ひるごはん の ため に おなかが すく"
+            ]
+        },
+        "146": {
+            "kanji": "のどが渇く",
+            "kana": "のどがかわく",
+            "english": "to be thirsty",
+            "bangla": "পিপাসিত হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は のどが かわく",
+                "かれ は みず を のむ ため に のどが かわく"
+            ]
+        },
+        "147": {
+            "kanji": "熱がある",
+            "kana": "ねつがある",
+            "english": "to have a fever",
+            "bangla": "জ্বর থাকা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は ねつ が ある",
+                "かれ は びょうき で ねつ が ある"
+            ]
+        },
+        "148": {
+            "kanji": "風邪をひく",
+            "kana": "かぜをひく",
+            "english": "to catch a cold",
+            "bangla": "সর্দি হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は かぜをひく",
+                "かれ は さむい ひ に かぜをひく"
+            ]
+        },
+        "149": {
+            "kanji": "興味がある",
+            "kana": "きょうみがある",
+            "english": "to be interested in",
+            "bangla": "আগ্রহী হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は にほんご に きょうみがある",
+                "かれ は えいが に きょうみがある"
+            ]
+        },
+        "150": {
+            "kanji": "保険に入る",
+            "kana": "ほけんにはいる",
+            "english": "to enroll in insurance",
+            "bangla": "বিমা গ্রহন করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は ほけんに はいる",
+                "かれ は いえ の ほけんに はいる"
+            ]
+        },
+        "151": {
+            "kanji": "迷う",
+            "kana": "まよう",
+            "english": "be confused",
+            "bangla": "বিভ্রান্ত হওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "わたし は みち に まよう",
+                "する かどうか まよう"
+            ]
+        },
+        "152": {
+            "kanji": "沸かす",
+            "kana": "わかす",
+            "english": "to boil (water)",
+            "bangla": "(পানি) গরম করা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "おちゃ の ために みず を わかす",
+                "そふ は みず を わかす"
+            ]
+        },
+        "153": {
+            "kanji": "お休みになる",
+            "kana": "おやすみになる",
+            "english": "to go to bed (respectful)",
+            "bangla": "শোয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "おじいさん は おやすみになる",
+                "おかあさん は はやく おやすみになる"
+            ]
+        },
+        "154": {
+            "kanji": "いらっしゃる",
+            "kana": "いらっしゃる",
+            "english": "to come, to go (respectful)",
+            "bangla": "আসা, যাওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "せんせい は いらっしゃる",
+                "かれ は すぐに いらっしゃる"
+            ]
+        },
+        "155": {
+            "kanji": "おっしゃる",
+            "kana": "おっしゃる",
+            "english": "to say (respectful)",
+            "bangla": "বলতে থাকা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "せんせい は そう おっしゃる",
+                "かれ は いま おっしゃった"
+            ]
+        },
+        "156": {
+            "kanji": "下さる",
+            "kana": "くださる",
+            "english": "to give (respectful)",
+            "bangla": "দেওয়া",
+            "type": "Group-1",
+            "exampleSentence": [
+                "せんせい が ほん を くださる",
+                "おとうさん が おかね を くださった"
+            ]
+        },
+        "157": {
+            "kanji": "ご覧になる",
+            "kana": "ごらんになる",
+            "english": "to see (respectful)",
+            "bangla": "দেখা",
+            "type": "Group-1",
+            "exampleSentence": [
+                "せんせい は これ を ごらんになる",
+                "かれ は ふじさん を ごらんになった"
+            ]
+        },
+        "158": {
+            "kanji": "食べる",
+            "kana": "たべる",
+            "english": "to eat",
+            "bangla": "খাওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は りんご を たべる",
+                "かれ は ごはん を たべる"
+            ]
+        },
+        "159": {
+            "kanji": "起きる",
+            "kana": "おきる",
+            "english": "to wake up",
+            "bangla": "জাগা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は あさ ６じ に おきる",
+                "かれ は すぐに おきる"
+            ]
+        },
+        "160": {
+            "kanji": "寝る",
+            "kana": "ねる",
+            "english": "to sleep",
+            "bangla": "ঘুমানো",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は １１じ に ねる",
+                "かれ は はやく ねる"
+            ]
+        },
+        "161": {
+            "kanji": "見る",
+            "kana": "みる",
+            "english": "to see",
+            "bangla": "দেখা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は えいが を みる",
+                "かれ は にほん を みる"
+            ]
+        },
+        "162": {
+            "kanji": "じろじろ見る",
+            "kana": "じろじろみる",
+            "english": "to stare",
+            "bangla": "তীক্ষ্ণ দৃষ্টিতে দেখা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "かれ は かのじょ を じろじろみる",
+                "わたし は あの ひと を じろじろみた"
+            ]
+        },
+        "163": {
+            "kanji": "いる",
+            "kana": "いる",
+            "english": "to be (animate)",
+            "bangla": "থাকা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "ねこ が いる",
+                "わたし の そば に いる"
+            ]
+        },
+        "164": {
+            "kanji": "出かける",
+            "kana": "でかける",
+            "english": "to go out",
+            "bangla": "বাহিরে যাওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は がっこう に でかける",
+                "かれ は ともだち と でかける"
+            ]
+        },
+        "165": {
+            "kanji": "開ける",
+            "kana": "あける",
+            "english": "to open",
+            "bangla": "খোলা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "ドア を あける",
+                "わたし は まど を あける"
+            ]
+        },
+        "166": {
+            "kanji": "閉める",
+            "kana": "しめる",
+            "english": "to close",
+            "bangla": "বন্ধ করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "ドア を しめる",
+                "かれ は まど を しめる"
+            ]
+        },
+        "167": {
+            "kanji": "降りる",
+            "kana": "おりる",
+            "english": "to descend, to get off",
+            "bangla": "নামা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "バス から おりる",
+                "かれ は てんじょう から おりる"
+            ]
+        },
+        "168": {
+            "kanji": "借りる",
+            "kana": "かりる",
+            "english": "to borrow",
+            "bangla": "ধার নেওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "ほん を かりる",
+                "わたし は ともだち から お金 を かりる"
+            ]
+        },
+        "169": {
+            "kanji": "教える",
+            "kana": "おしえる",
+            "english": "to teach, to inform",
+            "bangla": "শিক্ষা দেওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "せんせい が かんじ を おしえる",
+                "かれ は わたし に にほんご を おしえた"
+            ]
+        },
+        "170": {
+            "kanji": "つける",
+            "kana": "つける",
+            "english": "to attach, to turn on",
+            "bangla": "লাগানো",
+            "type": "Group-2",
+            "exampleSentence": [
+                "でんき を つける",
+                "わたし は かばん に なまえ を つける"
+            ]
+        },
+        "171": {
+            "kanji": "覚える",
+            "kana": "おぼえる",
+            "english": "to remember, to memorize",
+            "bangla": "মনে রাখা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は ことば を おぼえる",
+                "かれ は えいご を おぼえている"
+            ]
+        },
+        "172": {
+            "kanji": "忘れる",
+            "kana": "わすれる",
+            "english": "to forget",
+            "bangla": "ভুলে যাওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は しゅくだい を わすれる",
+                "かれ は ともだち の なまえ を わすれた"
+            ]
+        },
+        "173": {
+            "kanji": "電話をかける",
+            "kana": "でんわをかける",
+            "english": "to make a phone call",
+            "bangla": "ফোন করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は ともだち に でんわをかける",
+                "かれ は おとうさん に でんわをかけた"
+            ]
+        },
+        "174": {
+            "kanji": "着る",
+            "kana": "きる",
+            "english": "to wear, to put on",
+            "bangla": "পরা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は ふく を きる",
+                "かれ は くつ を きる"
+            ]
+        },
+        "175": {
+            "kanji": "勤める",
+            "kana": "つとめる",
+            "english": "to work for, to be employed",
+            "bangla": "কর্মরত থাকা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は がっこう に つとめる",
+                "かれ は かいしゃ に つとめている"
+            ]
+        },
+        "176": {
+            "kanji": "やせる",
+            "kana": "やせる",
+            "english": "to lose weight",
+            "bangla": "ওজন কমানো",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は やせる ように がんばる",
+                "かれ は やせる ために たべもの を かえた"
+            ]
+        },
+        "177": {
+            "kanji": "やせている",
+            "kana": "やせている",
+            "english": "to be thin",
+            "bangla": "পাতলা হওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "かのじょ は いま やせている",
+                "わたし は いま より やせている"
+            ]
+        },
+        "178": {
+            "kanji": "始める",
+            "kana": "はじめる",
+            "english": "to begin, to start",
+            "bangla": "শুরু করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は にほんご を はじめる",
+                "かれ は しごと を はじめる"
+            ]
+        },
+        "179": {
+            "kanji": "出る",
+            "kana": "でる",
+            "english": "to exit, to leave",
+            "bangla": "বাহিরে যাওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は がっこう から でる",
+                "かれ は うち から でた"
+            ]
+        },
+        "180": {
+            "kanji": "決める",
+            "kana": "きめる",
+            "english": "to decide",
+            "bangla": "নির্ধারণ করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は だいがく を きめる",
+                "かれ は どの くるま を きめる"
+            ]
+        },
+        "181": {
+            "kanji": "疲れる",
+            "kana": "つかれる",
+            "english": "to get tired",
+            "bangla": "থাকিয়ে যাওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は はたらいて つかれる",
+                "かれ は スポーツ で つかれる"
+            ]
+        },
+        "182": {
+            "kanji": "やめる",
+            "kana": "やめる",
+            "english": "to quit, to stop",
+            "bangla": "ছাড়া দেওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は タバコ を やめる",
+                "かれ は しごと を やめた"
+            ]
+        },
+        "183": {
+            "kanji": "せきが出る",
+            "kana": "せきがでる",
+            "english": "to cough",
+            "bangla": "কাশি আসা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "かれ は せきがでる",
+                "わたし は かぜ で せきがでる"
+            ]
+        },
+        "184": {
+            "kanji": "別れる",
+            "kana": "わかれる",
+            "english": "to separate",
+            "bangla": "বিচ্ছিন্ন হওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "かれ たち は べつれる",
+                "わたし は かのじょ と わかれた"
+            ]
+        },
+        "185": {
+            "kanji": "諦める",
+            "kana": "あきらめる",
+            "english": "to give up",
+            "bangla": "ছেড়ে দেওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は あきらめない",
+                "かれ は すぐに あきらめる"
+            ]
+        },
+        "186": {
+            "kanji": "あげる",
+            "kana": "あげる",
+            "english": "to give",
+            "bangla": "দেওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は かのじょ に プレゼント を あげる",
+                "かれ は わたし に えんぴつ を あげた"
+            ]
+        },
+        "187": {
+            "kanji": "くれる",
+            "kana": "くれる",
+            "english": "to give (to me)",
+            "bangla": "আমাকে দেওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "かのじょ は わたし に ほん を くれる",
+                "かれ は わたし に おかね を くれた"
+            ]
+        },
+        "188": {
+            "kanji": "できる",
+            "kana": "できる",
+            "english": "to be able to",
+            "bangla": "ক্ষমতা থাকা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は にほんご が できる",
+                "かれ は それを できる"
+            ]
+        },
+        "189": {
+            "kanji": "気をつける",
+            "kana": "きをつける",
+            "english": "to be careful",
+            "bangla": "সাবধান থাকা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "あぶない から、きをつける",
+                "かれ は いつも きをつける"
+            ]
+        },
+        "190": {
+            "kanji": "調べる",
+            "kana": "しらべる",
+            "english": "to investigate, to examine",
+            "bangla": "তদন্ত করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は じけん を しらべる",
+                "かれ は その こと を しらべた"
+            ]
+        },
+        "191": {
+            "kanji": "捨てる",
+            "kana": "すてる",
+            "english": "to throw away",
+            "bangla": "ফেলা দেওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "ごみ を すてる",
+                "わたし は いらない もの を すてた"
+            ]
+        },
+        "192": {
+            "kanji": "見える",
+            "kana": "みえる",
+            "english": "to be visible",
+            "bangla": "দেখা যাওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "やま が みえる",
+                "き の うしろ に つき が みえる"
+            ]
+        },
+        "193": {
+            "kanji": "集める",
+            "kana": "あつめる",
+            "english": "to collect",
+            "bangla": "সংগ্রহ করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "きれいな はな を あつめる",
+                "わたし は コイン を あつめている"
+            ]
+        },
+        "194": {
+            "kanji": "入れる",
+            "kana": "いれる",
+            "english": "to put in",
+            "bangla": "ভেতরে রাখা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "かばん に ほん を いれる",
+                "わたし は いろいろな もの を いれた"
+            ]
+        },
+        "195": {
+            "kanji": "乗り遅れる",
+            "kana": "のりおくれる",
+            "english": "to miss (a bus/train)",
+            "bangla": "নিতে ব্যর্থ হওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "でんしゃ に のりおくれる",
+                "わたし は バス を のりおくれた"
+            ]
+        },
+        "196": {
+            "kanji": "見せる",
+            "kana": "みせる",
+            "english": "to show",
+            "bangla": "দেখানো",
+            "type": "Group-2",
+            "exampleSentence": [
+                "わたし は かれ に その ほん を みせる",
+                "かのじょ は えいが を みせてくれた"
+            ]
+        },
+        "197": {
+            "kanji": "答える",
+            "kana": "こたえる",
+            "english": "to answer",
+            "bangla": "উত্তর দেওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "しつもん に こたえる",
+                "かれ は わたし の しつもん に こたえた"
+            ]
+        },
+        "198": {
+            "kanji": "浴びる",
+            "kana": "あびる",
+            "english": "to bathe, to bask",
+            "bangla": "স্নান করা, রোদ খাওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "これ から シャワー を あびる",
+                "かれ は にわ で おひさま を あびている"
+            ]
+        },
+        "199": {
+            "kanji": "生まれる",
+            "kana": "うまれる",
+            "english": "to be born",
+            "bangla": "জন্মগ্রহণ করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "子ども が うまれる",
+                "かれ は うまれて から いちども あったことがない"
+            ]
+        },
+        "200": {
+            "kanji": "並べる",
+            "kana": "ならべる",
+            "english": "to line up, to arrange",
+            "bangla": "একা করতে রাখা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "いす を ならべる",
+                "わたし は おかし を ならべた"
+            ]
+        },
+        "201": {
+            "kanji": "慣れる",
+            "kana": "なれる",
+            "english": "to get used to",
+            "bangla": "অভ্যস্ত হওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "この 仕事 に なれる",
+                "わたし は にほん に なれた"
+            ]
+        },
+        "202": {
+            "kanji": "足りる",
+            "kana": "たりる",
+            "english": "to be enough",
+            "bangla": "যথেষ্ট হওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "おかね が たりる",
+                "これ で たりる かもしれない"
+            ]
+        },
+        "203": {
+            "kanji": "伝える",
+            "kana": "つたえる",
+            "english": "to convey, to tell",
+            "bangla": "পৌঁছানো, বলা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "いけん を つたえる",
+                "わたし は かれ に メッセージ を つたえた"
+            ]
+        },
+        "204": {
+            "kanji": "待たせる",
+            "kana": "またせる",
+            "english": "to keep someone waiting",
+            "bangla": "অপেক্ষা করানো",
+            "type": "Group-2",
+            "exampleSentence": [
+                "かれ を またせる",
+                "わたし は みんな を またせてしまった"
+            ]
+        },
+        "205": {
+            "kanji": "晴れる",
+            "kana": "はれる",
+            "english": "to clear up, to become sunny",
+            "bangla": "উজ্জ্বল হওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "あした は はれる",
+                "きょう は くもり から はれる でしょう"
+            ]
+        },
+        "206": {
+            "kanji": "いじめる",
+            "kana": "いじめる",
+            "english": "to bully",
+            "bangla": "নিপীড়ন করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "かれ は わたし を いじめる",
+                "いじめられるのは いやだ"
+            ]
+        },
+        "207": {
+            "kanji": "着替える",
+            "kana": "きがえる",
+            "english": "to change clothes",
+            "bangla": "পোশাক পরিবর্তন করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "いえ に かえったら すぐ きがえる",
+                "かれ は いえで ふく を きがえた"
+            ]
+        },
+        "208": {
+            "kanji": "ためる",
+            "kana": "ためる",
+            "english": "to save, to accumulate",
+            "bangla": "সঞ্চয় করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "おかね を ためる",
+                "こづかい を ためて りょこう に いきたい"
+            ]
+        },
+        "209": {
+            "kanji": "間違える",
+            "kana": "まちがえる",
+            "english": "to make a mistake",
+            "bangla": "ভুল করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "しゅくだい を まちがえる",
+                "わたし は その いけん を まちがえた"
+            ]
+        },
+        "210": {
+            "kanji": "見つける",
+            "kana": "みつける",
+            "english": "to find",
+            "bangla": "খুঁজে পাওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "かぎ を みつける",
+                "わたし は ほん を みつけた"
+            ]
+        },
+        "211": {
+            "kanji": "育てる",
+            "kana": "そだてる",
+            "english": "to raise, to grow",
+            "bangla": "পালন করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "こども を そだてる",
+                "かれ は ねこ を そだてている"
+            ]
+        },
+        "212": {
+            "kanji": "助ける",
+            "kana": "たすける",
+            "english": "to help, to assist",
+            "bangla": "সাহায্য করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "かれ を たすける",
+                "だれか が わたし を たすけてくれた"
+            ]
+        },
+        "213": {
+            "kanji": "負ける",
+            "kana": "まける",
+            "english": "to lose",
+            "bangla": "হারানো",
+            "type": "Group-2",
+            "exampleSentence": [
+                "しあい に まける",
+                "かれ は たたかい で まけた"
+            ]
+        },
+        "214": {
+            "kanji": "受ける",
+            "kana": "うける",
+            "english": "to receive, to take (an exam)",
+            "bangla": "গৃহীত হওয়া, পরীক্ষায় বসা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "しけん を うける",
+                "わたし は にほんご の しけん を うけた"
+            ]
+        },
+        "215": {
+            "kanji": "比べる",
+            "kana": "くらべる",
+            "english": "to compare",
+            "bangla": "তুলনা করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "ふたり を くらべる",
+                "この ふく は あの ふく と くらべて たかい"
+            ]
+        },
+        "216": {
+            "kanji": "建てる",
+            "kana": "たてる",
+            "english": "to build",
+            "bangla": "গড়ে তোলা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "いえ を たてる",
+                "かれ は いえ を たてた"
+            ]
+        },
+        "217": {
+            "kanji": "逃げる",
+            "kana": "にげる",
+            "english": "to escape, to run away",
+            "bangla": "পালানো",
+            "type": "Group-2",
+            "exampleSentence": [
+                "きけん から にげる",
+                "かれ は ねこ を にげさせた"
+            ]
+        },
+        "218": {
+            "kanji": "濡れる",
+            "kana": "ぬれる",
+            "english": "to get wet",
+            "bangla": "ভিজে যাওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "あめ で ぬれる",
+                "かれ は かさ を ささずに ぬれた"
+            ]
+        },
+        "219": {
+            "kanji": "植える",
+            "kana": "うえる",
+            "english": "to plant",
+            "bangla": "বপন করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "き を うえる",
+                "かれ は にわ に はな を うえた"
+            ]
+        },
+        "220": {
+            "kanji": "投げる",
+            "kana": "なげる",
+            "english": "to throw",
+            "bangla": "নিক্ষেপ করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "ボール を なげる",
+                "かれ は いぬ に ボール を なげた"
+            ]
+        },
+        "221": {
+            "kanji": "知らせる",
+            "kana": "しらせる",
+            "english": "to inform, to notify",
+            "bangla": "জানানো",
+            "type": "Group-2",
+            "exampleSentence": [
+                "ともだち に しらせる",
+                "かれ は じゅぎょう の じかん を しらせた"
+            ]
+        },
+        "222": {
+            "kanji": "増える",
+            "kana": "ふえる",
+            "english": "to increase",
+            "bangla": "বৃদ্ধি পাওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "ひと が ふえる",
+                "この まち の じんこう が ふえた"
+            ]
+        },
+        "223": {
+            "kanji": "減る",
+            "kana": "へる",
+            "english": "to decrease",
+            "bangla": "হ্রাস পাওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "お金 が へる",
+                "かれ の けいざい が へっている"
+            ]
+        },
+        "224": {
+            "kanji": "似る",
+            "kana": "にる",
+            "english": "to resemble, to look like",
+            "bangla": "দেখতে অনুরূপ হওয়া",
+            "type": "Group-2",
+            "exampleSentence": [
+                "かれ は ちち に にている",
+                "この ふく は きょうだい に にている"
+            ]
+        },
+        "225": {
+            "kanji": "届ける",
+            "kana": "とどける",
+            "english": "to deliver",
+            "bangla": "পৌঁছানো",
+            "type": "Group-2",
+            "exampleSentence": [
+                "にもつ を とどける",
+                "かれ は はいけい に てがみ を とどけた"
+            ]
+        },
+        "226": {
+            "kanji": "つかまえる",
+            "kana": "つかまえる",
+            "english": "to catch, to seize",
+            "bangla": "ধরা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "さかな を つかまえる",
+                "かれ は ねこ を つかまえた"
+            ]
+        },
+        "227": {
+            "kanji": "褒める",
+            "kana": "ほめる",
+            "english": "to praise, to compliment",
+            "bangla": "প্রশংসা করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "せんせい に ほめられる",
+                "かれ は うたを ほめた"
+            ]
+        },
+        "228": {
+            "kanji": "続ける",
+            "kana": "つづける",
+            "english": "to continue",
+            "bangla": "জারি রাখা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "れんしゅう を つづける",
+                "かれ は べんきょう を つづけた"
+            ]
+        },
+        "229": {
+            "kanji": "差し上げる",
+            "kana": "さしあげる",
+            "english": "to give (respectfully)",
+            "bangla": "দেওয়া (সম্মানজনক)",
+            "type": "Group-2",
+            "exampleSentence": [
+                "ともだち に プレゼント を さしあげる",
+                "かれ は せんせい に さくらんぼ を さしあげた"
+            ]
+        },
+        "230": {
+            "kanji": "考える",
+            "kana": "かんがえる",
+            "english": "to think, to consider",
+            "bangla": "চিন্তা করা",
+            "type": "Group-2",
+            "exampleSentence": [
+                "しごと を かんがえる",
+                "かれ は いろいろな こと を かんがえた"
+            ]
+        },
+        "231": {
+            "kanji": "来る",
+            "kana": "くる",
+            "english": "to come",
+            "bangla": "আসা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "ともだち が くる",
+                "かれ は みせ に くる"
+            ]
+        },
+        "232": {
+            "kanji": "連れてくる",
+            "kana": "つれてくる",
+            "english": "to bring (someone)",
+            "bangla": "কাউকে নিয়ে আসা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "ともだち を つれてくる",
+                "かれ は いぬ を つれてきた"
+            ]
+        },
+        "233": {
+            "kanji": "持ってくる",
+            "kana": "もってくる",
+            "english": "to bring (something)",
+            "bangla": "কিছু নিয়ে আসা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "ほん を もってくる",
+                "かれ は たんす を もってきた"
+            ]
+        },
+        "234": {
+            "kanji": "迎えに来る",
+            "kana": "むかえにくる",
+            "english": "to come to pick up",
+            "bangla": "স্বাগত জানাতে আসা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "おくさん を むかえにくる",
+                "かれ は おばあさん を むかえにきた"
+            ]
+        },
+        "235": {
+            "kanji": "する",
+            "kana": "する",
+            "english": "to do",
+            "bangla": "করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "しごと を する",
+                "かれ は たんじょうび パーティー を する"
+            ]
+        },
+        "236": {
+            "kanji": "勉強する",
+            "kana": "べんきょうする",
+            "english": "to study",
+            "bangla": "পড়াশোনা করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "にほんご を べんきょうする",
+                "かれ は よる に べんきょうした"
+            ]
+        },
+        "237": {
+            "kanji": "結婚する",
+            "kana": "けっこんする",
+            "english": "to get married",
+            "bangla": "বিবাহ করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "かのじょ と けっこんする",
+                "かれ は けっこんした"
+            ]
+        },
+        "238": {
+            "kanji": "運転する",
+            "kana": "うんてんする",
+            "english": "to drive",
+            "bangla": "গাড়ি চালানো",
+            "type": "Group-3",
+            "exampleSentence": [
+                "くるま を うんてんする",
+                "かれ は あさ に うんてんした"
+            ]
+        },
+        "239": {
+            "kanji": "掃除する",
+            "kana": "そうじする",
+            "english": "to clean",
+            "bangla": "পরিষ্কার করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "へや を そうじする",
+                "かれ は まいにち そうじしている"
+            ]
+        },
+        "240": {
+            "kanji": "洗濯する",
+            "kana": "せんたくする",
+            "english": "to do laundry",
+            "bangla": "কাপড় ধোয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "せんたく を する",
+                "かれ は まいにち せんたくしている"
+            ]
+        },
+        "241": {
+            "kanji": "料理する",
+            "kana": "りょうりする",
+            "english": "to cook",
+            "bangla": "রাঁধা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "りょうり を する",
+                "かれ は おいしい りょうり を した"
+            ]
+        },
+        "242": {
+            "kanji": "運動する",
+            "kana": "うんどうする",
+            "english": "to exercise",
+            "bangla": "ব্যায়াম করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "うんどう を する",
+                "かれ は まいにち うんどうしている"
+            ]
+        },
+        "243": {
+            "kanji": "散歩する",
+            "kana": "さんぽする",
+            "english": "to take a walk",
+            "bangla": "হাঁটতে বের হওয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "こうえん で さんぽする",
+                "かれ は やま を さんぽした"
+            ]
+        },
+        "244": {
+            "kanji": "練習する",
+            "kana": "れんしゅうする",
+            "english": "to practice",
+            "bangla": "অভ্যাস করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "うた を れんしゅうする",
+                "かれ は ばんごはん の あと に れんしゅうした"
+            ]
+        },
+        "245": {
+            "kanji": "けんかする",
+            "kana": "けんかする",
+            "english": "to fight",
+            "bangla": "ঝগড়া করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "ともだち と けんかする",
+                "かれ は いもうと と けんかした"
+            ]
+        },
+        "246": {
+            "kanji": "紹介する",
+            "kana": "しょうかいする",
+            "english": "to introduce",
+            "bangla": "পরিচয় করানো",
+            "type": "Group-3",
+            "exampleSentence": [
+                "ともだち を しょうかいする",
+                "かれ は かのじょ を しょうかいした"
+            ]
+        },
+        "247": {
+            "kanji": "ダイエットする",
+            "kana": "だいえっとする",
+            "english": "to diet",
+            "bangla": "ডায়েট করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "からだ を だいえっとする",
+                "かれ は しんたい を だいえっとした"
+            ]
+        },
+        "248": {
+            "kanji": "遅刻する",
+            "kana": "ちこくする",
+            "english": "to be late",
+            "bangla": "দেরিতে আসা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "がっこう に ちこくする",
+                "かれ は じかん に ちこくした"
+            ]
+        },
+        "249": {
+            "kanji": "留学する",
+            "kana": "りゅうがくする",
+            "english": "to study abroad",
+            "bangla": "বিদেশে পড়াশোনা করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "アメリカ に りゅうがくする",
+                "かれ は にほん で りゅうがくした"
+            ]
+        },
+        "250": {
+            "kanji": "緊張する",
+            "kana": "きんちょうする",
+            "english": "to get nervous",
+            "bangla": "উদ্বিগ্ন হওয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "しゅくだい の とき きんちょうする",
+                "かれ は しあい で きんちょうした"
+            ]
+        },
+        "251": {
+            "kanji": "心配する",
+            "kana": "しんぱいする",
+            "english": "to worry",
+            "bangla": "চিন্তা করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "かれ に ついて しんぱいする",
+                "かのじょ は てがみ を しんぱいしている"
+            ]
+        },
+        "252": {
+            "kanji": "感動する",
+            "kana": "かんどうする",
+            "english": "to be moved",
+            "bangla": "আবেগপ্রবণ হওয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "えいが に かんどうする",
+                "かれ は かんどうして なくなった"
+            ]
+        },
+        "253": {
+            "kanji": "相談する",
+            "kana": "そうだんする",
+            "english": "to consult",
+            "bangla": "পরামর্শ করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "ともだち に そうだんする",
+                "かれ は せんせい に そうだんした"
+            ]
+        },
+        "254": {
+            "kanji": "プロポーズする",
+            "kana": "ぷろぽーずする",
+            "english": "to propose",
+            "bangla": "প্রস্তাব দেওয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "かのじょ に プロポーズする",
+                "かれ は きれいな ひと に プロポーズした"
+            ]
+        },
+        "255": {
+            "kanji": "卒業する",
+            "kana": "そつぎょうする",
+            "english": "to graduate",
+            "bangla": "স্নাতক হওয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "がっこう を そつぎょうする",
+                "かれ は だいがく を そつぎょうした"
+            ]
+        },
+        "256": {
+            "kanji": "予約する",
+            "kana": "よやくする",
+            "english": "to make a reservation",
+            "bangla": "অগ্রিম বুকিং করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "レストラン を よやくする",
+                "かれ は きっぷ を よやくした"
+            ]
+        },
+        "257": {
+            "kanji": "朝寝坊する",
+            "kana": "あさねぼうする",
+            "english": "to oversleep",
+            "bangla": "সকাল বেলা বেশি ঘুমানো",
+            "type": "Group-3",
+            "exampleSentence": [
+                "あさ ねぼう する",
+                "かれ は きょう あさ ねぼうした"
+            ]
+        },
+        "258": {
+            "kanji": "案内する",
+            "kana": "あんないする",
+            "english": "to guide",
+            "bangla": "পথ নির্দেশ করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "ともだち を あんないする",
+                "かれ は かのじょ を あんないした"
+            ]
+        },
+        "259": {
+            "kanji": "説明する",
+            "kana": "せつめいする",
+            "english": "to explain",
+            "bangla": "ব্যাখ্যা করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "てつがく を せつめいする",
+                "かれ は じょせい に せつめいした"
+            ]
+        },
+        "260": {
+            "kanji": "旅行する",
+            "kana": "りょこうする",
+            "english": "to travel",
+            "bangla": "ভ্রমণ করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "ともだち と りょこうする",
+                "かれ は にほん に りょこうした"
+            ]
+        },
+        "261": {
+            "kanji": "買い物する",
+            "kana": "かいものする",
+            "english": "to go shopping",
+            "bangla": "কেনাকাটা করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "かのじょ と かいものする",
+                "いえ の ちかく で かいものした"
+            ]
+        },
+        "262": {
+            "kanji": "成功する",
+            "kana": "せいこうする",
+            "english": "to succeed",
+            "bangla": "সাফল্য পাওয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "プロジェクト が せいこうする",
+                "かれ は せいこうして うれしかった"
+            ]
+        },
+        "263": {
+            "kanji": "輸入する",
+            "kana": "ゆにゅうする",
+            "english": "to import",
+            "bangla": "আমদানি করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "せいひん を ゆにゅうする",
+                "かれ は にほん へ せいひん を ゆにゅうした"
+            ]
+        },
+        "264": {
+            "kanji": "輸出する",
+            "kana": "ゆしゅつする",
+            "english": "to export",
+            "bangla": "রপ্তানি করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "せいひん を ゆしゅつする",
+                "かれ は さかな を ゆしゅつした"
+            ]
+        },
+        "265": {
+            "kanji": "経験する",
+            "kana": "けいけんする",
+            "english": "to experience",
+            "bangla": "অভিজ্ঞতা অর্জন করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "たいけん を けいけんする",
+                "かれ は いろいろ な けいけんをした"
+            ]
+        },
+        "266": {
+            "kanji": "約束する",
+            "kana": "やくそくする",
+            "english": "to promise",
+            "bangla": "প্রতিশ্রুতি দেওয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "ともだち に やくそくする",
+                "かれ は かのじょ に やくそくした"
+            ]
+        },
+        "267": {
+            "kanji": "準備する",
+            "kana": "じゅんびする",
+            "english": "to prepare",
+            "bangla": "প্রস্তুতি নেওয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "しゅくだい の じゅんびする",
+                "かれ は しゅうまつ の パーティー を じゅんびした"
+            ]
+        },
+        "268": {
+            "kanji": "出発する",
+            "kana": "しゅっぱつする",
+            "english": "to depart",
+            "bangla": "রওনা হওয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "あさ しゅっぱつする",
+                "かれ は にほん へ しゅっぱつした"
+            ]
+        },
+        "269": {
+            "kanji": "放送する",
+            "kana": "ほうそうする",
+            "english": "to broadcast",
+            "bangla": "প্রসারিত করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "ばんぐみ を ほうそうする",
+                "かれ は テレビ で ほうそうした"
+            ]
+        },
+        "270": {
+            "kanji": "計画する",
+            "kana": "けいかくする",
+            "english": "to plan",
+            "bangla": "পরিকল্পনা করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "きょう けいかくする",
+                "あたらしい けいかく を たてる"
+            ]
+        },
+        "271": {
+            "kanji": "世話をする",
+            "kana": "せわをする",
+            "english": "to take care of",
+            "bangla": "যত্ন নেওয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "ねこ の せわをする",
+                "かれ は こどもの せわをした"
+            ]
+        },
+        "272": {
+            "kanji": "失敗する",
+            "kana": "しっぱいする",
+            "english": "to fail",
+            "bangla": "ব্যর্থ হওয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "しけん で しっぱいする",
+                "かれ は しっぱいして くやしかった"
+            ]
+        },
+        "273": {
+            "kanji": "競争する",
+            "kana": "きょうそうする",
+            "english": "to compete",
+            "bangla": "প্রতিযোগিতা করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "レース で きょうそうする",
+                "かれ は ともだち と きょうそうした"
+            ]
+        },
+        "274": {
+            "kanji": "安心する",
+            "kana": "あんしんする",
+            "english": "to feel relieved",
+            "bangla": "মনকে শান্ত করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "しんぱい が あんしんする",
+                "かれ は べんきょう が できて あんしんした"
+            ]
+        },
+        "275": {
+            "kanji": "びっくりする",
+            "kana": "びっくりする",
+            "english": "to be surprised",
+            "bangla": "অবাক হওয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "びっくり して さけぶ",
+                "かれ は ひょうか に びっくりした"
+            ]
+        },
+        "276": {
+            "kanji": "昼寝をする",
+            "kana": "ひるねをする",
+            "english": "to take a nap",
+            "bangla": "দিবাগত বিশ্রাম নেওয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "よる ねむれ なくて ひるねをする",
+                "かれ は ひるね を した"
+            ]
+        },
+        "277": {
+            "kanji": "連絡する",
+            "kana": "れんらくする",
+            "english": "to contact",
+            "bangla": "যোগাযোগ করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "ともだち に れんらくする",
+                "かれ は おかあさん に れんらくした"
+            ]
+        },
+        "278": {
+            "kanji": "賛成する",
+            "kana": "さんせいする",
+            "english": "to agree",
+            "bangla": "সমর্থন করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "かれ の いけん に さんせいする",
+                "わたし は それに さんせいした"
+            ]
+        },
+        "279": {
+            "kanji": "反対する",
+            "kana": "はんたいする",
+            "english": "to oppose",
+            "bangla": "বিরোধিতা করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "かれ の いけん に はんたいする",
+                "わたし は その けってい に はんたいした"
+            ]
+        },
+        "280": {
+            "kanji": "徹夜する",
+            "kana": "てつやする",
+            "english": "to stay up all night",
+            "bangla": "রাত জাগা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "てつやして しごとをする",
+                "かれ は てつやして べんきょうした"
+            ]
+        },
+        "281": {
+            "kanji": "お願いする",
+            "kana": "おねがいする",
+            "english": "to request",
+            "bangla": "অনুরোধ করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "かれ に おねがいする",
+                "わたし は ともだち に おねがいした"
+            ]
+        },
+        "282": {
+            "kanji": "同情する",
+            "kana": "どうじょうする",
+            "english": "to sympathize",
+            "bangla": "সহানুভূতি প্রকাশ করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "かれ の きもちに どうじょうする",
+                "わたし は かれ に どうじょうした"
+            ]
+        },
+        "283": {
+            "kanji": "我慢する",
+            "kana": "がまんする",
+            "english": "to endure",
+            "bangla": "সহ্য করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "がまんして しごとをする",
+                "かれ は いたみを がまんした"
+            ]
+        },
+        "284": {
+            "kanji": "がっかりする",
+            "kana": "がっかりする",
+            "english": "to be disappointed",
+            "bangla": "নিরাশ হওয়া",
+            "type": "Group-3",
+            "exampleSentence": [
+                "しけんに がっかりする",
+                "かれ は せいせき に がっかりした"
+            ]
+        },
+        "285": {
+            "kanji": "ばかにする",
+            "kana": "ばかにする",
+            "english": "to make fun of",
+            "bangla": "মস্করা করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "ともだちを ばかにする",
+                "かれ は わたし を ばかにした"
+            ]
+        },
+        "286": {
+            "kanji": "交換する",
+            "kana": "こうかんする",
+            "english": "to exchange",
+            "bangla": "বিনিময় করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "プレゼントを こうかんする",
+                "かれ と プレゼント を こうかんした"
+            ]
+        },
+        "287": {
+            "kanji": "注文する",
+            "kana": "ちゅうもんする",
+            "english": "to order",
+            "bangla": "অর্ডার করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "たべものを ちゅうもんする",
+                "レストランで ちゅうもんした"
+            ]
+        },
+        "288": {
+            "kanji": "翻訳する",
+            "kana": "ほんやくする",
+            "english": "to translate",
+            "bangla": "অনুবাদ করা",
+            "type": "Group-3",
+            "exampleSentence": [
+                "にほんごを ほんやくする",
+                "かれ は えいご を ほんやくした"
+            ]
+        }
+    },
+    "types": {
+        "Group-1": {
+            "definition_bd": "Group-1 (U-verbs) হল সেসব ক্রিয়া যা 'u' এর উচ্চারণ দ্বারা সঙ্গে শেষ হয় এবং ক্রিয়াপদের বিভিন্ন রূপে তাদের শেষ অক্ষরটি পরিবর্তিত হয়ে 'i' এর মত উচ্চারণ হয়। উদাহরণ: いく → いきます、はしる → はしります",
+            "definition_en": "Group-1 (U-verbs) verbs are those that end with 'u' and typically change their last letter to 'i' in different forms of verbs. Example: いく → いきます、はしる → はしります"
+        },
+        "Group-2": {
+            "definition_bd": "Group-2 (Ru-verbs) হল সেসব ক্রিয়া যা 'る' দিয়ে শেষ হয় এবং এবং ক্রিয়াপদের বিভিন্ন রূপে তাদের শেষ অক্ষরটি (る) নাই হয়ে যায়। উদাহরণ: たべる → たべます、ねる → ねます",
+            "definition_en": "Group-2 (Ru-verbs)  are those that end with 'る' and the letter 'る' vanishes in different forms of verbs. Example: たべる → たべます、ねる → ねます"
+        },
+        "Group-3": {
+            "definition_bd": "Group-3 (する、くる) হল সেসব ক্রিয়া যেগুলো মূলত বিভিন্ন শব্দের শেসে 'する' বা 'くる' যোগ হয়ে ক্রিয়াপদের রূপ দেয়া পেয়েছে। এই ক্রিয়াপদগুলো বিভিন্ন রূপে পরিবর্তনের সময় সুনির্দিষ্ট কোন নিয়ম মানে না। উদাহরণ: する → しない、くる → こない",
+            "definition_en": "Group-3 (する、くる) verbs are those irregular verbs, who have got their verb forms by adding 'する' or 'くる' at the end of different words. They do not follow any specific rules when changing forms. Example: する → しない、くる → こない"
+        }
+    }
+}

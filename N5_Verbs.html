@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Shovon Hasan">
+    <meta name="copyright" content="©2024 株式会社LifeArk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeArk Japanese education: N5 Verbs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/game.css">
+    <style>
+        #words_list-container .category-title {
+            padding: 10px;
+            background-color: #3399ff;
+            color: white;
+        }
+        #words_list-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #words_list-container td {
+            padding: 10px;
+            vertical-align: top;
+            position: relative;
+        }
+        .word-highlight {
+            height: 30px;
+            padding: 0px 10px;
+            border-radius: 15px;
+            background-color: #ff66b3;
+            font-weight: bold;
+            text-align: center;
+            line-height: 150%;
+        }
+        .word-highlight-yellow {
+            background-color: yellow;
+        }
+        #words_list-container .word-num {
+            height: 30px;
+            padding: 0px 7px;
+            border-radius: 12px;
+            background-color: grey;
+            color: white;
+            text-align: center;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="words_list-container">
+            <div class="header-image">
+                <img src="assets/image/LifeArk_Nihongo_logo.png" />
+                <h2 style="text-align: center; margin: 0px;">N5 ক্রিয়া</h2>
+            </div>
+            <button class="play-button" onclick="playGame()">Play Game</button>
+        </div>
+        <div id="range_selection-container">
+            <h3 style="text-align: center;">Choose the question range</h3>
+            <div style="text-align: center;">
+                <input type="number" id="range-from" placeholder="from"> ~ <input type="number" id="range-to" placeholder="to">
+                <br><br>
+                <span class="alert" id="range-alert"></span>
+                <br>
+            </div>
+            <div class="button-container">
+                <button class="back-button" onclick="showPage('words_list')">←</button>
+                <button class="play-button" style="flex-grow: 1;" onclick="startGame()">Start Game!</button>
+            </div>
+        </div>
+        <div id="question-container">
+            <div class="button-container">
+                <div id="question-number"></div>
+                <button id="next-button" onclick="nextQuestion()" disabled>&#10132;</button>
+            </div>
+            <div>
+                <div id="question-caption"></div>
+            </div>
+            <div id="options">
+                <div class="option" onclick="checkAnswer(0)"></div>
+                <div class="option" onclick="checkAnswer(1)"></div>
+                <div class="option" onclick="checkAnswer(2)"></div>
+                <div class="option" onclick="checkAnswer(3)"></div>
+            </div>
+        </div>
+        <div id="result-container">
+            <div id="score"></div>
+            <button class="play-button" onclick="replayGame()">Replay</button><br/>
+            <button class="play-button" onclick="showPage('words_list')">Verbs List</button>
+        </div>
+    </div>
+
+    <script src="js/game_mcq.js"></script>
+    <script>
+
+        let itemsData = {};
+        let itemCounter = null;
+
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
+        
+        function createWordsList() {
+            const categories = ["Group-1", "Group-2", "Group-3"];
+            const container = document.getElementById('words_list-container');
+            itemCounter = 1;
+            
+            categories.forEach(category => {
+                // Create a category section
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'category';
+                categoryDiv.innerHTML = `<h2 class="category-title">${category}</h2>
+                                        <p>${itemsData.types[category].definition_bd}</p>`;
+
+                // Filter items by category
+                const verbs = itemsData.verbs;
+                const itemsInCategory = Object.keys(verbs).filter(key => verbs[key].type === category);
+
+                itemsInCategory.forEach(key => {
+                    const item = verbs[key];
+                    const table = document.createElement('table');
+
+                    // Create top row with image and text
+                    const topRow = document.createElement('tr');
+                    const textCell = document.createElement('td');
+                    textCell.innerHTML = `<span class="word-highlight">${item.kana}</span> 
+                                            <span class="word-highlight word-highlight-yellow">${item.kanji}</span> 
+                                            (${item.bangla})`;
+                    const numCell = document.createElement('td');
+                    numCell.innerHTML = `<span class="word-num">${itemCounter}</span>`;
+                    numCell.style.textAlign = "right";
+
+                    topRow.appendChild(textCell);
+                    topRow.appendChild(numCell);
+                    table.appendChild(topRow);
+
+                    // Create bottom row with example sentences
+                    const bottomRow = document.createElement('tr');
+                    const exampleCell = document.createElement('td');
+                    exampleCell.colSpan = 2;
+                    exampleCell.style.padding = "10px 0px";
+                    exampleCell.innerHTML = `・${item.exampleSentence[0]}<br>・${item.exampleSentence[1]}`;
+
+                    bottomRow.appendChild(exampleCell);
+                    table.appendChild(bottomRow);
+
+                    categoryDiv.appendChild(table);
+
+                    const hr = document.createElement('hr');
+                    categoryDiv.appendChild(hr);
+
+                    itemCounter++;
+                });
+
+                // decrease 1 to match total number
+                itemCounter -= 1;
+
+                container.appendChild(categoryDiv);
+            });
+        }
+
+        function playGame() {
+            showPage('range_selection');
+        }
+
+        function setGameRangeSelection() {
+            const rangeFromEl = document.getElementById("range-from");
+            const rangeToEl = document.getElementById("range-to");
+
+            rangeFromEl.min = 1;
+            rangeFromEl.max = itemCounter - totalQuestions + 1;
+
+            rangeFromEl.min = totalQuestions;
+            rangeFromEl.max = itemCounter;
+        }
+
+        function prepareMCQgameData() {
+            const verbs = itemsData.verbs;
+
+            let index = 0;
+
+            Object.keys(verbs).forEach(key => {
+                const dataItem = verbs[key];
+                gameData[index] = {};
+                gameData[index].question = {};
+                gameData[index].question.caption = dataItem.bangla;
+                gameData[index].answer = dataItem.kana;
+
+                index++;
+            });
+        }
+
+        function startGame() {
+            const rangeFrom = parseInt(document.getElementById("range-from").value);
+            const rangeTo = parseInt(document.getElementById("range-to").value);
+
+            let min = 1;
+            let max = itemCounter;
+
+            let alertMsg = "";
+            if (!rangeFrom || rangeFrom < min) {
+                alertMsg += "・Enter valid 'from' value<br>";
+            } else if (rangeFrom > max-totalQuestions+1) {
+                alertMsg += `・Maximum 'from' value is ${max-totalQuestions+1}<br>`;
+            }
+            if (!rangeTo || rangeTo < totalQuestions) {
+                alertMsg += "・Enter valid 'to' value<br>";
+            } else if (rangeTo > max) {
+                alertMsg += `・Maximum 'to' value is ${max}<br>`;
+            }
+
+            if (rangeFrom && rangeTo && rangeTo - rangeFrom < totalQuestions-1) {
+                alertMsg += "・'to' value should be at least 9 bigger than 'from' value<br>";
+            }
+
+            if (alertMsg) {
+                document.getElementById("range-alert").innerHTML = alertMsg;
+            } else {
+                // set game data
+                gameFromIndex = rangeFrom - 1;
+                gameToIndex = rangeTo - 1;
+
+                replayGame();
+
+                document.getElementById("range-alert").innerHTML = "";
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/verbs_N5-N4.json')
+                .then(response => response.json())
+                .then(data => {
+                    itemsData = data;
+                    // display words list
+                    createWordsList();
+                    showPage('words_list');
+
+                    setGameRangeSelection();
+                    prepareMCQgameData();
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        });
+
+    </script>
+</body>
+</html>
