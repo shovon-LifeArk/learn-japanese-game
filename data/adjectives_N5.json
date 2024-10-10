@@ -46,7 +46,7 @@
             "bangla": "উচ্চ, দামী",
             "type": "イ形容詞",
             "exampleSentence": [
-                "この いえ は たかい です。",
+                "この やま は たかい です。",
                 "たかい かばん を かいました。"
             ]
         },
@@ -76,14 +76,14 @@
             "bangla": "নিম্ন",
             "type": "イ形容詞",
             "exampleSentence": [
-                "この いえ は ひくい です。",
-                "ひくい せんせい です。"
+                "この やま は ひくい です。",
+                "ひくい ねだん で かいました。"
             ]
         },
         "8": {
             "kana": "せがひくい",
             "english": "short (person)",
-            "bangla": "ছোট (মানুষ)",
+            "bangla": "খাটো (মানুষ)",
             "type": "イ形容詞",
             "exampleSentence": [
                 "せ が ひくい かれ は とても かわいい。",
@@ -313,7 +313,7 @@
         "31": {
             "kana": "うるさい",
             "english": "noisy",
-            "bangla": "শোরগোল",
+            "bangla": "কোলাহলপূর্ণ",
             "type": "イ形容詞",
             "exampleSentence": [
                 "うるさい おんがく が きこえます。",
@@ -403,7 +403,7 @@
         "40": {
             "kana": "さびしい",
             "english": "lonely, sad",
-            "bangla": "একাকী",
+            "bangla": "একাকীত্ব",
             "type": "イ形容詞",
             "exampleSentence": [
                 "さびしい きもち です。",
@@ -623,7 +623,7 @@
         "62": {
             "kana": "ひどい",
             "english": "terrible, awful",
-            "bangla": "ভয়ঙ্কর",
+            "bangla": "ভয়ানক",
             "type": "イ形容詞",
             "exampleSentence": [
                 "ひどい けが を しました。",
@@ -633,7 +633,7 @@
         "63": {
             "kana": "まるい",
             "english": "round",
-            "bangla": "গোল",
+            "bangla": "গোলাকার",
             "type": "イ形容詞",
             "exampleSentence": [
                 "まるい だいこん を みました。",
@@ -743,7 +743,7 @@
         "74": {
             "kana": "かっこいい",
             "english": "cool, stylish",
-            "bangla": "সুন্দর",
+            "bangla": "সুদর্শন",
             "type": "イ形容詞",
             "exampleSentence": [
                 "かっこいい ふく を きました。",
@@ -753,7 +753,7 @@
         "75": {
             "kana": "かわいい",
             "english": "cute",
-            "bangla": "প্রীতিময়",
+            "bangla": "মিস্টি/কিউট",
             "type": "イ形容詞",
             "exampleSentence": [
                 "かわいい いぬ が います。",

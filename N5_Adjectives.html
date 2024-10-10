@@ -7,67 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LifeArk Japanese education: N5 Words</title>
     <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/game.css">
     <style>
-        body {
-            font-family: 'Klee One', sans-serif;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        #game-container {
-            height: 100vh;
-            width: 100%;
-            max-height: 1024px;
-            max-width: 576px;
-        }
-        .header-image {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .header-image img {
-            max-width: 70%;
-        }
-        .play-button {
-            padding: 10px 20px;
-            font-size: 1.5em;
-            background-color: #9966ff;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .back-button {
-            height: 50px;
-            width: 50px;
-            padding: 10px;
-            border-radius: 35px;
-            border: 2px solid #9966ff;
-            color: #9966ff;
-            font-size: 26px;
-            line-height: 100%;
-            background-color: white;
-            cursor: pointer;
-        }
-        .button-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-        hr {
-            border: 1px solid grey;
-            width: 100%;
-        }
-        #words_list-container {
-            min-height: calc(80vh - 40px);
-            padding: 20px;
-            display: none; 
-            flex: 1;
-            flex-direction: column;
-            gap: 20px;
-        }
         #words_list-container .category-title {
             padding: 10px;
             background-color: #3399ff;
@@ -100,29 +42,6 @@
             text-align: center;
             font-size: 0.8em;
         }
-        #next-button {
-            height: 50px;
-            width: 50px;
-            padding: 10px;
-            border-radius: 35px;
-            border: 2px solid #9966ff;
-            color: #9966ff;
-            font-size: 26px;
-            line-height: 100%;
-            background-color: white;
-            cursor: pointer;
-        }
-        #next-button:disabled {
-            border-color: gray;
-            color: gray;
-            cursor: not-allowed;
-        }
-        #score {
-            font-size: 2em;
-            text-align: center;
-            margin-top: 100px;
-            margin-bottom: 60px;
-        }
     </style>
 </head>
 <body>
@@ -132,12 +51,48 @@
                 <img src="assets/image/LifeArk_Nihongo_logo.png" />
                 <h2 style="text-align: center; margin: 0px;">N5 বিশেষণ</h2>
             </div>
+            <button class="play-button" onclick="playGame()">Play Game</button>
+        </div>
+        <div id="range_selection-container">
+            <h3 style="text-align: center;">Choose the question range</h3>
+            <div style="text-align: center;">
+                <input type="number" id="range-from" placeholder="from"> ~ <input type="number" id="range-to" placeholder="to">
+                <br><br>
+                <span class="alert" id="range-alert"></span>
+                <br>
+            </div>
+            <div class="button-container">
+                <button class="back-button" onclick="showPage('words_list')">←</button>
+                <button class="play-button" style="flex-grow: 1;" onclick="startGame()">Start Game!</button>
+            </div>
+        </div>
+        <div id="question-container">
+            <div class="button-container">
+                <div id="question-number"></div>
+                <button id="next-button" onclick="nextQuestion()" disabled>&#10132;</button>
+            </div>
+            <div>
+                <div id="question-caption"></div>
+            </div>
+            <div id="options">
+                <div class="option" onclick="checkAnswer(0)"></div>
+                <div class="option" onclick="checkAnswer(1)"></div>
+                <div class="option" onclick="checkAnswer(2)"></div>
+                <div class="option" onclick="checkAnswer(3)"></div>
+            </div>
+        </div>
+        <div id="result-container">
+            <div id="score"></div>
+            <button class="play-button" onclick="replayGame()">Replay</button><br/>
+            <button class="play-button" onclick="showPage('words_list')">Adjectives List</button>
         </div>
     </div>
 
+    <script src="js/game_mcq.js"></script>
     <script>
 
         let itemsData = {};
+        let itemCounter = null;
 
         function showPage(pageName) {
             const gameContainer = document.getElementById('game-container');
@@ -152,7 +107,7 @@
         function createWordsList() {
             const categories = ["イ形容詞", "ナ形容詞"];
             const container = document.getElementById('words_list-container');
-            let wordNum = 1;
+            itemCounter = 1;
             
             categories.forEach(category => {
                 // Create a category section
@@ -174,7 +129,7 @@
                     const textCell = document.createElement('td');
                     textCell.innerHTML = `<span class="word-highlight">${item.kana}</span> (${item.bangla})`;
                     const numCell = document.createElement('td');
-                    numCell.innerHTML = `<span class="word-num">${wordNum}</span>`;
+                    numCell.innerHTML = `<span class="word-num">${itemCounter}</span>`;
                     numCell.style.textAlign = "right";
 
                     topRow.appendChild(textCell);
@@ -196,11 +151,81 @@
                     const hr = document.createElement('hr');
                     categoryDiv.appendChild(hr);
 
-                    wordNum++;
+                    itemCounter++;
                 });
+
+                // decrease 1 to match total number
+                itemCounter -= 1;
 
                 container.appendChild(categoryDiv);
             });
+        }
+
+        function playGame() {
+            showPage('range_selection');
+        }
+
+        function setGameRangeSelection() {
+            const rangeFromEl = document.getElementById("range-from");
+            const rangeToEl = document.getElementById("range-to");
+
+            rangeFromEl.min = 1;
+            rangeFromEl.max = itemCounter - totalQuestions + 1;
+
+            rangeFromEl.min = totalQuestions;
+            rangeFromEl.max = itemCounter;
+        }
+
+        function prepareMCQgameData() {
+            const adjectives = itemsData.adjectives;
+
+            let index = 0;
+
+            Object.keys(adjectives).forEach(key => {
+                const dataItem = adjectives[key];
+                gameData[index] = {};
+                gameData[index].question = {};
+                gameData[index].question.caption = dataItem.bangla;
+                gameData[index].answer = dataItem.kana;
+
+                index++;
+            });
+        }
+
+        function startGame() {
+            const rangeFrom = parseInt(document.getElementById("range-from").value);
+            const rangeTo = parseInt(document.getElementById("range-to").value);
+
+            let min = 1;
+            let max = itemCounter;
+
+            let alertMsg = "";
+            if (!rangeFrom || rangeFrom < min) {
+                alertMsg += "・Enter valid 'from' value<br>";
+            } else if (rangeFrom > max-totalQuestions+1) {
+                alertMsg += `・Maximum 'from' value is ${max-totalQuestions+1}<br>`;
+            }
+            if (!rangeTo || rangeTo < totalQuestions) {
+                alertMsg += "・Enter valid 'to' value<br>";
+            } else if (rangeTo > max) {
+                alertMsg += `・Maximum 'to' value is ${max}<br>`;
+            }
+
+            if (rangeFrom && rangeTo && rangeTo - rangeFrom < totalQuestions-1) {
+                alertMsg += "・'to' value should be at least 9 bigger than 'from' value<br>";
+            }
+
+            if (alertMsg) {
+                document.getElementById("range-alert").innerHTML = alertMsg;
+            } else {
+                // set game data
+                gameFromIndex = rangeFrom - 1;
+                gameToIndex = rangeTo - 1;
+
+                replayGame();
+
+                document.getElementById("range-alert").innerHTML = "";
+            }
         }
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -211,6 +236,9 @@
                     // display words list
                     createWordsList();
                     showPage('words_list');
+
+                    setGameRangeSelection();
+                    prepareMCQgameData();
                 })
                 .catch(error => console.error('Error loading JSON:', error));
         });
