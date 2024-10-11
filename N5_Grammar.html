@@ -57,7 +57,7 @@
                 <h2 style="text-align: center; margin: 0px;">N5 ব্যাকরণ</h2>
             </div>
             <button class="play-button" onclick="playGame('type_1')">Play Game 1</button>
-            <button class="play-button" onclick="playGame('type_2')">Play Game 2</button><br/>
+            <button class="play-button" onclick="playGame('type_2')">Play Game 2</button>
         </div>
         <div id="question-container">
             <div class="button-container">
@@ -101,6 +101,10 @@
         
         function createGrammarList() {
             const container = document.getElementById('words_list-container');
+
+            const hr = document.createElement('hr');
+            container.appendChild(hr);
+
             itemCounter = 1;
             
             Object.keys(itemsData).forEach(index => {
