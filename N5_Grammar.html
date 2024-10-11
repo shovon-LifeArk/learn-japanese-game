@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Shovon Hasan">
+    <meta name="copyright" content="©2024 株式会社LifeArk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeArk Japanese education: N5 Grammar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/game.css">
+    <style>
+        #words_list-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #words_list-container td {
+            vertical-align: top;
+            position: relative;
+        }
+        #words_list-container h4 {
+            margin: 0px;
+            margin-top: 20px;
+        }
+        #words_list-container ul {
+            margin: 0px;
+            padding-left: 20px;
+        }
+        #words_list-container li {
+            margin-bottom: 10px;
+        }
+        .word-highlight {
+            height: 30px;
+            padding: 0px 10px;
+            border-radius: 15px;
+            background-color: #00ff00;
+            font-weight: bold;
+            text-align: center;
+            line-height: 150%;
+        }
+        #words_list-container .word-num {
+            height: 30px;
+            padding: 0px 7px;
+            border-radius: 12px;
+            background-color: grey;
+            color: white;
+            text-align: center;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="words_list-container">
+            <div class="header-image">
+                <img src="assets/image/LifeArk_Nihongo_logo.png" />
+                <h2 style="text-align: center; margin: 0px;">N5 ব্যাকরণ</h2>
+            </div>
+            <button class="play-button" onclick="playGame('type_1')">Play Game 1</button>
+            <button class="play-button" onclick="playGame('type_2')">Play Game 2</button><br/>
+        </div>
+        <div id="question-container">
+            <div class="button-container">
+                <div id="question-number"></div>
+                <button id="next-button" onclick="nextQuestion()" disabled>&#10132;</button>
+            </div>
+            <div>
+                <div id="question-text"></div>
+            </div>
+            <div id="options">
+                <div class="option" onclick="checkAnswer(0)"></div>
+                <div class="option" onclick="checkAnswer(1)"></div>
+                <div class="option" onclick="checkAnswer(2)"></div>
+                <div class="option" onclick="checkAnswer(3)"></div>
+            </div>
+        </div>
+        <div id="result-container">
+            <div id="score"></div>
+            <button class="play-button" onclick="replayGame()">Replay</button><br/>
+            <button class="play-button" onclick="showPage('words_list')">Grammar List</button>
+        </div>
+    </div>
+
+    <script src="js/game_mcq.js"></script>
+    <script>
+
+        let itemsData = {};
+        let itemCounter = null;
+
+        let quizData = {};
+
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
+        
+        function createGrammarList() {
+            const container = document.getElementById('words_list-container');
+            itemCounter = 1;
+            
+            Object.keys(itemsData).forEach(index => {
+                const item = itemsData[index];
+                const table = document.createElement('table');
+
+                // Create top row with image and text
+                const topRow = document.createElement('tr');
+                const textCell = document.createElement('td');
+                textCell.innerHTML = `<span class="word-highlight">${item.key}</span>`;
+                const numCell = document.createElement('td');
+                numCell.innerHTML = `<span class="word-num">${itemCounter}</span>`;
+                numCell.style.textAlign = "right";
+
+                topRow.appendChild(textCell);
+                topRow.appendChild(numCell);
+                table.appendChild(topRow);
+
+                // Create bottom row with example sentences
+                const bottomRow = document.createElement('tr');
+                const explanationCell = document.createElement('td');
+                explanationCell.colSpan = 2;
+                explanationCell.style.padding = "10px 0px";
+
+                const explanation = document.createElement('span');
+                explanation.innerHTML = item.meaning_bd;
+
+                const formHeader = document.createElement('h4');
+                formHeader.innerText = "বাক্যে রূপ:"
+
+                const form = document.createElement('span');
+                form.innerHTML = item.form;
+
+                const exampleHeader = document.createElement('h4');
+                exampleHeader.innerText = "উদাহরণ:"
+
+                const list = document.createElement('ul');
+                item.exampleSentence.forEach(example => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `${example.jp}<br/>${example.bd}`;
+                    list.appendChild(listItem);
+                });
+
+                explanationCell.appendChild(explanation);
+                explanationCell.appendChild(formHeader);
+                explanationCell.appendChild(form);
+                explanationCell.appendChild(exampleHeader);
+                explanationCell.appendChild(list);
+
+                bottomRow.appendChild(explanationCell);
+                table.appendChild(bottomRow);
+                container.appendChild(table);
+
+                const hr = document.createElement('hr');
+                container.appendChild(hr);
+
+                itemCounter++;
+            });
+
+            // decrease 1 to match total number
+            itemCounter -= 1;
+        }
+
+        function playGame(gameType) {
+            let questionsData = null;
+            if (gameType === 'type_1') {
+                questionsData = quizData.type_1;
+            } else {
+                questionsData = quizData.type_2;
+            }
+
+            // prepare game data
+            gameData = {};
+            let index = 0;
+
+            Object.keys(questionsData).forEach(key => {
+                const dataItem = questionsData[key];
+                gameData[index] = {};
+                gameData[index].question = {};
+                gameData[index].question.text = dataItem.question;
+                gameData[index].answer = dataItem.answer;
+                gameData[index].options = dataItem.options;
+
+                index++;
+            });
+
+            gameFromIndex = 0;
+            gameToIndex = index-1;
+
+            replayGame();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/grammar_N5.json')
+                .then(response => response.json())
+                .then(data => {
+                    itemsData = data;
+                    // display words list
+                    createGrammarList();
+                    showPage('words_list');
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+
+            // fetch quiz data too
+            fetch('data/grammar_N5_quiz.json')
+                .then(response => response.json())
+                .then(data => {
+                    quizData = data;
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        });
+
+    </script>
+</body>
+</html>

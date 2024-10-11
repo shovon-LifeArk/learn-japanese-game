@@ -59,22 +59,26 @@ function resetGameQuestionOptions() {
     const numbers = Object.keys(gameData);
 
     gameQuestionItemIDs.forEach(gameItemId => {
-        let options = new Set();
+        if ("options" in gameData[gameItemId]) {
+            // shuffle the options values and store by question item id
+            gameQuestionOptions[gameItemId] = gameData[gameItemId].options.sort(() => Math.random() - 0.5);
+        } else {
+            let options = new Set();
 
-        // Add the current question number to options
-        options.add(gameItemId);
+            // Add the current question number to options
+            options.add(gameItemId);
 
-        // choose random game item ids
-        while (options.size < 4) {
-            const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
-            options.add(randomNum);
+            // choose random game item ids
+            while (options.size < 4) {
+                const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
+                options.add(randomNum);
+            }
+
+            // Convert Set to Array and shuffle it
+            let optionsShuffled = Array.from(options).sort(() => Math.random() - 0.5);
+            // store the options values by question item id
+            gameQuestionOptions[gameItemId] = optionsShuffled.map(optionItemId => gameData[optionItemId].answer);
         }
-
-        // Convert Set to Array and shuffle it
-        const optionsShuffled = Array.from(options).sort(() => Math.random() - 0.5);
-
-        // store the options vsalues by question item id
-        gameQuestionOptions[gameItemId] = optionsShuffled.map(optionItemId => gameData[optionItemId].answer);
     });
 
 }
@@ -98,7 +102,7 @@ function nextQuestion() {
 
     // Update question image and caption
     if (question.text) {
-        questionTextEl.textContent = question.text;
+        questionTextEl.innerHTML = question.text;
     }
     if (question.imageUrl) {
         questionImgEl.innerHTML = `<img src="${question.imageUrl}" alt="?" >`;
