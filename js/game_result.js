@@ -34,28 +34,26 @@ function submitScore() {
         examTime,
     };
 
-    console.log("data", JSON.stringify(data));
+    const scoreSubmitButton = document.getElementById('score-submit-button');
+    scoreSubmitButton.disabled = true;
 
-    fetch('https://script.google.com/macros/s/AKfycbwhB5orSG7OnzBSvEvgWlkL5qfBwoeQmjC64-OhFgeS0tcaCDWA4Z_qS9aL7VDK7idQ/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbwhHlkdqB82c_1GqakpnMNHNT6j4gwshC8rX3_HmV14jeyTN2KFOmKYJYIsGq1kg6RtNA/exec', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'text/plain',
         },
         body: JSON.stringify(data),
     })
     .then(response => response.json())
     .then(result => {
-        if (result.status === 200) {
-            const scoreSubmitButton = document.getElementById('score-submit-button');
-            scoreSubmitButton.disabled = true;
+        if (result.status !== 200) {
+            scoreSubmitButton.disabled = false;
         }
         showResponseMsg(result.message);
     })
     .catch(error => {
+        scoreSubmitButton.disabled = false;
         showResponseMsg(error.message);
     });
-
-    
-
 
 }
