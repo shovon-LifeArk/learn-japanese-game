@@ -6,57 +6,10 @@
     <meta name="copyright" content="©2024 株式会社LifeArk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LifeArk Japanese education: Katakana Words for beginners</title>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/game.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        #game-container {
-            height: 100vh;
-            width: 100%;
-            max-height: 1024px;
-            max-width: 576px;
-        }
-        .header-image {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .header-image img {
-            max-width: 70%;
-        }
-        .play-button {
-            padding: 10px 20px;
-            font-size: 1.5em;
-            background-color: #9966ff;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        hr {
-            border: 1px solid grey;
-            width: 100%;
-        }
-        .button-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-        #words_list-container,
-        #question-container,
-        #result-container {
-            height: calc(100vh - 40px);
-            padding: 20px;
-            display: none; 
-            flex: 1;
-            flex-direction: column;
-            gap: 20px;
-        }
         #words_list-container table {
             width: 100%;
             border-collapse: collapse;
@@ -77,66 +30,19 @@
         #words_list-container .word-kana {
             font-size: 1.5em;
         }
-        #words_list-container .word-bangla {
+        #words_list-container .word-english {
             font-size: 1.2em;
         }
-        #question-number {
-            font-size: 1.5em;
-        }
-        #question-img {
-            height: 150px; /* Fixed height */
-            overflow: hidden;
-            text-align: center;
-        }
-        #question-img img {
-            height: 100%;
-            object-fit: cover;
-        }
-        #question-caption {
-            font-size: 2.5em;
-            font-weight: bold;
-            text-align: center;
-            color: #33cc33;
-        }
-        .option {
-            margin: 10px 0;
-            padding: 20px;
-            font-size: 1.5em;
-            text-align: center;
-            cursor: pointer;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-        }
-        .correct {
-            background-color: green;
+        #words_list-container .word-num {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            height: 30px;
+            padding: 0px 7px;
+            border-radius: 15px;
+            background-color: grey;
             color: white;
-        }
-        .wrong {
-            background-color: red;
-            color: white;
-        }
-        #next-button {
-            height: 50px;
-            width: 50px;
-            padding: 10px;
-            border-radius: 35px;
-            border: 2px solid #9966ff;
-            color: #9966ff;
-            font-size: 26px;
-            line-height: 100%;
-            background-color: white;
-            cursor: pointer;
-        }
-        #next-button:disabled {
-            border-color: gray;
-            color: gray;
-            cursor: not-allowed;
-        }
-        #score {
-            font-size: 2em;
             text-align: center;
-            margin-top: 100px;
-            margin-bottom: 60px;
         }
     </style>
 </head>
@@ -147,7 +53,20 @@
                 <img src="assets/image/LifeArk_Nihongo_logo.png" />
                 <h2 style="text-align: center; margin: 0px;">কাতাকানা'র শব্দাবলী</h2>
             </div>
-            <button class="play-button" onclick="replayGame()">Play Game</button>
+            <button class="play-button" onclick="playGame('Beginner: Katakana words')">Play Game</button>
+        </div>
+        <div id="range_selection-container">
+            <h3 style="text-align: center;">Choose the question range</h3>
+            <div style="text-align: center;">
+                <input type="number" id="range-from" placeholder="from"> ~ <input type="number" id="range-to" placeholder="to">
+                <br><br>
+                <span class="alert" id="range-alert"></span>
+                <br>
+            </div>
+            <div class="button-container">
+                <button class="back-button" onclick="showPage('words_list')">←</button>
+                <button class="play-button" style="flex-grow: 1;" onclick="startGame({'rangeType': 'number'});">Start Game!</button>
+            </div>
         </div>
         <div id="question-container">
             <div class="button-container">
@@ -167,44 +86,25 @@
         </div>
         <div id="result-container">
             <div id="score"></div>
-            <button class="play-button" onclick="replayGame()">Replay</button><br/>
-            <button class="play-button" onclick="showPage('words_list')">Words List</button>
+            <button class="play-button" onclick="replayGame()">Replay</button>
+            <button class="link-button" onclick="showPage('words_list')">Words List</button>
+            <div>
+                <h3>Submit your Score:</h3>
+                <div id="score-submit-form">
+                    <input type="text" id="player_userID" placeholder="User ID" value=""/>
+                    <button class="play-button" id="score-submit-button" onclick="submitScore()">Submit Score</button>
+                </div>
+                <div id="score-submit-response"></div>
+            </div>
         </div>
     </div>
 
+    <script src="js/game_rangeSelection.js"></script>
+    <script src="js/game_mcq.js"></script>
+    <script src="js/game_result.js"></script>
     <script>
-        const itemsData = {
-            0: { "katakana": "シャツ", "english": "shirt" },
-            1: { "katakana": "ズボン", "english": "pants" },
-            2: { "katakana": "パンダ", "english": "panda" },
-            3: { "katakana": "ブラウス", "english": "blouse" },
-            4: { "katakana": "ライオン", "english": "lion" },
-            5: { "katakana": "キャベツ", "english": "cabbage" },
-            7: { "katakana": "スカート", "english": "skirt" },
-            8: { "katakana": "ホッチキス", "english": "stapler" },
-            9: { "katakana": "はんズボン", "english": "shorts" },
-            10: { "katakana": "レモン", "english": "lemon" },
-            11: { "katakana": "ホットケーキ", "english": "pancake" },
-            12: { "katakana": "チョコレート", "english": "chocolate" },
-            13: { "katakana": "オレンジ", "english": "orange" },
-            14: { "katakana": "アイスクリーム", "english": "ice cream" },
-            15: { "katakana": "ワンピース", "english": "dress" },
-            16: { "katakana": "トマト", "english": "tomato" },
-            17: { "katakana": "テレビ", "english": "television" },
-            18: { "katakana": "パイナップル", "english": "pineapple" },
-            19: { "katakana": "プリン", "english": "pudding" },
-            20: { "katakana": "セーター", "english": "sweater" },
-            21: { "katakana": "バナナ", "english": "banana" },
-            22: { "katakana": "あなあけパンチ", "english": "hole punch machine" },
-            23: { "katakana": "レタス", "english": "lettuce" },
-            24: { "katakana": "サイ", "english": "rhinoceros" },
-            25: { "katakana": "リュックサック", "english": "backpack" },
-            26: { "katakana": "キャンデー", "english": "candy" },
-            27: { "katakana": "セロテープ", "english": "tape" },
-            28: { "katakana": "サンドイッチ", "english": "sandwich" },
-            29: { "katakana": "クッキー", "english": "cookie" },
-            30: { "katakana": "ユニフォーム", "english": "uniform" }
-        };
+        let itemsData = {};
+        let itemCounter = null;
 
         function showPage(pageName) {
             const gameContainer = document.getElementById('game-container');
@@ -219,6 +119,11 @@
         function createWordsList() {
             const container = document.getElementById('words_list-container');
 
+            const hr = document.createElement('hr');
+            container.appendChild(hr);
+
+            itemCounter = 1;
+
             Object.keys(itemsData).forEach(key => {
                 const item = itemsData[key];
                 const table = document.createElement('table');
@@ -229,7 +134,9 @@
                 imageCell.className = 'image-cell';
                 imageCell.innerHTML = `<img src="assets/image/Katakana_words/${item.imgkey ? item.imgkey : item.katakana}.png" alt="${item.katakana}">`;
                 const textCell = document.createElement('td');
-                textCell.innerHTML = `<span class="word-kana">${item.katakana}</span><br/><span class="word-bangla">${item.english}</span>`;
+                textCell.innerHTML = `<span class="word-kana">${item.katakana}</span><br/>
+                                        <span class="word-english">${item.english}</span>
+                                        <span class="word-num">${itemCounter}</span>`;
 
                 topRow.appendChild(imageCell);
                 topRow.appendChild(textCell);
@@ -239,140 +146,48 @@
 
                 const hr = document.createElement('hr');
                 container.appendChild(hr);
+
+                itemCounter++;
             });
 
+            // decrease 1 to match total number
+            itemCounter -= 1;
         }
 
-        const totalQuestions = 10;
-        let currentQuestion = 0;
-        let score = 0;
-
-        function getRandomItemNumbers() {
-            const numbers = Object.keys(itemsData).map(Number);
-            const randomItemNumbers = [];
-            while (randomItemNumbers.length < totalQuestions) {
-                const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
-                if (!randomItemNumbers.includes(randomNumber)) {
-                    randomItemNumbers.push(randomNumber);
-                }
-            }
-            return randomItemNumbers;
+        function playGame(lessonType) {
+            gameLessonType = lessonType;
+            showPage('range_selection');
         }
 
-        function checkAnswer(selectedIndex) {
-            // Disable all options after selection
-            for (let i = 0; i < optionsEl.length; i++) {
-                optionsEl[i].style.pointerEvents = 'none'; // Disable further clicks
-            }
+        function prepareMCQgameData() {
+            let index = 0;
 
-            let selectedOption = optionsEl[selectedIndex];
-            let selectedAnswer = selectedOption.textContent;
+            Object.keys(itemsData).forEach(key => {
+                const dataItem = itemsData[key];
+                gameData[index] = {};
+                gameData[index].question = {};
+                gameData[index].question.imageUrl = `assets/image/Katakana_words/${dataItem.imgkey ? dataItem.imgkey : dataItem.katakana}.png`;
+                gameData[index].question.caption = dataItem.english;
+                gameData[index].answer = dataItem.katakana;
 
-            if (selectedAnswer === currentItem.katakana) {
-                // Correct answer
-                selectedOption.classList.add('correct');
-                score++;
-            } else {
-                // Wrong answer
-                selectedOption.classList.add('wrong');
-
-                // Find and highlight the correct option
-                for (let i = 0; i < optionsEl.length; i++) {
-                    if (optionsEl[i].textContent === currentItem.katakana) {
-                        optionsEl[i].classList.add('correct');
-                        break;
-                    }
-                }
-            }
-
-            // Enable the Next button
-            nextBtn.disabled = false;
-        }
-
-        function getRandomOptions(currentItemNumber) {
-            const numbers = Object.keys(itemsData).map(Number);
-            const options = new Set();
-
-            // Add the current question number to options
-            options.add(currentItemNumber);
-
-            // Generate random options
-            while (options.size < 4) {
-                const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
-                options.add(randomNum);
-            }
-
-            // Convert Set to Array and shuffle it
-            return Array.from(options).sort(() => Math.random() - 0.5);
-        }
-
-        function nextQuestion() {
-            if (currentQuestion === totalQuestions) {
-                endGame();
-                return;
-            }
-
-            // Display question number
-            document.getElementById('question-number').textContent = `${currentQuestion + 1}/${totalQuestions}`;
-
-            // Load current question and options
-            const currentItemNumber = selectedItemNumbers[currentQuestion];
-            currentItem = itemsData[currentItemNumber];
-
-            // Update question text
-            questionImgEl.innerHTML = `<img src="assets/image/Katakana_words/${currentItem.katakana}.png" alt="${currentItem.katakana}">`;
-            questionCaptionEl.textContent = currentItem.bangla;
-
-            // Get random options
-            const options = getRandomOptions(currentItemNumber);
-
-            // Update options in the DOM
-            options.forEach((option, index) => {
-                optionsEl[index].textContent = itemsData[option].katakana;
-                optionsEl[index].classList.remove('correct', 'wrong'); // Reset styles
-                optionsEl[index].style.pointerEvents = 'auto'; // Enable click
+                index++;
             });
-
-            // Disabled the Next button
-            nextBtn.disabled = true;
-
-            currentQuestion++;
         }
 
-        function endGame() {
-            // hide question container
-            document.getElementById('question-container').style.display = 'none';
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/words_katakana_beginner.json')
+                .then(response => response.json())
+                .then(data => {
+                    itemsData = data;
+                    // display words list
+                    createWordsList();
+                    showPage('words_list');
 
-            // Display the score
-            const scoreEl = document.getElementById('score');
-            scoreEl.textContent = `Your score: ${score}/${totalQuestions}`;
-            document.getElementById('result-container').style.display = 'flex';
-        }
-
-        function replayGame() {
-            // Reset game state
-            currentQuestion = 0;
-            score = 0;
-            selectedItemNumbers = getRandomItemNumbers();
-
-            // show question container
-            showPage('question')
-
-            // Start the game
-            nextQuestion();
-        }
-
-        // Initialize the game
-        let selectedItemNumbers = getRandomItemNumbers();
-        const questionImgEl = document.getElementById('question-img');
-        const questionCaptionEl = document.getElementById('question-caption');
-        const optionsEl = document.querySelectorAll('.option');
-        const nextBtn = document.getElementById('next-button');
-        let currentItem = {};
-
-        // display words list
-        createWordsList();
-        showPage('words_list');
+                    setGameRangeSelection();
+                    prepareMCQgameData();
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        });
 
     </script>
 </body>
