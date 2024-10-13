@@ -13,6 +13,9 @@ Format:
 */
 let gameData = {};
 
+// for log purpose
+let gameLessonType = null;
+
 // questions should be chosen from this number in gameData
 let gameFromIndex = null;
 
@@ -34,6 +37,23 @@ let currentQuestionNum = 0;
 // number of correct answers
 let score = 0;
 
+// game start time and end time (store milliseconds)
+let gameStartTime, gameEndTime;
+
+function gameTimer(action) {
+    if (action === 'start') {
+        gameStartTime = Date.now(); // Record the start time
+        gameEndTime = null;
+    } else if (action === 'stop') {
+        if (!gameStartTime) {
+            console.log("Timer hasn't started yet.");
+            return;
+        }
+        gameEndTime = Date.now(); // Record the stop time
+    } else {
+        console.log("Invalid action. Use 'start' or 'stop'.");
+    }
+}
 
 function resetGameQuestionItemIDs() {
     let gameItemIDs = [];
@@ -85,7 +105,11 @@ function resetGameQuestionOptions() {
 
 
 function nextQuestion() {
+    if (currentQuestionNum === 0) {
+        gameTimer('start');
+    }
     if (currentQuestionNum === totalQuestions) {
+        gameTimer('stop');
         endGame();
         return;
     }
@@ -158,6 +182,16 @@ function checkAnswer(selectedIndex) {
     nextBtn.disabled = false;
 }
 
+function resetScoreSubmitForm() {
+    // enable score submit button
+    const scoreSubmitButton = document.getElementById('score-submit-button');
+    scoreSubmitButton.disabled = false;
+    // hide score submission message (if shown)
+    const scoreSubmitResponseEl = document.getElementById('score-submit-response');
+    scoreSubmitResponseEl.style.display = 'none';
+    scoreSubmitResponseEl.innerHTML = "";
+}
+
 
 // after answering last question, display the result
 function endGame() {
@@ -176,6 +210,7 @@ function replayGame() {
     score = 0;
     resetGameQuestionItemIDs();
     resetGameQuestionOptions();
+    resetScoreSubmitForm();
 
     showPage('question');
 

@@ -235,7 +235,7 @@
             "kanji": "乗る",
             "kana": "のる",
             "english": "to ride",
-            "bangla": "আরোহন করা",
+            "bangla": "(যানবাহনে) চড়া",
             "type": "Group-1",
             "exampleSentence": [
                 "わたし は でんしゃ に のる",
@@ -730,7 +730,7 @@
             "kanji": "登る",
             "kana": "のぼる",
             "english": "to climb",
-            "bangla": "চড়া",
+            "bangla": "আরোহণ করা",
             "type": "Group-1",
             "exampleSentence": [
                 "かれ は やま を のぼる",
@@ -961,7 +961,7 @@
             "kanji": "おごる",
             "kana": "おごる",
             "english": "to treat (someone)",
-            "bangla": "মিলানো",
+            "bangla": "(খাবার দিয়ে) আপ্যায়ন করা",
             "type": "Group-1",
             "exampleSentence": [
                 "わたし は かれ を おごる",
@@ -1005,7 +1005,7 @@
             "kanji": "連れていく",
             "kana": "つれていく",
             "english": "to take (someone) along",
-            "bangla": "কোনোকে নিয়ে যাওয়া",
+            "bangla": "কাউকে সাথে নিয়ে যাওয়া",
             "type": "Group-1",
             "exampleSentence": [
                 "わたし は かのじょ を つれていく",
@@ -1236,29 +1236,29 @@
             "kanji": "気が付く",
             "kana": "きがつく",
             "english": "to notice, to become aware",
-            "bangla": "বুঝতে পারা, লক্ষ্য করা",
+            "bangla": "লক্ষ্য করা",
             "type": "Group-1",
             "exampleSentence": [
-                "わたし は かれ に きがつく",
-                "あなた は じかん に きがつく"
+                "わたし は かのじょ に きがつく",
+                "かれ は じかん に きがつく"
             ]
         },
         "113": {
             "kanji": "噛む",
             "kana": "かむ",
             "english": "to bite, to chew",
-            "bangla": "কাটা, চিবানো",
+            "bangla": "কামড় দেয়া / চিবানো",
             "type": "Group-1",
             "exampleSentence": [
                 "わたし は りんご を かむ",
-                "いぬ は かみを かむ"
+                "いぬ は ほね を かむ"
             ]
         },
         "114": {
             "kanji": "踏む",
             "kana": "ふむ",
             "english": "to step on, to tread",
-            "bangla": "পদক্ষেপ নেওয়া",
+            "bangla": "পাড়া দেওয়া / পদক্ষেপ নেওয়া",
             "type": "Group-1",
             "exampleSentence": [
                 "わたし は みち を ふむ",
@@ -1566,7 +1566,7 @@
             "kanji": "拾う",
             "kana": "ひろう",
             "english": "to pick up",
-            "bangla": "তোলা, উঁচু করা",
+            "bangla": "কুড়ানো",
             "type": "Group-1",
             "exampleSentence": [
                 "ごみ を ひろう",
@@ -1599,7 +1599,7 @@
             "kanji": "お腹がすく",
             "kana": "おなかがすく",
             "english": "to be hungry",
-            "bangla": "ভোজন হওয়া",
+            "bangla": "ক্ষুধা লাগা",
             "type": "Group-1",
             "exampleSentence": [
                 "わたし は おなかが すく",
@@ -1610,11 +1610,11 @@
             "kanji": "のどが渇く",
             "kana": "のどがかわく",
             "english": "to be thirsty",
-            "bangla": "পিপাসিত হওয়া",
+            "bangla": "তৃষ্ণার্ত হওয়া",
             "type": "Group-1",
             "exampleSentence": [
-                "わたし は のどが かわく",
-                "かれ は みず を のむ ため に のどが かわく"
+                "わたし は のど が かわく",
+                "かれ は はしる と のど が かわく"
             ]
         },
         "147": {
@@ -1635,8 +1635,8 @@
             "bangla": "সর্দি হওয়া",
             "type": "Group-1",
             "exampleSentence": [
-                "わたし は かぜをひく",
-                "かれ は さむい ひ に かぜをひく"
+                "わたし は かぜ を ひく",
+                "かれ は さむい ひ に かぜ を ひく"
             ]
         },
         "149": {
@@ -1995,7 +1995,7 @@
             "kanji": "疲れる",
             "kana": "つかれる",
             "english": "to get tired",
-            "bangla": "থাকিয়ে যাওয়া",
+            "bangla": "ক্লান্ত হওয়া",
             "type": "Group-2",
             "exampleSentence": [
                 "わたし は はたらいて つかれる",
@@ -2006,7 +2006,7 @@
             "kanji": "やめる",
             "kana": "やめる",
             "english": "to quit, to stop",
-            "bangla": "ছাড়া দেওয়া",
+            "bangla": "বন্ধ করা / ছেড়ে দেওয়া",
             "type": "Group-2",
             "exampleSentence": [
                 "わたし は タバコ を やめる",
