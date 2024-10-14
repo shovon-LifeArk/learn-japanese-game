@@ -117,9 +117,7 @@ function resetGameQuestionOptions() {
             gameQuestionOptions[gameItemId] = optionsShuffled;
         }
     });
-
 }
-
 
 function nextQuestion() {
     if (currentQuestionNum === 0) {
