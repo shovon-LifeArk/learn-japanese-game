@@ -66,7 +66,7 @@
             </div>
             <div class="button-container">
                 <button class="back-button" onclick="showPage('words_list')">←</button>
-                <button class="play-button" style="flex-grow: 1;" onclick="startGame()">Start Game!</button>
+                <button class="play-button" style="flex-grow: 1;" onclick="startGame({'rangeType': 'number'})">Start Game!</button>
             </div>
         </div>
         <div id="question-container">
@@ -99,6 +99,7 @@
         </div>
     </div>
 
+    <script src="js/game_rangeSelection.js"></script>
     <script src="js/game_mcq.js"></script>
     <script src="js/game_result.js"></script>
     <script>
@@ -180,17 +181,6 @@
             showPage('range_selection');
         }
 
-        function setGameRangeSelection() {
-            const rangeFromEl = document.getElementById("range-from");
-            const rangeToEl = document.getElementById("range-to");
-
-            rangeFromEl.min = 1;
-            rangeFromEl.max = itemCounter - totalQuestions + 1;
-
-            rangeFromEl.min = totalQuestions;
-            rangeFromEl.max = itemCounter;
-        }
-
         function prepareMCQgameData() {
             const verbs = itemsData.verbs;
 
@@ -205,42 +195,6 @@
 
                 index++;
             });
-        }
-
-        function startGame() {
-            const rangeFrom = parseInt(document.getElementById("range-from").value);
-            const rangeTo = parseInt(document.getElementById("range-to").value);
-
-            let min = 1;
-            let max = itemCounter;
-
-            let alertMsg = "";
-            if (!rangeFrom || rangeFrom < min) {
-                alertMsg += "・Enter valid 'from' value<br>";
-            } else if (rangeFrom > max-totalQuestions+1) {
-                alertMsg += `・Maximum 'from' value is ${max-totalQuestions+1}<br>`;
-            }
-            if (!rangeTo || rangeTo < totalQuestions) {
-                alertMsg += "・Enter valid 'to' value<br>";
-            } else if (rangeTo > max) {
-                alertMsg += `・Maximum 'to' value is ${max}<br>`;
-            }
-
-            if (rangeFrom && rangeTo && rangeTo - rangeFrom < totalQuestions-1) {
-                alertMsg += "・'to' value should be at least 9 bigger than 'from' value<br>";
-            }
-
-            if (alertMsg) {
-                document.getElementById("range-alert").innerHTML = alertMsg;
-            } else {
-                // set game data
-                gameFromIndex = rangeFrom - 1;
-                gameToIndex = rangeTo - 1;
-
-                replayGame();
-
-                document.getElementById("range-alert").innerHTML = "";
-            }
         }
 
         document.addEventListener('DOMContentLoaded', function() {
