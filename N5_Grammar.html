@@ -56,8 +56,8 @@
                 <img src="assets/image/LifeArk_Nihongo_logo.png" />
                 <h2 style="text-align: center; margin: 0px;">N5 ব্যাকরণ</h2>
             </div>
-            <button class="play-button" onclick="playGame('type_1')">Play Game 1</button>
-            <button class="play-button" onclick="playGame('type_2')">Play Game 2</button>
+            <button class="play-button" onclick="playGame_type1('N5 Grammar: practice type_1')">Play Game 1</button>
+            <button class="play-button" onclick="playGame_type2('N5 Grammar: practice type_2')">Play Game 2</button>
         </div>
         <div id="question-container">
             <div class="button-container">
@@ -77,17 +77,28 @@
         <div id="result-container">
             <div id="score"></div>
             <button class="play-button" onclick="replayGame()">Replay</button><br/>
-            <button class="play-button" onclick="showPage('words_list')">Grammar List</button>
+            <button class="link-button" onclick="showPage('words_list')">Grammar List</button>
+            <div></div>
+                <h3>Submit your Score:</h3>
+                <div id="score-submit-form">
+                    <input type="text" id="player_userID" placeholder="User ID" value=""/>
+                    <button class="play-button" id="score-submit-button" onclick="submitScore()">Submit Score</button>
+                </div>
+                <div id="score-submit-response"></div>
+            </div>
         </div>
     </div>
 
     <script src="js/game_mcq.js"></script>
+    <script src="js/game_result.js"></script>
     <script>
 
         let itemsData = {};
         let itemCounter = null;
 
         let quizData = {};
+        let type1_GameData = null;
+        let type2_GameData = null;
 
         function showPage(pageName) {
             const gameContainer = document.getElementById('game-container');
@@ -168,33 +179,54 @@
             itemCounter -= 1;
         }
 
-        function playGame(gameType) {
-            let questionsData = null;
-            if (gameType === 'type_1') {
-                questionsData = quizData.type_1;
-            } else {
-                questionsData = quizData.type_2;
-            }
+        function playGame_type1(lessonType) {
+            gameLessonType = lessonType;
+            gameData = type1_GameData;
 
-            // prepare game data
-            gameData = {};
+            gameFromIndex = 0;
+            gameToIndex = Object.keys(gameData).length-1;
+
+            replayGame();
+        }
+
+        function playGame_type2(lessonType) {
+            gameLessonType = lessonType;
+            gameData = type2_GameData;
+
+            gameFromIndex = 0;
+            gameToIndex = Object.keys(gameData).length-1;
+
+            replayGame();
+        }
+
+        function prepareMCQgameData() {
+            // prepare type-1 game data
+            type1_GameData = {};
             let index = 0;
-
-            Object.keys(questionsData).forEach(key => {
-                const dataItem = questionsData[key];
-                gameData[index] = {};
-                gameData[index].question = {};
-                gameData[index].question.text = dataItem.question;
-                gameData[index].answer = dataItem.answer;
-                gameData[index].options = dataItem.options;
+            Object.keys(quizData.type_1).forEach(key => {
+                const dataItem = quizData.type_1[key];
+                type1_GameData[index] = {};
+                type1_GameData[index].question = {};
+                type1_GameData[index].question.text = dataItem.question;
+                type1_GameData[index].answer = dataItem.answer;
+                type1_GameData[index].options = dataItem.options;
 
                 index++;
             });
 
-            gameFromIndex = 0;
-            gameToIndex = index-1;
+            // prepare type-2 game data
+            type2_GameData = {};
+            index = 0;
+            Object.keys(quizData.type_2).forEach(key => {
+                const dataItem = quizData.type_2[key];
+                type2_GameData[index] = {};
+                type2_GameData[index].question = {};
+                type2_GameData[index].question.text = dataItem.question;
+                type2_GameData[index].answer = dataItem.answer;
+                type2_GameData[index].options = dataItem.options;
 
-            replayGame();
+                index++;
+            });
         }
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -213,6 +245,8 @@
                 .then(response => response.json())
                 .then(data => {
                     quizData = data;
+
+                    prepareMCQgameData();
                 })
                 .catch(error => console.error('Error loading JSON:', error));
         });

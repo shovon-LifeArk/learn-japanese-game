@@ -2,8 +2,8 @@
     font-size: 1.5em;
 }
 #question-text {
-    padding: 10px;
-    text-align: center;
+    text-align: left;
+    font-size: 1.2em;
 }
 #question-img {
     height: 150px; /* Fixed height */

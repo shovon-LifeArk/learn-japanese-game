@@ -55,6 +55,7 @@
         }
         #question-text {
             font-size: 4em !important;
+            text-align: center !important;
         }
     </style>
 </head>
@@ -180,7 +181,6 @@
 
         function playWritingGame(lessonType) {
             gameLessonType = lessonType;
-            gameType = "writing";
             gameData = writingGameData;
             showPage('range_selection');
 
@@ -197,7 +197,6 @@
 
         function playReadingGame(lessonType) {
             gameLessonType = lessonType;
-            gameType = "reading";
             gameData = readingGameData;
             showPage('range_selection');
 

@@ -19,12 +19,23 @@ function showResponseMsg(message) {
 }
 
 function submitScore() {
-    const rangeFrom = parseInt(document.getElementById("range-from").value);
-    const rangeTo = parseInt(document.getElementById("range-to").value);
-
     const userId = document.getElementById('player_userID').value;
     const lessonType = gameLessonType;
-    const examRange = `${rangeFrom} - ${rangeTo}`;
+
+    let examRange;
+    const rangeContainer = document.getElementById("range_selection-container");
+    const rangeFromEl = document.getElementById("range-from");
+    const rangeToEl = document.getElementById("range-to");
+
+    if (!rangeContainer) {
+        examRange = "All";
+    }
+    else if (rangeFromEl && rangeToEl) {
+        const rangeFromVal = parseInt(document.getElementById("range-from").value);
+        const rangeToEl = parseInt(document.getElementById("range-to").value);
+        examRange = `${rangeFromVal} - ${rangeToEl}`;
+    }
+
     const examMarks = `${score}/${totalQuestions}`;
     const examTime = msToTime(gameEndTime - gameStartTime);
 
