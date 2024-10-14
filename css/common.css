@@ -80,6 +80,19 @@ hr {
     font-size: 1.5em;;
     text-align: center;
 }
+#range_selection-container .checkbox-button {
+    display: block;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    border: 1px solid #9966ff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0px;
+}
+#range_selection-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
 .alert {
     font-size: 1em;
     color: red;

@@ -22,6 +22,12 @@ let gameFromIndex = null;
 // questions should be chosen upto this number in gameData
 let gameToIndex = null;
 
+// store category values for differnt types (ramge type will be checkboxes)
+let gameRangeCheckedCategories = null;
+
+// used when submitting report
+let gameRangeText = 'All';
+
 // hold index of gameData (chosen randomly from gameItemIDs)
 let gameQuestionItemIDs = null;
 
@@ -59,11 +65,22 @@ function resetGameQuestionItemIDs() {
     let gameItemIDs = [];
 
     // select game item indexes in Range
-    Object.keys(gameData).forEach(key => {
-        if (parseInt(key) >= gameFromIndex && parseInt(key) <= gameToIndex) {
-            gameItemIDs.push(key);
-        }
-    });
+    if (gameFromIndex !== null && gameToIndex !== null) {
+        // filter all question ids within range
+        Object.keys(gameData).forEach(index => {
+            if (parseInt(index) >= gameFromIndex && parseInt(index) <= gameToIndex) {
+                gameItemIDs.push(index);
+            }
+        });
+    }
+    else if (gameRangeCheckedCategories !== null) {
+        // filter all question ids by categories
+        Object.keys(gameData).forEach(index => {
+            if (gameRangeCheckedCategories.includes(gameData[index].category)) {
+                gameItemIDs.push(index);
+            }
+        });
+    }
 
     // Shuffle array
     const shuffled = gameItemIDs.sort(() => 0.5 - Math.random());

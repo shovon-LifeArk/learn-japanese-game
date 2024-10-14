@@ -47,13 +47,20 @@ function isValidRange_number() {
 function startGame(params) {
     const {rangeType, rangeMapping} = params;
     if (rangeType === 'number' && isValidRange_number()) {
+        // set report submission data
+        gameRangeText = `${gameFromIndex+1} - ${gameToIndex+1}`;
+
         replayGame();
         // clear range input alert
         document.getElementById("range-alert").innerHTML = "";
     }
 
     // for Kanji game where item number and actual game item numbers are different
-    if (rangeType === 'mapped_number' && isValidRange_number()) {
+    else if (rangeType === 'mapped_number' && isValidRange_number()) {
+        // set report submission data
+        gameRangeText = `${gameFromIndex+1} - ${gameToIndex+1}`;
+
+        // map index from itemData to gameData
         gameFromIndex = rangeMapping.from[gameFromIndex];
         gameToIndex = rangeMapping.to[gameToIndex];
 
@@ -61,4 +68,64 @@ function startGame(params) {
         // clear range input alert
         document.getElementById("range-alert").innerHTML = "";
     }
+
+    // when range is selected by categories only
+    else if (rangeType === 'checkbox') {
+        const individualCheckboxes = document.querySelectorAll('input[name="game_range"]');
+        gameRangeCheckedCategories = [...individualCheckboxes]
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value);
+
+        // prepare reporting data
+        const allCheckboxButton = document.getElementById('range_all');
+        if (allCheckboxButton.checked) {
+            gameRangeText = 'All'
+        } else {
+            gameRangeText = gameRangeCheckedCategories.toString();
+        }
+        
+        replayGame();
+    }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const rangeSelectionCheckbox = document.getElementById('range_selection-checkbox');
+
+    if (rangeSelectionCheckbox) {
+        // game range selection functionality
+        const allCheckboxButton = document.getElementById('range_all');
+        const individualCheckboxes = document.querySelectorAll('input[name="game_range"]');
+        const rangeConfirmButton = document.getElementById('range_confirm-button');
+
+        function updateRangeConfirmButtonState() {
+            let hasChecked = false;
+            individualCheckboxes.forEach(checkbox => {
+                if (!hasChecked & checkbox.checked) hasChecked = true;
+            });
+
+            if (hasChecked) {
+                rangeConfirmButton.classList.remove('disabled');
+                rangeConfirmButton.disabled = false;
+            } else {
+                rangeConfirmButton.classList.add('disabled');
+                rangeConfirmButton.disabled = true;
+            }
+        }
+
+        allCheckboxButton.addEventListener('change', function() {
+            individualCheckboxes.forEach(checkbox => {
+                checkbox.checked = this.checked;
+            });
+            updateRangeConfirmButtonState();
+        });
+
+        individualCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const allChecked = [...individualCheckboxes].every(checkbox => checkbox.checked);
+                allCheckboxButton.checked = allChecked;
+
+                updateRangeConfirmButtonState();
+            });
+        });
+    }
+});
