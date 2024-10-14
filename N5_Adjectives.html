@@ -51,7 +51,7 @@
                 <img src="assets/image/LifeArk_Nihongo_logo.png" />
                 <h2 style="text-align: center; margin: 0px;">N5 বিশেষণ</h2>
             </div>
-            <button class="play-button" onclick="playGame()">Play Game</button>
+            <button class="play-button" onclick="playGame('N5 Adjectives: word meaning')">Play Game</button>
         </div>
         <div id="range_selection-container">
             <h3 style="text-align: center;">Choose the question range</h3>
@@ -63,7 +63,7 @@
             </div>
             <div class="button-container">
                 <button class="back-button" onclick="showPage('words_list')">←</button>
-                <button class="play-button" style="flex-grow: 1;" onclick="startGame()">Start Game!</button>
+                <button class="play-button" style="flex-grow: 1;" onclick="startGame({'rangeType': 'number'})">Start Game!</button>
             </div>
         </div>
         <div id="question-container">
@@ -83,12 +83,22 @@
         </div>
         <div id="result-container">
             <div id="score"></div>
-            <button class="play-button" onclick="replayGame()">Replay</button><br/>
-            <button class="play-button" onclick="showPage('words_list')">Adjectives List</button>
+            <button class="play-button" onclick="replayGame()">Replay</button>
+            <button class="link-button" onclick="showPage('words_list')">Adjectives List</button>
+            <div>
+                <h3>Submit your Score:</h3>
+                <div id="score-submit-form">
+                    <input type="text" id="player_userID" placeholder="User ID" value=""/>
+                    <button class="play-button" id="score-submit-button" onclick="submitScore()">Submit Score</button>
+                </div>
+                <div id="score-submit-response"></div>
+            </div>
         </div>
     </div>
 
+    <script src="js/game_rangeSelection.js"></script>
     <script src="js/game_mcq.js"></script>
+    <script src="js/game_result.js"></script>
     <script>
 
         let itemsData = {};
@@ -161,7 +171,8 @@
             });
         }
 
-        function playGame() {
+        function playGame(lessonType) {
+            gameLessonType = lessonType;
             showPage('range_selection');
         }
 
