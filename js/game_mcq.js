@@ -6,9 +6,9 @@ const totalQuestions = 10;
 /*
 Format:
 {
-    0: {"question": {"text": "text ...", "imageUrl": "image link ...", "caption": "..."}, "answer": "answer here ..."},
-    1: {"question": {"text": "text ...", "imageUrl": "image link ...", "caption": "..."}, "answer": "answer here ...",},
-    2: {"question": {"text": "text ...", "imageUrl": "image link ...", "caption": "..."}, "answer": "answer here ...",}
+    0: {"question": {"text": "text ...", "imageUrl": "image link ...", "soundUrl": "audio link ...", "caption": "..."}, "answer": "answer here ..."},
+    1: {"question": {"text": "text ...", "imageUrl": "image link ...", "soundUrl": "audio link ...", "caption": "..."}, "answer": "answer here ...",},
+    2: {"question": {"text": "text ...", "imageUrl": "image link ...", "soundUrl": "audio link ...", "caption": "..."}, "answer": "answer here ...",}
 }
 */
 let gameData = {};
@@ -124,12 +124,27 @@ function nextQuestion() {
     // get current question data object
     const question = currentGameItem.question;
 
-    // Update question image and caption
+    // Update question text, image, sound and caption
     if (question.text) {
         questionTextEl.innerHTML = question.text;
     }
     if (question.imageUrl) {
         questionImgEl.innerHTML = `<img src="${question.imageUrl}" alt="?" >`;
+    }
+    if (question.soundUrl) {
+        const soundButton = document.createElement("button");
+        soundButton.classList.add('sound-button');
+        soundButton.textContent = "🔊";
+        soundButton.addEventListener('click', () => {
+            const soundFile = question.soundUrl;
+            playSound(soundFile);
+        });
+        questionSoundEl.innerHTML = '';
+        questionSoundEl.appendChild(soundButton);
+
+        setTimeout(() => {
+            soundButton.click();
+        }, 600);
     }
     if (question.caption) {
         questionCaptionEl.textContent = question.caption;
@@ -222,6 +237,7 @@ function replayGame() {
 // Initialize the game elements
 const questionTextEl = document.getElementById('question-text');
 const questionImgEl = document.getElementById('question-img');
+const questionSoundEl = document.getElementById('question-sound');
 const questionCaptionEl = document.getElementById('question-caption');
 const optionsEl = document.querySelectorAll('.option');
 const nextBtn = document.getElementById('next-button');

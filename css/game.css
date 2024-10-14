@@ -14,6 +14,16 @@
     height: 100%;
     object-fit: cover;
 }
+#question-sound {
+    text-align: center;
+}
+#question-sound .sound-button {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 40px;
+    font-size: 20px;
+}
 #question-caption {
     font-size: 2.5em;
     font-weight: bold;
