@@ -1,0 +1,621 @@
+{
+    "particles": {
+        "0": {
+            "particle": "は",
+            "useCase": {
+                "bd": "は - বাক্যের কর্তা বা কোন বিষয় নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "は - Indicates the topic or subject."
+            },
+            "sentence": {
+                "jp": "わたし は がっこう へ いきます。",
+                "bd": "আমি স্কুলে যাই।",
+                "en": "I go to school."
+            },
+            "quiz": [
+                "わたし　◯　がっこう　へ　いきます",
+                "かれ　◯　べんきょう　して　います",
+                "きょう　◯　あめ　が　ふって　います"
+            ]
+        },
+        "1": {
+            "particle": "も",
+            "useCase": {
+                "bd": "も - একই বিষয় বা সংযোজন নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "も - Indicates similarity or addition."
+            },
+            "sentence": {
+                "jp": "わたし も がっこう へ いきます。",
+                "bd": "আমিও স্কুলে যাই।",
+                "en": "I also go to school."
+            },
+            "quiz": [
+                "わたし　◯　がっこう　へ　いきます",
+                "ともだち　◯　にほんご　を　べんきょう　して　います",
+                "いぬ　◯　ねこ　◯　すきです"
+            ]
+        },
+
+        "2": {
+            "particle": "が",
+            "useCase": {
+                "bd": "が - বাক্যের বিষয় বা কর্মকারী নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "が - Indicates the subject or doer of the action."
+            },
+            "sentence": {
+                "jp": "ねこ が います。",
+                "bd": "(সেখানে) একটি বিড়াল আছে।",
+                "en": "There is a cat."
+            },
+            "quiz": [
+                "いぬ　◯　はしって　います",
+                "きょう　は　あめ　◯　ふっています",
+                "つくえ　の　うえ　に　わたし　の　ほん　◯　あります"
+            ]
+        },
+        "3": {
+            "particle": "を",
+            "useCase": {
+                "bd": "を - একটি কর্মের উদ্দেশ্য বা বস্তুকে নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "を - Indicates the direct object of an action."
+            },
+            "sentence": {
+                "jp": "ほん を よみます。",
+                "bd": "(আমি) বই পড়ি।",
+                "en": "I read a book."
+            },
+            "quiz": [
+                "ほん　◯　よみます",
+                "てがみ　◯　かきました",
+                "みち　◯　あるきます"
+            ]
+        },
+        "4": {
+            "particle": "に",
+            "useCase": {
+                "bd": "に - গন্তব্য বা সময় নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "に - Indicates the destination or time."
+            },
+            "sentence": {
+                "jp": "がっこう に いきます。",
+                "bd": "(আমি) স্কুলে যাই।",
+                "en": "I go to school."
+            },
+            "quiz": [
+                "がっこう　◯　いきます",
+                "ともだち　◯　あいます",
+                "へや　◯　います"
+            ]
+        },
+        "5": {
+            "particle": "へ",
+            "useCase": {
+                "bd": "へ - গন্তব্য নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "へ - Indicates the direction or destination."
+            },
+            "sentence": {
+                "jp": "にほん へ いきます。",
+                "bd": "(আমি) জাপানে যাই।",
+                "en": "I am going to Japan."
+            },
+            "quiz": [
+                "にほん　◯　いきたい　です",
+                "がっこう　◯　いきます",
+                "しごと　◯　むかいます"
+            ]
+        },
+        "6": {
+            "particle": "で",
+            "useCase": {
+                "bd": "で - কাজের স্থান বা উপায় নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "で - Indicates the place of action or means."
+            },
+            "sentence": {
+                "jp": "バス で がっこう に いきます。",
+                "bd": "(আমি) বাসে করে স্কুলে যাই।",
+                "en": "I go to school by bus."
+            },
+            "quiz": [
+                "バス　◯　がっこう　へ　いきます",
+                "えき　◯　まちあわせします",
+                "きっさてん　◯　ほん　を　よみます"
+            ]
+        },
+        "7": {
+            "particle": "と",
+            "useCase": {
+                "bd": "と - সঙ্গী ব্যক্তি বা জিনিস নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "と - Indicates the accompanying person or thing."
+            },
+            "sentence": {
+                "jp": "ともだち と はなします。",
+                "bd": "(আমি) বন্ধুর সাথে কথা বলি।",
+                "en": "I talk with my friend."
+            },
+            "quiz": [
+                "わたし　は　ともだち　◯　はなします",
+                "かれ　は　いぬ　◯　さんぽ　に　いきます",
+                "がくせいたち　は　せんせい　◯　れんしゅう　します"
+            ]
+        },
+        "8": {
+            "particle": "から",
+            "useCase": {
+                "bd": "から - শুরু বা উৎস নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "から - Indicates the starting point or source."
+            },
+            "sentence": {
+                "jp": "がっこう から かえります。",
+                "bd": "(আমি) স্কুল থেকে বাড়ি ফিরি।",
+                "en": "I return from school."
+            },
+            "quiz": [
+                "がっこう　◯　かえります",
+                "きょう　◯　べんきょう　を　はじめます",
+                "ともだち　◯　てがみ　が　きました"
+            ]
+        },
+        "9": {
+            "particle": "まで",
+            "useCase": {
+                "bd": "まで - শেষ বিন্দু বা সীমা নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "まで - Indicates the endpoint or limit."
+            },
+            "sentence": {
+                "jp": "がっこう まで あるきます。",
+                "bd": "(আমি) স্কুল পর্যন্ত হাঁটব।",
+                "en": "I walk to school."
+            },
+            "quiz": [
+                "いえ　◯　あるきます",
+                "いえ　から　がっこう　◯　いきます",
+                "しごと　は　１７じ　◯　おわりません"
+            ]
+        },
+        "10": {
+            "particle": "より",
+            "useCase": {
+                "bd": "より - তুলনার ভিত্তি নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "より - Indicates the basis of comparison."
+            },
+            "sentence": {
+                "jp": "かれ は わたし より せ が たかい。",
+                "bd": "সে আমার চেয়ে লম্বা।",
+                "en": "He is taller than me."
+            },
+            "quiz": [
+                "わたし　は　ともだち　◯　はやく　つきました",
+                "きょう　は　きのう　◯　あつい　です",
+                "わたし　は　いもうと　◯　せ　が　たかい　です"
+            ]
+        },
+        "11": {
+            "particle": "から",
+            "useCase": {
+                "bd": "から - কারণ নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "から - Indicates reason or cause."
+            },
+            "sentence": {
+                "jp": "あめ が ふる から でかけません。",
+                "bd": "বৃষ্টি পড়ছে বলে আমি বাইরে যাব না।",
+                "en": "I won’t go out because it’s raining."
+            },
+            "quiz": [
+                "あめ　が　ふった　◯　でかけません　でした",
+                "つかれた　◯　はやく　ねます",
+                "しごと　が　おわった　◯　かいもの　に　いきます"
+            ]
+        },
+        "12": {
+            "particle": "ので",
+            "useCase": {
+                "bd": "ので - নরমভাবে কারণ বা যুক্তি নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "ので - Softly indicates reason or justification."
+            },
+            "sentence": {
+                "jp": "あつい ので まど を あけます。",
+                "bd": "গরম লাগছে বলে জানালা খুলে দেই।",
+                "en": "I will open the window because it’s hot."
+            },
+            "quiz": [
+                "あつい　◯　アイスクリーム　を　たべます",
+                "じかん　が　ない　◯　タクシー　に　のりました",
+                "あめ　が　ふって　いる　◯　おうち　に　います"
+            ]
+        },
+        "13": {
+            "particle": "のに",
+            "useCase": {
+                "bd": "のに - বিস্ময় বা হতাশা সহ একটি বৈপরীত্য নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "のに - Indicates contrast with a sense of surprise or frustration."
+            },
+            "sentence": {
+                "jp": "やくそく した のに きませんでした。",
+                "bd": "প্রতিশ্রুতি দিয়েও সে আসেনি।",
+                "en": "Although they promised, they didn’t come."
+            },
+            "quiz": [
+                "あめ　が　ふっている　◯　さんぽ　に　いきました",
+                "がっこう　が　やすみ　◯　せんせい　は　きました",
+                "べんきょう　した　◯　テスト　に　おちました"
+            ]
+        },
+        "14": {
+            "particle": "が",
+            "useCase": {
+                "bd": "が - কিন্তু বা বৈপরীত্য নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "が - Indicates contrast or 'but'."
+            },
+            "sentence": {
+                "jp": "てんき は いい です が さむい です。",
+                "bd": "আবহাওয়া ভালো কিন্তু ঠাণ্ডা।",
+                "en": "The weather is good, but it's cold."
+            },
+            "quiz": [
+                "じゅぎょう　は　すき　◯　しけん　は　きらい　です",
+                "やさい　は　すき　◯　にく　は　すき　ではありません",
+                "みず　は　のみたい　◯　コーヒー　は　のみたくない　です"
+            ]
+        },
+        "15": {
+            "particle": "けれども",
+            "useCase": {
+                "bd": "けれども - যদিও বা কিন্তু নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "けれども - Indicates 'although' or 'but'."
+            },
+            "sentence": {
+                "jp": "がんばりました けれども まけました。",
+                "bd": "আমরা কঠোর পরিশ্রম করেছি, তবে হেরে গেছি।",
+                "en": "We tried hard, but we lost."
+            },
+            "quiz": [
+                "がっこう　に　いきました　◯　だれも　いませんでした",
+                "テスト　は　むずかしかった　◯　がんばりました",
+                "たくさん　べんきょう　しました　◯　テスト　は　できませんでした"
+            ]
+        },
+        "16": {
+            "particle": "て",
+            "useCase": {
+                "bd": "て - কাজের ধারাবাহিকতা নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "て - Indicates continuation of actions or reason."
+            },
+            "sentence": {
+                "jp": "あさ おきて べんきょう します。",
+                "bd": "সকালে উঠে পড়াশোনা করি।",
+                "en": "I wake up in the morning and study."
+            },
+            "quiz": [
+                "ほん　を　よん◯　べんきょう　します",
+                "あさ　おき◯　あさごはん　を　たべます",
+                "ともだち　に　あっ◯　はなし　を　しました"
+            ]
+        },
+        "17": {
+            "particle": "たり",
+            "useCase": {
+                "bd": "たり - বিভিন্ন কাজের উদাহরণ দিতে ব্যবহৃত হয়।",
+                "en": "たり - Used to list examples of actions."
+            },
+            "sentence": {
+                "jp": "ほん を よんだり テレビ を みたり します。",
+                "bd": "আমি বই পড়ি, টিভি দেখি।",
+                "en": "I read books and watch TV."
+            },
+            "quiz": [
+                "ほん　を　よんだり　おんがく　を　きい◯　します",
+                "がっこう　で　べんきょう　し◯　あそんだり　します",
+                "しゅくだい　を　し◯　テレビ　を　みたり　します"
+            ]
+        },
+        "18": {
+            "particle": "し",
+            "useCase": {
+                "bd": "し - একাধিক কারণ বা উপাদান নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "し - Indicates multiple reasons or factors."
+            },
+            "sentence": {
+                "jp": "ねつ も ある し せき も でます。",
+                "bd": "আমার জ্বরও আছে আবার কাশিও হচ্ছে।",
+                "en": "I have a fever and a cough."
+            },
+            "quiz": [
+                "ねこ　が　かわいい　◯　やさしい　です",
+                "あの　ひと　は　あたま　が　いい　◯　せいかく　も　いい　です",
+                "きのう　は　あめ　が　ふった　◯　さむかった　です"
+            ]
+        },
+        "19": {
+            "particle": "ても",
+            "useCase": {
+                "bd": "ても - বক্তার দৃঢ়তা বা সংকল্প নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "ても - Used to indicate the speaker’s determination or resolve."
+            },
+            "sentence": {
+                "jp": "どんな こと が あって も いきます。",
+                "bd": "যাই ঘটুক না কেন, আমি যাবো।",
+                "en": "No matter what happens, I will go."
+            },
+            "quiz": [
+                "たくさん　べんきょう　し◯　なかなか　おぼえられない",
+                "あめ　が　ふっ◯　そと　で　あそびます",
+                "いくら　たべ◯　おなか　が　すきます"
+            ]
+        },
+        "20": {
+            "particle": "だけ",
+            "useCase": {
+                "bd": "だけ - একমাত্র বা সীমাবদ্ধতা নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "だけ - Indicates limitation or 'only'."
+            },
+            "sentence": {
+                "jp": "ひとり だけ きました。",
+                "bd": "শুধু একজনই এসেছে।",
+                "en": "Only one person came."
+            },
+            "quiz": [
+                "きょう　は　しごと　◯　しました",
+                "わたし　◯　がっこう　へ　いきます",
+                "この　ほん　◯　よんで　ください"
+            ]
+        },
+        "21": {
+            "particle": "しか",
+            "useCase": {
+                "bd": "しか - সীমাবদ্ধতা নির্দেশ করতে ব্যবহৃত হয়, সাধারণত নেতিবাচক বাক্যে ব্যবহৃত হয়।",
+                "en": "しか - Indicates limitation, typically used in negative sentences."
+            },
+            "sentence": {
+                "jp": "みず しか のみません。",
+                "bd": "পানি ছাড়া অন্য কিছু পান করি না।",
+                "en": "I drink only water."
+            },
+            "quiz": [
+                "わたし　は　ごはん　◯　たべません",
+                "この　かんじ　は　せんせい　◯　しりません",
+                "おかね　が　ひゃくえん　◯　ありません"
+            ]
+        },
+        "22": {
+            "particle": "まで",
+            "useCase": {
+                "bd": "まで - সময় বা স্থান নির্দেশ করতে ব্যবহৃত হয়, যা অবধি কিছু ঘটে।",
+                "en": "まで - Indicates the time or place up to which something happens."
+            },
+            "sentence": {
+                "jp": "あさ まで べんきょう しました。",
+                "bd": "সকাল পর্যন্ত পড়াশোনা করেছি।",
+                "en": "I studied until morning."
+            },
+            "quiz": [
+                "わたし　は　１０じ　◯　べんきょう　します。",
+                "あさって　◯　に　この　しごと　を　おわらせます。",
+                "えいが　は　７じ　◯　つづきます。"
+            ]
+        },
+        "23": {
+            "particle": "ほど",
+            "useCase": {
+                "bd": "ほど - তুলনা বা সীমার পরিমাণ নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "ほど - Indicates degree of comparison or extent."
+            },
+            "sentence": {
+                "jp": "わたし は あなた ほど せ が たかく ない。",
+                "bd": "আমি তোমার মতো লম্বা নই।",
+                "en": "I am not as tall as you."
+            },
+            "quiz": [
+                "わたし　は　あなた　◯　せ　が　たかくない　です",
+                "この　ほん　は　おもしろくない　◯　むずかしい　です",
+                "きみ　◯　うた　が　うまい　ひと　は　いません"
+            ]
+        },
+        "24": {
+            "particle": "くらい",
+            "useCase": {
+                "bd": "くらい - পরিমাণ বা ডিগ্রি নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "くらい - Indicates approximate amount or degree."
+            },
+            "sentence": {
+                "jp": "ごはん を たべる くらい の じかん は あります。",
+                "bd": "খাওয়ার মতো সময় আছে।",
+                "en": "I have enough time to eat."
+            },
+            "quiz": [
+                "ごはん　を　たべる　◯　じかん　は　あります",
+                "いぬ　の　さんぽ　を　する　◯　じかん　は　あります",
+                "にほんご　が　わかる　◯　べんきょう　を　しました"
+            ]
+        },
+        "25": {
+            "particle": "ばかり",
+            "useCase": {
+                "bd": "ばかり - একটি সীমাবদ্ধতা বা কিছু প্রায় একমাত্র ঘটে এমন পরিস্থিতি নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "ばかり - Indicates limitation or that something happens almost exclusively."
+            },
+            "sentence": {
+                "jp": "かれ は ゲーム ばかり して います。",
+                "bd": "সে শুধু গেম খেলে।",
+                "en": "They only play games."
+            },
+            "quiz": [
+                "あめ　が　ふって　いる　◯　で　つまらない",
+                "さいきん　あそぶ　◯　して　います",
+                "かれ　は　テレビ　◯　みています"
+            ]
+        },
+        "26": {
+            "particle": "こそ",
+            "useCase": {
+                "bd": "こそ - জোর বা জোরালোভাবে কিছু নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "こそ - Used to emphasize or strongly indicate something."
+            },
+            "sentence": {
+                "jp": "これ こそ わたし が ほしい もの です。",
+                "bd": "এটাই আমি যা চাই।",
+                "en": "This is exactly what I want."
+            },
+            "quiz": [
+                "きみ　◯　がんばれば　だいじょうぶ　です",
+                "こんかい　◯　うまく　いく　でしょう",
+                "あなた　◯　ほんとうの　ともだち　です"
+            ]
+        },
+        "27": {
+            "particle": "など",
+            "useCase": {
+                "bd": "など - উদাহরণ বা তালিকার শেষে কিছু জিনিস নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "など - Indicates examples or things like those at the end of a list."
+            },
+            "sentence": {
+                "jp": "ほん など を かいました。",
+                "bd": "আমি বই ইত্যাদি কিনেছি।",
+                "en": "I bought books and such."
+            },
+            "quiz": [
+                "りんご　◯　くだもの　が　すきです",
+                "にほんご　◯　ごがく　を　べんきょうしています",
+                "すし　◯　たべたいです"
+            ]
+        },
+        "28": {
+            "particle": "でも",
+            "useCase": {
+                "bd": "でも - এমনকি বা কোন উদাহরণ নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "でも - Indicates even or any example."
+            },
+            "sentence": {
+                "jp": "おちゃ でも のみます か。",
+                "bd": "চা হলেও খাবেন কি?",
+                "en": "Shall we drink tea or something?"
+            },
+            "quiz": [
+                "おちゃ　◯　のみますか",
+                "ひるごはん　◯　たべに　いきませんか",
+                "きょう　は　サッカー　◯　し　に　いきませんか"
+            ]
+        },
+        "29": {
+            "particle": "ね",
+            "useCase": {
+                "bd": "ね - সম্মতি বা নিশ্চিতকরণের জন্য ব্যবহৃত হয়।",
+                "en": "ね - Used for seeking agreement or confirmation."
+            },
+            "sentence": {
+                "jp": "いい てんき です ね。",
+                "bd": "আজকের আবহাওয়া ভালো, তাই না?",
+                "en": "The weather is nice, isn’t it?"
+            },
+            "quiz": [
+                "きょう　は　あつい　◯",
+                "この　ケーキ　おいしい　◯",
+                "あした　は　がっこう　が　やすみ　だ　◯"
+            ]
+        },
+        "30": {
+            "particle": "よ",
+            "useCase": {
+                "bd": "よ - নতুন তথ্য দেওয়ার জন্য বা কিছু জোর দিয়ে বলতে ব্যবহৃত হয়।",
+                "en": "よ - Used to give new information or emphasize something."
+            },
+            "sentence": {
+                "jp": "あした は やすみ です よ。",
+                "bd": "আগামীকাল ছুটি আছে, জানো!",
+                "en": "Tomorrow is a holiday, you know!"
+            },
+            "quiz": [
+                "きょう　は　がっこう　に　いくんだ　◯",
+                "この　ほん　は　すごく　おもしろい　◯",
+                "しごと　は　もう　おわった　◯"
+            ]
+        },
+        "31": {
+            "particle": "な",
+            "useCase": {
+                "bd": "な - অনুভূতি বা ইচ্ছা প্রকাশ করতে ব্যবহৃত হয়, সাধারণত অনানুষ্ঠানিকভাবে।",
+                "en": "な - Used to express feelings or desires, usually informally."
+            },
+            "sentence": {
+                "jp": "また あいたい な。",
+                "bd": "আবার দেখা করতে চাই।",
+                "en": "I want to meet you again."
+            },
+            "quiz": [
+                "きょう　は　たいへん　だった　◯",
+                "この　テスト　は　むずかしかった　◯",
+                "あの　ひと　は　しんせつ　だ　◯"
+            ]
+        },
+        "32": {
+            "particle": "か",
+            "useCase": {
+                "bd": "か - একটি প্রশ্ন বা সন্দেহ প্রকাশ করতে ব্যবহৃত হয়।",
+                "en": "か - Used to indicate a question or doubt."
+            },
+            "sentence": {
+                "jp": "これ は ほんとう です か。",
+                "bd": "এটি কি সত্য?",
+                "en": "Is this true?"
+            },
+            "quiz": [
+                "あした　は　あめ　が　ふる　◯",
+                "この　ほん　は　たかい　◯",
+                "わたし　も　がっこう　に　いく　◯"
+            ]
+        },
+        "34": {
+            "particle": "ぞ",
+            "useCase": {
+                "bd": "ぞ - জোর দিয়ে কিছু বলতে ব্যবহৃত হয়, সাধারণত পুরুষদের ভাষায়।",
+                "en": "ぞ - Used to emphasize something, typically in male speech."
+            },
+            "sentence": {
+                "jp": "やる ぞ！",
+                "bd": "আমি এটা করবো!",
+                "en": "I’ll do it!"
+            },
+            "quiz": [
+                "これ　は　おれ　の　ほん　だ　◯",
+                "あした　は　ぜったい　かつ　◯",
+                "いま　から　しゅっぱつ　する　◯"
+            ]
+        },
+        "35": {
+            "particle": "ぜ",
+            "useCase": {
+                "bd": "ぜ - একটি অনানুষ্ঠানিক জোরালো ঘোষণা বা ইচ্ছা নির্দেশ করতে ব্যবহৃত হয়।",
+                "en": "ぜ - Used for informal, emphatic declarations or desires."
+            },
+            "sentence": {
+                "jp": "いこう ぜ！",
+                "bd": "চলো যাই!",
+                "en": "Let’s go!"
+            },
+            "quiz": [
+                "いっしょに　たべよう　◯",
+                "あした　は　がんばる　◯",
+                "この　えいが　は　ほんとうに　すごい　◯"
+            ]
+        },
+        "36": {
+            "particle": "わ",
+            "useCase": {
+                "bd": "わ - বক্তার অনুভূতি বা অভিব্যক্তি নরমভাবে প্রকাশ করতে ব্যবহৃত হয়, সাধারণত নারীদের ভাষায়।",
+                "en": "わ - Softly expresses the speaker’s feelings or emotions, typically in female speech."
+            },
+            "sentence": {
+                "jp": "これ が すき です わ。",
+                "bd": "এটা আমার পছন্দ।",
+                "en": "I like this."
+            },
+            "quiz": [
+                "きょう　は　ほんとう　に　たのしかった　◯",
+                "あの　みせ　の　ケーキ　は　おいしい　◯",
+                "もう　しごと　が　おわった　◯"
+            ]
+        }
+    },
+    "definition": {
+        "bd": "গ্রামাটিকাল পার্টিকেল হলো ছোট শব্দ, যা বাক্যের শব্দগুলোর মধ্যে সম্পর্ক বা ব্যাকরণগত বৈশিষ্ট্য প্রকাশ করে। এদের নিজস্ব কোনো অর্থ নেই (যেমন \"কে\", \"তে\")",
+        "en": "Grammatical particles are small words used to show relationships between other words or indicate grammatical features like tense or mood. They don't have meaning by themselves (e.g., \"to\", \"in\")."
+    }
+}

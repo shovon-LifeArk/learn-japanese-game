@@ -7,83 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LifeArk Japanese education: 助詞</title>
     <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/game.css">
     <style>
-        body {
-            font-family: 'Klee One', sans-serif;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        #game-container {
-            height: 100vh;
-            width: 100%;
-            max-height: 1024px;
-            max-width: 576px;
-        }
-        .header-image {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .header-image img {
-            max-width: 70%;
-        }
-        .play-button {
-            padding: 10px 20px;
-            font-size: 1.5em;
-            background-color: #9966ff;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .play-button:disabled {
-            background-color: gray;
-            cursor: not-allowed;
-        }
-        .back-button {
-            height: 50px;
-            width: 50px;
-            padding: 10px;
-            border-radius: 35px;
-            border: 2px solid #9966ff;
-            color: #9966ff;
-            font-size: 26px;
-            line-height: 100%;
-            background-color: white;
-            cursor: pointer;
-        }
-        .button-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-        .checkbox-button {
-            display: block;
-            padding: 10px 20px;
-            font-size: 1.5em;
-            border: 1px solid #9966ff;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 10px 0px;
-        }
-        input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-        }
-        #words_list-container,
-        #range_selection-container,
-        #question-container,
-        #result-container {
-            min-height: calc(80vh - 40px);
-            padding: 20px;
-            display: none; 
-            flex: 1;
-            gap: 20px;
-            flex-direction: column;
-        }
         #words_list-container {
             font-size: 1.2em !important;
         }
@@ -100,7 +26,8 @@
             text-align: center;
         }
         #words_list-container .particle-name {
-            border-bottom: 2px solid #9966ff;
+            font-weight: bold;
+            font-size: 1.4em;
         }
         #words_list-container table {
             width: 100%;
@@ -108,61 +35,28 @@
             table-layout: fixed;
             margin-bottom: 20px;
         }
-        #words_list-container td {
-            padding: 10px;
-            border: 1px solid black;
+        #words_list-container table td{
+            padding-bottom: 20px;
+            position: relative;
         }
-        #question-number {
-            font-size: 1.5em;
+        #words_list-container ul {
+            margin-left: 0px;
+            padding-left: 20px;
         }
-        #question {
-            margin-top: 30px;
-            padding: 20px;
-            font-size: 1.5em;
-            text-align: center;
-            word-break: keep-all;
-        }
-        .option {
-            margin: 10px 0;
-            padding: 20px;
-            font-size: 1.2em;
-            text-align: center;
-            cursor: pointer;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            word-break: keep-all;
-            white-space: normal; 
-        }
-        .correct {
-            background-color: green;
+        #words_list-container .word-num {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            height: 30px;
+            padding: 0px 7px;
+            border-radius: 15px;
+            background-color: grey;
             color: white;
-        }
-        .wrong {
-            background-color: red;
-            color: white;
-        }
-        #next-button {
-            height: 50px;
-            width: 50px;
-            padding: 10px;
-            border-radius: 35px;
-            border: 2px solid #9966ff;
-            color: #9966ff;
-            font-size: 26px;
-            line-height: 100%;
-            background-color: white;
-            cursor: pointer;
-        }
-        #next-button:disabled {
-            border-color: gray;
-            color: gray;
-            cursor: not-allowed;
-        }
-        #score {
-            font-size: 2em;
             text-align: center;
-            margin-top: 100px;
-            margin-bottom: 60px;
+        }
+        #question-text {
+            font-size: 1.4em !important;
+            text-align: center;
         }
     </style>
 </head>
@@ -173,36 +67,19 @@
                 <img src="assets/image/LifeArk_Nihongo_logo.png" />
                 <h2 style="text-align: center; margin: 0px;">অব্যয়</h2>
             </div>
-            <button class="play-button" onclick="playGame()">Play Game</button><br>
+            <button class="play-button" onclick="playGame('Beginner: grammatical particle')">Play Game</button><br>
         </div>
         <div id="range_selection-container">
             <h3 style="text-align: center;">Choose the question range</h3>
-            <div>
-                <label class="checkbox-button">
-                    <input type="checkbox" id="range_all"> All
-                </label>
-                <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="係助詞"> けいじょし
-                </label>
-                <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="格助詞"> かくじょし
-                </label>
-                <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="接続助詞"> せつぞくじょし
-                </label>
-                <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="副助詞"> ふくじょし
-                </label>
-                <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="終助詞"> しゅうじょし
-                </label>
-                <label class="checkbox-button">
-                    <input type="checkbox" name="game_range" value="取り立て助詞"> とりたてじょし
-                </label>
+            <div style="text-align: center;">
+                <input type="number" id="range-from" placeholder="from"> ~ <input type="number" id="range-to" placeholder="to">
+                <br><br>
+                <span class="alert" id="range-alert"></span>
+                <br>
             </div>
             <div class="button-container">
                 <button class="back-button" onclick="showPage('words_list')">←</button>
-                <button class="play-button disabled" style="flex-grow: 1;" id="range_confirm-button" onclick="startGame()" disabled>Start Game!</button>
+                <button class="play-button" style="flex-grow: 1;" onclick="startParticleGame();">Start Game!</button>
             </div>
         </div>
         <div id="question-container">
@@ -210,7 +87,9 @@
                 <div id="question-number"></div>
                 <button id="next-button" onclick="nextQuestion()" disabled>&#10132;</button>
             </div>
-            <div id="question"></div>
+            <div>
+                <div id="question-text"></div>
+            </div>
             <div id="options">
                 <div class="option" onclick="checkAnswer(0)"></div>
                 <div class="option" onclick="checkAnswer(1)"></div>
@@ -221,23 +100,30 @@
         <div id="result-container">
             <div id="score"></div>
             <button class="play-button" onclick="replayGame()">Replay</button><br/>
-            <button class="play-button" onclick="showPage('words_list')">Particles List</button>
+            <button class="link-button" onclick="showPage('words_list')">Particles List</button>
+            <div>
+                <h3>Submit your Score:</h3>
+                <div id="score-submit-form">
+                    <input type="text" id="player_userID" placeholder="User ID" value=""/>
+                    <button class="play-button" id="score-submit-button" onclick="submitScore()">Submit Score</button>
+                </div>
+                <div id="score-submit-response"></div>
+            </div>
         </div>
     </div>
 
+    <script src="js/game_rangeSelection.js"></script>
+    <script src="js/game_mcq.js"></script>
+    <script src="js/game_result.js"></script>
     <script>
 
-        let itemsData = {};
-        let gameData = {};
+        let itemsData = null;
+        let quizData = null;
 
-        // game related data
-        const totalQuestions = 10;      // total questions in a game
-        let selectedCategories = null;       // questions should be chosen from this form of verbs
-        let gameItemIDs = null;         // hold item IDs within game range
-        let gameQuestionItemIDs = null; // hold index of itemsData (chosen randomly from gameItemIDs)
-        let currentQuestionItem = {};   // item for current question in game
-        let currentQuestionNum = 0;     // current question changes from 0 to 9
-        let score = 0;                  // number of correct answers
+        let dataItemToGameItemNumberMapping = {
+            'from': {},
+            'to': {}
+        };
 
         function showPage(pageName) {
             const gameContainer = document.getElementById('game-container');
@@ -249,20 +135,26 @@
             document.getElementById(`${pageName}-container`).style.display = 'flex';
         }
 
-        function createTableForParticles(category) {
+        function createTableForParticles() {
             const table = document.createElement('table');
+            const particles = itemsData.particles;
 
-            const particleKeys = Object.keys(itemsData[category].particles);
+            itemCounter = 1;
 
-            particleKeys.forEach(particleKey => {
-                const particleData = itemsData[category].particles[particleKey];
+            Object.keys(particles).forEach(index => {
+                const particleData = particles[index];
 
                 const row = document.createElement('tr');
-                let rowHTML = `<td><h4><span class="particle-name">${particleKey}</span></h4>${particleData.useCase.bd}
-                                <ul><li>${particleData.sentence.jp}<br/>${particleData.sentence.bd}</li></ul>
-                                </td>`;
-                row.innerHTML = rowHTML;
+                const cell = document.createElement('td');
+                cell.innerHTML = `<span class="particle-name">■ ${particleData.particle}</span><br/>
+                                    ${particleData.useCase.bd}
+                                    <ul><li>${particleData.sentence.jp}<br/>${particleData.sentence.bd}</li></ul>
+                                    <div class="word-num">${itemCounter}</div>
+                                    <hr></hr>`;
+                row.appendChild(cell);
                 table.appendChild(row);
+
+                itemCounter++
             });
 
             return table;
@@ -271,209 +163,87 @@
         function createParticlesList() {
             const container = document.getElementById('words_list-container');
 
-            Object.keys(itemsData).forEach(category => {
-                // title
-                const heading = document.createElement("h3");
-                heading.textContent = category;
-                container.appendChild(heading);
+            // definition
+            const definition = document.createElement("span");
+            definition.textContent = itemsData.definition.bd;
+            container.appendChild(definition);
 
-                // definition
-                const definition = document.createElement("span");
-                definition.textContent = itemsData[category].definition.bd;
-                container.appendChild(definition);
+            // particles list table
+            const particles = itemsData.particles;
+            const table = document.createElement('table');
+            
+            itemCounter = 1;
 
-                // particles list table
-                const table = createTableForParticles(category);
-                container.appendChild(table);
-            });
-        }
+            Object.keys(particles).forEach(index => {
+                const particleData = particles[index];
 
-        function nextQuestion() {
-            if (currentQuestionNum === totalQuestions) {
-                endGame();
-                return;
-            }
+                const row = document.createElement('tr');
+                const cell = document.createElement('td');
+                cell.innerHTML = `<span class="particle-name">■ ${particleData.particle}</span><br/>
+                                    ${particleData.useCase.bd}
+                                    <ul><li>${particleData.sentence.jp}<br/>${particleData.sentence.bd}</li></ul>
+                                    <div class="word-num">${itemCounter}</div>
+                                    <hr></hr>`;
+                row.appendChild(cell);
+                table.appendChild(row);
 
-            // Display question number
-            document.getElementById('question-number').textContent = `${currentQuestionNum + 1}/${totalQuestions}`;
-
-            // Load current question and options
-            const currentQuestionItemID = gameQuestionItemIDs[currentQuestionNum];
-            currentQuestionItem = gameData[currentQuestionItemID];
-
-            // Update question
-            questionEl.innerHTML = currentQuestionItem.sentence;
-
-            // Get random options
-            const options = getRandomOptions(currentQuestionItem);
-
-            // Update options in the DOM
-            options.forEach((optionText, index) => {
-                optionsEl[index].textContent = optionText;
-                optionsEl[index].classList.remove('correct', 'wrong'); // Reset styles
-                optionsEl[index].style.pointerEvents = 'auto'; // Enable click
+                itemCounter++
             });
 
-            // Disabled the Next button
-            nextBtn.disabled = true;
+            // decrease 1 to match total number
+            itemCounter -= 1;
 
-            currentQuestionNum++;
+            container.appendChild(table);
         }
 
-        function getRandomQuestionItemIDs() {
-            const filteredKeys = Object.keys(gameData).filter(id => {
-                return selectedCategories.includes(gameData[id].category);
-            });
-            // Shuffle array
-            const shuffled = filteredKeys.sort(() => 0.5 - Math.random());
-            // return first n elemets
-            return shuffled.slice(0, totalQuestions);
-        }
-
-        function getRandomOptions(currentQuestionItem) {
-            const options = new Set();
-
-            // Add the current question number to options
-            options.add(currentQuestionItem.particle);
-
-            const questionIndexes = Object.keys(gameData); 
-
-            // Generate random options
-            while (options.size < 4) {
-                const randomIndex = questionIndexes[Math.floor(Math.random() * questionIndexes.length)];
-                if (gameData[randomIndex].category !== currentQuestionItem.category) {
-                    options.add(gameData[randomIndex].particle);
-                }
-                
-            }
-
-            // Convert Set to Array and shuffle it
-            return Array.from(options).sort(() => Math.random() - 0.5);
-        }
-
-        function checkAnswer(selectedIndex) {
-            // Disable all options after selection
-            for (let i = 0; i < optionsEl.length; i++) {
-                optionsEl[i].style.pointerEvents = 'none'; // Disable further clicks
-            }
-
-            const selectedOption = optionsEl[selectedIndex];
-            const selectedAnswer = selectedOption.textContent;
-            const correctAnswer = currentQuestionItem.particle;
-
-            if (selectedAnswer === correctAnswer) {
-                // Correct answer
-                selectedOption.classList.add('correct');
-                score++;
-            } else {
-                // Wrong answer
-                selectedOption.classList.add('wrong');
-
-                // Find and highlight the correct option
-                for (let i = 0; i < optionsEl.length; i++) {
-                    if (optionsEl[i].textContent === correctAnswer) {
-                        optionsEl[i].classList.add('correct');
-                        break;
-                    }
-                }
-            }
-
-            // Enable the Next button
-            nextBtn.disabled = false;
-        }
-
-        function endGame() {
-            // Display the score
-            const scoreEl = document.getElementById('score');
-            scoreEl.textContent = `Your score: ${score}/${totalQuestions}`;
-
-            showPage('result');
-        }
-
-        function replayGame() {
-            // Reset game state
-            currentQuestionNum = 0;
-            score = 0;
-            gameQuestionItemIDs = getRandomQuestionItemIDs();
-
-            showPage('question');
-
-            // Start the game
-            nextQuestion();
-        }
-
-        function startGame() {
-            selectedCategories = [...individualCheckboxes]
-                .filter(checkbox => checkbox.checked)
-                .map(checkbox => checkbox.value);
-
-            replayGame();
-        }
-
-        function playGame() {
+        function playGame(lessonType) {
+            gameLessonType = lessonType;
             showPage('range_selection');
         }
 
-        function updateRangeConfirmButtonState() {
-            let hasChecked = false;
-            individualCheckboxes.forEach(checkbox => {
-                if (!hasChecked & checkbox.checked) hasChecked = true;
-            });
+        function startParticleGame() {
+            const params = {
+                'rangeType': 'mapped_number',
+                'rangeMapping': dataItemToGameItemNumberMapping
+            };
+            startGame(params);
+        }
 
-            if (hasChecked) {
-                rangeConfirmButton.classList.remove('disabled');
-                rangeConfirmButton.disabled = false;
-            } else {
-                rangeConfirmButton.classList.add('disabled');
-                rangeConfirmButton.disabled = true;
-            }
+        function prepareMCQgameData() {
+            const particles = itemsData.particles;
+
+            let index = 0;
+            Object.keys(particles).forEach(key => {
+                // store range start item num mapping
+                dataItemToGameItemNumberMapping.from[key] = index;
+
+                const dataItem = particles[key];
+                dataItem.quiz.forEach(questionText => {
+                    gameData[index] = {};
+                    gameData[index].question = {};
+                    gameData[index].question.text = questionText;
+                    gameData[index].answer = dataItem.particle;
+
+                    index++;
+                });
+                // store range end item num mapping
+                dataItemToGameItemNumberMapping.to[key] = index-1;
+            });
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('data/particles.json')
+            fetch('data/grammar_particles.json')
                 .then(response => response.json())
                 .then(data => {
                     itemsData = data;
 
                     createParticlesList();
                     showPage('words_list');
-                })
-                .catch(error => console.error('Error loading JSON:', error));
 
-            // fetch game data
-            fetch('data/particles_quiz.json')
-                .then(response => response.json())
-                .then(data => {
-                    gameData = data;
+                    prepareMCQgameData();
                 })
                 .catch(error => console.error('Error loading JSON:', error));
         });
-
-        // game range selection functionality
-        const allCheckboxButton = document.getElementById('range_all');
-        const individualCheckboxes = document.querySelectorAll('input[name="game_range"]');
-        const rangeConfirmButton = document.getElementById('range_confirm-button');
-
-        allCheckboxButton.addEventListener('change', function() {
-            individualCheckboxes.forEach(checkbox => {
-                checkbox.checked = this.checked;
-            });
-            updateRangeConfirmButtonState();
-        });
-
-        individualCheckboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                const allChecked = [...individualCheckboxes].every(checkbox => checkbox.checked);
-                allCheckboxButton.checked = allChecked;
-
-                updateRangeConfirmButtonState();
-            });
-        });
-
-        // Initialize the game
-        const questionEl = document.getElementById('question');
-        const optionsEl = document.querySelectorAll('.option');
-        const nextBtn = document.getElementById('next-button');
 
     </script>
 </body>
