@@ -7,70 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LifeArk Japanese education: N5 Words</title>
     <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/game.css">
     <style>
-        body {
-            font-family: 'Klee One', sans-serif;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        #game-container {
-            height: 100vh;
-            width: 100%;
-            max-height: 1024px;
-            max-width: 576px;
-        }
-        .header-image {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .header-image img {
-            max-width: 70%;
-        }
-        .play-button {
-            padding: 10px 20px;
-            font-size: 1.5em;
-            background-color: #9966ff;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .back-button {
-            height: 50px;
-            width: 50px;
-            padding: 10px;
-            border-radius: 35px;
-            border: 2px solid #9966ff;
-            color: #9966ff;
-            font-size: 26px;
-            line-height: 100%;
-            background-color: white;
-            cursor: pointer;
-        }
-        .button-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-        hr {
-            border: 1px solid grey;
-            width: 100%;
-        }
-        #words_list-container,
-        #range_selection-container,
-        #question-container,
-        #result-container {
-            min-height: calc(80vh - 40px);
-            padding: 20px;
-            display: none; 
-            flex: 1;
-            flex-direction: column;
-            gap: 20px;
-        }
         #words_list-container .category-title {
             padding: 10px;
             background-color: #3399ff;
@@ -107,78 +46,10 @@
             height: 30px;
             padding: 0px 10px;
             border-radius: 15px;
-            background-color: #0066ff;
+            background-color: grey;
             color: white;
             text-align: center;
             line-height: 30px;
-        }
-        #range_selection-container input {
-            width: 80px;
-            padding: 10px;
-            font-size: 1.5em;;
-            text-align: center;
-        }
-        .alert {
-            font-size: 1em;
-            color: red;
-        }
-        #question-number {
-            font-size: 1.5em;
-        }
-        #question-img {
-            height: 150px; /* Fixed height */
-            overflow: hidden;
-            text-align: center;
-        }
-        #question-img img {
-            height: 100%;
-            object-fit: cover;
-        }
-        #question-caption {
-            font-size: 2.5em;
-            font-weight: bold;
-            text-align: center;
-            color: #33cc33;
-        }
-        .option {
-            margin: 10px 0;
-            padding: 20px;
-            font-size: 1.5em;
-            text-align: center;
-            cursor: pointer;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-        }
-        .correct {
-            background-color: green;
-            color: white;
-        }
-        .wrong {
-            background-color: red;
-            color: white;
-        }
-        #next-button {
-            height: 50px;
-            width: 50px;
-            padding: 10px;
-            border-radius: 35px;
-            border: 2px solid #9966ff;
-            color: #9966ff;
-            font-size: 26px;
-            line-height: 100%;
-            background-color: white;
-            cursor: pointer;
-        }
-        #next-button:disabled {
-            border-color: gray;
-            color: gray;
-            cursor: not-allowed;
-        }
-        #score {
-            font-size: 2em;
-            text-align: center;
-            margin-top: 100px;
-            margin-bottom: 60px;
         }
     </style>
 </head>
@@ -189,19 +60,19 @@
                 <img src="assets/image/LifeArk_Nihongo_logo.png" />
                 <h2 style="text-align: center; margin: 0px;">N5 শব্দাবলী</h2>
             </div>
-            <button class="play-button" onclick="playGame()">Play Game</button>
+            <button class="play-button" onclick="playGame('N5 words: word meaning')">Play Game</button>
         </div>
         <div id="range_selection-container">
             <h3 style="text-align: center;">Choose the question range</h3>
             <div style="text-align: center;">
-                <input type="number" id="range-from" placeholder="from" min="1" max="90"> ~ <input type="number" id="range-to" placeholder="to" min="10" max="100">
+                <input type="number" id="range-from" placeholder="from"> ~ <input type="number" id="range-to" placeholder="to">
                 <br><br>
                 <span class="alert" id="range-alert"></span>
                 <br>
             </div>
             <div class="button-container">
                 <button class="back-button" onclick="showPage('words_list')">←</button>
-                <button class="play-button" style="flex-grow: 1;" onclick="startGame()">Start Game!</button>
+                <button class="play-button" style="flex-grow: 1;" onclick="startGame({'rangeType': 'number'});">Start Game!</button>
             </div>
         </div>
         <div id="question-container">
@@ -222,26 +93,29 @@
         </div>
         <div id="result-container">
             <div id="score"></div>
-            <button class="play-button" onclick="replayGame()">Replay</button><br/>
-            <button class="play-button" onclick="showPage('words_list')">Words List</button>
+            <button class="play-button" onclick="replayGame()">Replay</button>
+            <button class="link-button" onclick="showPage('words_list')">Words List</button>
+            <div>
+                <h3>Submit your Score:</h3>
+                <div id="score-submit-form">
+                    <input type="text" id="player_userID" placeholder="User ID" value=""/>
+                    <button class="play-button" id="score-submit-button" onclick="submitScore()">Submit Score</button>
+                </div>
+                <div id="score-submit-response"></div>
+            </div>
         </div>
     </div>
 
+    <script src="js/game_rangeSelection.js"></script>
+    <script src="js/game_mcq.js"></script>
+    <script src="js/game_result.js"></script>
     <script>
 
-        let itemsData = {};
+        const categories = ["animal", "nature", "season", "country", "place", "body", "people", "clothes", "occupation"];
 
-        // game related data
-        const totalQuestions = 10;  // total questions in a game
-        let gameData = {}           // Store data for game (in suitable format)
-        let fromWordNum = null;     // questions should be chosen from this number in gameData
-        let toWordNum = null;       // questions should be chosen upto this number in gameData
-        let gameItemIDs = null;     // hold item IDs within game range
-        let gameQuestionItemIDs = null; // hold index of gameData (chosen randomly from gameItemIDs)
-        let currentQuestionItem = {};   // item for current question in game
-        let currentQuestionNum = 0;    // current question changes from 0 to 9
-        let score = 0;              // number of correct answers
-    
+        let itemsData = null;
+        let itemCounter = null;
+
         function showPage(pageName) {
             const gameContainer = document.getElementById('game-container');
             // hide all page
@@ -253,9 +127,8 @@
         }
         
         function createWordsList() {
-            const categories = ["animal", "nature", "season", "country", "place", "body", "people", "clothes", "occupation"];
             const container = document.getElementById('words_list-container');
-            let wordNum = 1;
+            itemCounter = 1;
             
             categories.forEach(category => {
                 // Create a category section
@@ -278,7 +151,7 @@
                     const textCell = document.createElement('td');
                     textCell.innerHTML = `<span class="word-kana">${item.kana}</span><br/>
                                         <span class="word-bangla">${item.bangla}</span>
-                                        <div class="word-num">${wordNum}</div>`;
+                                        <div class="word-num">${itemCounter}</div>`;
 
                     topRow.appendChild(imageCell);
                     topRow.appendChild(textCell);
@@ -299,173 +172,39 @@
                     const hr = document.createElement('hr');
                     categoryDiv.appendChild(hr);
 
-                    // store game data (start from 0 index)
-                    gameData[wordNum-1] = item;
-
-                    wordNum++;
+                    itemCounter++;
                 });
 
                 container.appendChild(categoryDiv);
             });
+
+            // decrease 1 to match total number
+            itemCounter -= 1;
         }
 
-        function prepareGameData() {
-            gameItemIDs = [];
-            const from = fromWordNum-1;
-            const to = toWordNum-1;
-            Object.keys(gameData).forEach(key => {
-                if (parseInt(key) >= from && parseInt(key) <= to) {
-                    gameItemIDs.push(key);
-                }
-            });
-        }
-
-        function getRandomQuestionItemIDs() {
-            // Shuffle array
-            const shuffled = gameItemIDs.sort(() => 0.5 - Math.random());
-            // return first n elemets
-            return shuffled.slice(0, totalQuestions);
-        }
-
-        function checkAnswer(selectedIndex) {
-            // Disable all options after selection
-            for (let i = 0; i < optionsEl.length; i++) {
-                optionsEl[i].style.pointerEvents = 'none'; // Disable further clicks
-            }
-
-            let selectedOption = optionsEl[selectedIndex];
-            let selectedAnswer = selectedOption.textContent;
-
-            if (selectedAnswer === currentQuestionItem.kana) {
-                // Correct answer
-                selectedOption.classList.add('correct');
-                score++;
-            } else {
-                // Wrong answer
-                selectedOption.classList.add('wrong');
-
-                // Find and highlight the correct option
-                for (let i = 0; i < optionsEl.length; i++) {
-                    if (optionsEl[i].textContent === currentQuestionItem.kana) {
-                        optionsEl[i].classList.add('correct');
-                        break;
-                    }
-                }
-            }
-
-            // Enable the Next button
-            nextBtn.disabled = false;
-        }
-
-        function getRandomOptions(currentQuestionItemID) {
-            const numbers = Object.keys(gameData).map(Number);
-            const options = new Set();
-
-            // Add the current question number to options
-            options.add(gameData[currentQuestionItemID].kana);
-
-            // Generate random options
-            while (options.size < 4) {
-                const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
-                options.add(gameData[randomNum].kana);
-            }
-
-            // Convert Set to Array and shuffle it
-            return Array.from(options).sort(() => Math.random() - 0.5);
-        }
-
-        function nextQuestion() {
-            if (currentQuestionNum === totalQuestions) {
-                endGame();
-                return;
-            }
-
-            // Display question number
-            document.getElementById('question-number').textContent = `${currentQuestionNum + 1}/${totalQuestions}`;
-
-            // Load current question and options
-            const currentQuestionItemID = gameQuestionItemIDs[currentQuestionNum];
-            currentQuestionItem = gameData[currentQuestionItemID];
-
-            // Update question image and caption
-            questionImgEl.innerHTML = `<img src="assets/image/N5_words/${currentQuestionItem.imgkey ? currentQuestionItem.imgkey : currentQuestionItem.kana}.jpg" alt="Image">`;
-            questionCaptionEl.textContent = currentQuestionItem.bangla;
-
-            // Get random options
-            const options = getRandomOptions(currentQuestionItemID);
-
-            // Update options in the DOM
-            options.forEach((optionText, index) => {
-                optionsEl[index].textContent = optionText;
-                optionsEl[index].classList.remove('correct', 'wrong'); // Reset styles
-                optionsEl[index].style.pointerEvents = 'auto'; // Enable click
-            });
-
-            // Disabled the Next button
-            nextBtn.disabled = true;
-
-            currentQuestionNum++;
-        }
-
-        function endGame() {
-            // Display the score
-            const scoreEl = document.getElementById('score');
-            scoreEl.textContent = `Your score: ${score}/${totalQuestions}`;
-
-            showPage('result');
-        }
-
-        function replayGame() {
-            // Reset game state
-            currentQuestionNum = 0;
-            score = 0;
-            gameQuestionItemIDs = getRandomQuestionItemIDs();
-
-            showPage('question');
-
-            // Start the game
-            nextQuestion();
-        }
-
-        function startGame() {
-            const rangeFrom = parseInt(document.getElementById("range-from").value);
-            const rangeTo = parseInt(document.getElementById("range-to").value);
-
-            let min = 1;
-            let max = Object.keys(gameData).length;
-
-            let alertMsg = "";
-            if (!rangeFrom || rangeFrom < min) {
-                alertMsg += "・Enter valid 'from' value<br>";
-            } else if (rangeFrom > max-totalQuestions+1) {
-                alertMsg += `・Maximum 'from' value is ${max-totalQuestions+1}<br>`;
-            }
-            if (!rangeTo || rangeTo < totalQuestions) {
-                alertMsg += "・Enter valid 'to' value<br>";
-            } else if (rangeTo > max) {
-                alertMsg += `・Maximum 'to' value is ${max}<br>`;
-            }
-
-            if (rangeFrom && rangeTo && rangeTo - rangeFrom < totalQuestions-1) {
-                alertMsg += "・'to' value should be at least 9 bigger than 'from' value<br>";
-            }
-
-            if (alertMsg) {
-                document.getElementById("range-alert").innerHTML = alertMsg;
-            } else {
-                fromWordNum = rangeFrom;
-                toWordNum = rangeTo;
-
-                prepareGameData();
-
-                replayGame();
-
-                document.getElementById("range-alert").innerHTML = "";
-            }
-        }
-
-        function playGame() {
+        function playGame(lessonType) {
+            gameLessonType = lessonType;
             showPage('range_selection');
+        }
+
+        function prepareMCQgameData() {
+            let index = 0;
+
+            categories.forEach(category => {
+                // Filter items by category
+                const itemsInCategory = Object.keys(itemsData).filter(key => itemsData[key].category === category);
+
+                itemsInCategory.forEach(key => {
+                    const dataItem = itemsData[key];
+                    gameData[index] = {};
+                    gameData[index].question = {};
+                    gameData[index].question.imageUrl = `assets/image/N5_words/${dataItem.imgkey ? dataItem.imgkey : dataItem.kana}.jpg`;
+                    gameData[index].question.caption = dataItem.bangla;
+                    gameData[index].answer = dataItem.kana;
+
+                    index++;
+                });
+            });
         }
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -476,15 +215,12 @@
                     // display words list
                     createWordsList();
                     showPage('words_list');
+
+                    setGameRangeSelection();
+                    prepareMCQgameData();
                 })
                 .catch(error => console.error('Error loading JSON:', error));
         });
-
-        // Initialize the game
-        const questionImgEl = document.getElementById('question-img');
-        const questionCaptionEl = document.getElementById('question-caption');
-        const optionsEl = document.querySelectorAll('.option');
-        const nextBtn = document.getElementById('next-button');
 
     </script>
 </body>
