@@ -85,19 +85,19 @@ function resetGameQuestionOptions() {
         } else {
             let options = new Set();
 
-            // Add the current question number to options
-            options.add(gameItemId);
+            // Add the current answer to options
+            options.add(gameData[gameItemId].answer);
 
             // choose random game item ids
             while (options.size < 4) {
                 const randomNum = numbers[Math.floor(Math.random() * numbers.length)];
-                options.add(randomNum);
+                options.add(gameData[randomNum].answer);
             }
 
             // Convert Set to Array and shuffle it
             let optionsShuffled = Array.from(options).sort(() => Math.random() - 0.5);
             // store the options values by question item id
-            gameQuestionOptions[gameItemId] = optionsShuffled.map(optionItemId => gameData[optionItemId].answer);
+            gameQuestionOptions[gameItemId] = optionsShuffled;
         }
     });
 

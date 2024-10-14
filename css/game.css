@@ -1,6 +1,10 @@
 #question-number {
     font-size: 1.5em;
 }
+#question-text {
+    padding: 10px;
+    text-align: center;
+}
 #question-img {
     height: 150px; /* Fixed height */
     overflow: hidden;
@@ -24,6 +28,26 @@
     cursor: pointer;
     border: 2px solid #ccc;
     border-radius: 5px;
+}
+.option-container_circle {
+    margin: 60px auto;
+    padding: 10px;
+    width: 80%;
+    min-width: 286px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Prevent new line */
+    justify-content: space-between; /* Distribute space */
+}
+.option-circle {
+    font-size: 1.5em;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    padding: 7px 0px;
+    width: 50px;
+    border-radius: 32px;
+    display: inline-block;
 }
 .correct {
     background-color: green;

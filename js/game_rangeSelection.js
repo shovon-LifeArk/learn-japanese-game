@@ -45,8 +45,18 @@ function isValidRange_number() {
 }
 
 function startGame(params) {
-    const {rangeType} = params;
+    const {rangeType, rangeMapping} = params;
     if (rangeType === 'number' && isValidRange_number()) {
+        replayGame();
+        // clear range input alert
+        document.getElementById("range-alert").innerHTML = "";
+    }
+
+    // for Kanji game where item number and actual game item numbers are different
+    if (rangeType === 'mapped_number' && isValidRange_number()) {
+        gameFromIndex = rangeMapping.from[gameFromIndex];
+        gameToIndex = rangeMapping.to[gameToIndex];
+
         replayGame();
         // clear range input alert
         document.getElementById("range-alert").innerHTML = "";

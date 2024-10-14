@@ -19,10 +19,12 @@ function showResponseMsg(message) {
 }
 
 function submitScore() {
+    const rangeFrom = parseInt(document.getElementById("range-from").value);
+    const rangeTo = parseInt(document.getElementById("range-to").value);
 
     const userId = document.getElementById('player_userID').value;
     const lessonType = gameLessonType;
-    const examRange = `${gameFromIndex+1} - ${gameToIndex+1}`;
+    const examRange = `${rangeFrom} - ${rangeTo}`;
     const examMarks = `${score}/${totalQuestions}`;
     const examTime = msToTime(gameEndTime - gameStartTime);
 
