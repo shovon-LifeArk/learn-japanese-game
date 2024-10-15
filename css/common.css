@@ -54,6 +54,15 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+.radio-button {
+    display: block;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    border: 1px solid #9966ff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0px;
+}
 .button-container {
     display: flex;
     justify-content: space-between;
@@ -90,6 +99,10 @@ hr {
     margin: 10px 0px;
 }
 #range_selection-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+#range_selection-container input[type="radio"] {
     width: 20px;
     height: 20px;
 }

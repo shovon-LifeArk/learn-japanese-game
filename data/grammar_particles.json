@@ -615,7 +615,7 @@
         }
     },
     "definition": {
-        "bd": "গ্রামাটিকাল পার্টিকেল হলো ছোট শব্দ, যা বাক্যের শব্দগুলোর মধ্যে সম্পর্ক বা ব্যাকরণগত বৈশিষ্ট্য প্রকাশ করে। এদের নিজস্ব কোনো অর্থ নেই (যেমন \"কে\", \"তে\")",
+        "bd": "Grammatical particles (অব্যয়) হলো ছোট শব্দ, যা বাক্যের শব্দগুলোর মধ্যে সম্পর্ক বা ব্যাকরণগত বৈশিষ্ট্য প্রকাশ করে। এদের নিজস্ব কোনো অর্থ নেই (যেমন \"কে\", \"তে\")",
         "en": "Grammatical particles are small words used to show relationships between other words or indicate grammatical features like tense or mood. They don't have meaning by themselves (e.g., \"to\", \"in\")."
     }
 }

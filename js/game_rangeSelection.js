@@ -69,6 +69,21 @@ function startGame(params) {
         document.getElementById("range-alert").innerHTML = "";
     }
 
+    // for radio button
+    else if (rangeType === 'radiobutton') {
+        const rangeFrom = 1;
+        const rangeTo = parseInt(document.querySelector('input[name="game_range"]:checked').value);
+
+        // set report submission data
+        gameRangeText = `${rangeFrom} - ${rangeTo}`;
+
+        // set game data
+        gameFromIndex = rangeFrom - 1;
+        gameToIndex = rangeTo - 1;
+
+        replayGame();
+    }
+
     // when range is selected by categories only
     else if (rangeType === 'checkbox') {
         const individualCheckboxes = document.querySelectorAll('input[name="game_range"]');
