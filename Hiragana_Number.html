@@ -6,53 +6,10 @@
     <meta name="copyright" content="©2024 株式会社LifeArk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LifeArk Japanese education: Counting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/game.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        #game-container {
-            height: 100vh;
-            width: 100%;
-            max-height: 1024px;
-            max-width: 576px;
-        }
-        .header-image {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .header-image img {
-            max-width: 70%;
-        }
-        .play-button {
-            padding: 10px 20px;
-            font-size: 1.5em;
-            background-color: #9966ff;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .button-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-        #words_list-container,
-        #question-container,
-        #result-container {
-            min-height: calc(80vh - 40px);
-            padding: 20px;
-            display: none; 
-            flex: 1;
-            flex-direction: column;
-            gap: 20px;
-        }
         #words_list-container table {
             width: 100%;
             border-collapse: collapse;
@@ -73,52 +30,9 @@
             border: 1px solid black;
             font-size: 1.2em;
         }
-        #question-number {
-            font-size: 1.5em;
-        }
-        #question {
-            font-size: 6em;
+        #question-text {
+            font-size: 6em !important;
             text-align: center;
-        }
-        .option {
-            margin: 10px 0;
-            padding: 20px;
-            font-size: 1.5em;
-            text-align: center;
-            cursor: pointer;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-        }
-        .correct {
-            background-color: green;
-            color: white;
-        }
-        .wrong {
-            background-color: red;
-            color: white;
-        }
-        #next-button {
-            height: 50px;
-            width: 50px;
-            padding: 10px;
-            border-radius: 35px;
-            border: 2px solid #9966ff;
-            color: #9966ff;
-            font-size: 26px;
-            line-height: 100%;
-            background-color: white;
-            cursor: pointer;
-        }
-        #next-button:disabled {
-            border-color: gray;
-            color: gray;
-            cursor: not-allowed;
-        }
-        #score {
-            font-size: 2em;
-            text-align: center;
-            margin-top: 100px;
-            margin-bottom: 60px;
         }
     </style>
 </head>
@@ -129,14 +43,16 @@
                 <img src="assets/image/LifeArk_Nihongo_logo.png" />
                 <h2 style="text-align: center; margin: 0px;">গণনা</h2>
             </div>
-            <button class="play-button" onclick="replayGame()">Play Game</button>
+            <button class="play-button" onclick="playGame('Beginner: Counting')">Play Game</button>
         </div>
         <div id="question-container">
             <div class="button-container">
                 <div id="question-number"></div>
                 <button id="next-button" onclick="nextQuestion()" disabled>&#10132;</button>
             </div>
-            <div id="question"></div>
+            <div>
+                <div id="question-text"></div>
+            </div>
             <div id="options">
                 <div class="option" onclick="checkAnswer(0)"></div>
                 <div class="option" onclick="checkAnswer(1)"></div>
@@ -146,17 +62,23 @@
         </div>
         <div id="result-container">
             <div id="score"></div>
-            <button class="play-button" onclick="replayGame()">Replay</button><br/>
-            <button class="play-button" onclick="showPage('words_list')">Numbers List</button>
+            <button class="play-button" onclick="replayGame()">Replay</button>
+            <button class="link-button" onclick="showPage('words_list')">Numbers List</button>
+            <div>
+                <h3>Submit your Score:</h3>
+                <div id="score-submit-form">
+                    <input type="text" id="player_userID" placeholder="User ID" value=""/>
+                    <button class="play-button" id="score-submit-button" onclick="submitScore()">Submit Score</button>
+                </div>
+                <div id="score-submit-response"></div>
+            </div>
         </div>
     </div>
 
+    <script src="js/game_mcq.js"></script>
+    <script src="js/game_result.js"></script>
     <script>
-        let numbersData = {};
-
-        const totalQuestions = 10;
-        let currentQuestion = 0;
-        let score = 0;
+        let itemsData = null;
 
         function showPage(pageName) {
             const gameContainer = document.getElementById('game-container');
@@ -179,8 +101,8 @@
 
             const specialKanaNumbers = [300, 600, 800, 3000];
 
-            Object.keys(numbersData).forEach(key => {
-                const item = numbersData[key];
+            Object.keys(itemsData).forEach(key => {
+                const item = itemsData[key];
                 const number = key;
 
                 // Create top row with image and text
@@ -202,147 +124,69 @@
             container.appendChild(table);
         }
 
-        function getRandomNumbers() {
-            const numbers = Object.keys(numbersData).map(Number);
-            const randomNumbers = [];
+        function playGame(lessonType) {
+            gameLessonType = lessonType;
 
-            let loopCnt = 0;
-            while (randomNumbers.length < totalQuestions && loopCnt < 100) {
-                const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
-                if (!randomNumbers.includes(randomNumber)) {
-                    randomNumbers.push(randomNumber);
-                }
+            // set game data
+            gameFromIndex = 0;
+            gameToIndex = Object.keys(gameData).length - 1;
 
-                loopCnt++;
-            }
-            return randomNumbers;
+            // prepare reporting data
+            gameRangeText = 'All'
+
+            replayGame();
         }
 
-        function checkAnswer(selectedIndex) {
-            // Disable all options after selection
-            for (let i = 0; i < optionsEl.length; i++) {
-                optionsEl[i].style.pointerEvents = 'none'; // Disable further clicks
-            }
-
-            let selectedOption = optionsEl[selectedIndex];
-            let selectedAnswer = selectedOption.textContent;
-
-            if (selectedAnswer === currentItem.kana) {
-                // Correct answer
-                selectedOption.classList.add('correct');
-                score++;
-            } else {
-                // Wrong answer
-                selectedOption.classList.add('wrong');
-
-                // Find and highlight the correct option
-                for (let i = 0; i < optionsEl.length; i++) {
-                    if (optionsEl[i].textContent === currentItem.kana) {
-                        optionsEl[i].classList.add('correct');
-                        break;
-                    }
-                }
-            }
-
-            // Enable the Next button
-            nextBtn.disabled = false;
-        }
-
-        function getRandomOptions() {
-            const currentCategory = currentItem.category;
+        function getRandomOptions(numKey) {
+            const dataItem = itemsData[numKey];
+            const itemCategory = dataItem.category;
             const options = new Set();
 
             // Add the correct answer to options
-            options.add(currentItem.kana);
+            options.add(dataItem.kana);
 
             // Filter items by category
-            const itemsInCategory = Object.keys(numbersData).filter(key => numbersData[key].category === currentCategory);
+            const itemsInCategory = Object.keys(itemsData).filter(key => itemsData[key].category === itemCategory);
 
             // Generate random options
-            let loopCnt = 0;
-            while (options.size < 4 && loopCnt < 100) {
+            while (options.size < 4) {
                 const randomIdx = Math.floor(Math.random() * (itemsInCategory.length - 1));
                 const randomNum = itemsInCategory[randomIdx];
-                options.add(numbersData[randomNum].kana);
-
-                loopCnt++;
+                options.add(itemsData[randomNum].kana);
             }
 
-            // Convert Set to Array and shuffle it
-            return Array.from(options).sort(() => Math.random() - 0.5);
+            // Convert Set to Array
+            return Array.from(options);
         }
 
-        function nextQuestion() {
-            if (currentQuestion === totalQuestions) {
-                endGame();
-                return;
-            }
+        function prepareMCQgameData() {
+            gameData = {};
 
-            // Display question number
-            document.getElementById('question-number').textContent = `${currentQuestion + 1}/${totalQuestions}`;
+            let index = 0;
+            Object.keys(itemsData).forEach(key => {
+                const dataItem = itemsData[key];
+                gameData[index] = {};
+                gameData[index].question = {};
+                gameData[index].question.text = dataItem.number.toString();
+                gameData[index].options = getRandomOptions(key);
+                gameData[index].answer = dataItem.kana;
 
-            // Load current question and options
-            const currentItemNumber = selectedNumbers[currentQuestion];
-            currentItem = numbersData[currentItemNumber];
-
-            // Update question text
-            questionEl.textContent = currentItem.number;
-
-            // Get random options
-            const options = getRandomOptions();
-
-            // Update options in the DOM
-            options.forEach((optionText, index) => {
-                optionsEl[index].textContent = optionText;
-                optionsEl[index].classList.remove('correct', 'wrong'); // Reset styles
-                optionsEl[index].style.pointerEvents = 'auto'; // Enable click
+                index++;
             });
-
-            // Disabled the Next button
-            nextBtn.disabled = true;
-
-            currentQuestion++;
-        }
-
-        function endGame() {
-            // hide question container
-            document.getElementById('question-container').style.display = 'none';
-
-            // Display the score
-            const scoreEl = document.getElementById('score');
-            scoreEl.textContent = `Your score: ${score}/${totalQuestions}`;
-            document.getElementById('result-container').style.display = 'flex';
-        }
-
-        function replayGame() {
-            // Reset game state
-            currentQuestion = 0;
-            score = 0;
-            selectedNumbers = getRandomNumbers();
-
-            showPage('question');
-
-            // Start the game
-            nextQuestion();
         }
 
         document.addEventListener('DOMContentLoaded', function() {
             fetch('data/number_count.json')
                 .then(response => response.json())
                 .then(data => {
-                    numbersData = data;
+                    itemsData = data;
                     createNumberList();
                     showPage('words_list');
+
+                    prepareMCQgameData();
                 })
                 .catch(error => console.error('Error loading JSON:', error));
         });
-
-        // Initialize the game
-        let selectedNumbers = getRandomNumbers();
-        const questionEl = document.getElementById('question');
-        const optionsEl = document.querySelectorAll('.option');
-        const nextBtn = document.getElementById('next-button');
-        let currentItem = {};
 
     </script>
 </body>
