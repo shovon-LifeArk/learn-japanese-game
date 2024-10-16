@@ -1,0 +1,195 @@
+{
+    "0": {
+      "form": "◯　は　◯　です。",
+      "explanation": {
+        "en": "This form is used to declare that something is something. The verb 'です' is a polite way to state that A is B.",
+        "bd": "বাক্যের এই রূপটি কোন একটি বিষয়কে ঘোষণা করতে ব্যবহৃত হয়। বাক্যের শেষে ক্রিয়া 'です' ব্যবহার করে বলা হয় A হল B।"
+      },
+      "example": [
+        {
+          "jp": "<h>これ</h>　は　<h>ペン</h>　です。",
+          "en": "This is a pen.",
+          "bd": "এটি একটি কলম।"
+        },
+        {
+          "jp": "<h>かれ</h>　は　<h>せんせい</h>　です。",
+          "en": "He is a teacher.",
+          "bd": "তিনি একজন শিক্ষক।"
+        },
+        {
+          "jp": "<h>わたし</h>　は　<h>がくせい</h>　です。",
+          "en": "I am a student.",
+          "bd": "আমি একজন ছাত্র।"
+        }
+      ]
+    },
+    "1": {
+      "form": "◯　は　◯　ですか。",
+      "explanation": {
+        "en": "This form is used to ask a question. Adding 'か' at the end of a sentence makes it a question.",
+        "bd": "বাক্যের এই রূপটি একটি প্রশ্ন করার জন্য ব্যবহৃত হয়। বাক্যের শেষে 'か' যোগ করলে এটি প্রশ্ন হয়ে যায়।"
+      },
+      "example": [
+        {
+          "jp": "<h>これ</h>　は　<h>ペン</h>　ですか。",
+          "en": "Is this a pen?",
+          "bd": "এটি কি একটি কলম?"
+        },
+        {
+          "jp": "<h>かれ</h>　は　<h>せんせい</h>　ですか。",
+          "en": "Is he a teacher?",
+          "bd": "তিনি কি একজন শিক্ষক?"
+        },
+        {
+          "jp": "<h>あなた</h>　は　<h>がくせい</h>　ですか。",
+          "en": "Are you a student?",
+          "bd": "আপনি কি একজন ছাত্র?"
+        }
+      ]
+    },
+    "2": {
+      "form": "◯　は　◯　ではありません。",
+      "explanation": {
+        "en": "This form is used to state that something is not something. 'ではありません' is the negative form of 'です'.",
+        "bd": "বাক্যের এই রূপটি কোনো ব্যাক্তি/বস্তু অন্য কোন ব্যাক্তি/বস্তু নয় তা জানাতে ব্যবহৃত হয়। 'ではありません' হল 'です' এর না-বোধক ফর্ম।"
+      },
+      "example": [
+        {
+          "jp": "<h>これ</h>　は　<h>ペン</h>　ではありません。",
+          "en": "This is not a pen.",
+          "bd": "এটি একটি কলম নয়।"
+        },
+        {
+          "jp": "<h>かれ</h>　は　<h>せんせい</h>　ではありません。",
+          "en": "He is not a teacher.",
+          "bd": "তিনি একজন শিক্ষক নন।"
+        },
+        {
+          "jp": "<h>わたし</h>　は　<h>がくせい</h>　ではありません。",
+          "en": "I am not a student.",
+          "bd": "আমি একজন ছাত্র নই।"
+        }
+      ]
+    },
+    "3": {
+      "form": "わたし/かれ/かのじょ　は　[Name]　です。",
+      "explanation": {
+        "en": "This form is used to introduce oneself or someone else, simply stating a name.",
+        "bd": "বাক্যের এই রূপটি নিজেকে বা অন্য কাউকে পরিচয় করাতে ব্যবহৃত হয়, এক্ষেত্রে শুধু নাম বলা হয়ে থাকে।"
+      },
+      "example": [
+        {
+          "jp": "わたし　は　<h>ショボン</h>　です。",
+          "en": "I am Shovon.",
+          "bd": "আমি শোভন।"
+        },
+        {
+          "jp": "かれ　は　<h>ジョン</h>　です。",
+          "en": "He is John.",
+          "bd": "তিনি জন।"
+        },
+        {
+          "jp": "かのじょ　は　<h>リア</h>　です。",
+          "en": "She is Ms. Ria.",
+          "bd": "তিনি মিস রিয়া।"
+        }
+      ]
+    },
+    "4": {
+      "form": "◯　に　◯　が　あります。",
+      "explanation": {
+        "en": "This form is used to state the existence of inanimate objects (non-living things) in a location.",
+        "bd": "বাক্যের এই রূপটি জীবিত নয় এমন কোন বস্তুর অবস্থান বা অস্থিত্ব জানাতে ব্যবহৃত হয়।"
+      },
+      "example": [
+        {
+          "jp": "<h>へや</h>　に　<h>イス</h>　が　あります。",
+          "en": "There is a chair in the room.",
+          "bd": "ঘরে একটি চেয়ার আছে।"
+        },
+        {
+          "jp": "<h>つくえ　の　うえ</h>　に　<h>ほん</h>　が　あります。",
+          "en": "There is a book on the desk.",
+          "bd": "ডেস্কের উপরে একটি বই আছে।"
+        },
+        {
+          "jp": "<h>こうえん</h>　に　<h>き</h>　が　あります。",
+          "en": "There is a tree in the park.",
+          "bd": "পার্কে কিছু গাছ আছে।"
+        }
+      ]
+    },
+    "5": {
+      "form": "◯　に　◯　が　います。",
+      "explanation": {
+        "en": "This form is used to state the existence of animate objects (living things like people or animals) in a location.",
+        "bd": "বাক্যের এই রূপটি জীবিত বস্তু যেমন মানুষ বা প্রাণীর অবস্থান বা অস্থিত্ব জানাতে ব্যবহৃত হয়।"
+      },
+      "example": [
+        {
+          "jp": "<h>がっこう</h>　に　<h>せんせい</h>　が　います。",
+          "en": "There is a teacher at the school.",
+          "bd": "স্কুলে একজন শিক্ষক আছেন।"
+        },
+        {
+          "jp": "<h>いえ</h>　に　<h>いぬ</h>　が　います。",
+          "en": "There is a dog at home.",
+          "bd": "বাড়িতে একটি কুকুর আছে।"
+        },
+        {
+          "jp": "<h>こうえん</h>　に　<h>こども</h>　が　います。",
+          "en": "There are children in the park.",
+          "bd": "পার্কে কিছু শিশু আছে।"
+        }
+      ]
+    },
+    "6": {
+      "form": "◯　が　すき　です。",
+      "explanation": {
+        "en": "This form is used to express liking or preference for something.",
+        "bd": "বাক্যের এই রূপটি কোনো কিছু পছন্দ বা প্রিয় তা প্রকাশ করতে ব্যবহৃত হয়।"
+      },
+      "example": [
+        {
+          "jp": "わたし　は　<h>ねこ</h>　が　すき　です。",
+          "en": "I like cats.",
+          "bd": "আমার বিড়াল পছন্দ।"
+        },
+        {
+          "jp": "かれ　は　<h>おんがく</h>　が　すき　です。",
+          "en": "He likes music.",
+          "bd": "তিনি সংগীত পছন্দ করেন।"
+        },
+        {
+          "jp": "かのじょ　は　<h>えいが</h>　が　すき　です。",
+          "en": "She likes movies.",
+          "bd": "সে সিনেমা পছন্দ করে।"
+        }
+      ]
+    },
+    "7": {
+      "form": "◯　を　[verb]　こと　が　できます。",
+      "explanation": {
+        "en": "This form is used to express the ability to do something, like being able to perform an action.",
+        "bd": "বাক্যের এই রূপটি কোনো কাজ করার সক্ষমতা বা পারদর্শিতা প্রকাশ করতে ব্যবহৃত হয়।"
+      },
+      "example": [
+        {
+          "jp": "わたし　は　<h>にほんご</h>　を　<h>はなす</h>　こと　が　できます。",
+          "en": "I can speak Japanese.",
+          "bd": "আমি জাপানি ভাষা বলতে পারি।"
+        },
+        {
+          "jp": "かれ　は　<h>くるま</h>　を　<h>うんてんする</h>　こと　が　できます。",
+          "en": "He can drive a car.",
+          "bd": "তিনি গাড়ি চালাতে পারেন।"
+        },
+        {
+          "jp": "かのじょ　は　<h>ピアノ</h>　を　<h>ひく</h>　こと　が　できます。",
+          "en": "She can play the piano.",
+          "bd": "সে পিয়ানো বাজাতে পারে।"
+        }
+      ]
+    }
+  }
+  

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Shovon Hasan">
+    <meta name="copyright" content="©2024 株式会社LifeArk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeArk Japanese education: Sentence for Beginner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/game.css">
+    <style>
+        #words_list-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #words_list-container td {
+            vertical-align: top;
+            position: relative;
+        }
+        #words_list-container h4 {
+            margin: 0px;
+            margin-top: 20px;
+        }
+        #words_list-container ul {
+            margin: 0px;
+            padding-left: 20px;
+        }
+        #words_list-container li {
+            margin-bottom: 10px;
+        }
+        .word-highlight {
+            height: 30px;
+            padding: 5px 10px;
+            background-color: #ff99dd;
+            font-weight: bold;
+            text-align: center;
+            line-height: 150%;
+        }
+        h {
+            color: red;
+        }
+        .option {
+            text-align: left !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="words_list-container">
+            <div class="header-image">
+                <img src="assets/image/LifeArk_Nihongo_logo.png" />
+                <h2 style="text-align: center; margin: 0px;">বাক্য গঠন</h2>
+            </div>
+            <button class="play-button" onclick="playGame('Sentence: Basic structure')">Play Game</button>
+        </div>
+        <div id="question-container">
+            <div class="button-container">
+                <div id="question-number"></div>
+                <button id="next-button" onclick="nextQuestion()" disabled>&#10132;</button>
+            </div>
+            <div>
+                <div id="question-text"></div>
+            </div>
+            <div id="options">
+                <div class="option" onclick="checkAnswer(0)"></div>
+                <div class="option" onclick="checkAnswer(1)"></div>
+                <div class="option" onclick="checkAnswer(2)"></div>
+                <div class="option" onclick="checkAnswer(3)"></div>
+            </div>
+        </div>
+        <div id="result-container">
+            <div id="score"></div>
+            <button class="play-button" onclick="replayGame()">Replay</button><br/>
+            <button class="link-button" onclick="showPage('words_list')">Form of Sentences</button>
+            <div></div>
+                <h3>Submit your Score:</h3>
+                <div id="score-submit-form">
+                    <input type="text" id="player_userID" placeholder="User ID" value=""/>
+                    <button class="play-button" id="score-submit-button" onclick="submitScore()">Submit Score</button>
+                </div>
+                <div id="score-submit-response"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/game_mcq.js"></script>
+    <script src="js/game_result.js"></script>
+    <script>
+
+        let itemsData = {};
+        let itemCounter = null;
+
+        let quizData = {};
+        let type1_GameData = null;
+        let type2_GameData = null;
+
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
+        
+        function createSentenceList() {
+            const container = document.getElementById('words_list-container');
+
+            const hr = document.createElement('hr');
+            container.appendChild(hr);
+
+            itemCounter = 1;
+            
+            Object.keys(itemsData).forEach(index => {
+                const item = itemsData[index];
+                const table = document.createElement('table');
+
+                // Create top row with image and text
+                const topRow = document.createElement('tr');
+                const textCell = document.createElement('td');
+                textCell.innerHTML = `<span class="word-highlight">${item.form}</span>`;
+
+                topRow.appendChild(textCell);
+                table.appendChild(topRow);
+
+                // Create bottom row with example sentences
+                const bottomRow = document.createElement('tr');
+                const explanationCell = document.createElement('td');
+                explanationCell.style.padding = "10px 0px";
+
+                const explanation = document.createElement('span');
+                explanation.innerHTML = item.explanation.bd;
+
+                const exampleHeader = document.createElement('h4');
+                exampleHeader.innerText = "উদাহরণ:"
+
+                const list = document.createElement('ul');
+                item.example.forEach(exItem => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `${exItem.jp}<br/>${exItem.bd}`;
+                    list.appendChild(listItem);
+                });
+
+                explanationCell.appendChild(explanation);
+                explanationCell.appendChild(exampleHeader);
+                explanationCell.appendChild(list);
+
+                bottomRow.appendChild(explanationCell);
+                table.appendChild(bottomRow);
+                container.appendChild(table);
+
+                const hr = document.createElement('hr');
+                container.appendChild(hr);
+
+                itemCounter++;
+            });
+
+            // decrease 1 to match total number
+            itemCounter -= 1;
+        }
+
+        function playGame(lessonType) {
+            gameLessonType = lessonType;
+
+            gameFromIndex = 0;
+            gameToIndex = Object.keys(gameData).length-1;
+
+            replayGame();
+        }
+
+        function createShuffledSentenceOptions(sentence) {
+            let options = new Set();
+
+            // Add the current answer to options
+            options.add(sentence);
+
+            while (options.size < 4) {
+                const words = sentence.split('　');
+
+                // Shuffle the array of words
+                for (let i = words.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [words[i], words[j]] = [words[j], words[i]]; // Swap words
+                }
+
+                const shuffledSentence = words.join('　');
+                options.add(shuffledSentence);
+            }
+
+            return Array.from(options);
+        }
+
+        function prepareMCQgameData() {
+            gamedata = {};
+
+            let index = 0;
+            Object.keys(itemsData).forEach(key => {
+                const examples = itemsData[key].example;
+
+                examples.forEach(sentence => {
+                    gameData[index] = {};
+                    gameData[index].question = {};
+                    gameData[index].question.text = "নিচের বাক্যগুলোর কোন রূপটি সঠিক?";
+                    gameData[index].answer = sentence.jp.replace(/<\/?h>|。/g, '');
+                    gameData[index].options = createShuffledSentenceOptions(gameData[index].answer );
+
+                    index++;
+                });
+            });
+
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/sentence_beginner.json')
+                .then(response => response.json())
+                .then(data => {
+                    itemsData = data;
+                    // display words list
+                    createSentenceList();
+                    showPage('words_list');
+
+                    prepareMCQgameData();
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        });
+
+    </script>
+</body>
+</html>
