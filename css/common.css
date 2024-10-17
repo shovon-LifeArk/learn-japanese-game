@@ -128,3 +128,6 @@ hr {
     border: 2px solid black;
     display: none;
 }
+h {
+    color: red;
+}
