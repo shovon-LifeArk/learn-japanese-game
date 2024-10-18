@@ -5,8 +5,8 @@ function setGameRangeSelection() {
     rangeFromEl.min = 1;
     rangeFromEl.max = itemCounter - totalQuestions + 1;
 
-    rangeFromEl.min = totalQuestions;
-    rangeFromEl.max = itemCounter;
+    rangeToEl.min = totalQuestions;
+    rangeToEl.max = itemCounter;
 }
 
 function isValidRange_number() {
