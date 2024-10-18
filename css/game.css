@@ -79,6 +79,7 @@
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    touch-action: none;
 }
 .correct-rearrange {
     border-color: green;
