@@ -75,47 +75,33 @@
     color: white;
 }
 .rearrange-sentence-holder {
-    border: 2px solid grey;
-    padding: 20px;
     display: flex;
-    flex-wrap: wrap;
-    touch-action: none;
+    flex-direction: column;
+    gap: 10px;
+}
+.rearrange-word {
+    padding: 10px;
+    height: 30px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rearrange-word .text {
+    font-size: 1.0em;
+}
+.rearrange-word .select-box {
+    width: 50px;
+    padding: 5px;
+    font-size: 1.0em;
 }
 .correct-rearrange {
     border-color: green;
 }
 .wrong-rearrange {
     border-color: red;
-}
-.rearrange-word {
-    padding: 10px;
-    min-width: 60px;
-    height: 30px;
-    background-color: #e0e0e0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: grab;
-    user-select: none;
-    margin: 10px 0px;
-}
-.drop-space {
-    width: 20px;
-    height: 50px;
-    border-radius: 4px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: grab;
-    user-select: none;
-    background-color: transparent;
-    cursor: default;
-    margin: 10px 0px;
-}
-.dragging {
-    opacity: 0.5;
 }
 .rearrange-answer-holder {
     padding: 20px;

@@ -133,65 +133,7 @@ function resetGameQuestionOptions() {
 }
 
 // for rearrange: START
-function getNewDropSpace() {
-    const dropSpace = document.createElement("div");
-    dropSpace.className = "drop-space";
-    dropSpace.addEventListener("dragover", handleDragOver);
-    dropSpace.addEventListener("dragleave", handleDragLeave);
-    dropSpace.addEventListener("drop", handleDrop);
-    
-    return dropSpace;
-}
-function handleDragStart(e) {
-    draggedElement = e.target;
-    e.target.classList.add("dragging");
-}
-function handleDragOver(e) {
-    e.preventDefault();
-    e.target.style.backgroundColor = 'black';
-}
-function handleDragLeave(e) {
-    e.preventDefault();
-    e.target.style.backgroundColor = 'transparent';
-}
-function handleDragEnd(e) {
-    e.target.classList.remove("dragging");
-}
-function handleDrop(e) {
-    e.preventDefault();
 
-    const dropSpace = e.target;
-
-    // Insert dragged word before the drop space and after the previous word/space
-    if (dropSpace.classList.contains('drop-space')) {
-        rearrangeQuestionEl.insertBefore(draggedElement, dropSpace);
-
-        // Ensure no consecutive words or spaces
-        adjustSpaces();
-    }
-}
-function adjustSpaces() {
-    let children = Array.from(rearrangeQuestionEl.children);
-
-    // remove all drop spaces
-    for (let i = 0; i < children.length; i++) {
-        const curr = children[i];
-        if (curr.classList.contains('drop-space')) {
-            rearrangeQuestionEl.removeChild(curr); // Remove extra space
-        }
-    }
-
-    children = Array.from(rearrangeQuestionEl.children);
-
-    // append drop spaces before words
-    for (let i = 0; i < children.length; i++) {
-        const curr = children[i];
-        rearrangeQuestionEl.insertBefore(getNewDropSpace(), curr);
-    }
-
-    // append one dropspace at end
-    rearrangeQuestionEl.appendChild(getNewDropSpace());
-}
 // for rearrange: End
 
 function nextQuestion() {
@@ -254,25 +196,30 @@ function nextQuestion() {
     else if (gameType === 'rearrange') {
         rearrangeQuestionEl.innerHTML = "";
 
-        // Initial setup: space before the first word
-        rearrangeQuestionEl.appendChild(getNewDropSpace());
-
         const shuffledWords = shuffle(question.words.slice());
         shuffledWords.forEach((word, index) => {
             const wordElement = document.createElement("div");
             wordElement.className = "rearrange-word";
-            wordElement.textContent = word;
-            wordElement.draggable = true;
-            wordElement.dataset.index = index;
-            wordElement.addEventListener("dragstart", handleDragStart);
-            wordElement.addEventListener("dragend", handleDragEnd);
+            
+            const textElement = document.createElement("span");
+            textElement.className = "text";
+            textElement.textContent = word;
 
+            const selectElement = document.createElement('select');
+            selectElement.className = "select-box";
+            for (let i = 0; i <= shuffledWords.length; i++) {
+                const option = document.createElement('option');
+                option.value = i;    // Set option value
+                option.text = `${i === 0 ? '' : i}`; // Set the display text
+                
+                selectElement.appendChild(option);
+              }
+
+            wordElement.appendChild(textElement);
+            wordElement.appendChild(selectElement);
             rearrangeQuestionEl.appendChild(wordElement);
-            // Always add a space after each word
-            rearrangeQuestionEl.appendChild(getNewDropSpace());
         });
 
-        rearrangeQuestionEl.classList.remove('correct-rearrange', 'wrong-rearrange'); // Reset styles
         rearrangeAnswerEl.innerText = "";
         rearrangeSubmitBtn.disabled = false;
     }
@@ -316,17 +263,34 @@ function checkAnswer(selectedIndex) {
 
 // rearrange
 function checkRearrangeAnswer() {
-    const words = Array.from(rearrangeQuestionEl.children).filter(el => el.className === "rearrange-word").map(wordElement => wordElement.textContent);
-    const userAnswer = words.join(" ");
-    const correctAnswer = currentGameItem.answer;
+    const correctAnswer = currentGameItem.answer.split(" ").reduce((acc, word, i) => {
+        acc[i+1] = word;
+        return acc;
+    }, {});
+    console.log("correctAnswer", correctAnswer);
 
-    if (userAnswer === correctAnswer) {
+    let isCorrect = true;
+
+    const wordsEl = document.querySelectorAll('.rearrange-word');
+    wordsEl.forEach(wordEl => {
+        const word = wordEl.querySelector('.text').textContent;
+        const selectBox = wordEl.querySelector('.select-box');
+        const order = selectBox.value;
+
+        if (correctAnswer[order] === word) {
+            wordEl.classList.add('correct-rearrange');
+        } else {
+            wordEl.classList.add('wrong-rearrange');
+            isCorrect = false;
+        }
+
+        selectBox.disabled = true;
+    });
+
+    if (isCorrect) {
         score++;
-        rearrangeQuestionEl.classList.add('correct-rearrange');
-    } else {
-        rearrangeQuestionEl.classList.add('wrong-rearrange');
     }
-    rearrangeAnswerEl.textContent = correctAnswer;
+    rearrangeAnswerEl.textContent = currentGameItem.answer;
 
     // Disable the rearrange submit button
     rearrangeSubmitBtn.disabled = true;
@@ -384,6 +348,5 @@ const optionsEl = document.querySelectorAll('.option');
 const rearrangeQuestionEl = document.getElementById('rearrange-sentence');
 const rearrangeAnswerEl = document.getElementById('rearrange-answer');
 const rearrangeSubmitBtn = document.getElementById('rearrange-submit-btn');
-let draggedEl = null;
 
 const nextBtn = document.getElementById('next-button');
