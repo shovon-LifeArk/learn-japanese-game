@@ -1,0 +1,382 @@
+{
+    "0": {
+        "wh_word": "何（なに / なん）",
+        "meaning": {
+            "en": "What",
+            "bd": "কি"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: <h>なに</h> を しています か？ A: べんきょう しています。",
+                "en": "Q: What are you doing? A: I am studying.",
+                "bd": "Q: আপনি কী করছেন? A: আমি পড়াশোনা করছি।"
+            },
+            {
+                "jp": "Q: これ は <h>なん</h> です か？ A: それ は ほん です。",
+                "en": "Q: What is this? A: It is a book.",
+                "bd": "Q: এটা কী? A: ওটা একটা বই।"
+            }
+        ]
+    },
+    "1": {
+        "wh_word": "誰（だれ）",
+        "meaning": {
+            "en": "Who",
+            "bd": "কে"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: <h>だれ</h> が あなた の せんせい です か？ A: たなか せんせい です。",
+                "en": "Q: Who is your teacher? A: It's Mr. Tanaka.",
+                "bd": "Q: আপনার শিক্ষক কে? A: মি. তানাকা।"
+            },
+            {
+                "jp": "Q: きょう の かいぎ に <h>だれ</h> が きます か？ A: たかはしさん が きます。",
+                "en": "Q: Who is coming to today's meeting? A: Mr. Takahashi is coming.",
+                "bd": "Q: আজকের সভায় কে আসছেন? A: মি. তাকাহাশি আসছেন।"
+            }
+        ]
+    },
+    "2": {
+        "wh_word": "どこ",
+        "meaning": {
+            "en": "Where",
+            "bd": "কোথায়"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: あなた は <h>どこ</h> に すんで います か？ A: わたし は とうきょう に すんで います。",
+                "en": "Q: Where do you live? A: I live in Tokyo.",
+                "bd": "Q: আপনি কোথায় থাকেন? A: আমি টোকিওতে থাকি।"
+            },
+            {
+                "jp": "Q: ぎんこう は <h>どこ</h> です か？ A: ぎんこう は えき の となり です。",
+                "en": "Q: Where is the bank? A: The bank is next to the station.",
+                "bd": "Q: ব্যাংক কোথায়? A: ব্যাংকটি স্টেশনের পাশে।"
+            }
+        ]
+    },
+    "3": {
+        "wh_word": "いつ",
+        "meaning": {
+            "en": "When",
+            "bd": "কখন"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: <h>いつ</h> がっこう に いきます か？ A: あさ 8じ に いきます。",
+                "en": "Q: When are you going to school? A: I am going at 8 a.m.",
+                "bd": "Q: আপনি কখন স্কুলে যাবেন? A: আমি সকাল ৮টায় যাব।"
+            },
+            {
+                "jp": "Q: あなた の たんじょうび は <h>いつ</h> です か？ A: わたし の たんじょうび は 6がつ です。",
+                "en": "Q: When is your birthday? A: My birthday is in June.",
+                "bd": "Q: আপনার জন্মদিন কখন? A: আমার জন্মদিন জুন মাসে।"
+            }
+        ]
+    },
+    "4": {
+        "wh_word": "なぜ",
+        "meaning": {
+            "en": "Why",
+            "bd": "কেন"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: <h>なぜ</h> にほんご を べんきょう して います か？ A: にほん で はたらきたい から です。",
+                "en": "Q: Why are you studying Japanese? A: Because I want to work in Japan.",
+                "bd": "Q: আপনি কেন জাপানিজ শিখছেন? A: কারণ আমি জাপানে কাজ করতে চাই।"
+            },
+            {
+                "jp": "Q: <h>なぜ</h> きょう きません でした か？ A: びょうき だった から です。",
+                "en": "Q: Why didn't you come today? A: Because I was sick.",
+                "bd": "Q: আপনি আজ কেন আসেননি? A: কারণ আমি অসুস্থ ছিলাম।"
+            }
+        ]
+    },
+    "5": {
+        "wh_word": "どうして",
+        "meaning": {
+            "en": "Why (casual)",
+            "bd": "কেন (সাধারণ)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: <h>どうして</h> きょう は はやく かえりました か？ A: あたま が いたかった から です。",
+                "en": "Q: Why did you go home early today? A: Because I had a headache.",
+                "bd": "Q: আপনি কেন আজ তাড়াতাড়ি বাড়ি ফিরলেন? A: কারণ আমার মাথা ব্যথা ছিল।"
+            },
+            {
+                "jp": "Q: <h>どうして</h> べんきょう しない です か？ A: つかれて いる から です。",
+                "en": "Q: Why aren't you studying? A: Because I'm tired.",
+                "bd": "Q: আপনি কেন পড়াশোনা করছেন না? A: কারণ আমি ক্লান্ত।"
+            }
+        ]
+    },
+    "6": {
+        "wh_word": "どのように",
+        "meaning": {
+            "en": "How (formal)",
+            "bd": "কিভাবে (আনুষ্ঠানিক)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: <h>どのように</h> この しごと を します か？ A: この きじゅつ を つかって ください。",
+                "en": "Q: How do you do this task? A: Please use this technique.",
+                "bd": "Q: আপনি এই কাজটি কিভাবে করেন? A: এই পদ্ধতিটি ব্যবহার করুন।"
+            },
+            {
+                "jp": "Q: <h>どのように</h> かいけつ します か？ A: しっかり と はなして ください。",
+                "en": "Q: How do you resolve it? A: Please discuss it thoroughly.",
+                "bd": "Q: আপনি এটি কিভাবে সমাধান করবেন? A: দয়া করে পুরোপুরি আলোচনা করুন।"
+            }
+        ]
+    },
+    "7": {
+        "wh_word": "どうやって",
+        "meaning": {
+            "en": "How (casual)",
+            "bd": "কিভাবে (সাধারণ)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: <h>どうやって</h> がっこう に いきます か？ A: でんしゃ で いきます。",
+                "en": "Q: How do you go to school? A: I go by train.",
+                "bd": "Q: আপনি কিভাবে স্কুলে যান? A: আমি ট্রেনে যাই।"
+            },
+            {
+                "jp": "Q: <h>どうやって</h> この しつもん に こたえます か？ A: しずか に かんがえて こたえます。",
+                "en": "Q: How do you answer this question? A: I think quietly and then answer.",
+                "bd": "Q: আপনি এই প্রশ্নের উত্তর কিভাবে দেন? A: আমি চুপচাপ চিন্তা করি এবং তারপর উত্তর দিই।"
+            }
+        ]
+    },
+    "8": {
+        "wh_word": "いくら",
+        "meaning": {
+            "en": "How much",
+            "bd": "কত"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: この りんご は <h>いくら</h> です か？ A: 150えん です。",
+                "en": "Q: How much is this apple? A: It is 150 yen.",
+                "bd": "Q: এই আপেলের দাম কত? A: এটি ১৫০ ইয়েন।"
+            },
+            {
+                "jp": "Q: その かばん は <h>いくら</h> です か？ A: 5000えん です。",
+                "en": "Q: How much is that bag? A: It is 5000 yen.",
+                "bd": "Q: ওই ব্যাগটির দাম কত? A: এটি ৫০০০ ইয়েন।"
+            }
+        ]
+    },
+    "9": {
+        "wh_word": "いくつ",
+        "meaning": {
+            "en": "How many (for counting)",
+            "bd": "কত (গণনা করার জন্য)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: あなた は <h>いくつ</h> です か？ A: 25さい です。",
+                "en": "Q: How old are you? A: I am 25 years old.",
+                "bd": "Q: আপনার বয়স কত? A: আমার বয়স ২৫ বছর।"
+            },
+            {
+                "jp": "Q: この りんご は <h>いくつ</h> あります か？ A: 3つ あります。",
+                "en": "Q: How many apples are there? A: There are 3.",
+                "bd": "Q: এখানে কতটি আপেল আছে? A: এখানে ৩টি আছে।"
+            }
+        ]
+    },
+    "10": {
+        "wh_word": "どれ",
+        "meaning": {
+            "en": "Which",
+            "bd": "কোন"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: <h>どれ</h> が あなた の かばん です か？ A: あの あかい かばん です。",
+                "en": "Q: Which is your bag? A: That red bag.",
+                "bd": "Q: কোনটি আপনার ব্যাগ? A: ওই লাল ব্যাগ।"
+            },
+            {
+                "jp": "Q: <h>どれ</h> が おいしい です か？ A: この ケーキ が おいしい です。",
+                "en": "Q: Which is delicious? A: This cake is delicious.",
+                "bd": "Q: কোনটি সুস্বাদু? A: এই কেকটি সুস্বাদু।"
+            }
+        ]
+    },
+    "11": {
+        "wh_word": "どの",
+        "meaning": {
+            "en": "Which (specific)",
+            "bd": "কোন (নির্দিষ্ট)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: <h>どの</h> ほん が あなた の です か？ A: この ほん です。",
+                "en": "Q: Which book is yours? A: This book.",
+                "bd": "Q: কোন বইটি আপনার? A: এই বইটি।"
+            },
+            {
+                "jp": "Q: <h>どの</h> たべもの が いちばん おいしい です か？ A: この すし が おいしい です。",
+                "en": "Q: Which food is the most delicious? A: This sushi is delicious.",
+                "bd": "Q: কোন খাবারটি সবচেয়ে সুস্বাদু? A: এই সুশি সুস্বাদু।"
+            }
+        ]
+    },
+    "12": {
+        "wh_word": "どちら",
+        "meaning": {
+            "en": "Which (formal)",
+            "bd": "কোন (আনুষ্ঠানিক)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: <h>どちら</h> が あなた の いえ です か？ A: あちら です。",
+                "en": "Q: Which is your house? A: That way.",
+                "bd": "Q: কোনটি আপনার বাড়ি? A: ঐ দিকে।"
+            },
+            {
+                "jp": "Q: <h>どちら</h> に いきます か？ A: としょかん に いきます。",
+                "en": "Q: Which way are you going? A: I am going to the library.",
+                "bd": "Q: আপনি কোন দিকে যাচ্ছেন? A: আমি লাইব্রেরিতে যাচ্ছি।"
+            }
+        ]
+    },
+    "13": {
+        "wh_word": "どっち",
+        "meaning": {
+            "en": "Which (casual)",
+            "bd": "কোন (সাধারণ)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: <h>どっち</h> が いい です か？ A: こっち が いい です。",
+                "en": "Q: Which is better? A: This one is better.",
+                "bd": "Q: কোনটি ভালো? A: এটি ভালো।"
+            },
+            {
+                "jp": "Q: <h>どっち</h> に いきます か？ A: あっち に いきます。",
+                "en": "Q: Which way are you going? A: I'm going that way.",
+                "bd": "Q: আপনি কোন দিকে যাচ্ছেন? A: আমি ঐ দিকে যাচ্ছি।"
+            }
+        ]
+    },
+    "14": {
+        "wh_word": "何時（なんじ）",
+        "meaning": {
+            "en": "What time",
+            "bd": "কয় টা (সময়)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: いま <h>なんじ</h> です か？ A: 3じ です。",
+                "en": "Q: What time is it now? A: It is 3 o'clock.",
+                "bd": "Q: এখন কয় টা বাজে? A: ৩টা বাজে।"
+            },
+            {
+                "jp": "Q: あなた は <h>なんじ</h> に いきます か？ A: 10じ に いきます。",
+                "en": "Q: What time are you going? A: I am going at 10 o'clock.",
+                "bd": "Q: আপনি কখন যাবেন? A: আমি ১০ টার সময় যাব।"
+            }
+        ]
+    },
+    "15": {
+        "wh_word": "何歳（なんさい）",
+        "meaning": {
+            "en": "How old",
+            "bd": "কত বছর"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: あなた は <h>なんさい</h> です か？ A: 30さい です。",
+                "en": "Q: How old are you? A: I am 30 years old.",
+                "bd": "Q: আপনার বয়স কত? A: আমার বয়স ৩০ বছর।"
+            },
+            {
+                "jp": "Q: かれ は <h>なんさい</h> です か？ A: 25さい です。",
+                "en": "Q: How old is he? A: He is 25 years old.",
+                "bd": "Q: তার বয়স কত? A: তার বয়স ২৫ বছর।"
+            }
+        ]
+    },
+    "16": {
+        "wh_word": "何人（なんにん）",
+        "meaning": {
+            "en": "How many people",
+            "bd": "কতজন"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: パーティーに <h>なんにん</h> きます か？ A: 5にん きます。",
+                "en": "Q: How many people are coming to the party? A: 5 people are coming.",
+                "bd": "Q: পার্টিতে কতজন আসছে? A: ৫জন আসছে।"
+            },
+            {
+                "jp": "Q: あなた の かぞく は <h>なんにん</h> です か？ A: 4にん です。",
+                "en": "Q: How many people are in your family? A: There are 4 people.",
+                "bd": "Q: আপনার পরিবারে সদস্য কতজন? A: ৪জন।"
+            }
+        ]
+    },
+    "17": {
+        "wh_word": "何日（なんにち）",
+        "meaning": {
+            "en": "What day / How many days",
+            "bd": "কোন দিন / কত দিন"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: きょうは <h>なんにち</h> です か？ A: 10がつ 23にち です。",
+                "en": "Q: What day is today? A: It is October 23rd.",
+                "bd": "Q: আজকের তারিখ কি? A: এটি ২৩ অক্টোবর।"
+            },
+            {
+                "jp": "Q: りょこうは <h>なんにち</h> かかります か？ A: 5にち かかります。",
+                "en": "Q: How many days does the trip take? A: It takes 5 days.",
+                "bd": "Q: ভ্রমণে কত দিন লাগবে? A: ৫ দিন লাগবে।"
+            }
+        ]
+    },
+    "18": {
+        "wh_word": "何回（なんかい）",
+        "meaning": {
+            "en": "How many times",
+            "bd": "কতবার"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: このえいがは <h>なんかい</h> みました か？ A: 3かい みました。",
+                "en": "Q: How many times have you seen this movie? A: I have seen it 3 times.",
+                "bd": "Q: এই সিনেমাটি আপনি কতবার দেখেছেন? A: আমি এটি ৩ বার দেখেছি।"
+            },
+            {
+                "jp": "Q: どうぶつえんに <h>なんかい</h> いきました か？ A: 2かい いきました。",
+                "en": "Q: How many times did you go to the zoo? A: I went 2 times.",
+                "bd": "Q: আপনি কতবার চিড়িয়াখানায় গিয়েছেন? A: আমি ২ বার গিয়েছি।"
+            }
+        ]
+    },
+    "19": {
+        "wh_word": "どう",
+        "meaning": {
+            "en": "How",
+            "bd": "কিভাবে"
+        },
+        "exampleSentence": [
+            {
+                "jp": "Q: あなた は <h>どう</h> です か？ A: げんき です。",
+                "en": "Q: How are you? A: I am fine.",
+                "bd": "Q: আপনি কেমন আছেন? A: আমি ভালো আছি।"
+            },
+            {
+                "jp": "Q: このかんじ を <h>どう</h> やって かきます か？ A: こう かきます。",
+                "en": "Q: How do you write this kanji? A: You write it like this.",
+                "bd": "Q: এই কানজি কিভাবে লিখবেন? A: এভাবে লিখবেন।"
+            }
+        ]
+    }
+}

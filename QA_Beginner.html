@@ -5,30 +5,35 @@
     <meta name="author" content="Shovon Hasan">
     <meta name="copyright" content="©2024 株式会社LifeArk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LifeArk Japanese education: N5 Adjectives</title>
+    <title>LifeArk Japanese education: QA Beginner</title>
     <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/game.css">
     <style>
-        #words_list-container .category-title {
-            padding: 10px;
-            background-color: #3399ff;
-            color: white;
-        }
         #words_list-container table {
             width: 100%;
             border-collapse: collapse;
         }
         #words_list-container td {
-            padding: 10px;
             vertical-align: top;
             position: relative;
         }
-        #words_list-container .word-highlight {
+        #words_list-container h4 {
+            margin: 0px;
+            margin-top: 20px;
+        }
+        #words_list-container ul {
+            margin: 0px;
+            padding-left: 20px;
+        }
+        #words_list-container li {
+            margin-bottom: 10px;
+        }
+        .word-highlight {
             height: 30px;
             padding: 0px 10px;
             border-radius: 15px;
-            background-color: orange;
+            background-color: yellow;
             font-weight: bold;
             text-align: center;
             line-height: 150%;
@@ -42,6 +47,13 @@
             text-align: center;
             font-size: 0.8em;
         }
+        #question-text {
+            text-align: center !important;
+        }
+        .option {
+            text-align: left !important;
+            font-size: 1.2em !important;
+        }
     </style>
 </head>
 <body>
@@ -49,9 +61,9 @@
         <div id="words_list-container">
             <div class="header-image">
                 <img src="assets/image/LifeArk_Nihongo_logo.png" />
-                <h2 style="text-align: center; margin: 0px;">N5 বিশেষণ</h2>
+                <h2 style="text-align: center; margin: 0px;">প্রশ্নোত্তর</h2>
             </div>
-            <button class="play-button" onclick="playGame('N5 Adjectives: word meaning')">Play Game</button>
+            <button class="play-button" onclick="playGame('Beginner QA')">Play Game</button>
         </div>
         <div id="range_selection-container">
             <h3 style="text-align: center;">Choose the question range</h3>
@@ -63,7 +75,7 @@
             </div>
             <div class="button-container">
                 <button class="back-button" onclick="showPage('words_list')">←</button>
-                <button class="play-button" style="flex-grow: 1;" onclick="startGame({'rangeType': 'number'})">Start Game!</button>
+                <button class="play-button" style="flex-grow: 1;" onclick="startGame({'rangeType': 'number'});">Start Game!</button>
             </div>
         </div>
         <div id="question-container">
@@ -74,7 +86,8 @@
             <div id="question-holder">
                 <div id="mcq-question">
                     <div>
-                        <div id="question-caption"></div>
+                        <div style="margin-bottom: 20px;">নিচের প্রশ্নটির সঠিক উত্তর নির্বাচন কর:</div>
+                        <div id="question-text"></div>
                     </div>
                     <div id="options">
                         <div class="option" onclick="checkAnswer(0)"></div>
@@ -88,8 +101,8 @@
         <div id="result-container">
             <div id="score"></div>
             <button class="play-button" onclick="replayGame()">Replay</button>
-            <button class="link-button" onclick="showPage('words_list')">Adjectives List</button>
-            <div>
+            <button class="link-button" onclick="showPage('words_list')">Question List</button>
+            <div></div>
                 <h3>Submit your Score:</h3>
                 <div id="score-submit-form">
                     <input type="text" id="player_userID" placeholder="User ID" value=""/>
@@ -100,6 +113,7 @@
         </div>
     </div>
 
+    <script src="js/common.js"></script>
     <script src="js/game_rangeSelection.js"></script>
     <script src="js/game_mcq.js"></script>
     <script src="js/game_result.js"></script>
@@ -118,57 +132,55 @@
             document.getElementById(`${pageName}-container`).style.display = 'flex';
         }
         
-        function createWordsList() {
-            const categories = ["イ形容詞", "ナ形容詞"];
+        function createQAList() {
             const container = document.getElementById('words_list-container');
+
+            const hr = document.createElement('hr');
+            container.appendChild(hr);
+
             itemCounter = 1;
             
-            categories.forEach(category => {
-                // Create a category section
-                const categoryDiv = document.createElement('div');
-                categoryDiv.className = 'category';
-                categoryDiv.innerHTML = `<h2 class="category-title">${category}</h2>
-                                        <p>${itemsData.types[category].definition_bd}</p>`;
+            Object.keys(itemsData).forEach(index => {
+                const item = itemsData[index];
+                const table = document.createElement('table');
 
-                // Filter items by category
-                const adjectives = itemsData.adjectives;
-                const itemsInCategory = Object.keys(adjectives).filter(key => adjectives[key].type === category);
+                // Create top row with text and number
+                const topRow = document.createElement('tr');
+                const textCell = document.createElement('td');
+                textCell.innerHTML = `<span class="word-highlight">${item.wh_word}</span> 【${item.meaning.bd}】`;
+                const numCell = document.createElement('td');
+                numCell.innerHTML = `<span class="word-num">${itemCounter}</span>`;
+                numCell.style.textAlign = "right";
 
-                itemsInCategory.forEach(key => {
-                    const item = adjectives[key];
-                    const table = document.createElement('table');
+                topRow.appendChild(textCell);
+                topRow.appendChild(numCell);
+                table.appendChild(topRow);
 
-                    // Create top row with image and text
-                    const topRow = document.createElement('tr');
-                    const textCell = document.createElement('td');
-                    textCell.innerHTML = `<span class="word-highlight">${item.kana}</span> (${item.bangla})`;
-                    const numCell = document.createElement('td');
-                    numCell.innerHTML = `<span class="word-num">${itemCounter}</span>`;
-                    numCell.style.textAlign = "right";
+                // Create bottom row with example sentences
+                const bottomRow = document.createElement('tr');
+                const exampleCell = document.createElement('td');
+                exampleCell.colSpan = 2;
+                exampleCell.style.padding = "10px 0px";
 
-                    topRow.appendChild(textCell);
-                    topRow.appendChild(numCell);
-                    table.appendChild(topRow);
-
-                    // Create bottom row with example sentences
-                    const bottomRow = document.createElement('tr');
-                    const exampleCell = document.createElement('td');
-                    exampleCell.colSpan = 2;
-                    exampleCell.style.padding = "10px 0px";
-                    exampleCell.innerHTML = `・${item.exampleSentence[0]}<br>・${item.exampleSentence[1]}`;
-
-                    bottomRow.appendChild(exampleCell);
-                    table.appendChild(bottomRow);
-
-                    categoryDiv.appendChild(table);
-
-                    const hr = document.createElement('hr');
-                    categoryDiv.appendChild(hr);
-
-                    itemCounter++;
+                const list = document.createElement('ul');
+                item.exampleSentence.forEach(example => {
+                    const listItem = document.createElement('li');
+                    const qa_jp = example.jp.split('？').map(part => part.trim());
+                    const qa_bd = example.bd.split('?').map(part => part.trim());
+                    listItem.innerHTML = `${qa_jp[0]}?<br/>${qa_bd[0]}?<br/>${qa_jp[1]}<br/>${qa_bd[1]}`;
+                    list.appendChild(listItem);
                 });
 
-                container.appendChild(categoryDiv);
+                exampleCell.appendChild(list);
+
+                bottomRow.appendChild(exampleCell);
+                table.appendChild(bottomRow);
+                container.appendChild(table);
+
+                const hr = document.createElement('hr');
+                container.appendChild(hr);
+
+                itemCounter++;
             });
 
             // decrease 1 to match total number
@@ -180,33 +192,34 @@
             showPage('range_selection');
         }
 
-        function prepareMCQgameData() {
-            const adjectives = itemsData.adjectives;
-
+        function prepareMCQGameData() {
+            gameData = {};
             let index = 0;
-
-            Object.keys(adjectives).forEach(key => {
-                const dataItem = adjectives[key];
-                gameData[index] = {};
-                gameData[index].question = {};
-                gameData[index].question.caption = dataItem.bangla;
-                gameData[index].answer = dataItem.kana;
+            Object.keys(itemsData).forEach(key => {
+                const dataItem = itemsData[key];
+                dataItem.exampleSentence.forEach(sentence => {
+                    const qa_parts = sentence.jp.replace(/Q: |A: /g, '').split('？').map(part => part.trim().replace("。",''));
+                    gameData[index] = {};
+                    gameData[index].question = {};
+                    gameData[index].question.text = qa_parts[0]+'？';
+                    gameData[index].answer = qa_parts[1];
+                });
 
                 index++;
             });
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('data/adjectives_N5.json')
+            fetch('data/QA.json')
                 .then(response => response.json())
                 .then(data => {
                     itemsData = data;
                     // display words list
-                    createWordsList();
+                    createQAList();
                     showPage('words_list');
 
                     setGameRangeSelection();
-                    prepareMCQgameData();
+                    prepareMCQGameData();
                 })
                 .catch(error => console.error('Error loading JSON:', error));
         });
