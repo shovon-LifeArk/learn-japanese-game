@@ -70,7 +70,7 @@
             </div>
             <div class="button-container">
                 <button class="back-button" onclick="showPage('words_list')">←</button>
-                <button class="play-button" style="flex-grow: 1;" onclick="startGame({'rangeType': 'number'});">Start Game!</button>
+                <button class="play-button" style="flex-grow: 1;" onclick="startRearrangeGame();">Start Game!</button>
             </div>
         </div>
         <div id="question-container">
@@ -122,11 +122,14 @@
         let itemsData = {};
         let itemCounter = null;
 
-        let type1_GameData = null;
-
         let quizData = {};
+        let type1_GameData = null;
         let type2_GameData = null;
         let type3_GameData = null;
+        let dataItemToRearrangeGameItemNumberMapping = {
+            'from': {},
+            'to': {}
+        };
 
         function showPage(pageName) {
             const gameContainer = document.getElementById('game-container');
@@ -237,11 +240,22 @@
             replayGame();
         }
 
+        function startRearrangeGame() {
+            const params = {
+                'rangeType': 'mapped_number',
+                'rangeMapping': dataItemToRearrangeGameItemNumberMapping
+            };
+            startGame(params);
+        }
+
         function prepareRearrangeGameData() {
             // prepare type-1 game data
             type1_GameData = {};
             let index = 0;
             Object.keys(itemsData).forEach(key => {
+                // store range start item num mapping
+                dataItemToRearrangeGameItemNumberMapping.from[key] = index;
+
                 const dataItem = itemsData[key];
                 dataItem.exampleSentence.forEach(sentence => {
                     type1_GameData[index] = {};
@@ -251,6 +265,8 @@
 
                     index++;
                 });
+                // store range end item num mapping
+                dataItemToRearrangeGameItemNumberMapping.to[key] = index-1;
             });
         }
 

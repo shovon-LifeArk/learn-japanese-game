@@ -267,7 +267,6 @@ function checkRearrangeAnswer() {
         acc[i+1] = word;
         return acc;
     }, {});
-    console.log("correctAnswer", correctAnswer);
 
     let isCorrect = true;
 
