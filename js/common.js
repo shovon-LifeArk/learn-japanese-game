@@ -1,7 +1,16 @@
+let global_currentAudio = null;
+
 // Function to play sound
 function playSound(soundFile) {
-    const audio = new Audio(soundFile);
-    audio.play();
+    // Stop the current audio if it's playing
+    if (global_currentAudio) {
+        global_currentAudio.pause();
+        global_currentAudio.currentTime = 0;  // Reset to start
+    }
+
+    // Create a new Audio object and play the new sound
+    global_currentAudio = new Audio(soundFile);
+    global_currentAudio.play();
 }
 
 // get random item from array

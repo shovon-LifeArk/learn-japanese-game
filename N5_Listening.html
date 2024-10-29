@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Shovon Hasan">
+    <meta name="copyright" content="©2024 株式会社LifeArk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeArk Japanese education: N5 Listening</title>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/game.css">
+    <style>
+        #words_list-container table {
+            margin-top: 30px;;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #words_list-container td {
+            padding: 10px;
+            vertical-align: top;
+            border: 1px solid black;
+            word-break: keep-all;
+            font-size: 1em;
+            line-height: 150%;
+        }
+        #question-container #question-img {
+            height: auto !important;
+            margin-top: 20px;
+        }
+        #question-container #question-img img{
+            width: 100%;
+            height: auto !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="words_list-container">
+            <div class="header-image">
+                <img src="assets/image/LifeArk_Nihongo_logo.png" />
+                <h2 style="text-align: center; margin: 0px;">N5 Listening</h2>
+            </div>
+            <button class="play-button" onclick="playGame('N5 Listening: test')">Play Game</button>
+        </div>
+        <div id="range_selection-container">
+            <h3 style="text-align: center;">Choose the question range</h3>
+            <div style="text-align: center;">
+                <input type="number" id="range-from" placeholder="from" min="1" max="90"> ~ <input type="number" id="range-to" placeholder="to" min="10" max="100">
+                <br><br>
+                <span class="alert" id="range-alert"></span>
+                <br>
+            </div>
+            <div class="button-container">
+                <button class="back-button" onclick="showPage('listening_list')">←</button>
+                <button class="play-button" style="flex-grow: 1;" onclick="startGame({'rangeType': 'number'})">Start Game!</button>
+            </div>
+        </div>
+        <div id="question-container">
+            <div class="button-container">
+                <div id="question-number"></div>
+                <button id="next-button" onclick="nextQuestion()" disabled>&#10132;</button>
+            </div>
+            <div id="question-holder">
+                <div id="mcq-question">
+                    <div>
+                        <div id="question-sound"></div>
+                        <div id="question-img"></div>
+                    </div>
+                    <div id="options">
+                        <div class="option" onclick="checkAnswer(0)"></div>
+                        <div class="option" onclick="checkAnswer(1)"></div>
+                        <div class="option" onclick="checkAnswer(2)"></div>
+                        <div class="option" onclick="checkAnswer(3)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="result-container">
+            <div id="score"></div>
+            <button class="play-button" onclick="replayGame()">Replay</button>
+            <button class="link-button" onclick="showPage('words_list')">Listening List</button>
+            <div>
+                <h3>Submit your Score:</h3>
+                <div id="score-submit-form">
+                    <input type="text" id="player_userID" placeholder="User ID" value=""/>
+                    <button class="play-button" id="score-submit-button" onclick="submitScore()">Submit Score</button>
+                </div>
+                <div id="score-submit-response"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/game_rangeSelection.js"></script>
+    <script src="js/game_mcq.js"></script>
+    <script src="js/game_result.js"></script>
+    <script>
+        let itemsData = null;
+        let itemCounter = null;
+
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
+
+        function createListeningItemsList() {
+            const container = document.getElementById('words_list-container');
+            const table = document.createElement('table');
+
+            itemCounter = 1;
+
+            Object.keys(itemsData).forEach(key => {
+                const dataItem = itemsData[key];
+                // Create top row with image and text
+                const row = document.createElement('tr');
+                const numCell = document.createElement('td');
+                numCell.innerText = itemCounter;
+
+                const textCell = document.createElement('td');
+                let dispHtml = `<audio controls src="assets/N5_Listening/${dataItem.audio_path}"></audio>`;
+                if (dataItem?.image_path) {
+                    dispHtml += `<br/><img width="100%" src="assets/N5_Listening/${dataItem.image_path}" >`;
+                }
+                textCell.innerHTML = dispHtml;
+
+                row.appendChild(numCell);
+                row.appendChild(textCell);
+                table.appendChild(row);
+
+                itemCounter++;
+            });
+            // decrease 1 to match total number
+            itemCounter -= 1;
+
+            container.appendChild(table);
+
+            // Add click event listener to each hiragana div
+            const sounds = document.querySelectorAll('.listening-sound');
+            sounds.forEach(element => {
+                element.addEventListener('click', () => {
+                    const soundFile = element.getAttribute('data-sound');
+                    playSound(soundFile);
+                });
+            });
+        }
+
+        function playGame(lessonType) {
+            gameLessonType = lessonType;
+            showPage('range_selection');
+
+            // Change option design
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.classList.add('option-container_circle');
+            optionsEl.forEach(optionItem => {
+                optionItem.classList.remove('option');
+                if (!optionItem.classList.contains('option-circle')) {
+                    optionItem.classList.add('option-circle');
+                }
+            });
+        }
+
+        function prepareMCQgameData() {
+            let index = 0;
+
+            Object.keys(itemsData).forEach(key => {
+                const dataItem = itemsData[key];
+                gameData[index] = {};
+                gameData[index].question = {};
+                gameData[index].question.soundUrl = `assets/N5_Listening/${dataItem.audio_path}`;
+                if (dataItem?.image_path) {
+                    gameData[index].question.imageUrl = `assets/N5_Listening/${dataItem.image_path}`;
+                }
+                gameData[index].staticOptions = ["1", "2", "3", "4"];
+                gameData[index].answer = dataItem.answer;
+
+                index++;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/listening_N5.json')
+                .then(response => response.json())
+                .then(data => {
+                    itemsData = data;
+                    createListeningItemsList();
+                    showPage('words_list');
+
+                    setGameRangeSelection();
+                    prepareMCQgameData();
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        });
+
+    </script>
+</body>
+</html>

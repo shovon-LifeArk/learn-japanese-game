@@ -112,6 +112,9 @@ function resetGameQuestionOptions() {
         if ("options" in gameData[gameItemId]) {
             // shuffle the options values and store by question item id
             gameQuestionOptions[gameItemId] = gameData[gameItemId].options.sort(() => Math.random() - 0.5);
+        } else if ("staticOptions" in gameData[gameItemId]) {
+            // do not shuffle the options values, store by question item id
+            gameQuestionOptions[gameItemId] = gameData[gameItemId].staticOptions;
         } else {
             let options = new Set();
 
@@ -144,6 +147,20 @@ function nextQuestion() {
         gameTimer('stop');
         endGame();
         return;
+    }
+
+    // clear all containers
+    if (questionTextEl) {
+        questionTextEl.innerHTML = '';
+    }
+    if (questionImgEl) {
+        questionImgEl.innerHTML = '';
+    }
+    if (questionSoundEl) {
+        questionSoundEl.innerHTML = '';
+    }
+    if (questionCaptionEl) {
+        questionCaptionEl.innerHTML = '';
     }
 
     // Display question number
