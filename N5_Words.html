@@ -60,7 +60,8 @@
                 <img src="assets/image/LifeArk_Nihongo_logo.png" />
                 <h2 style="text-align: center; margin: 0px;">N5 শব্দাবলী</h2>
             </div>
-            <button class="play-button" onclick="playGame('N5 words: word meaning')">Play Game</button>
+            <button class="play-button" onclick="playWordMeaningGame('N5 words: word meaning')">Play Game (word meaning)</button>
+            <button class="play-button" onclick="playFillBlankGame('N5 words: fill blank')">Play Game (fill blank)</button>
         </div>
         <div id="range_selection-container">
             <h3 style="text-align: center;">Choose the question range</h3>
@@ -83,6 +84,7 @@
             <div id="question-holder">
                 <div id="mcq-question">
                     <div>
+                        <div id="question-text"></div>
                         <div id="question-img"></div>
                         <div id="question-caption"></div>
                     </div>
@@ -119,6 +121,10 @@
 
         let itemsData = null;
         let itemCounter = null;
+
+        let quizData = {};
+        let wordMeaning_GameData = {};
+        let fillBlank_GameData = {};
 
         function showPage(pageName) {
             const gameContainer = document.getElementById('game-container');
@@ -186,12 +192,31 @@
             itemCounter -= 1;
         }
 
-        function playGame(lessonType) {
+        function playWordMeaningGame(lessonType) {
             gameLessonType = lessonType;
+            gameData = wordMeaning_GameData;
+
+            // show question image container
+            questionImgEl.style.display = 'block';
+
             showPage('range_selection');
         }
 
-        function prepareMCQgameData() {
+        function playFillBlankGame(lessonType) {
+            gameLessonType = lessonType;
+            gameData = fillBlank_GameData;
+            gameType = "mcq";
+
+            gameFromIndex = 0;
+            gameToIndex = Object.keys(gameData).length-1;
+
+            // hide question image container
+            questionImgEl.style.display = 'none';
+
+            replayGame()
+        }
+
+        function prepareWordMeaningGameData() {
             let index = 0;
 
             categories.forEach(category => {
@@ -200,14 +225,31 @@
 
                 itemsInCategory.forEach(key => {
                     const dataItem = itemsData[key];
-                    gameData[index] = {};
-                    gameData[index].question = {};
-                    gameData[index].question.imageUrl = `assets/image/N5_words/${dataItem.imgkey ? dataItem.imgkey : dataItem.kana}.jpg`;
-                    gameData[index].question.caption = dataItem.bangla;
-                    gameData[index].answer = dataItem.kana;
+                    wordMeaning_GameData[index] = {};
+                    wordMeaning_GameData[index].question = {};
+                    wordMeaning_GameData[index].question.imageUrl = `assets/image/N5_words/${dataItem.imgkey ? dataItem.imgkey : dataItem.kana}.jpg`;
+                    wordMeaning_GameData[index].question.caption = dataItem.bangla;
+                    wordMeaning_GameData[index].answer = dataItem.kana;
 
                     index++;
                 });
+            });
+        }
+
+        function prepareFillBlankGameData() {
+            let index = 0;
+
+            Object.keys(quizData).forEach(key => {
+                const quizItem = quizData[key];
+                if (quizItem.category === 'noun' || quizItem.category === 'phrase') {
+                    fillBlank_GameData[index] = {};
+                    fillBlank_GameData[index].question = {};
+                    fillBlank_GameData[index].question.text = quizItem.question;
+                    fillBlank_GameData[index].options = quizItem.options;
+                    fillBlank_GameData[index].answer = quizItem.answer;
+
+                    index++;
+                }
             });
         }
 
@@ -221,7 +263,17 @@
                     showPage('words_list');
 
                     setGameRangeSelection();
-                    prepareMCQgameData();
+                    prepareWordMeaningGameData();
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+
+            // fetch quiz data too
+            fetch('data/vocabulary_N5_quiz.json')
+                .then(response => response.json())
+                .then(data => {
+                    quizData = data;
+
+                    prepareFillBlankGameData();
                 })
                 .catch(error => console.error('Error loading JSON:', error));
         });
