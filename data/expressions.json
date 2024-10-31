@@ -1,0 +1,876 @@
+{
+    "0": {
+        "phrase": "こんにちは",
+        "explanation": {
+            "en": "Hello / Good afternoon",
+            "bd": "হ্যালো / শুভ অপরাহ্ণ"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>こんにちは</h>、げんき です か？",
+                "en": "Hello, how are you?",
+                "bd": "হ্যালো, আপনি কেমন আছেন?"
+            },
+            {
+                "jp": "<h>こんにちは</h>、たなかさん。きょうは いい てんき ですね。",
+                "en": "Hello, Mr. Tanaka. The weather is nice today, isn't it?",
+                "bd": "হ্যালো, মি. তানাকা। আজকের আবহাওয়া খুব সুন্দর, তাই না?"
+            }
+        ]
+    },
+    "1": {
+        "phrase": "おはよう ございます",
+        "explanation": {
+            "en": "Good morning (polite)",
+            "bd": "সুপ্রভাত"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>おはよう ございます</h>、せんせい。",
+                "en": "Good morning, teacher.",
+                "bd": "সুপ্রভাত, স্যার।"
+            },
+            {
+                "jp": "<h>おはよう ございます</h>、きょう は いい ひ です。",
+                "en": "Good morning, today is a good day.",
+                "bd": "সুপ্রভাত, আজকের দিনটি ভালো।"
+            }
+        ]
+    },
+    "2": {
+        "phrase": "こんばんは",
+        "explanation": {
+            "en": "Good evening",
+            "bd": "শুভ সন্ধ্যা"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>こんばんは</h>、いかが です か？",
+                "en": "Good evening, how are you?",
+                "bd": "শুভ সন্ধ্যা, আপনি কেমন আছেন?"
+            },
+            {
+                "jp": "<h>こんばんは</h>、えいが を みてきました。",
+                "en": "Good evening, I just watched a movie.",
+                "bd": "শুভ সন্ধ্যা, আমি একটি সিনেমা দেখে আসলাম।"
+            }
+        ]
+    },
+    "3": {
+        "phrase": "さようなら",
+        "explanation": {
+            "en": "Goodbye",
+            "bd": "বিদায়"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>さようなら</h>、あした また あいましょう。",
+                "en": "Goodbye, see you again tomorrow.",
+                "bd": "বিদায়, কাল আবার দেখা হবে।"
+            },
+            {
+                "jp": "<h>さようなら</h>、せんせい。",
+                "en": "Goodbye, teacher.",
+                "bd": "বিদায়, স্যার।"
+            }
+        ]
+    },
+    "4": {
+        "phrase": "ありがとう ございます",
+        "explanation": {
+            "en": "Thank you (polite)",
+            "bd": "ধন্যবাদ"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>ありがとう ございます</h>、ほんとう に たすかりました。",
+                "en": "Thank you, you really helped me.",
+                "bd": "ধন্যবাদ, আপনি সত্যিই আমাকে সাহায্য করেছেন।"
+            },
+            {
+                "jp": "<h>ありがとう ございます</h>、プレゼント を いただきました。",
+                "en": "Thank you, I received the gift.",
+                "bd": "ধন্যবাদ, আমি উপহারটি পেয়েছি।"
+            }
+        ]
+    },
+    "5": {
+        "phrase": "すみません",
+        "explanation": {
+            "en": "Excuse me / Sorry / Thank you (depending on the context)",
+            "bd": "মাফ করবেন / দুঃখিত / ধন্যবাদ (প্রেক্ষাপট অনুযায়ী)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>すみません</h>、みち を おしえて ください。",
+                "en": "Excuse me, please tell me the way.",
+                "bd": "মাফ করবেন, দয়া করে আমাকে রাস্তাটি দেখিয়ে দিন।"
+            },
+            {
+                "jp": "<h>すみません</h>、おそく なりました。",
+                "en": "Sorry, I’m late.",
+                "bd": "দুঃখিত, আমি দেরি করে ফেলেছি।"
+            }
+        ]
+    },
+    "6": {
+        "phrase": "どういたしまして",
+        "explanation": {
+            "en": "You’re welcome",
+            "bd": "এটা তেমন কোন ব্যাপার না।"
+        },
+        "exampleSentence": [
+            {
+                "jp": "A: ありがとうございます！<br/>B: <h>どういたしまして。</h>",
+                "en": "A: Thank you! <br/>B: You’re welcome.",
+                "bd": "A: ধন্যবাদ! <br/>B: এটা তেমন কোন ব্যাপার না।"
+            },
+            {
+                "jp": "A: いろいろありがとうございました！<br/>B: <h>どういたしまして</h>、また いつでも きて ください。",
+                "en": "A: Thank you for everything!<br/>B: You’re welcome, feel free to come again anytime.",
+                "bd": "A: সবকিছুর জন্য ধন্যবাদ!<br/>B: এটা তেমন কোন ব্যাপার না, আবার যে কোনো সময় চলে আসবেন।"
+            }
+        ]
+    },
+    "7": {
+        "phrase": "いただきます",
+        "explanation": {
+            "en": "A phrase said before eating (lit. 'I humbly receive')",
+            "bd": "খাওয়ার আগে বলা একটি বাক্যাংশ (আক্ষরিক অর্থ 'আমি বিনয়ের সাথে গ্রহণ করছি')"
+        },
+        "exampleSentence": [
+            {
+                "jp": "みんな で、 「<h>いただきます</h>」！",
+                "en": "Let’s say 'Itadakimasu' together!",
+                "bd": "সবাই মিলে 'ইতাদাকিমাস' বলি!"
+            },
+            {
+                "jp": "<h>いただきます</h>、きょう の ごはん は とても おいしそう です。",
+                "en": "Itadakimasu, today's meal looks really delicious.",
+                "bd": "ইতাদাকিমাস, আজকের খাবারটি খুবই সুস্বাদু দেখাচ্ছে।"
+            }
+        ]
+    },
+    "8": {
+        "phrase": "ごちそうさま でした",
+        "explanation": {
+            "en": "A phrase said after eating (lit. 'It was a feast')",
+            "bd": "খাওয়ার পর বলা একটি বাক্যাংশ (আক্ষরিক অর্থ 'এটি ছিল একটি ভোজ')"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>ごちそうさま でした</h>、とても おいしかった です。",
+                "en": "Thank you for the meal, it was very delicious.",
+                "bd": "খাবারের জন্য ধন্যবাদ, এটি খুবই সুস্বাদু ছিল।"
+            },
+            {
+                "jp": "<h>ごちそうさま でした</h>、きょう も すばらしい ごはん でした。",
+                "en": "Thank you for the meal, today’s food was wonderful too.",
+                "bd": "খাবারের জন্য ধন্যবাদ, আজকেও অসাধারণ খাবার ছিল।"
+            }
+        ]
+    },
+    "9": {
+        "phrase": "おつかれさま でした",
+        "explanation": {
+            "en": "Thank you for your hard work (used after finishing work or a task)",
+            "bd": "কষ্ট করার জন্য ধন্যবাদ (কাজ শেষ করার পর ব্যবহৃত হয়)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>おつかれさま でした</h>、きょう も いちにち がんばりました。",
+                "en": "Thank you for your hard work, we did our best today too.",
+                "bd": "কষ্ট করার  জন্য ধন্যবাদ, আজও আমরা আমাদের সর্বোচ্চ চেষ্টা করেছি।"
+            },
+            {
+                "jp": "<h>おつかれさま でした</h>、つぎ の かいぎ は あした です。",
+                "en": "Thank you for your hard work, the next meeting is tomorrow.",
+                "bd": "কষ্ট করার  জন্য ধন্যবাদ, পরবর্তী মিটিং কালকে।"
+            }
+        ]
+    },
+    "10": {
+        "phrase": "いらっしゃいませ",
+        "explanation": {
+            "en": "Welcome (typically used by shop staff to greet customers)",
+            "bd": "স্বাগতম (সাধারণত দোকানের কর্মীরা গ্রাহকদের অভিবাদন জানাতে ব্যবহার করে)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>いらっしゃいませ</h>、なに を おさがし です か？",
+                "en": "Welcome, what are you looking for?",
+                "bd": "স্বাগতম, আপনি কী খুঁজছেন?"
+            },
+            {
+                "jp": "<h>いらっしゃいませ</h>、こちら に どうぞ。",
+                "en": "Welcome, please come this way.",
+                "bd": "স্বাগতম, এই পথে আসুন।"
+            }
+        ]
+    },
+    "11": {
+        "phrase": "おねがい します",
+        "explanation": {
+            "en": "Please (used when making a request)",
+            "bd": "অনুগ্রহ করে (অনুরোধ করার সময় ব্যবহৃত হয়)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "みず を <h>おねがい します</h>。",
+                "en": "Water, please.",
+                "bd": "অনুগ্রহ করে পানি দিন।"
+            },
+            {
+                "jp": "てつだい <h>おねがい します</h>。",
+                "en": "Please help me.",
+                "bd": "অনুগ্রহ করে আমাকে সাহায্য করুন।"
+            }
+        ]
+    },
+    "12": {
+        "phrase": "はい",
+        "explanation": {
+            "en": "Yes",
+            "bd": "হ্যাঁ"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>はい</h>、わかりました。",
+                "en": "Yes, I understand.",
+                "bd": "হ্যাঁ, আমি বুঝতে পেরেছি।"
+            },
+            {
+                "jp": "<h>はい</h>、できます。",
+                "en": "Yes, I can do it.",
+                "bd": "হ্যাঁ, আমি এটা করতে পারি।"
+            }
+        ]
+    },
+    "13": {
+        "phrase": "いいえ",
+        "explanation": {
+            "en": "No",
+            "bd": "না"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>いいえ</h>、だいじょうぶ です。",
+                "en": "No, it's okay.",
+                "bd": "না, ঠিক আছে।"
+            },
+            {
+                "jp": "<h>いいえ</h>、まだ わかりません。",
+                "en": "No, I don’t understand yet.",
+                "bd": "না, আমি এখনো বুঝতে পারছি না।"
+            }
+        ]
+    },
+    "14": {
+        "phrase": "ちがいます",
+        "explanation": {
+            "en": "That's not right / It’s different",
+            "bd": "এটা সঠিক নয় / এটা আলাদা"
+        },
+        "exampleSentence": [
+            {
+                "jp": "いいえ、それ は <h>ちがいます</h>。",
+                "en": "No, that’s not right.",
+                "bd": "না, এটা ঠিক নয়।"
+            },
+            {
+                "jp": "<h>ちがいます</h>。これは わたしの もの じゃない です。",
+                "en": "No, This isn’t mine.",
+                "bd": "না, এটা আমার নয়।"
+            }
+        ]
+    },
+    "15": {
+        "phrase": "わかりました",
+        "explanation": {
+            "en": "I understand / Got it",
+            "bd": "আমি বুঝতে পেরেছি / ঠিক আছে"
+        },
+        "exampleSentence": [
+            {
+                "jp": "はなす こと を <h>わかりました</h>。",
+                "en": "I understood what you said.",
+                "bd": "আপনার কথাটি আমি বুঝতে পেরেছি।"
+            },
+            {
+                "jp": "<h>わかりました</h>、すぐ に やります。",
+                "en": "Got it, I’ll do it right away.",
+                "bd": "ঠিক আছে, আমি সাথে সাথে করবো।"
+            }
+        ]
+    },
+    "16": {
+        "phrase": "わかりません",
+        "explanation": {
+            "en": "I don't understand",
+            "bd": "আমি বুঝতে পারছি না"
+        },
+        "exampleSentence": [
+            {
+                "jp": "もう いちど いって ください、<h>わかりません</h>。",
+                "en": "Please say it again, I don’t understand.",
+                "bd": "দয়া করে আবার বলুন, আমি বুঝতে পারছি না।"
+            },
+            {
+                "jp": "この もんだい は <h>わかりません</h>。",
+                "en": "I don’t understand this problem.",
+                "bd": "এই সমস্যাটি আমি বুঝতে পারছি না।"
+            }
+        ]
+    },
+    "17": {
+        "phrase": "もしもし",
+        "explanation": {
+            "en": "Hello (used when answering the phone)",
+            "bd": "হ্যালো (ফোন রিসিভ করার সময় ব্যবহৃত হয়)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>もしもし</h>、たなか です。",
+                "en": "Hello, this is Tanaka speaking.",
+                "bd": "হ্যালো, আমি তানাকা বলছি।"
+            },
+            {
+                "jp": "<h>もしもし</h>、いま どこ に います か？",
+                "en": "Hello, where are you now?",
+                "bd": "হ্যালো, আপনি এখন কোথায় আছেন?"
+            }
+        ]
+    },
+    "18": {
+        "phrase": "おめでとうございます",
+        "explanation": {
+            "en": "Congratulations",
+            "bd": "অভিনন্দন"
+        },
+        "exampleSentence": [
+            {
+                "jp": "けっこん <h>おめでとうございます</h>！",
+                "en": "Congratulations on your marriage!",
+                "bd": "আপনার বিয়ের জন্য অভিনন্দন!"
+            },
+            {
+                "jp": "しけん に ごうかく して <h>おめでとうございます</h>。",
+                "en": "Congratulations on passing the exam.",
+                "bd": "পরীক্ষায় উত্তীর্ণ হওয়ার জন্য অভিনন্দন।"
+            }
+        ]
+    },
+    "19": {
+        "phrase": "よろしく おねがい します",
+        "explanation": {
+            "en": "Nice to meet you / Please take care of ~ (a polite phrase used in introductions or when asking for a favor)",
+            "bd": "আপনার সাথে দেখা হয়ে আনন্দিত / দয়া করে এটির যত্ন নিন (ভদ্রভাবে পরিচয়ের সময় বা অনুরোধ করার সময় ব্যবহৃত একটি বাক্যাংশ)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "はじめまして、<h>よろしく おねがい します</h>。",
+                "en": "Nice to meet you, please take care of me.",
+                "bd": "আনন্দিত, দয়া করে আমার যত্ন নিন।"
+            },
+            {
+                "jp": "これ から <h>よろしく おねがい します</h>。",
+                "en": "I look forward to working with you.",
+                "bd": "আপনার সাথে কাজ করার জন্য আগ্রহী।"
+            }
+        ]
+    },
+    "20": {
+        "phrase": "どうぞ",
+        "explanation": {
+            "en": "Please go ahead / Here you go",
+            "bd": "অনুগ্রহ করে সামনে যান / এটি নিন"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>どうぞ</h>、おさき に。",
+                "en": "Please, go ahead.",
+                "bd": "অনুগ্রহ করে, আগে যান।"
+            },
+            {
+                "jp": "これ を <h>どうぞ</h>。",
+                "en": "Here you go.",
+                "bd": "এটি নিন।"
+            }
+        ]
+    },
+    "21": {
+        "phrase": "すごい",
+        "explanation": {
+            "en": "Amazing / Awesome",
+            "bd": "অবিশ্বাস্য / দুর্দান্ত"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>すごい</h>、あめ が ふって います ね！",
+                "en": "Wow, it’s raining heavily!",
+                "bd": "ওয়াও, প্রচুর বৃষ্টি হচ্ছে!"
+            },
+            {
+                "jp": "<h>すごい</h> じしょ を もって います ね！",
+                "en": "You have an awesome dictionary!",
+                "bd": "আপনার দুর্দান্ত একটি অভিধান আছে!"
+            }
+        ]
+    },
+    "22": {
+        "phrase": "たいへん ですね",
+        "explanation": {
+            "en": "That’s tough, isn’t it? / That must be difficult",
+            "bd": "এটা কঠিন, তাই না? / এটা অবশ্যই কঠিন হতে হবে"
+        },
+        "exampleSentence": [
+            {
+                "jp": "しごと が おおくて <h>たいへん ですね</h>。",
+                "en": "You have a lot of work, it must be tough.",
+                "bd": "আপনার অনেক কাজ আছে, এটা অবশ্যই কঠিন।"
+            },
+            {
+                "jp": "あめ で <h>たいへん ですね</h>。",
+                "en": "It must be tough with all the rain.",
+                "bd": "এই বৃষ্টির মধ্যে অবশ্যই কঠিন।"
+            }
+        ]
+    },
+    "23": {
+        "phrase": "がんばって ください",
+        "explanation": {
+            "en": "Good luck / Do your best",
+            "bd": "শুভকামনা / আপনার সর্বোচ্চ চেষ্টা করুন"
+        },
+        "exampleSentence": [
+            {
+                "jp": "しけん を <h>がんばって ください</h>。",
+                "en": "Good luck on the exam.",
+                "bd": "পরীক্ষায় শুভকামনা।"
+            },
+            {
+                "jp": "しごと を <h>がんばって ください</h>！",
+                "en": "Do your best at work!",
+                "bd": "কাজে আপনার সর্বোচ্চ চেষ্টা করুন!"
+            }
+        ]
+    },
+    "24": {
+        "phrase": "おだいじに",
+        "explanation": {
+            "en": "Take care (often used when someone is sick)",
+            "bd": "সাবধানে থাকুন (কারো অসুস্থতার সময় ব্যবহৃত হয়)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "かぜ を ひいて いる なら <h>おだいじに</h>。",
+                "en": "Take care if you have a cold.",
+                "bd": "যদি আপনার সর্দি লাগে তবে সাবধানে থাকুন।"
+            },
+            {
+                "jp": "びょういん へ いく なら <h>おだいじに</h>。",
+                "en": "Take care if you're going to the hospital.",
+                "bd": "যদি আপনি হাসপাতালে যান, সাবধানে থাকুন।"
+            }
+        ]
+    },
+    "25": {
+        "phrase": "ごめんなさい",
+        "explanation": {
+            "en": "I'm sorry (more personal and apologetic)",
+            "bd": "আমি দুঃখিত (আরও ব্যক্তিগত এবং ক্ষমাপ্রার্থী)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "おそく なって <h>ごめんなさい</h>。",
+                "en": "I'm sorry for being late.",
+                "bd": "দেরি হওয়ার জন্য আমি দুঃখিত।"
+            },
+            {
+                "jp": "<h>ごめんなさい</h>、まちがえました。",
+                "en": "I'm sorry, I made a mistake.",
+                "bd": "আমি দুঃখিত, আমি একটি ভুল করেছি।"
+            }
+        ]
+    },
+    "26": {
+        "phrase": "よろしく",
+        "explanation": {
+            "en": "Informal version of よろしくおねがいします, often used with friends or peers",
+            "bd": "よろしくおねがいします এর অনানুষ্ঠানিক রূপ, প্রায়শই বন্ধু বা সহকর্মীদের সাথে ব্যবহৃত হয়"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>よろしく</h>、おねがい します。",
+                "en": "Please take care of it.",
+                "bd": "এটি দেখাশোনা করুন।"
+            },
+            {
+                "jp": "あした も <h>よろしく</h>。",
+                "en": "Please take care of things tomorrow as well.",
+                "bd": "আগামীকালও দয়া করে সবকিছু দেখাশোনা করুন।"
+            }
+        ]
+    },
+    "27": {
+        "phrase": "はじめまして",
+        "explanation": {
+            "en": "Nice to meet you (A formal greeting when meeting someone for the first time)",
+            "bd": "দেখা হয়ে ভালো লাগল (কারও সাথে প্রথমবার দেখা হলে বলা হয়)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>はじめまして</h>、わたしの なまえは アリ です。",
+                "en": "Nice to meet you, my name is Ali.",
+                "bd": "আপনার সাথে দেখা হয়ে ভালো লাগল, আমার নাম আলি।"
+            },
+            {
+                "jp": "<h>はじめまして</h>、あなたに あえて うれしいです。",
+                "en": "Nice to meet you, I’m happy to see you.",
+                "bd": "দেখা হয়ে ভালো লাগল, আপনার সাথে দেখা করতে পেরে আনন্দিত।"
+            }
+        ]
+    },
+    "28": {
+        "phrase": "どうぞ よろしく",
+        "explanation": {
+            "en": "Formal way to say 'Nice to meet you' or 'Please take care of me'",
+            "bd": "'আপনার সাথে দেখা করে ভালো লাগলো' বা 'আমার যত্ন নিন' বলার ভদ্র উপায়"
+        },
+        "exampleSentence": [
+            {
+                "jp": "はじめまして、<h>どうぞ よろしく</h> おねがいします。",
+                "en": "Nice to meet you, expecting your cooperation in future.",
+                "bd": "দেখা হয়ে ভালো লাগল, আপনার সহযোগিতা প্রত্যাশা করছি।"
+            },
+            {
+                "jp": "こんご も <h>どうぞ よろしく</h>。",
+                "en": "Please continue to take care of me.",
+                "bd": "পরবর্তিতেও আপনার সহযোগিতা প্রত্যাশা করছি।"
+            }
+        ]
+    },
+    "29": {
+        "phrase": "おげんき ですか",
+        "explanation": {
+            "en": "How are you?",
+            "bd": "আপনি ভালো আছেন?"
+        },
+        "exampleSentence": [
+            {
+                "jp": "ひさしぶり です ね、<h>おげんき ですか</h>？",
+                "en": "It’s been a while, how are you?",
+                "bd": "অনেকদিন পর, আপনি ভালো আছেন?"
+            },
+            {
+                "jp": "A: <h>おげんき ですか</h>？<br/>B: はい、げんき です。",
+                "en": "How are you? Yes, I’m fine.",
+                "bd": "আপনি ভালো আছেন? হ্যাঁ, আমি ভালো আছি।"
+            }
+        ]
+    },
+    "30": {
+        "phrase": "だいじょうぶ ですか",
+        "explanation": {
+            "en": "Are you okay?",
+            "bd": "আপনি কি ঠিক আছেন?"
+        },
+        "exampleSentence": [
+            {
+                "jp": "ころんで しまいました ね、<h>だいじょうぶ ですか</h>？",
+                "en": "You fell down, are you okay?",
+                "bd": "আপনি পড়ে গেছেন, আপনি কি ঠিক আছেন?"
+            },
+            {
+                "jp": "つかれて います か？ <h>だいじょうぶ ですか</h>？",
+                "en": "Are you tired? Are you okay?",
+                "bd": "আপনি ক্লান্ত? আপনি কি ঠিক আছেন?"
+            }
+        ]
+    },
+    "31": {
+        "phrase": "がんばります",
+        "explanation": {
+            "en": "I’ll do my best",
+            "bd": "সর্বোচ্চ চেষ্টা করব"
+        },
+        "exampleSentence": [
+            {
+                "jp": "あした の しけん を <h>がんばります</h>。",
+                "en": "I’ll do my best on tomorrow's exam.",
+                "bd": "আগামীকালকের পরীক্ষায় আমি আমার সর্বোচ্চ চেষ্টা করব।"
+            },
+            {
+                "jp": "しごと で <h>がんばります</h>。",
+                "en": "I’ll do my best at work.",
+                "bd": "কাজে আমি আমার সর্বোচ্চ চেষ্টা করব।"
+            }
+        ]
+    },
+    "32": {
+        "phrase": "き を つけて",
+        "explanation": {
+            "en": "Take care (when someone is going somewhere)",
+            "bd": "সাবধানে যেও (যখন কেউ কোথাও যাচ্ছে)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "あめ が ふって いる ので、<h>き を つけて</h>。",
+                "en": "It's raining, so take care.",
+                "bd": "বৃষ্টি হচ্ছে, তাই সাবধানে যেও।"
+            },
+            {
+                "jp": "がっこう へ いく とき、<h>き を つけて</h> ね。",
+                "en": "Take care on your way to school.",
+                "bd": "স্কুলে যাওয়ার সময় সাবধানে যেও।"
+            }
+        ]
+    },
+    "33": {
+        "phrase": "どうも",
+        "explanation": {
+            "en": "Thanks (casual)",
+            "bd": "ধন্যবাদ (অনানুষ্ঠানিক)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "A: あなたの にもつを はこんでおいたよ。<br/>B: <h>どうも</h>。",
+                "en": "A: I have carried your luggage.<br/>B: Thank you.",
+                "bd": "A: আমি তোমার লাগেজটি নিয়ে এসেছি।<br/>B: ধন্যবাদ।"
+            },
+            {
+                "jp": "A: 自転車を直したよ。<br/>B: <h>どうも</h>、ありがとう。",
+                "en": "A: I fixed the bicycle.<br/>B: Thank you, I appreciate it.",
+                "bd": "আমি সাইকেলটি মেরামত করেছি।<br/>B: ধন্যবাদ, আমি এর জন্য কৃতজ্ঞ।"
+            }
+        ]
+    },
+    "34": {
+        "phrase": "すごい ですね",
+        "explanation": {
+            "en": "That’s amazing, isn’t it?",
+            "bd": "অসাধারণ, তাই না?"
+        },
+        "exampleSentence": [
+            {
+                "jp": "この えいが は <h>すごい ですね</h>。",
+                "en": "This movie is amazing, isn’t it?",
+                "bd": "এই সিনেমাটা অসাধারণ, তাই না?"
+            },
+            {
+                "jp": "あめ が <h>すごい ですね</h>。",
+                "en": "It's raining really hard, isn’t it?",
+                "bd": "অনেক বৃষ্টি পড়ছে, তাই না?"
+            }
+        ]
+    },
+    "35": {
+        "phrase": "いい ですね",
+        "explanation": {
+            "en": "That’s good, isn’t it?",
+            "bd": "এটা ভালো, তাই না?"
+        },
+        "exampleSentence": [
+            {
+                "jp": "あたらしい かばん は <h>いい ですね</h>。",
+                "en": "Your new bag is nice, isn’t it?",
+                "bd": "তোমার নতুন ব্যাগটা ভালো, তাই না?"
+            },
+            {
+                "jp": "この あさごはん は <h>いい ですね</h>。",
+                "en": "This breakfast is good, isn’t it?",
+                "bd": "এই সকালের নাস্তাটা ভালো, তাই না?"
+            }
+        ]
+    },
+    "36": {
+        "phrase": "しつれい します",
+        "explanation": {
+            "en": "Excuse me (polite, used when interrupting or leaving a room)",
+            "bd": "মাফ করবেন (শ্রদ্ধাপূর্ণভাবে, যখন কাউকে ব্যাঘাত করা হয় বা একটি কক্ষ থেকে বের হওয়া হয়)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "あしたは よていが ある ので、おさきに <h>しつれい します</h>。",
+                "en": "I have plans tomorrow, so I will excuse myself first.",
+                "bd": "আমার আগামীকাল কাজ আছে, তাই আগেই প্রস্থান করছি।"
+            },
+            {
+                "jp": "A: <h>しつれい します</h>。B: はい、どうぞ。A: このもんだいは どのように ときますか。",
+                "en": "A: Excuse me.<br/>B: Yes, please go ahead.<br/>A: How do I solve this problem?",
+                "bd": "A: মাফ করবেন। <br/>B: হ্যাঁ, বলুন।<br/>A: আমি এই সমস্যাটি কিভাবে সমাধান করব?"
+            }
+        ]
+    },
+    "37": {
+        "phrase": "おじゃま します",
+        "explanation": {
+            "en": "Sorry to interrupt you (used when entering someone’s home)",
+            "bd": "আপনাকে বিরক্ত করার জন্য ক্ষমাপ্রার্থী (কারো বাড়িতে বা কক্ষে প্রবেশ করার সময় ব্যবহৃত হয়)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "A: <h>おじゃま します</h>。<br/>B: いらっしゃい。",
+                "en": "A: Excuse me for interrupting.<br/>B: Please, come.",
+                "bd": "A: বিরক্ত করার জন্য দুঃখিত।<br/>B: ভিতরে আসুন।"
+            },
+            {
+                "jp": "せんせい、<h>おじゃま します</h>。あしたの しけんは なんじ からですか。",
+                "en": "Teacher, excuse me for intruding. What time does tomorrow's exam start?",
+                "bd": "শিক্ষক, বিরক্ত করার জন্য ক্ষমাপ্রার্থী। আগামীকালের পরীক্ষাটি কয়টা থেকে শুরু হবে?"
+            }
+        ]
+    },
+    "38": {
+        "phrase": "おせわ に なります",
+        "explanation": {
+            "en": "Thank you for your help (used when you expect to be helped by someone)",
+            "bd": "আপনার সাহায্যের জন্য ধন্যবাদ (যখন আপনি কারো সাহায্য পাওয়ার আশা করেন)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "こんど の プロジェクト で <h>おせわ に なります</h>。",
+                "en": "Thank you for your help in the upcoming project.",
+                "bd": "আসন্ন প্রকল্পে আপনার সাহায্যের জন্য ধন্যবাদ।"
+            },
+            {
+                "jp": "いつも <h>おせわ に なります</h>。",
+                "en": "Thank you for always helping me.",
+                "bd": "সবসময় আমাকে সাহায্য করার জন্য ধন্যবাদ।"
+            }
+        ]
+    },
+    "39": {
+        "phrase": "いってきます",
+        "explanation": {
+            "en": "I’m leaving (used when leaving home)",
+            "bd": "বের হলাম (বাড়ি থেকে বের হওয়ার সময় ব্যবহৃত হয়)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>いってきます</h>、がっこう に いきます。",
+                "en": "I’m leaving, I’m going to school.",
+                "bd": "বের হলাম, স্কুলে যাচ্ছি।"
+            },
+            {
+                "jp": "<h>いってきます</h>、また あとで。",
+                "en": "I’m leaving, see you later.",
+                "bd": "আমি বের হলাম, পরে দেখা হবে।"
+            }
+        ]
+    },
+    "40": {
+        "phrase": "いってらっしゃい",
+        "explanation": {
+            "en": "Have a good day / Take care (used when seeing someone off)",
+            "bd": "ভালোভাবে যাও / সাবধানে থেকো (কাউকে বিদায় দেওয়ার সময় ব্যবহৃত)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>いってらっしゃい</h>、きをつけて。",
+                "en": "Have a good day, take care.",
+                "bd": "ভালোভাবে যাও, সাবধানে থেকো।"
+            },
+            {
+                "jp": "がっこう へ <h>いってらっしゃい</h>。",
+                "en": "Have a good day at school.",
+                "bd": "স্কুলে ভালোভাবে যাও।"
+            }
+        ]
+    },
+    "41": {
+        "phrase": "ただいま",
+        "explanation": {
+            "en": "I’m back (used when returning home)",
+            "bd": "আমি ফিরে এসেছি (বাড়িতে ফিরে আসার সময় ব্যবহৃত)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>ただいま</h>、いま かえりました。",
+                "en": "I’m back, I’ve just returned.",
+                "bd": "আমি ফিরে এসেছি, আমি ঠিক এখনই ফিরলাম।"
+            },
+            {
+                "jp": "<h>ただいま</h>！ いま かえって きた。",
+                "en": "I’m back! I just got home.",
+                "bd": "আমি ফিরে এসেছি! আমি এখনই ঘরে এলাম।"
+            }
+        ]
+    },
+    "42": {
+        "phrase": "おかえりなさい",
+        "explanation": {
+            "en": "Welcome back",
+            "bd": "স্বাগতম (কারো ফিরে আসার সময়)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>おかえりなさい</h>、いそがしかった です か？",
+                "en": "Welcome back, was it busy?",
+                "bd": "স্বাগতম, কি ব্যস্ত ছিলে?"
+            },
+            {
+                "jp": "<h>おかえりなさい</h>、きょう は どう だった？",
+                "en": "Welcome back, how was your day?",
+                "bd": "স্বাগতম, আজ কেমন ছিল?"
+            }
+        ]
+    },
+    "43": {
+        "phrase": "おひさしぶり です",
+        "explanation": {
+            "en": "Long time no see (polite)",
+            "bd": "অনেকদিন পর দেখা (শ্রদ্ধাপূর্ণ)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>おひさしぶり です</h>、げんき です か？",
+                "en": "Long time no see, how have you been?",
+                "bd": "অনেকদিন পর দেখা, কেমন আছো?"
+            },
+            {
+                "jp": "<h>おひさしぶり です</h>、また あえて うれしい です。",
+                "en": "Long time no see, I’m glad to see you again.",
+                "bd": "অনেকদিন পর দেখা, তোমার সাথে আবার দেখা করতে পেরে খুশি হলাম।"
+            }
+        ]
+    },
+    "44": {
+        "phrase": "だめ です",
+        "explanation": {
+            "en": "It's no good / Not allowed",
+            "bd": "এটা ঠিক না / অনুমোদিত নয়"
+        },
+        "exampleSentence": [
+            {
+                "jp": "それ は <h>だめ です</h>、やめて ください。",
+                "en": "That’s no good, please stop.",
+                "bd": "এটা ঠিক না, দয়া করে থামুন।"
+            },
+            {
+                "jp": "<h>だめ です</h>、いま は できません。",
+                "en": "It’s not allowed, I can’t do it right now.",
+                "bd": "এটা অনুমোদিত নয়, আমি এখন করতে পারব না।"
+            }
+        ]
+    },
+    "45": {
+        "phrase": "つまらない もの ですが",
+        "explanation": {
+            "en": "This is just a small gift (humble expression when giving a gift)",
+            "bd": "এটি একটি সামান্য উপহার (উপহার দেওয়ার সময় বিনম্রভাবে ব্যবহার করা হয়)"
+        },
+        "exampleSentence": [
+            {
+                "jp": "<h>つまらない もの ですが</h>、どうぞ。",
+                "en": "This is just a small gift, please accept it.",
+                "bd": "এটি একটি সামান্য উপহার, দয়া করে গ্রহণ করুন।"
+            },
+            {
+                "jp": "<h>つまらない もの ですが</h>、おうけとり ください。",
+                "en": "It’s just a little something, please take it.",
+                "bd": "এটি সামান্য কিছু, দয়া করে এটি নিন।"
+            }
+        ]
+    }
+}

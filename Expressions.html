@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Shovon Hasan">
+    <meta name="copyright" content="©2024 株式会社LifeArk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeArk Japanese education: Expressions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/game.css">
+    <style>
+        #words_list-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #words_list-container td {
+            vertical-align: top;
+            position: relative;
+        }
+        #words_list-container h4 {
+            margin: 0px;
+            margin-top: 20px;
+        }
+        #words_list-container ul {
+            margin: 0px;
+            padding-left: 20px;
+        }
+        #words_list-container li {
+            margin-bottom: 10px;
+        }
+        .word-highlight {
+            background-color: yellow;
+            font-size: 1.4em;
+            line-height: 150%;
+        }
+        #words_list-container .word-num {
+            height: 30px;
+            padding: 0px 7px;
+            border-radius: 12px;
+            background-color: grey;
+            color: white;
+            text-align: center;
+            font-size: 0.8em;
+        }
+        #question-caption {
+            font-size: 1.5em !important;
+        }
+        .option {
+            text-align: left !important;
+            font-size: 1.2em !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="words_list-container">
+            <div class="header-image">
+                <img src="assets/image/LifeArk_Nihongo_logo.png" />
+                <h2 style="text-align: center; margin: 0px;">অভিব্যক্তি</h2>
+            </div>
+            <button class="play-button" onclick="playGame('Beginner QA')">Play Game</button>
+        </div>
+        <div id="range_selection-container">
+            <h3 style="text-align: center;">Choose the question range</h3>
+            <div style="text-align: center;">
+                <input type="number" id="range-from" placeholder="from"> ~ <input type="number" id="range-to" placeholder="to">
+                <br><br>
+                <span class="alert" id="range-alert"></span>
+                <br>
+            </div>
+            <div class="button-container">
+                <button class="back-button" onclick="showPage('words_list')">←</button>
+                <button class="play-button" style="flex-grow: 1;" onclick="startGame({'rangeType': 'number'});">Start Game!</button>
+            </div>
+        </div>
+        <div id="question-container">
+            <div class="button-container">
+                <div id="question-number"></div>
+                <button id="next-button" onclick="nextQuestion()" disabled>&#10132;</button>
+            </div>
+            <div id="question-holder">
+                <div id="mcq-question">
+                    <div>
+                        <div id="question-caption"></div>
+                    </div>
+                    <div id="options">
+                        <div class="option" onclick="checkAnswer(0)"></div>
+                        <div class="option" onclick="checkAnswer(1)"></div>
+                        <div class="option" onclick="checkAnswer(2)"></div>
+                        <div class="option" onclick="checkAnswer(3)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="result-container">
+            <div id="score"></div>
+            <button class="play-button" onclick="replayGame()">Replay</button>
+            <button class="link-button" onclick="showPage('words_list')">Question List</button>
+            <div></div>
+                <h3>Submit your Score:</h3>
+                <div id="score-submit-form">
+                    <input type="text" id="player_userID" placeholder="User ID" value=""/>
+                    <button class="play-button" id="score-submit-button" onclick="submitScore()">Submit Score</button>
+                </div>
+                <div id="score-submit-response"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/game_rangeSelection.js"></script>
+    <script src="js/game_mcq.js"></script>
+    <script src="js/game_result.js"></script>
+    <script>
+
+        let itemsData = {};
+        let itemCounter = null;
+
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
+        
+        function createExpressionsList() {
+            const container = document.getElementById('words_list-container');
+
+            const hr = document.createElement('hr');
+            container.appendChild(hr);
+
+            itemCounter = 1;
+            
+            Object.keys(itemsData).forEach(index => {
+                const item = itemsData[index];
+                const table = document.createElement('table');
+
+                // Create top row with text and number
+                const topRow = document.createElement('tr');
+                const textCell = document.createElement('td');
+                textCell.innerHTML = `<span class="word-highlight">${item.phrase}</span><br/>└ ${item.explanation.bd}`;
+                const numCell = document.createElement('td');
+                numCell.innerHTML = `<span class="word-num">${itemCounter}</span>`;
+                numCell.style.textAlign = "right";
+
+                topRow.appendChild(textCell);
+                topRow.appendChild(numCell);
+                table.appendChild(topRow);
+
+                // Create bottom row with example sentences
+                const bottomRow = document.createElement('tr');
+                const exampleCell = document.createElement('td');
+                exampleCell.colSpan = 2;
+                exampleCell.style.padding = "10px 0px";
+
+                const list = document.createElement('ul');
+                item.exampleSentence.forEach(example => {
+                    const listItem = document.createElement('li');
+                    const ex_jp = example.jp;
+                    const ex_bd = example.bd;
+                    listItem.innerHTML = `${ex_jp}<br/>${ex_bd}`;
+                    list.appendChild(listItem);
+                });
+
+                exampleCell.appendChild(list);
+
+                bottomRow.appendChild(exampleCell);
+                table.appendChild(bottomRow);
+                container.appendChild(table);
+
+                const hr = document.createElement('hr');
+                container.appendChild(hr);
+
+                itemCounter++;
+            });
+
+            // decrease 1 to match total number
+            itemCounter -= 1;
+        }
+
+        function playGame(lessonType) {
+            gameLessonType = lessonType;
+            showPage('range_selection');
+        }
+
+        function prepareMCQGameData() {
+            gameData = {};
+            let index = 0;
+            Object.keys(itemsData).forEach(key => {
+                const dataItem = itemsData[key];
+                gameData[index] = {};
+                gameData[index].question = {};
+                gameData[index].question.caption = dataItem.explanation.bd;
+                gameData[index].answer = dataItem.phrase;
+
+                index++;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/expressions.json')
+                .then(response => response.json())
+                .then(data => {
+                    itemsData = data;
+                    // display words list
+                    createExpressionsList();
+                    showPage('words_list');
+
+                    setGameRangeSelection();
+                    prepareMCQGameData();
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        });
+
+    </script>
+</body>
+</html>
