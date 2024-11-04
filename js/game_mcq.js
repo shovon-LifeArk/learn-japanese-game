@@ -414,6 +414,7 @@ function endGame() {
 function replayGame() {
     // Reset game state
     currentQuestionNum = 0;
+    maxScore = 0;
     score = 0;
     resetGameQuestionItemIDs();
     resetGameQuestionOptions();
