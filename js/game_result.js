@@ -22,7 +22,7 @@ function submitScore() {
     const userId = document.getElementById('player_userID').value;
     const lessonType = gameLessonType;
     const examRange = gameRangeText;
-    const examMarks = `${score}/${totalQuestions}`;
+    const examMarks = `${score}/${maxScore}`;
     const examTime = msToTime(gameEndTime - gameStartTime);
 
     const data = {

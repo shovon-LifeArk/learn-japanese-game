@@ -421,7 +421,7 @@
         "phrase": "たいへん ですね",
         "explanation": {
             "en": "That’s tough, isn’t it? / That must be difficult",
-            "bd": "এটা কঠিন, তাই না? / এটা অবশ্যই কঠিন হতে হবে"
+            "bd": "কঠিন সময়, তাই না? / খুবই কঠিন অবস্থা মনে হয়"
         },
         "exampleSentence": [
             {
@@ -440,7 +440,7 @@
         "phrase": "がんばって ください",
         "explanation": {
             "en": "Good luck / Do your best",
-            "bd": "শুভকামনা / আপনার সর্বোচ্চ চেষ্টা করুন"
+            "bd": "শুভ কামনা / আপনার সর্বোচ্চ চেষ্টা করুন"
         },
         "exampleSentence": [
             {
@@ -463,14 +463,14 @@
         },
         "exampleSentence": [
             {
-                "jp": "かぜ を ひいて いる なら <h>おだいじに</h>。",
-                "en": "Take care if you have a cold.",
-                "bd": "যদি আপনার সর্দি লাগে তবে সাবধানে থাকুন।"
+                "jp": "ゆっくり休んでね、<h>お大事に</h>。",
+                "en": "Please rest well. Take care of yourself.",
+                "bd": "ধীরেসুস্থে বিশ্রাম নাও, নিজের যত্ন নাও।"
             },
             {
-                "jp": "びょういん へ いく なら <h>おだいじに</h>。",
-                "en": "Take care if you're going to the hospital.",
-                "bd": "যদি আপনি হাসপাতালে যান, সাবধানে থাকুন।"
+                "jp": "いま から びょういん へ いきますか。 <h>おだいじに</h>。",
+                "en": "Are you going to the hospital now? Take care of yourself.",
+                "bd": "এখন হাসপাতাল যাচ্ছেন? সাবধানে থাকবেন।"
             }
         ]
     },
@@ -478,7 +478,7 @@
         "phrase": "ごめんなさい",
         "explanation": {
             "en": "I'm sorry (more personal and apologetic)",
-            "bd": "আমি দুঃখিত (আরও ব্যক্তিগত এবং ক্ষমাপ্রার্থী)"
+            "bd": "আমি দুঃখিত (ব্যক্তিগতভাবে ক্ষমাপ্রার্থী)"
         },
         "exampleSentence": [
             {
@@ -534,8 +534,8 @@
     "28": {
         "phrase": "どうぞ よろしく",
         "explanation": {
-            "en": "Formal way to say 'Nice to meet you' or 'Please take care of me'",
-            "bd": "'আপনার সাথে দেখা করে ভালো লাগলো' বা 'আমার যত্ন নিন' বলার ভদ্র উপায়"
+            "en": "Formal way to say 'Nice to meet you' or 'Please take care of ~'",
+            "bd": "'আপনার সাথে দেখা করে ভালো লাগলো' বা 'আপনার সহযোগিতা কামনা করছি' বলার ভদ্র উপায়"
         },
         "exampleSentence": [
             {
@@ -544,7 +544,7 @@
                 "bd": "দেখা হয়ে ভালো লাগল, আপনার সহযোগিতা প্রত্যাশা করছি।"
             },
             {
-                "jp": "こんご も <h>どうぞ よろしく</h>。",
+                "jp": "こんご も <h>どうぞ よろしく</h> おねがい します。",
                 "en": "Please continue to take care of me.",
                 "bd": "পরবর্তিতেও আপনার সহযোগিতা প্রত্যাশা করছি।"
             }

@@ -1,5 +1,6 @@
 #mcq-question,
-#rearrange-question {
+#rearrange-question,
+#reading-question {
     display: none; 
     flex: 1;
     flex-direction: column;
@@ -110,6 +111,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.reading-question-text {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.reading-question-option {
+    display: block;
+    font-size: 1.3em;
+    line-height: 150%;
 }
 #next-button {
     height: 50px;

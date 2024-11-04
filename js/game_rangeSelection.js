@@ -29,7 +29,7 @@ function isValidRange_number() {
     }
 
     if (rangeFrom && rangeTo && rangeTo - rangeFrom < totalQuestions-1) {
-        alertMsg += "・'to' value should be at least 9 bigger than 'from' value<br>";
+        alertMsg += `・'to' value should be at least ${totalQuestions-1} bigger than 'from' value<br>`;
     }
 
     if (alertMsg) {

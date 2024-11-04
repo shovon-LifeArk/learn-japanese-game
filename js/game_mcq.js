@@ -1,6 +1,6 @@
 
 // total questions in a game
-const totalQuestions = 10;
+let totalQuestions = 10;
 
 // default game type
 let gameType = 'mcq'
@@ -43,6 +43,8 @@ let currentGameItem = {};
 // current question changes from 0 to 9
 let currentQuestionNum = 0;
 
+// number of questions (including sub questions) appeared in game
+let maxScore = 0;
 // number of correct answers
 let score = 0;
 
@@ -115,7 +117,10 @@ function resetGameQuestionOptions() {
         } else if ("staticOptions" in gameData[gameItemId]) {
             // do not shuffle the options values, store by question item id
             gameQuestionOptions[gameItemId] = gameData[gameItemId].staticOptions;
-        } else {
+        } else if ("noOptions" in gameData[gameItemId]) {
+            // do notthing
+            // this is for reading questions where questions have nested questions within it 
+        }  else {
             let options = new Set();
 
             // Add the current answer to options
@@ -134,10 +139,6 @@ function resetGameQuestionOptions() {
         }
     });
 }
-
-// for rearrange: START
-
-// for rearrange: End
 
 function nextQuestion() {
     if (currentQuestionNum === 0) {
@@ -209,6 +210,9 @@ function nextQuestion() {
             optionsEl[index].classList.remove('correct', 'wrong'); // Reset styles
             optionsEl[index].style.pointerEvents = 'auto'; // Enable click
         });
+
+        // calculate maximum score a player can get
+        maxScore++;
     }
     else if (gameType === 'rearrange') {
         rearrangeQuestionEl.innerHTML = "";
@@ -239,6 +243,47 @@ function nextQuestion() {
 
         rearrangeAnswerEl.innerText = "";
         rearrangeSubmitBtn.disabled = false;
+
+        // calculate maximum score a player can get
+        maxScore++;
+    }
+    else if (gameType === 'reading') {
+        readingPassageEl.innerHTML = question.passage;
+
+        readingQuestionsEl.innerHTML = '';
+
+        question.childQuestions.forEach((childQuestion, childQuestionIndex) => {
+            const questionDiv = document.createElement('div');
+            const questionText = document.createElement('p');
+            questionText.className = 'reading-question-text';
+            questionText.textContent = `${childQuestionIndex+1}. ${childQuestion.text}`;
+            questionDiv.appendChild(questionText);
+
+            const childQuestionOptions = shuffle(childQuestion.options);
+            childQuestionOptions.forEach((option, optionIndex) => {
+                const optionLabel = document.createElement('label');
+                optionLabel.className = 'reading-question-option';
+                const optionRadio = document.createElement('input');
+                optionRadio.type = 'radio';
+                optionRadio.name = `question${childQuestionIndex}`;
+                optionRadio.value = option;
+                optionRadio.id = `q${childQuestionIndex}_o${optionIndex}`;
+    
+                optionLabel.htmlFor = optionRadio.id;
+                optionLabel.appendChild(optionRadio);
+                optionLabel.appendChild(document.createTextNode(option));
+    
+                questionDiv.appendChild(optionLabel);
+                questionDiv.appendChild(document.createElement('br'));
+            });
+
+            readingQuestionsEl.appendChild(questionDiv);
+
+            // calculate maximum score a player can get
+            maxScore++;
+        });
+
+        readingSubmitBtn.disabled = false;
     }
 
     // Disable the Next button
@@ -314,6 +359,36 @@ function checkRearrangeAnswer() {
     nextBtn.disabled = false;
 }
 
+// reading
+function checkReadingAnswers() {
+    // get current question data object
+    const question = currentGameItem.question;
+
+    question.childQuestions.forEach((childQuestion, childQuestionIndex) => {
+        const selectedOption = document.querySelector(`input[name="question${childQuestionIndex}"]:checked`);
+        const correctAnswer = childQuestion.answer;
+
+        if (selectedOption && selectedOption.value === correctAnswer) {
+            score++;
+        }
+
+        childQuestion.options.forEach((option, optionIndex) => {
+            const optionLabel = document.querySelector(`label[for="q${childQuestionIndex}_o${optionIndex}"]`);
+            const optionInput = document.getElementById(`q${childQuestionIndex}_o${optionIndex}`);
+            if (option === correctAnswer) {
+                optionLabel.classList.add('correct');
+            } else if (optionInput.checked) {
+                optionLabel.classList.add('wrong');
+            }
+        });
+    });
+
+    // Disable the reading submit button
+    readingSubmitBtn.disabled = true;
+    // Enable the Next button
+    nextBtn.disabled = false;
+}
+
 function resetScoreSubmitForm() {
     // enable score submit button
     const scoreSubmitButton = document.getElementById('score-submit-button');
@@ -329,7 +404,7 @@ function resetScoreSubmitForm() {
 function endGame() {
     // Display the score
     const scoreEl = document.getElementById('score');
-    scoreEl.textContent = `Your score: ${score}/${totalQuestions}`;
+    scoreEl.textContent = `Your score: ${score}/${maxScore}`;
 
     showPage('result');
 }
@@ -364,5 +439,10 @@ const optionsEl = document.querySelectorAll('.option');
 const rearrangeQuestionEl = document.getElementById('rearrange-sentence');
 const rearrangeAnswerEl = document.getElementById('rearrange-answer');
 const rearrangeSubmitBtn = document.getElementById('rearrange-submit-btn');
+
+// reading type question elements
+const readingPassageEl = document.getElementById('reading-passage');
+const readingQuestionsEl = document.getElementById('reading-questions');
+const readingSubmitBtn = document.getElementById('reading-submit-btn');
 
 const nextBtn = document.getElementById('next-button');
