@@ -1,0 +1,1756 @@
+{
+    "0": {
+        "key": "〜みたいな / みたいに",
+        "meaning_en": "Used to explain something by showing an example.",
+        "meaning_bd": "কিছু ব্যাখ্যা করতে ব্যবহার করা হয় উদাহরণ দেখিয়ে।",
+        "form": "V（普通形） + みたいな / みたいに<br/>N + みたいな / みたいに",
+        "exampleSentence": [
+            {
+                "jp": "トムさん<h>みたいに</h> <ruby>日本語<rt>にほんご</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>に <ruby>話<rt>はな</rt></ruby>せるように なりたいなあ。",
+                "en": "I want to be able to speak Japanese like Tom.",
+                "bd": "আমি টমের মতো জাপানি ভাষায় ভালোভাবে কথা বলতে পারতে চাই।"
+            },
+            {
+                "jp": "<ruby>彼<rt>かれ</rt></ruby><h>みたいに </h><ruby>怠け者<rt>なまけもの</rt></ruby>で、 いつも<ruby>親<rt>おや</rt></ruby>に <ruby>頼<rt>たよ</rt></ruby>ってばかりいる<ruby>人<rt>ひと</rt></ruby> にはなりたくない。",
+                "en": "I don't want to be a lazy person like him, always relying on my parents.",
+                "bd": "আমি তার মতো অলস মানুষ হতে চাই না, যারা সবসময় তাদের বাবা-মায়ের উপর নির্ভরশীল।"
+            },
+            {
+                "jp": "<ruby>将来<rt>しょうらい</rt></ruby>は マレーシア<h>みたいな</h> <ruby>物価<rt>ぶっか</rt></ruby>の<ruby>安<rt>やす</rt></ruby>い<ruby>国<rt>くに</rt></ruby>に <ruby>住<rt>す</rt></ruby>みたい。",
+                "en": "I want to live in a low-living-cost country like Malaysia in the future.",
+                "bd": "আমি ভবিষ্যতে মালয়েশিয়ার মতো স্বল্পমূল্যের দেশে বাস করতে চাই।"
+            }
+        ]
+    },
+    "1": {
+        "key": "〜みたいだ",
+        "meaning_en": "\"It seems like\". Expressions used by the speaker to convey what they have sensed and speculated using their five senses.",
+        "meaning_bd": "\"এটি মনে হচ্ছে\"। বক্তা যে অনুভূতি এবং অনুমান প্রকাশ করতে তাদের পাঁচটি ইন্দ্রিয় ব্যবহার করে।",
+        "form": "V（普通形） + みたいだ<br/>イA（普通形） + みたいだ<br/>ナA + みたいだ<br/>N + みたいだ",
+        "notes": "「〜ようだ 」よりもカジュアルで、友達や家族、親しい人と話す時に使う。",
+        "exampleSentence": [
+            {
+                "jp": "あそこで <ruby>事故<rt>じこ</rt></ruby>があった<h> みたいです。</h>",
+                "en": "It seems like there was an accident at the site.",
+                "bd": "মনে হচ্ছে সেখানে একটি দুর্ঘটনা ঘটেছে।"
+            },
+            {
+                "jp": "どうやら、 <ruby>車<rt>くるま</rt></ruby>と<ruby>バイク</ruby>が ぶつかった <h>みたいです。</h>",
+                "en": "It appears that a car and a motorcycle collided.",
+                "bd": "এটি মনে হচ্ছে একটি গাড়ি এবং একটি মোটরসাইকেল ধাক্কা খেয়েছে।"
+            },
+            {
+                "jp": "<ruby>彼<rt>かれ</rt></ruby>は お<ruby>腹<rt>なか</rt></ruby>が <ruby>空<rt>す</rt></ruby>いている <h>みたいです。</h>",
+                "en": "He seems hungry.",
+                "bd": "তিনি মনে হচ্ছে ক্ষুধার্ত।"
+            }
+        ]
+    },
+    "2": {
+        "key": "〜ような / ように",
+        "meaning_en": "Used to explain something by showing an example.",
+        "meaning_bd": "কিছু ব্যাখ্যা করতে ব্যবহার করা হয় উদাহরণ দেখিয়ে।",
+        "form": "V（普通形） + ような / ように<br/>Nの + ような / ように",
+        "notes": "話し言葉では「〜みたいな」を使う。",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>彼<rt>かれ</rt></ruby>が <ruby>持<rt>も</rt></ruby>っている <h>ような</h> <ruby>鞄<rt>かばん</rt></ruby> が<ruby>欲<rt>ほ</rt></ruby>しいです。",
+                "en": "I want a bag like the one he has.",
+                "bd": "আমি তার মতো একটি ব্যাগ চাই।"
+            },
+            {
+                "jp": "<ruby>彼<rt>かれ</rt></ruby>はまだ <ruby>小学生<rt>しょうがくせい</rt></ruby>なのに、 <ruby>大人<rt>おとな</rt></ruby>が<ruby>読む<rt>よ</rt></ruby><h>ような</h> <ruby>難<rt>むずか</rt></ruby>しい<ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>んでいます。",
+                "en": "He is still in elementary school, but he reads difficult books like adults.",
+                "bd": "তিনি এখনও প্রাথমিক বিদ্যালয়ে আছেন, তবে তিনি বড়দের মতো কঠিন বই পড়েন।"
+            },
+            {
+                "jp": "<ruby>私<rt>わたし</rt></ruby>は <ruby>大阪<rt>おおさか</rt></ruby>の<h>ような</h> <ruby>賑<rt>にぎ</rt></ruby>やかな<ruby>街<rt>まち</rt></ruby>が <ruby>好<rt>す</rt>き</ruby>です。",
+                "en": "I like bustling cities like Osaka.",
+                "bd": "আমি ওসাকার মতো প্রাণবন্ত শহরগুলি পছন্দ করি।"
+            }
+        ]
+    },
+    "3": {
+        "key": "〜ば",
+        "meaning_en": "\"if X then Y\". If condition X is met, then Y will happen.",
+        "meaning_bd": "\"যদি X তবে Y\"। যদি শর্ত X পূর্ণ হয়, তবে Y ঘটবে।",
+        "form": "V（ba form）<br/>イA + ければ / イA + なければ<br/>ナA + ならば / ナA + でなければ<br/>N + ならば / N + でなければ",
+        "notes": [
+            "① Usable in both high-feasibility and low-feasibility conditions.",
+            "② Often results in favorable outcomes in the consequent.",
+            "③ Written in a slightly formal tone, more characteristic of written language.",
+            "④ Frequently used in proverbs. (Example: \"San nin yoreba, Monju no chie.\")"
+        ],
+        "exampleSentence": [
+            {
+                "jp": "<ruby>春<rt>はる</rt></ruby>に なれ<h>ば</h>、 <ruby>桜<rt>さくら</rt></ruby>が <ruby>咲<rt>さ</rt></ruby>きます。",
+                "en": "When spring comes, the cherry blossoms will bloom.",
+                "bd": "বসন্ত আসলে, সাকুরা ফুটবে।"
+            },
+            {
+                "jp": "１００<ruby>万円<rt>まんえん</rt></ruby> <ruby>当<rt>あ</rt></ruby>たれ<h>ば</h>、 <ruby>車<rt>くるま</rt></ruby>を <ruby>買<rt>か</rt></ruby>います。",
+                "en": "If I win 1 million yen, I'll buy a car.",
+                "bd": "যদি আমি ১ মিলিয়ন ইয়েন জিতি, আমি একটি গাড়ি কিনব।"
+            },
+            {
+                "jp": "<ruby>次<rt>つぎ</rt></ruby>の <ruby>電車<rt>でんしゃ</rt></ruby>に <ruby>乗<rt>の</rt></ruby>れ<h>ば</h>、 <ruby>間<rt>ま</rt></ruby>に<ruby>合<rt>あ</rt></ruby>います。",
+                "en": "If we catch the next train, we'll make it on time.",
+                "bd": "যদি আমরা পরের ট্রেনটি ধরতে পারি, তাহলে আমরা সময়মতো পৌঁছাব।"
+            }
+        ]
+    },
+    "4": {
+        "key": "〜必要がある",
+        "meaning_en": "It is necessary to / need to do",
+        "meaning_bd": "কিছু করার প্রয়োজনীয়তা বোঝাতে ব্যবহৃত হয়।",
+        "form": "V（辞書形）+ 必要がある",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>図書館<rt>としょかん</rt></ruby>の <ruby>本<rt>ほん</rt></ruby>を<ruby>借<rt>か</rt></ruby>りる には、 <ruby>図書<rt>としょ</rt></ruby><ruby>カード<rt></rt></ruby>を<ruby>作<rt>つく</rt></ruby>る <h><ruby>必要<rt>ひつよう</rt></ruby>がある</h>。",
+                "en": "In order to borrow books from the library, you need to make a library card.",
+                "bd": "লাইব্রেরি থেকে বই ধার করার জন্য, আপনাকে একটি লাইব্রেরি কার্ড তৈরি করতে হবে।"
+            },
+            {
+                "jp": "<ruby>本当<rt>ほんとう</rt></ruby>に JLPTに<ruby>合格<rt>ごうかく</rt></ruby> したいなら、 ジョンさんは もっと<ruby>勉強<rt>べんきょう</rt></ruby>する <h><ruby>必要<rt>ひつよう</rt></ruby>があります</h>よ。",
+                "en": "John, If you really want to pass the JLPT, you need to study harder.",
+                "bd": "জন, আপনি যদি সত্যিই JLPT পাস করতে চান, তবে আপনাকে আরও কঠোর পরিশ্রম করতে হবে।"
+            },
+            {
+                "jp": "<ruby>会議室<rt>かいぎしつ</rt></ruby>を <ruby>使<rt>つか</rt></ruby>いたい<ruby>場合<rt>ばあい</rt></ruby>は、 <ruby>予約<rt>よやく</rt></ruby>しておく <h><ruby>必要<rt>ひつよう</rt></ruby>がある</h>。",
+                "en": "If you want to use a meeting room, you need to reserve it.",
+                "bd": "যদি আপনি একটি মিটিং রুম ব্যবহার করতে চান, তবে আপনাকে এটি সংরক্ষণ করতে হবে।"
+            }
+        ]
+    },
+    "5": {
+        "key": "（自動詞）ている",
+        "meaning_en": "Expressions indicating that the result or state of an event that occurred before the time of speaking continues.",
+        "meaning_bd": "যে ঘটনার ফলাফল বা অবস্থা বক্তৃতার সময়ের আগে ঘটেছিল এবং তা চলমান রয়েছে, সেই অবস্থাকে বোঝায়।",
+        "form": "V（自動詞のテ形）+ いる",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>窓<rt>まど</rt></ruby>が <ruby>開<rt>あ</rt></ruby>い<h>ています</h> ね。",
+                "en": "The window is open.",
+                "bd": "জানালাটা খোলা আছে।"
+            },
+            {
+                "jp": "<ruby>ドア<rt></rt></ruby>が <ruby>閉<rt>し</rt></ruby>まっ<h>ていて</h> <ruby>開<rt>あ</rt></ruby>きません。",
+                "en": "The door is closed and won't open.",
+                "bd": "দরজাটা বন্ধ এবং খুলছে না।"
+            },
+            {
+                "jp": "あれー。 <ruby>レストラン<rt></rt></ruby>が <ruby>閉<rt>し</rt></ruby>まっ<h>てる</h>。 なんでだろう。",
+                "en": "Huh, The restaurant is closed. I wonder why.",
+                "bd": "আরে! রেস্তোরাঁটা বন্ধ। কেন বন্ধ হলো বুঝতে পারছি না।"
+            }
+        ]
+    },
+    "6": {
+        "key": "〜でしょう（推量）",
+        "meaning_en": "\"probably\" An expression of speculation. It's used when one cannot definitively assert something but, based on knowledge, experience, or analysis, feels almost certain and says \"probably.\"",
+        "meaning_bd": "সম্ভবত। এটি একটি অনুমানের প্রকাশ, যেখানে জ্ঞান, অভিজ্ঞতা বা বিশ্লেষণ অনুযায়ী প্রায় নিশ্চিত মনে হয় তবে নিশ্চিতভাবে বলা যায় না।",
+        "form": "V（普通形） + でしょう<br/>イA（普通形） + でしょう<br/>ナA（普通形） + でしょう　※ナAな + でしょう<br/>N（普通形） + でしょう　※Nだ + でしょう",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>明日<rt>あした</rt></ruby>は <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>る <h>でしょう。</h>",
+                "en": "It will probably rain tomorrow.",
+                "bd": "আগামীকাল সম্ভবত বৃষ্টি হবে।"
+            },
+            {
+                "jp": "<ruby>明日<rt>あした</rt></ruby>はn<ruby>寒<rt>さむ</rt></ruby>く なる <h>でしょう。</h>",
+                "en": "It will probably get cold tomorrow.",
+                "bd": "আগামীকাল সম্ভবত ঠাণ্ডা হয়ে যাবে।"
+            },
+            {
+                "jp": "<ruby>薬<rt>くすり</rt></ruby>を <ruby>飲<rt>の</rt></ruby>めば、 <ruby>大丈夫<rt>だいじょうぶ</rt></ruby><h> でしょう。</h>",
+                "en": "If you take the medicine, you will probably be fine.",
+                "bd": "আপনি যদি ওষুধ খান, তবে সম্ভবত আপনি ভালো থাকবেন।"
+            }
+        ]
+    },
+    "7": {
+        "key": "〜つもりだ",
+        "meaning_en": "\"intend to do\" used to describe what a person is planning to do in the future or what a person is planning not to do.",
+        "meaning_bd": "ভবিষ্যতে কী করার বা না করার পরিকল্পনা করা হয়েছে তা বোঝাতে ব্যবহৃত হয়।",
+        "form": "V（辞書形 / ナイ形） + つもりだ",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>夏休<rt>なつやす</rt></ruby>みは <ruby>国<rt>くに</rt></ruby>へ <ruby>帰<rt>かえ</rt></ruby>る <h>つもりです</h>。",
+                "en": "I'm going back to my country for summer vacation.",
+                "bd": "গ্রীষ্মের ছুটিতে আমি আমার দেশে ফিরে যাচ্ছি।"
+            },
+            {
+                "jp": "<ruby>週末<rt>しゅうまつ</rt></ruby>は <ruby>ジェシカ<rt></rt></ruby>さんと モールで <ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>る <h>つもりだ</h>。",
+                "en": "I am going to watch a movie at the mall with Jessica on the weekend.",
+                "bd": "সপ্তাহান্তে আমি জেসিকার সাথে মলে সিনেমা দেখতে যাচ্ছি।"
+            },
+            {
+                "jp": "<ruby>私<rt>わたし</rt></ruby>は <ruby>来年<rt>らいねん</rt></ruby>、 この<ruby>会社<rt>かいしゃ</rt></ruby>を <ruby>辞<rt>や</rt></ruby>める <h>つもりです</h>。",
+                "en": "I'm going to quit this company next year.",
+                "bd": "আমি আগামী বছর এই কোম্পানি ছেড়ে দেব।"
+            }
+        ]
+    },
+    "8": {
+        "key": "〜かどうか",
+        "meaning_en": "Indirect question. An expression used to embed a question within a sentence without using an interrogative word in the sentence.",
+        "meaning_bd": "অপ্রত্যক্ষ প্রশ্ন। বাক্যের মধ্যে কোনও প্রশ্নবোধক শব্দ ব্যবহার না করে কোনও প্রশ্নকে বাক্যে সংযুক্ত করার জন্য ব্যবহৃত একটি প্রকাশ।",
+        "form": "V（普通形）かどうか、〜<br/>イA（普通形）かどうか、〜<br/>ナA（普通形）だかどうか、〜　※ナAだ<br/>N（普通形）だかどうか、〜　※Nだ",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>納豆<rt>なっとう</rt></ruby>は <ruby>食<rt>た</rt></ruby>べたことが ないので、 <ruby>美味<rt>おい</rt></ruby>しい <h>かどうか</h> わかりません。",
+                "en": "I've never eaten natto before, so I don't know if it's good or not.",
+                "bd": "আমি আগে কখনও নাত্তো খাইনি, তাই এটি ভালো কিনা জানি না।"
+            },
+            {
+                "jp": "<ruby>今夜<rt>こんや</rt></ruby>の <ruby>パーティー<rt></rt></ruby>に <ruby>行<rt>い</rt></ruby>ける <h>かどうか</h>、 まだわかりません。",
+                "en": "I'm not sure if I can go to the party tonight.",
+                "bd": "আমি আজ রাতের পার্টিতে যেতে পারব কিনা তা এখনও জানি না।"
+            },
+            {
+                "jp": "<ruby>学校<rt>がっこう</rt></ruby>を <ruby>卒業<rt>そつぎょう</rt></ruby>したら <ruby>国<rt>くに</rt></ruby>へ<ruby>帰<rt>かえ</rt></ruby>る <h>かどうか</h>、 まだ<ruby>決<rt>き</rt></ruby>めていません。",
+                "en": "I haven't decided yet whether or not I will go back to my country after I graduate from school.",
+                "bd": "স্কুল থেকে স্নাতক শেষ করার পর আমি আমার দেশে ফিরে যাব কিনা তা আমি এখনও সিদ্ধান্ত নিইনি।"
+            }
+        ]
+    },
+    "9": {
+        "key": "（疑問詞）〜か",
+        "meaning_en": "Indirect question. An expression used to embed a question within a sentence using an interrogative word.",
+        "meaning_bd": "অপ্রত্যক্ষ প্রশ্ন। বাক্যে কোনও প্রশ্নবোধক শব্দ ব্যবহার করে কোনও প্রশ্নকে বাক্যে সংযুক্ত করার জন্য ব্যবহৃত একটি প্রকাশ।",
+        "form": "疑問詞 + V（普通形）か、〜<br/>疑問詞 + イA（普通形）か、〜<br/>疑問詞 + ナA（普通形）だか、〜　※ナAだ<br/>疑問詞 + N（普通形）だか、〜　※Nだ",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>漢字<rt>かんじ</rt></ruby>は いつ <ruby>日本<rt>にほん</rt></ruby>へ <ruby>来<rt>き</rt></ruby>た<h>か</h> <ruby>知<rt>し</rt></ruby>って いますか。",
+                "en": "Do you know when Kanji came to Japan?",
+                "bd": "আপনি কি জানেন কখন কানজি জাপানে এসেছিল?"
+            },
+            {
+                "jp": "<ruby>トム<rt></rt></ruby>さんって どんな<ruby>人<rt>ひと</rt></ruby> <h>か</h> <ruby>知<rt>し</rt></ruby>ってる？",
+                "en": "Do you know what Tom is like?",
+                "bd": "আপনি কি জানেন টম কেমন মানুষ?"
+            },
+            {
+                "jp": "<ruby>誰<rt>だれ</rt></ruby>が <ruby>パーティー<rt></rt></ruby>に <ruby>来<rt>く</rt></ruby>る<h>か</h> <ruby>知<rt>し</rt></ruby>ってる？",
+                "en": "Do you know who's coming to the party?",
+                "bd": "আপনি কি জানেন পার্টিতে কে আসছে?"
+            }
+        ]
+    },
+    "10": {
+        "key": "（形容詞）する",
+        "meaning_en": "\"make it 形容詞\" A sentence pattern indicating the transformation of an object into a certain state.",
+        "meaning_bd": "কোনও বস্তু বা অবস্থাকে একটি নির্দিষ্ট অবস্থায় পরিবর্তন করার প্রকাশ।",
+        "form": "イAく + する<br/>ナAに + する",
+        "exampleSentence": [
+            {
+                "jp": "この<ruby>コーヒー<rt></rt></ruby>は <ruby>苦<rt>にが</rt></ruby>すぎるので、 <ruby>砂糖<rt>さとう</rt></ruby>を <ruby>入<rt>い</rt></ruby>れて <ruby>甘<rt>あま</rt></ruby>く<h>します</h>。",
+                "en": "This coffee is too bitter, so I'll add sugar to make it sweeter.",
+                "bd": "এই কফিটা খুব তেতো, তাই আমি এটি মিষ্টি করার জন্য চিনি যোগ করব।"
+            },
+            {
+                "jp": "<ruby>教室<rt>きょうしつ</rt></ruby>が <ruby>汚<rt>きたな</rt></ruby>いので、 <ruby>掃除<rt>そうじ</rt></ruby>して <ruby>綺麗<rt>きれい</rt></ruby>に <h>しましょう</h>。",
+                "en": "The classroom is dirty. Let's clean it up.",
+                "bd": "শ্রেণীকক্ষটি নোংরা। আসুন এটি পরিষ্কার করি।"
+            }
+        ]
+    },
+    "11": {
+        "key": "〜ようにする",
+        "meaning_en": "\"to make a conscious effort to do something\" This sentence pattern is used when the speaker consciously decides to do something with effort and expresses their determination to do so.",
+        "meaning_bd": "কিছু করার জন্য সচেতন প্রচেষ্টা করা। এটি এমন একটি বাক্য কাঠামো যা ব্যবহার করা হয় যখন বক্তা সচেতনভাবে কিছু করার সিদ্ধান্ত নেয় এবং তাদের প্রচেষ্টা প্রকাশ করে।",
+        "form": "V（辞書形）+ ようにする<br/>V（ない形）+ ようにする",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>体<rt>からだ</rt></ruby>のことが <ruby>心配<rt>しんぱい</rt></ruby>になって<ruby>来<rt>き</rt></ruby>たので、 しばらくタバコは <ruby>吸<rt>す</rt></ruby>わない <h>ようにします</h>。",
+                "en": "I've been getting concerned about my health, so I'm going to stop smoking for a while.",
+                "bd": "আমি আমার স্বাস্থ্যের জন্য উদ্বিগ্ন হয়ে উঠেছি, তাই আমি কিছু সময়ের জন্য ধূমপান বন্ধ করতে যাচ্ছি।"
+            },
+            {
+                "jp": "<ruby>医者<rt>いしゃ</rt></ruby>：<ruby>健康<rt>けんこう</rt></ruby>のために<ruby>野菜<rt>やさい</rt></ruby>もしっかり<ruby>食<rt>た</rt></ruby>べてください。<br/><ruby>患者<rt>かんじゃ</rt></ruby>：<ruby>分<rt>わ</rt></ruby>かりました。じゃあ、<ruby>今日<rt>きょう</rt></ruby>から<ruby>毎日<rt>まいにち</rt></ruby><ruby>野菜<rt>やさい</rt></ruby>を<ruby>食<rt>た</rt></ruby>べる<h>ようにします</h>。",
+                "en": "Doctor: For your health, you should also make sure to eat plenty of vegetables.<br/>Patient: I understand. So, I'll start eating vegetables every day from today on.",
+                "bd": "ডাক্তার: আপনার স্বাস্থ্যের জন্য আপনাকে প্রচুর শাকসবজি খাওয়া উচিত।<br/>রোগী: আমি বুঝতে পেরেছি। তাহলে আজ থেকে প্রতিদিন শাকসবজি খাওয়া শুরু করব।"
+            },
+            {
+                "jp": "A：このまま<ruby>痩<rt>や</rt></ruby>せなければ、<ruby>入院<rt>にゅういん</rt></ruby>することになりますよ！<br/>B：じゃあ、<ruby>明日<rt>あした</rt></ruby>から<ruby>毎朝<rt>まいあさ</rt></ruby>１０<ruby>分<rt>ぷん</rt></ruby><ruby>ジョギング<rt></rt></ruby>するようにします。<br/>B：それから、<ruby>スナック<rt></rt></ruby>や<ruby>カロリー<rt></rt></ruby>の<ruby>高<rt>たか</rt></ruby>いものは<ruby>食<rt>た</rt></ruby>べない<h>ようにします</h>。",
+                "en": "A: If you don't lose weight, you're going to end up in the hospital!<br/>B: Okay, I'll start jogging for 10 minutes every morning from tomorrow on.<br/>B: And I'll also stop eating snacks and high-calorie foods.",
+                "bd": "A: যদি আপনি ওজন না কমান, আপনাকে হাসপাতালে ভর্তি হতে হবে!<br/>B: ঠিক আছে, আমি আগামীকাল থেকে প্রতিদিন সকালে ১০ মিনিট জগিং করা শুরু করব।<br/>B: এবং আমি স্ন্যাকস এবং উচ্চ-ক্যালোরির খাবার খাওয়াও বন্ধ করব।"
+            }
+        ]
+    },
+    "12": {
+        "key": "〜ても",
+        "meaning_en": "\"even if\" (used to express a contrast or concession)",
+        "meaning_bd": "\"যদিও\" বা \"তবুও\" বোঝাতে ব্যবহৃত হয়।",
+        "form": "V（て形） + も<br/>イA + くても<br/>なA + でも<br/>N + でも",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>親<rt>おや</rt></ruby>に <ruby>反対<rt>はんたい</rt></ruby>され<h>ても</h>、 <ruby>僕<rt>ぼく</rt></ruby>たちは <ruby>結婚<rt>けっこん</rt></ruby>する つもりです。",
+                "en": "We're going to get married even though our parents are against it.",
+                "bd": "আমাদের বাবা-মা বিরোধিতা করলেও আমরা বিয়ে করতে যাচ্ছি।"
+            },
+            {
+                "jp": "もうすぐ <ruby>テスト<rt></rt></ruby>ですから、 <ruby>眠<rt>ねむ</rt></ruby>く<h>ても</h> <ruby>勉強<rt>べんきょう</rt></ruby> しなければなりません。",
+                "en": "I have to study even if I am sleepy because the exam is coming soon.",
+                "bd": "পরীক্ষা আসছে বলে, ঘুম পেলেও আমাকে পড়াশোনা করতে হবে।"
+            },
+            {
+                "jp": "<ruby>便利<rt>べんり</rt></ruby> <h>でも</h>、 <ruby>電車<rt>でんしゃ</rt></ruby>を <ruby>使<rt>つか</rt></ruby>いません。",
+                "en": "Even if it's convenient, I won't take the train.",
+                "bd": "এটি সুবিধাজনক হলেও আমি ট্রেন ব্যবহার করব না।"
+            },
+            {
+                "jp": "<ruby>お金<rt>おかね</rt></ruby>が ないので、 <ruby>半額<rt>はんがく</rt></ruby><h>でも</h> <ruby>買<rt>か</rt></ruby>いません。",
+                "en": "I don't have money, so I won't buy anything even if it's half price.",
+                "bd": "আমার কাছে টাকা নেই, তাই অর্ধেক দামে হলেও আমি কিছু কিনব না।"
+            }
+        ]
+    },
+    "13": {
+        "key": "〜ていく",
+        "meaning_en": "① Used to show, based on the present situation, how things will change in the future.<br/>② Used to indicate that the direction of V is away from the speaker.",
+        "meaning_bd": "① বর্তমান অবস্থার ভিত্তিতে ভবিষ্যতে জিনিসগুলি কীভাবে পরিবর্তিত হবে তা দেখাতে ব্যবহৃত হয়।<br/>② V-এর দিকটি বক্তার থেকে দূরে যাচ্ছে তা বোঝাতে ব্যবহৃত হয়।",
+        "form": "V（て形） + いく",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>今<rt>いま</rt></ruby>はまだ <ruby>日本語<rt>にほんご</rt></ruby>があまり <ruby>話<rt>はな</rt></ruby>せないかもしれませんが、 だんだん<ruby>話<rt>はな</rt></ruby>せるように なっ<h>ていきます</h>よ。",
+                "en": "You might not be able to speak much Japanese now, but you'll gradually become more fluent.",
+                "bd": "আপনি এখন খুব বেশি জাপানি বলতে না-ও পারেন, তবে আপনি ধীরে ধীরে আরও দক্ষ হয়ে উঠবেন।"
+            },
+            {
+                "jp": "<ruby>息子<rt>むすこ</rt></ruby>は <ruby>帰<rt>かえ</rt></ruby>ってくると、 <ruby>リビング<rt></rt></ruby>に<ruby>鞄<rt>かばん</rt></ruby>を<ruby>置<rt>お</rt></ruby>いて、 <ruby>急<rt>いそ</rt></ruby>いで<ruby>階段<rt>かいだん</rt></ruby>を <ruby>上<rt>のぼ</rt></ruby>っ<h>ていった</h>。",
+                "en": "As soon as my son came home, he put his bag down in the living room and rushed up the stairs.",
+                "bd": "আমার ছেলে বাড়ি ফিরেই, লিভিং রুমে তার ব্যাগ রেখে তাড়াতাড়ি সিঁড়ি বেয়ে উপরে উঠে গেল।"
+            }
+        ]
+    },
+    "14": {
+        "key": "〜なら",
+        "meaning_en": "① Expression used when addressing the topic brought up by the other party, offering advice or making requests regarding it.<br/>② Expression used to address what the other party has said and elaborate on it.<br/>③ Expression indicating limitation or contrast. It means \"While it's not the case for others, regarding one specific thing or matter, it is this way.\"",
+        "meaning_bd": "① অন্য ব্যক্তির উত্থাপিত বিষয় নিয়ে কথা বলার সময় পরামর্শ দেওয়া বা অনুরোধ করার জন্য ব্যবহৃত প্রকাশভঙ্গী।<br/>② অন্য ব্যক্তির বলা কথা তুলে ধরে বিশদ বিবরণ দেওয়ার জন্য ব্যবহৃত হয়।<br/>③ সীমাবদ্ধতা বা বৈপরীত্য বোঝাতে ব্যবহৃত হয়। এর মানে, \"অন্যদের ক্ষেত্রে এটি সত্য নয়, তবে নির্দিষ্ট কোনও জিনিস বা বিষয়ে এটি এইভাবে।\"",
+        "form": "① 普通形 + なら<br/>② N + なら<br/>③ N + なら",
+        "exampleSentence": [
+            {
+                "jp": "A：<ruby>今度<rt>こんど</rt></ruby>、<ruby>韓国<rt>かんこく</rt></ruby>へ<ruby>旅行<rt>りょこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>くんですが、お<ruby>土産<rt>みやげ</rt></ruby>に<ruby>何<rt>なに</rt></ruby>を<ruby>買<rt>か</rt></ruby>えばいいですか。<br/>B：<ruby>韓国<rt>かんこく</rt></ruby><h>なら</h>やっぱり<ruby>海苔<rt>のり</rt></ruby>かな。",
+                "en": "A: I'm going to Korea for a trip next time. What should I buy as souvenirs?<br/>B: If it's Korea, then maybe seaweed.",
+                "bd": "A: আমি পরের বার কোরিয়ায় ভ্রমণে যাচ্ছি। স্মৃতিচিহ্ন হিসেবে কী কিনব?<br/>B: যদি কোরিয়া হয়, তবে সম্ভবত সি উইড।"
+            },
+            {
+                "jp": "A：<ruby>トム<rt></rt></ruby>さんはどこ？<br/>B：<ruby>トム<rt></rt></ruby>さん<h>なら</h>、さっき<ruby>トイレ<rt></rt></ruby>に<ruby>行<rt>い</rt></ruby>ったよ。",
+                "en": "A: Where's Tom?<br/>B: Tom went to the bathroom a little while ago.",
+                "bd": "A: টম কোথায়?<br/>B: টম একটু আগে বাথরুমে গিয়েছিল।"
+            },
+            {
+                "jp": "A：<ruby>何<rt>なに</rt></ruby>か<ruby>楽器<rt>がっき</rt></ruby>ができますか。<br/>B：<ruby>ギター<rt></rt></ruby><h>なら</h>できますよ。",
+                "en": "A: Can you play any musical instruments?<br/>B: If it's guitar, yes, I can.",
+                "bd": "A: আপনি কি কোনো বাদ্যযন্ত্র বাজাতে পারেন?<br/>B: যদি গিটার হয়, হ্যাঁ, আমি পারি।"
+            }
+        ]
+    },
+    "15": {
+        "key": "〜らしい（推量）",
+        "meaning_en": "\"It seems that\" An expression of speculation based on information seen or heard, typically phrased as \"probably.\"",
+        "meaning_bd": "সম্ভবত ~ এটি দেখা বা শোনা তথ্যের উপর ভিত্তি করে অনুমানের প্রকাশ।",
+        "form": "V（普通形）+ らしい<br/>イA（普通形）+ らしい<br/>ナA（普通形）+ らしい　※ナAだ + らしい<br/>N（普通形）+ らしい  ※Nだ + らしい",
+        "exampleSentence": [
+            {
+                "jp": "あの<ruby>レストラン<rt></rt></ruby>の <ruby>ハンバーグ<rt></rt></ruby>は とっても <ruby>美味<rt>おい</rt></ruby>しい<h>らしい</h>よ。",
+                "en": "I heard the hamburgers at that restaurant are really good.",
+                "bd": "আমি শুনেছি যে রেস্তোরাঁর হ্যামবার্গারগুলো খুবই ভালো।"
+            },
+            {
+                "jp": "<ruby>キム<rt></rt></ruby>さんに よると、 <ruby>トム<rt></rt></ruby>さんは<ruby>最近<rt>さいきん</rt></ruby>、 <ruby>日本人<rt>にほんじん</rt></ruby>の <ruby>彼女<rt>かのじょ</rt></ruby>が できた<h>らしい</h>。",
+                "en": "According to Mr. Kim, Mr. Tom recently got a Japanese girlfriend.",
+                "bd": "মি. কিমের মতে, টম সম্প্রতি একজন জাপানি বান্ধবী পেয়েছে।"
+            },
+            {
+                "jp": "<ruby>トム<rt></rt></ruby>さんは <ruby>大学<rt>だいがく</rt></ruby>を <ruby>卒業<rt>そつぎょう</rt></ruby>したら、 <ruby>国<rt>くに</rt></ruby>へ <ruby>帰<rt>かえ</rt></ruby>る<h>らしい</h>よ。",
+                "en": "Tom says he's going back to his country after he graduates from college.",
+                "bd": "টম বলেছেন, তিনি বিশ্ববিদ্যালয় থেকে স্নাতক শেষ করার পরে তার দেশে ফিরে যাবেন।"
+            }
+        ]
+    },
+    "16": {
+        "key": "〜ところだ",
+        "meaning_en": "① Indicates just before an action starts. About to ~.<br/>② Indicates that an action is currently in progress. In the middle of ~.<br/>③ Indicates just after an action has finished. Just ~.",
+        "meaning_bd": "① কোনও কাজ শুরু হওয়ার ঠিক আগে বোঝায়। কিছু করতে যাচ্ছি।<br/>② কোনও কাজ এখন চলছে তা বোঝায়। ~ এর মাঝে।<br/>③ কোনও কাজ শেষ হওয়ার ঠিক পরে বোঝায়। এখনই ~ করেছি।",
+        "form": "① V（辞書形）+ ところだ。<br/>② V（て形）いる + ところだ。<br/>③ V（た形）+ ところだ。",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>今<rt>いま</rt></ruby>から、 <ruby>電車<rt>でんしゃ</rt></ruby>に <ruby>乗<rt>の</rt></ruby>る<h>ところです</h>。",
+                "en": "I'm about to get on the train.",
+                "bd": "আমি এখন ট্রেনে উঠতে যাচ্ছি।"
+            },
+            {
+                "jp": "<ruby>今<rt>いま</rt></ruby>、 <ruby>電車<rt>でんしゃ</rt></ruby>に <ruby>乗<rt>の</rt></ruby>っている<h>ところだ</h>から、 <ruby>後<rt>あと</rt></ruby>で<ruby>電話<rt>でんわ</rt></ruby>するね。",
+                "en": "I'm on the train right now, so I'll call you later.",
+                "bd": "আমি এখন ট্রেনে আছি, তাই পরে তোমাকে ফোন করব।"
+            },
+            {
+                "jp": "<ruby>今<rt>いま</rt></ruby>、 <ruby>電車<rt>でんしゃ</rt></ruby>を <ruby>降<rt>お</rt></ruby>りた<h>ところなので</h>、 <ruby>後<rt>あと</rt></ruby>１０<ruby>分<rt>ぷん</rt></ruby>ぐらいで <ruby>着<rt>つ</rt></ruby>きます。",
+                "en": "I just got off the train, so I'll arrive in about 10 minutes.",
+                "bd": "আমি এখনই ট্রেন থেকে নেমেছি, তাই প্রায় ১০ মিনিটের মধ্যে পৌঁছাবো।"
+            }
+        ]
+    },
+    "17": {
+        "key": "〜という",
+        "meaning_en": "\"…called / …named\" Used when mentioning names of things, people, places, etc., that the listener is likely not familiar with.",
+        "meaning_bd": "\"…বলা/…নামে\" বস্তু, ব্যক্তি, স্থান ইত্যাদির নাম উল্লেখ করার জন্য ব্যবহৃত হয়, যা শ্রোতা সম্ভবত অপরিচিত।",
+        "form": "N1 + という + N2",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>私<rt>わたし</rt></ruby>は <ruby>タマ<rt></rt></ruby><h>という</h> <ruby>猫<rt>ねこ</rt></ruby>を <ruby>飼<rt>か</rt></ruby>っています。",
+                "en": "I have a cat named Tama.",
+                "bd": "আমার তামা নামের একটি বিড়াল আছে।"
+            },
+            {
+                "jp": "<ruby>村上春樹<rt>むらかみはるき</rt></ruby> <h>という</h> <ruby>小説家<rt>しょうせつか</rt></ruby>を <ruby>知<rt>し</rt></ruby>っていますか？",
+                "en": "Do you know a novelist named Haruki Murakami?",
+                "bd": "আপনি কি হারুকি মুরাকামি নামে একজন ঔপন্যাসিককে চেনেন?"
+            },
+            {
+                "jp": "<ruby>私<rt>わたし</rt></ruby>は <ruby>インドネシア<rt></rt></ruby>の バンドン<h>という</h> <ruby>町<rt>まち</rt></ruby>から <ruby>来<rt>き</rt></ruby>ました。",
+                "en": "I'm from a town called Bandung in Indonesia.",
+                "bd": "আমি ইন্দোনেশিয়ার বান্দুং নামে একটি শহর থেকে এসেছি।"
+            }
+        ]
+    },
+    "18": {
+        "key": "〜なさい",
+        "meaning_en": "\"do it\" Expressing commands or instructions.",
+        "meaning_bd": "\"করো\" আদেশ বা নির্দেশ বোঝাতে ব্যবহৃত হয়।",
+        "form": "V（ます形）ます + なさい<br/>ex. たべる → たべ(ます) + なさい = たべなさい",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>ジェームス<rt></rt></ruby>、 <ruby>早<rt>はや</rt></ruby>く <ruby>起<rt>お</rt></ruby>き<h>なさい</h>。",
+                "en": "James, wake up.",
+                "bd": "জেমস, তাড়াতাড়ি ওঠো।"
+            },
+            {
+                "jp": "<ruby>今<rt>いま</rt></ruby> <ruby>何時<rt>なんじ</rt></ruby>だ と<ruby>思<rt>おも</rt></ruby>ってるの！ <ruby>早<rt>はや</rt></ruby>く <ruby>寝<rt>ね</rt></ruby><h>なさい</h>。",
+                "en": "Do you know what time it is? Go to bed.",
+                "bd": "তুমি কি জানো এখন কয়টা বাজে? শুয়ে পড়ো।"
+            },
+            {
+                "jp": "<ruby>次<rt>つぎ</rt></ruby>の <ruby>質問<rt>しつもん</rt></ruby>に <ruby>答<rt>こた</rt></ruby>え<h>なさい</h>。",
+                "en": "Answer the following questions.",
+                "bd": "নিচের প্রশ্নগুলোর উত্তর দাও।"
+            }
+        ]
+    },
+    "19": {
+        "key": "〜てしまう",
+        "meaning_en": "① the action has been completed.<br/>② do negative action unintentionally. / something regrettable happens.",
+        "meaning_bd": "① কোনো কাজ সম্পূর্ণ হয়ে গেছে।<br/>② অনিচ্ছাকৃতভাবে নেতিবাচক কাজ করা। / কিছু দুঃখজনক ঘটে।",
+        "form": "V（て形） + しまう",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>昨日<rt>きのう</rt></ruby>、 <ruby>友達<rt>ともだち</rt></ruby>に <ruby>借<rt>か</rt></ruby>りた<ruby>漫画<rt>まんが</rt></ruby>を <ruby>全部<rt>ぜんぶ</rt></ruby> <ruby>読<rt>よ</rt></ruby>ん<h>でしまった</h>。",
+                "en": "Yesterday, I finished reading all the manga I borrowed from my friend.",
+                "bd": "গতকাল, আমি আমার বন্ধুর কাছ থেকে ধার করা সমস্ত মাঙ্গা পড়া শেষ করেছি।"
+            },
+            {
+                "jp": "<ruby>昨日<rt>きのう</rt></ruby>は <ruby>宿題<rt>しゅくだい</rt></ruby>を やらずに <ruby>寝<rt>ね</rt></ruby><h>てしまった</h>。",
+                "en": "I regretfully went to sleep last night without doing my homework.",
+                "bd": "গতকাল রাতে আমি হোমওয়ার্ক না করেই ঘুমিয়ে পড়েছিলাম, যা নিয়ে এখন অনুশোচনা হচ্ছে।"
+            }
+        ]
+    },
+    "20": {
+        "key": "〜ていただけませんか",
+        "meaning_en": "\"please do something for me.\" Used when you request someone to do something in a polite way.",
+        "meaning_bd": "\"আমার জন্য কিছু করবেন কি?\" কাউকে বিনয়ের সাথে কিছু করার জন্য অনুরোধ করার সময় ব্যবহৃত হয়।",
+        "form": "V（て形） + いただけませんか",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>銀行<rt>ぎんこう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きたいんですが、 <ruby>道<rt>みち</rt></ruby>を <ruby>教<rt>おし</rt></ruby>え<h>ていただけませんか</h>。",
+                "en": "I want to go to the bank, could you tell me the way?",
+                "bd": "আমি ব্যাংকে যেতে চাই, আপনি কি আমাকে রাস্তা বলতে পারেন?"
+            },
+            {
+                "jp": "この<ruby>漢字<rt>かんじ</rt></ruby>の <ruby>読み方<rt>よみかた</rt></ruby>を <ruby>教<rt>おし</rt></ruby>え<h>ていただけませんか</h>。",
+                "en": "Could you please tell me how to read this kanji?",
+                "bd": "আপনি কি দয়া করে আমাকে এই কাঞ্জি কীভাবে পড়তে হয় তা বলতে পারেন?"
+            },
+            {
+                "jp": "<ruby>すみません</ruby>が、 <ruby>お金<rt>おかね</rt></ruby>を <ruby>貸<rt>か</rt></ruby>し<h>ていただけませんか</h>。",
+                "en": "I'm sorry, but could you lend me some money?",
+                "bd": "দুঃখিত, কিন্তু আপনি কি আমাকে কিছু টাকা ধার দিতে পারেন?"
+            }
+        ]
+    },
+    "21": {
+        "key": "〜てある",
+        "meaning_en": "somebody has done something intentionally and that state continues.",
+        "meaning_bd": "কেউ ইচ্ছাকৃতভাবে কিছু করেছে এবং সেই অবস্থাটি এখনও চলছে।",
+        "form": "V（て形） + ある",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>壁<rt>かべ</rt></ruby>に <ruby>ポスター<rt></rt></ruby>が <ruby>貼<rt>は</rt></ruby>っ<h>てあります</h>。",
+                "en": "There is a poster pasted on the wall.",
+                "bd": "দেয়ালে একটি পোস্টার লাগানো আছে।"
+            },
+            {
+                "jp": "<ruby>テーブル<rt></rt></ruby>に <ruby>お皿<rt>おさら</rt></ruby>が <ruby>並<rt>なら</rt></ruby>べ<h>てあります</h>。",
+                "en": "Plates are lined up on the table.",
+                "bd": "টেবিলে প্লেটগুলো সারিবদ্ধভাবে রাখা আছে।"
+            },
+            {
+                "jp": "もう <ruby>宿題<rt>しゅくだい</rt></ruby>は し<h>てあります</h>。",
+                "en": "I've already done my homework.",
+                "bd": "আমি ইতিমধ্যেই আমার হোমওয়ার্ক শেষ করেছি।"
+            }
+        ]
+    },
+    "22": {
+        "key": "〜のに（予想外）",
+        "meaning_en": "\"… despite of the 〜\" Often used to show the speaker’s dissatisfaction, regret, or feeling that something is unexpected.",
+        "meaning_bd": "\"… এর পরেও\" বক্তার অসন্তোষ, আফসোস বা কিছু অপ্রত্যাশিত হওয়ার অনুভূতি বোঝাতে ব্যবহৃত হয়।",
+        "form": "V（普通形） + のに<br/>イAい + のに<br/>ナA + のに<br/>N + なのに",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>薬<rt>くすり</rt></ruby>を <ruby>飲<rt>の</rt></ruby>んだ<h>のに</h>、 <ruby>全然<rt>ぜんぜん</rt></ruby> <ruby>良<rt>よ</rt></ruby>くなりません。",
+                "en": "I took the medicine, but I'm not feeling any better at all.",
+                "bd": "আমি ওষুধ খেয়েছি, কিন্তু আমি একদম ভালো বোধ করছি না।"
+            },
+            {
+                "jp": "<ruby>昨日<rt>きのう</rt></ruby>、 <ruby>早<rt>はや</rt></ruby>く たくさん <ruby>寝<rt>ね</rt></ruby>た<h>のに</h>、 まだ<ruby>眠<rt>ねむ</rt></ruby>いです。",
+                "en": "I slept early and a lot last night, but I'm still sleepy.",
+                "bd": "গতকাল রাতে আমি তাড়াতাড়ি এবং অনেক ঘুমিয়েছি, কিন্তু এখনও ঘুম পাচ্ছে।"
+            },
+            {
+                "jp": "<ruby>トム<rt></rt></ruby>さんは ２<ruby>年<rt>ねん</rt></ruby><ruby>日本<rt>にほん</rt></ruby>へ <ruby>留学<rt>りゅうがく</rt></ruby>した<h>のに</h>、 <ruby>全然<rt>ぜんぜん</rt></ruby> <ruby>日本語<rt>にほんご</rt></ruby>が <ruby>話<rt>はな</rt></ruby>せません。",
+                "en": "Tom has been studying abroad in Japan for two years, but he still can't speak Japanese at all.",
+                "bd": "টম জাপানে দুই বছর ধরে পড়াশোনা করছে, তবুও সে একেবারেই জাপানি বলতে পারে না।"
+            }
+        ]
+    },
+    "23": {
+        "key": "〜のに（用途）",
+        "meaning_en": "This sentence pattern is used with “使います” to tell the purpose of using things.",
+        "meaning_bd": "এই বাক্য কাঠামোটি \"使います\" এর সাথে ব্যবহার করা হয় কোনো কিছুর ব্যবহারের উদ্দেশ্য জানাতে।",
+        "form": "V（辞書形） + のに<br/>N + に",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>風呂敷<rt>ふろしき</rt></ruby>は <ruby>物<rt>もの</rt></ruby>を<ruby>包<rt>つつ</rt></ruby>む <h>のに</h> <ruby>使<rt>つか</rt></ruby>います。",
+                "en": "Furoshiki is used to wrap things.",
+                "bd": "ফুরোশিকি জিনিস মোড়ানোর জন্য ব্যবহৃত হয়।"
+            },
+            {
+                "jp": "<ruby>この<rt></rt></ruby><ruby>箸<rt>はし</rt></ruby>は <ruby>パスタ<rt></rt></ruby>を<ruby>食<rt>た</rt></ruby>べる <h>のに</h> <ruby>使<rt>つか</rt></ruby>います。",
+                "en": "These chopsticks are used to eat pasta.",
+                "bd": "এই চপস্টিকগুলি পাস্তা খাওয়ার জন্য ব্যবহৃত হয়।"
+            },
+            {
+                "jp": "<ruby>これ<rt></rt></ruby>は <ruby>おにぎり<rt></rt></ruby>を<ruby>作<rt>つく</rt></ruby>る <h>のに</h> <ruby>使<rt>つか</rt></ruby>います。",
+                "en": "This is used to make rice balls.",
+                "bd": "এটি অনিগিরি (ভাতের বল) তৈরি করার জন্য ব্যবহৃত হয়।"
+            }
+        ]
+    },
+    "24": {
+        "key": "〜のに（評価）",
+        "meaning_en": "This sentence pattern is used with “便利です”, “不便です”, “良いです”, “悪いです” etc to evaluate things and places.",
+        "meaning_bd": "এই বাক্য কাঠামোটি \"便利です\", \"不便です\", \"良いです\", \"悪いです\" ইত্যাদির সাথে ব্যবহার করা হয় কোনো জিনিস বা জায়গা মূল্যায়ন করতে।",
+        "form": "V（辞書形） + のに<br/>N + に",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>田舎<rt>いなか</rt></ruby>は <ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>する <h>のに</h> <ruby>不便<rt>ふべん</rt></ruby>です。",
+                "en": "It's inconvenient to do shopping in the countryside.",
+                "bd": "গ্রামে কেনাকাটা করা খুবই অসুবিধাজনক।"
+            },
+            {
+                "jp": "<ruby>東京<rt>とうきょう</rt></ruby>は <ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>する <h>のに</h> <ruby>便利<rt>べんり</rt></ruby>です。",
+                "en": "Tokyo is convenient for shopping.",
+                "bd": "টোকিও কেনাকাটার জন্য সুবিধাজনক।"
+            },
+            {
+                "jp": "<ruby>東京<rt>とうきょう</rt></ruby>は <ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>多<rt>おお</rt></ruby>いので、 <ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>通<rt>かよ</rt></ruby>う <h>のに</h> <ruby>便利<rt>べんり</rt></ruby>です。",
+                "en": "There are many trains in Tokyo, so it is convenient to go to work.",
+                "bd": "টোকিওতে অনেক ট্রেন রয়েছে, তাই কাজে যাওয়া সহজ।"
+            }
+        ]
+    },
+    "25": {
+        "key": "〜ので",
+        "meaning_en": "because<br/>Used to say the reason or cause.<br/>\"ので\" sounds more formal than \"から\"",
+        "meaning_bd": "\"কারণ\"<br/>কারণ বা কারণ জানাতে ব্যবহৃত হয়।<br/>\"ので\" শব্দটি \"から\" এর চেয়ে বেশি আনুষ্ঠানিক শোনায়।",
+        "form": "普通形 + ので",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>暑<rt>あつ</rt></ruby>い <h>ので</h>、 <ruby>エアコン<rt></rt></ruby>を <ruby>付<rt>つ</rt></ruby>けて もいいですか。",
+                "en": "It's hot, so can I turn on the air conditioner?",
+                "bd": "গরম লাগছে, তাই আমি কি এয়ার কন্ডিশনার চালাতে পারি?"
+            },
+            {
+                "jp": "<ruby>電車<rt>でんしゃ</rt></ruby>が <ruby>遅<rt>おく</rt></ruby>れた <h>ので</h>、 <ruby>少<rt>すこ</rt></ruby>し<ruby>遅刻<rt>ちこく</rt></ruby> しそうです。",
+                "en": "The train is late, so I'm going to be a little late.",
+                "bd": "ট্রেন দেরি করেছে, তাই আমি একটু দেরি করব।"
+            },
+            {
+                "jp": "<ruby>頭<rt>あたま</rt></ruby>が <ruby>痛<rt>いた</rt></ruby>い<h>ので</h>、 <ruby>帰<rt>かえ</rt></ruby>って もいいですか。",
+                "en": "I have a headache, can I go home?",
+                "bd": "আমার মাথাব্যথা হচ্ছে, আমি কি বাড়ি যেতে পারি?"
+            }
+        ]
+    },
+    "26": {
+        "key": "〜ようと思う",
+        "meaning_en": "This sentence pattern is used to talk about the speaker’s determinations or plans.",
+        "meaning_bd": "এই বাক্য কাঠামোটি বক্তার সিদ্ধান্ত বা পরিকল্পনা প্রকাশ করতে ব্যবহৃত হয়।",
+        "form": "V（意向形） + と思う",
+        "exampleSentence": [
+            {
+                "jp": "これから、 <ruby>図書館<rt>としょかん</rt></ruby>で <ruby>勉強<rt>べんきょう</rt></ruby> し<h>ようと思います</h>。",
+                "en": "I'm going to study at the library.",
+                "bd": "আমি এখন লাইব্রেরিতে পড়াশোনা করতে যাচ্ছি।"
+            },
+            {
+                "jp": "今日は <ruby>給料日<rt>きゅうりょうび</rt></ruby> なので、 <ruby>欲<rt>ほ</rt></ruby>しかった<ruby>ゲーム<rt></rt></ruby>を <ruby>買<rt>か</rt></ruby><h>おうと思います</h>。",
+                "en": "Today is payday, so I'm going to buy the game I want.",
+                "bd": "আজ বেতন দিবস, তাই আমি যে গেমটি চেয়েছিলাম তা কিনতে যাচ্ছি।"
+            },
+            {
+                "jp": "<ruby>早<rt>はや</rt></ruby>く<ruby>仕事<rt>しごと</rt></ruby>が <ruby>終<rt>お</rt></ruby>わったので、 ちょっと<ruby>飲<rt>の</rt></ruby>みに <ruby>行<rt>い</rt></ruby><h>こうと思います</h>。",
+                "en": "I finished work early, so I'm going out for a drink.",
+                "bd": "আমি কাজ তাড়াতাড়ি শেষ করেছি, তাই একটু পান করতে যাচ্ছি।"
+            }
+        ]
+    },
+    "27": {
+        "key": "〜ようと思っている",
+        "meaning_en": "Used to talk about the speaker’s determinations or plans.",
+        "meaning_bd": "বক্তার সিদ্ধান্ত বা পরিকল্পনা নিয়ে কথা বলার জন্য ব্যবহৃত হয়।",
+        "form": "V（意向形） + と思っています",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>大学<rt>だいがく</rt></ruby>を <ruby>卒業<rt>そつぎょう</rt></ruby>したら、 <ruby>国<rt>くに</rt></ruby>へ <ruby>帰<rt>かえ</rt></ruby><h>ろう と思っています</h>。",
+                "en": "I'm planning to go back to my country after I graduate from university.",
+                "bd": "বিশ্ববিদ্যালয় থেকে স্নাতক শেষ করার পরে আমি আমার দেশে ফিরে যাওয়ার পরিকল্পনা করছি।"
+            },
+            {
+                "jp": "<ruby>夏休<rt>なつやす</rt></ruby>みは <ruby>国<rt>くに</rt></ruby>へ <ruby>帰<rt>かえ</rt></ruby><h>ろう と思っています</h>。",
+                "en": "I am planning to go back to my country during the summer vacation.",
+                "bd": "গ্রীষ্মের ছুটিতে আমি আমার দেশে ফিরে যাওয়ার পরিকল্পনা করছি।"
+            },
+            {
+                "jp": "<ruby>将来<rt>しょうらい</rt></ruby>は <ruby>マレーシア<rt></rt></ruby>に <ruby>住<rt>す</rt></ruby><h>もう と思っています</h>。",
+                "en": "I'm planning to live in Malaysia in the future.",
+                "bd": "ভবিষ্যতে আমি মালয়েশিয়াতে বসবাস করার পরিকল্পনা করছি।"
+            }
+        ]
+    },
+    "28": {
+        "key": "〜予定だ",
+        "meaning_en": "Used to say that an action/plan is scheduled to happen or be done.",
+        "meaning_bd": "কোনও কাজ/পরিকল্পনা নির্ধারিত সময়ে ঘটতে বা সম্পন্ন হওয়ার কথা বোঝাতে ব্যবহৃত হয়।",
+        "form": "V（辞書形） + 予定だ<br/>N + の予定だ",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>明日<rt>あした</rt></ruby>は <ruby>友達<rt>ともだち</rt></ruby>と <ruby>モール<rt></rt></ruby>へ <ruby>行<rt>い</rt></ruby>く <h>予定です</h>。",
+                "en": "I'm going to the mall tomorrow with my friends.",
+                "bd": "আগামীকাল আমি আমার বন্ধুদের সাথে মলে যেতে যাচ্ছি।"
+            },
+            {
+                "jp": "<ruby>夏休<rt>なつやす</rt></ruby>みは <ruby>国<rt>くに</rt></ruby>へ <ruby>帰<rt>かえ</rt></ruby>る <h>予定です</h>。",
+                "en": "I’m planning to go back to my country during the summer vacation.",
+                "bd": "গ্রীষ্মের ছুটিতে আমি আমার দেশে ফিরে যাওয়ার পরিকল্পনা করছি।"
+            },
+            {
+                "jp": "<ruby>大学<rt>だいがく</rt></ruby>を <ruby>卒業<rt>そつぎょう</rt></ruby>したら、 <ruby>国<rt>くに</rt></ruby>へ <ruby>帰<rt>かえ</rt></ruby>る <h>予定です</h>。",
+                "en": "I’m planning to go back to my country after I graduate from college.",
+                "bd": "আমি বিশ্ববিদ্যালয় থেকে স্নাতক শেষ করার পরে আমার দেশে ফিরে যাওয়ার পরিকল্পনা করছি।"
+            }
+        ]
+    },
+    "29": {
+        "key": "〜ばかり",
+        "meaning_en": "It refers to having a lot of the same thing, or doing the same thing repeatedly. It's often used in a negative sense.",
+        "meaning_bd": "এটি একই ধরনের জিনিসের অনেক থাকার বা একই কাজ বারবার করার কথা বোঝায়। এটি প্রায়শই নেতিবাচক অর্থে ব্যবহৃত হয়।",
+        "form": "V（て形） + ばかり<br/>N + ばかり",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>友達<rt>ともだち</rt></ruby>は いつもゲーム <h>ばかり</h> している。",
+                "en": "My friend is always just playing games.",
+                "bd": "আমার বন্ধু সব সময় শুধু গেম খেলছে।"
+            },
+            {
+                "jp": "この<ruby>会社<rt>かいしゃ</rt></ruby>の <ruby>社員<rt>しゃいん</rt></ruby>は <ruby>若<rt>わか</rt></ruby>い<ruby>女性<rt>じょせい</rt></ruby> <h>ばかり</h>だ。",
+                "en": "The majority of the employees at this company are young women.",
+                "bd": "এই কোম্পানির বেশিরভাগ কর্মচারীই তরুণী।"
+            }
+        ]
+    },
+    "30": {
+        "key": "〜は〜が、〜は（対比）",
+        "meaning_en": "When contrasting two objects or matters, the particle 'は' is used.",
+        "meaning_bd": "দুটি বস্তু বা বিষয়ের মধ্যে তুলনা করার সময়, 'は' অব্যয়টি ব্যবহৃত হয়।",
+        "form": "N + は",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>日本<rt>にほん</rt></ruby>に <ruby>来<rt>き</rt></ruby>たとき<h>は</h> <ruby>寂<rt>さび</rt></ruby>しかったです<h>が</h>、 <ruby>今<rt>いま</rt></ruby><h>は</h><ruby>友達<rt>ともだち</rt></ruby>もできて <ruby>楽<rt>たの</rt></ruby>しくなりました。",
+                "en": "I was lonely when I first came to Japan, but now I have made friends and I'm having a lot of fun.",
+                "bd": "আমি যখন প্রথম জাপানে এসেছিলাম তখন আমি একা ছিলাম, কিন্তু এখন আমি বন্ধুবান্ধব পেয়েছি এবং মজা করছি।"
+            },
+            {
+                "jp": "<ruby>日本語<rt>にほんご</rt></ruby>の <ruby>会話<rt>かいわ</rt></ruby><ruby>練習<rt>れんしゅう</rt></ruby><h>は</h> <ruby>好<rt>す</rt></ruby>きです<h>が</h>、 <ruby>漢字<rt>かんじ</rt></ruby>の<ruby>練習<rt>れんしゅう</rt></ruby><h>は</h> <ruby>嫌<rt>きら</rt></ruby>いです。",
+                "en": "I enjoy practicing Japanese conversation, but I don't like studying kanji.",
+                "bd": "আমি জাপানি কথোপকথন অনুশীলন করতে পছন্দ করি, কিন্তু আমি কানজি পড়তে পছন্দ করি না।"
+            },
+            {
+                "jp": "<ruby>トム<rt></rt></ruby>さんに<h>は</h> バレンタインの<ruby>チョコ<rt></rt></ruby>を あげた<h>が</h>、 <ruby>ジェームス<rt></rt></ruby>さん に<h>は</h>あげなかった。",
+                "en": "I gave Tom chocolate for Valentine's Day, but I didn't give James any.",
+                "bd": "আমি টমকে ভ্যালেন্টাইন্স ডেতে চকলেট দিয়েছি, কিন্তু জেমসকে দিইনি।"
+            }
+        ]
+    },
+    "31": {
+        "key": "〜と",
+        "meaning_en": "\"whenever A happens, B also happens.\"<br/>① This sentence pattern describes a sequence of actions or events where one action inevitably leads to another.<br/>② This sentence pattern is commonly used in explaining how to use machines or giving directions.",
+        "meaning_bd": "\"যদি A ঘটে, তাহলে B ও ঘটবে।\"<br/>① এই বাক্য কাঠামোটি একটি ক্রমের ক্রিয়া বা ঘটনাকে বর্ণনা করে যেখানে একটি ক্রিয়া অনিবার্যভাবে অন্যটির দিকে পরিচালিত করে।<br/>② এটি সাধারণত মেশিন ব্যবহারের নির্দেশনা বা রাস্তার নির্দেশনা দেওয়ার সময় ব্যবহৃত হয়।",
+        "form": "V（辞書形 / ナイ形）+ と<br/>イAい + と<br/>ナAだ + と<br/>Nだ + と",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>この<rt></rt></ruby><ruby>道<rt>みち</rt></ruby>を まっすぐ<ruby>行<rt>い</rt></ruby>く<h>と</h>、 <ruby>病院<rt>びょういん</rt></ruby>が あります。",
+                "en": "If you go straight down this road, you will find a hospital.",
+                "bd": "এই রাস্তা ধরে সোজা চলে গেলে, আপনি একটি হাসপাতাল পাবেন।"
+            },
+            {
+                "jp": "<ruby>この<rt></rt></ruby>まま まっすぐ<ruby>行<rt>い</rt></ruby>って、 ２つ<ruby>目<rt>め</rt></ruby>の<ruby>角<rt>かど</rt></ruby>を <ruby>左<rt>ひだり</rt></ruby>に<ruby>曲<rt>ま</rt></ruby>がる<h>と</h>、 <ruby>交番<rt>こうばん</rt></ruby>があります。",
+                "en": "Keep going straight, and then turn left at the second corner, and you'll find a police box.",
+                "bd": "সোজা যান, তারপর দ্বিতীয় মোড়ে বাঁ দিকে ঘুরলে, আপনি একটি পুলিশ বক্স পাবেন।"
+            },
+            {
+                "jp": "<ruby>お金<rt>おかね</rt></ruby>を<ruby>入<rt>い</rt></ruby>れて、 <ruby>食<rt>た</rt></ruby>べたい<ruby>料理<rt>りょうり</rt></ruby>の <ruby>ボタン<rt></rt></ruby>を<ruby>押<rt>お</rt></ruby>す<h>と</h>、 <ruby>食券<rt>しょっけん</rt></ruby>が<ruby>出<rt>で</rt></ruby>ます。",
+                "en": "Insert money and press the button for the dish you want to eat, and a meal ticket will be issued.",
+                "bd": "টাকা ঢোকান, তারপর আপনি যা খেতে চান সেই খাবারের বোতামটি চাপলে, খাবারের টিকিট বের হবে।"
+            }
+        ]
+    },
+    "32": {
+        "key": "まだ〜ていない",
+        "meaning_en": "\"not yet\" Indicates that the action or event has not been completed.",
+        "meaning_bd": "\"এখনও না\" ক্রিয়া বা ঘটনা এখনও শেষ হয়নি তা বোঝায়।",
+        "form": "まだ + V（テ形） + いません",
+        "exampleSentence": [
+            {
+                "jp": "あ〜、 <h>まだ</h><ruby>国<rt>くに</rt></ruby>へ<ruby>帰<rt>かえ</rt></ruby>る <ruby>チケット<rt></rt></ruby>を <ruby>買<rt>か</rt></ruby>っ<h>てない</h>。",
+                "en": "Oh, I haven't bought a ticket back to my country yet.",
+                "bd": "আহ্, আমি এখনও আমার দেশে ফেরার টিকিট কিনিনি।"
+            },
+            {
+                "jp": "<h>まだ</h> <ruby>明日<rt>あした</rt></ruby><ruby>締切<rt>しめきり</rt></ruby>の <ruby>レポート<rt></rt></ruby>が <ruby>終<rt>お</rt></ruby>わっ<h>てない</h>ので、 <ruby>遊<rt>あそ</rt></ruby>びに<ruby>行<rt>い</rt></ruby>けない。",
+                "en": "I still haven't finished the report that's due tomorrow, so I can't go out to hang out.",
+                "bd": "আমি এখনও আগামীকাল জমা দেওয়ার রিপোর্ট শেষ করিনি, তাই আমি ঘুরতে যেতে পারছি না।"
+            },
+            {
+                "jp": "A：<ruby>遅<rt>おく</rt></ruby>れてごめん。もう、<ruby>試合<rt>しあい</rt></ruby>始まった？<br/>B：ううん、<h>まだ</h>始まっ<h>てない</h>よ。",
+                "en": "A: Sorry for the delay. Has the game started yet?<br/>B: No, it hasn't started.",
+                "bd": "A: দেরির জন্য দুঃখিত। খেলা কি শুরু হয়ে গেছে?<br/>B: না, এখনও শুরু হয়নি।"
+            }
+        ]
+    },
+    "33": {
+        "key": "〜ようにしている",
+        "meaning_en": "The expression for describing something done habitually.",
+        "meaning_bd": "নিয়মিত করা কিছু বোঝাতে ব্যবহৃত একটি প্রকাশ।",
+        "form": "V（辞書形 / ナイ形）+ ようにしている",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>健康<rt>けんこう</rt></ruby>のために できるだけ <ruby>毎日<rt>まいにち</rt></ruby><ruby>運動<rt>うんどう</rt></ruby>する <h>ようにしています</h>。",
+                "en": "I've made it a habit to exercise every day for the sake of my health.",
+                "bd": "আমি আমার স্বাস্থ্যের জন্য প্রতিদিন ব্যায়াম করার অভ্যাস করেছি।"
+            },
+            {
+                "jp": "<ruby>健康<rt>けんこう</rt></ruby>のために タバコは <ruby>吸<rt>す</rt></ruby>わない <h>ようにしています</h>。",
+                "en": "I've made it a habit to avoid smoking for the sake of my health.",
+                "bd": "আমি আমার স্বাস্থ্যের জন্য ধূমপান থেকে বিরত থাকার অভ্যাস করেছি।"
+            },
+            {
+                "jp": "<ruby>毎日<rt>まいにち</rt></ruby> １１<ruby>時<rt>じ</rt></ruby>には <ruby>寝<rt>ね</rt></ruby>る<h>ようにしています</h>。",
+                "en": "I've made it a habit to go to bed by 11:00 every night.",
+                "bd": "আমি প্রতিরাতে ১১:০০ টার মধ্যে ঘুমানোর অভ্যাস করেছি।"
+            }
+        ]
+    },
+    "34": {
+        "key": "〜までに",
+        "meaning_en": "“までに” indicates “time limit”. Used when talking about doing something within a given time period.",
+        "meaning_bd": "\"までに\" সময়সীমা নির্দেশ করে। নির্দিষ্ট সময়ের মধ্যে কিছু করার কথা বলতে ব্যবহৃত হয়।",
+        "form": "V（辞書形）+ までに<br/>N（時間 / 日付）+ までに",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>レポート<rt></rt></ruby>は <ruby>来週<rt>らいしゅう</rt></ruby>の<ruby>水曜日<rt>すいようび</rt></ruby> <h>までに</h> <ruby>出<rt>だ</rt></ruby>してください。",
+                "en": "Please submit the report by next Wednesday.",
+                "bd": "দয়া করে রিপোর্টটি আগামী বুধবারের মধ্যে জমা দিন।"
+            },
+            {
+                "jp": "<ruby>死<rt>し</rt></ruby>ぬ <h>までに</h> １<ruby>度<rt>ど</rt></ruby>は アフリカへ <ruby>行<rt>い</rt></ruby>ってみたいです。",
+                "en": "I want to go to Africa at least once before I die.",
+                "bd": "আমি মারা যাওয়ার আগে অন্তত একবার আফ্রিকাতে যেতে চাই।"
+            },
+            {
+                "jp": "<ruby>月末<rt>げつまつ</rt></ruby> <h>までに</h>、 きちんと<ruby>家賃<rt>やちん</rt></ruby>を <ruby>払<rt>はら</rt></ruby>ってくださいね。",
+                "en": "Please make sure you pay your rent by the end of the month.",
+                "bd": "দয়া করে মাসের শেষের মধ্যে আপনার ভাড়া পরিশোধ করতে ভুলবেন না।"
+            }
+        ]
+    },
+    "35": {
+        "key": "〜て（理由・原因）",
+        "meaning_en": "because",
+        "meaning_bd": "\"কারণ\" বোঝাতে ব্যবহৃত হয়।",
+        "form": "V（て形）<br/>イAくて<br/>ナAで<br/>Nで （Nは地震や台風、火事などのよくない単語が来る）",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>遅<rt>おく</rt></ruby>れ<h>て</h>、 ごめん。",
+                "en": "Sorry for the delay.",
+                "bd": "দেরির জন্য দুঃখিত।"
+            },
+            {
+                "jp": "<ruby>昨日<rt>きのう</rt></ruby>の<ruby>テスト<rt></rt></ruby>は <ruby>問題<rt>もんだい</rt></ruby>が<ruby>難<rt>むずか</rt></ruby>しく<h>て</h>、 <ruby>全然<rt>ぜんぜん</rt></ruby> わからなかった。",
+                "en": "I couldn't understand any of the questions on yesterday's exam because they were too difficult.",
+                "bd": "গতকালের পরীক্ষায় প্রশ্নগুলো খুব কঠিন ছিল বলে আমি কিছুই বুঝতে পারিনি।"
+            },
+            {
+                "jp": "<ruby>台風<rt>たいふう</rt></ruby><h>で</h> <ruby>大<rt>おお</rt></ruby>きな<ruby>木<rt>き</rt></ruby>が たくさん<ruby>倒<rt>たお</rt></ruby>れた。",
+                "en": "Many big trees fell down due to the typhoon.",
+                "bd": "ঘূর্ণিঝড়ের কারণে অনেক বড় বড় গাছ ভেঙে পড়েছে।"
+            }
+        ]
+    },
+    "36": {
+        "key": "〜かもしれない",
+        "meaning_en": "\"maybe / perhaps\" Indicates that there is a possibility. An expression in which the speaker says what he or she guesses. It is an uncertain guess with less basis for judgment than ”〜でしょう / 〜だろう”.",
+        "meaning_bd": "\"সম্ভবত\" কোনও সম্ভাবনা আছে তা বোঝায়। এটি এমন একটি প্রকাশ যেখানে বক্তা অনুমান করে। এটি কম ভিত্তির সাথে একটি অনিশ্চিত অনুমান।",
+        "form": "V（普通形） + かもしれない<br/>イA（普通形）+かもしれない<br/>ナA（普通形）だ + かもしれない<br/>N（普通形）だ + かもしれない",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>午後<rt>ごご</rt></ruby>から <ruby>雨<rt>あめ</rt></ruby>が やむ <h>かもしれません</h>。",
+                "en": "The rain might stop from the afternoon.",
+                "bd": "দুপুরের পর বৃষ্টি থেমে যেতে পারে।"
+            },
+            {
+                "jp": "<ruby>新<rt>あたら</rt></ruby>しい<ruby>先生<rt>せんせい</rt></ruby>は <ruby>顔<rt>かお</rt></ruby>が<ruby>怖<rt>こわ</rt></ruby>いし、 <ruby>厳<rt>きび</rt></ruby>しい <h>かもしれない</h>。",
+                "en": "The new teacher has a scary face and might be strict.",
+                "bd": "নতুন শিক্ষকের মুখ ভীতিকর, এবং তিনি কঠোর হতে পারেন।"
+            },
+            {
+                "jp": "<ruby>トム<rt></rt></ruby>さんは <ruby>高<rt>たか</rt></ruby>そうな<ruby>ギター<rt></rt></ruby>を <ruby>持<rt>も</rt></ruby>っているし、 <ruby>ギター<rt></rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby> <h>かもしれない</h>。",
+                "en": "Tom has an expensive guitar, and he might be a good guitar player.",
+                "bd": "টমের একটি দামি গিটার আছে এবং সে একজন ভালো গিটার বাজাতে পারে।"
+            },
+            {
+                "jp": "<ruby>新<rt>あたら</rt></ruby>しく<ruby>来<rt>き</rt></ruby>た <ruby>転校生<rt>てんこうせい</rt></ruby>は <ruby>目<rt>め</rt></ruby>が<ruby>茶色<rt>ちゃいろ</rt></ruby>いし、 <ruby>花<rt>はな</rt></ruby>も<ruby>高<rt>たか</rt></ruby>いし、 ハーフ <h>かもしれない</h>。",
+                "en": "The new transfer student has brown eyes, and a tall nose, so he might be half.",
+                "bd": "নতুন ট্রান্সফার ছাত্রের বাদামী চোখ এবং উঁচু নাক রয়েছে, তাই তিনি হয়তো মিশ্র হতে পারেন।"
+            }
+        ]
+    },
+    "37": {
+        "key": "〜しか〜ない",
+        "meaning_en": "\"only\" An expression used when you feel that the degree or amount of something is less than you expected.",
+        "meaning_bd": "\"শুধু\" এটি এমন একটি প্রকাশ যা তখন ব্যবহৃত হয় যখন আপনি মনে করেন যে কোনও কিছুর মাত্রা বা পরিমাণ আপনার প্রত্যাশার চেয়ে কম।",
+        "form": "Noun + しか<br/>Number + counter + しか",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>マーク<rt></rt></ruby>さんは <ruby>日本<rt>にほん</rt></ruby>に３<ruby>年<rt>ねん</rt></ruby>も<ruby>留学<rt>りゅうがく</rt></ruby>したのに、 <ruby>ひらがな<rt></rt></ruby><h>しか</h> <ruby>書<rt>か</rt></ruby>け<h>ません</h>。",
+                "en": "Mark has been studying abroad in Japan for three years, but he can only write hiragana.",
+                "bd": "মার্ক তিন বছর ধরে জাপানে পড়াশোনা করছেন, তবে তিনি কেবল হিরাগানা লিখতে পারেন।"
+            },
+            {
+                "jp": "<ruby>昨日<rt>きのう</rt></ruby>、 <ruby>忙<rt>いそが</rt></ruby>しすぎて ４<ruby>時間<rt>じかん</rt></ruby> <h>しか</h> <ruby>寝<rt>ね</rt></ruby>られ<h>ませんでした</h>。",
+                "en": "I was so busy yesterday that I could only sleep for four hours.",
+                "bd": "গতকাল আমি এত ব্যস্ত ছিলাম যে আমি মাত্র চার ঘণ্টা ঘুমাতে পেরেছি।"
+            },
+            {
+                "jp": "<ruby>今<rt>いま</rt></ruby>、 <ruby>財布<rt>さいふ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>には ５００<ruby>円<rt>えん</rt></ruby> <h>しか</h> あり<h>ません</h>。",
+                "en": "I only have 500 yen in my wallet right now.",
+                "bd": "এখন আমার মানিব্যাগে মাত্র ৫০০ ইয়েন আছে।"
+            }
+        ]
+    },
+    "38": {
+        "key": "〜ようだ（推量）",
+        "meaning_en": "\"It seems like\" An expression describing what the speaker felt or inferred using their five senses.",
+        "meaning_bd": "\"এটা মনে হচ্ছে\" বক্তা তার পাঁচটি ইন্দ্রিয় ব্যবহার করে যা অনুভব করেছেন বা অনুমান করেছেন তা বর্ণনা করার জন্য ব্যবহৃত একটি প্রকাশ।",
+        "form": "V（普通形）+ ようです<br/>イA（普通形）+ ようです<br/>ナA（普通形）+ ようです ※ナAな + ようです<br/>N（普通形）+ ようです ※Nの + ようです",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>彼<rt>かれ</rt></ruby>は <ruby>お腹<rt>おなか</rt></ruby>が <ruby>空<rt>す</rt></ruby>いている <h>ようです</h>。",
+                "en": "He seems to be hungry.",
+                "bd": "তার মনে হচ্ছে ক্ষুধা লেগেছে।"
+            },
+            {
+                "jp": "さっき <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>った <h>ようです</h>。",
+                "en": "It seems to have rained a while ago.",
+                "bd": "এটা মনে হচ্ছে কিছুক্ষণ আগে বৃষ্টি হয়েছে।"
+            },
+            {
+                "jp": "あの<ruby>二人<rt>ふたり</rt></ruby>は <ruby>喧嘩<rt>けんか</rt></ruby>した <h>ようです</h>。",
+                "en": "It seems that they had a fight.",
+                "bd": "এটা মনে হচ্ছে তারা ঝগড়া করেছে।"
+            }
+        ]
+    },
+    "39": {
+        "key": "〜そうです（直前）",
+        "meaning_en": "It seems like something is about to happen.",
+        "meaning_bd": "মনে হচ্ছে কিছু ঘটতে যাচ্ছে।",
+        "form": "V（ます形）<s>ます</s> + そうです",
+        "exampleSentence": [
+            {
+                "jp": "いまにも、 <ruby>雨<rt>あめ</rt></ruby>が <ruby>降<rt>ふ</rt></ruby>り <h>そうです</h>。",
+                "en": "It looks like it's about to rain any moment now.",
+                "bd": "যেকোনো মুহূর্তে বৃষ্টি হতে চলেছে বলে মনে হচ্ছে।"
+            },
+            {
+                "jp": "そろそろ <ruby>雨<rt>あめ</rt></ruby>が やみ <h>そうなので</h>、もう少し <ruby>待<rt>ま</rt></ruby>ちましょう。",
+                "en": "The rain seems to be easing off, so let's wait a little longer.",
+                "bd": "বৃষ্টি একটু থামতে চলেছে বলে মনে হচ্ছে, তাই চল একটু অপেক্ষা করি।"
+            },
+            {
+                "jp": "テーブルから コップが <ruby>落<rt>お</rt></ruby>ち<h>そうです</h>。",
+                "en": "The glass is about to fall off the table.",
+                "bd": "গ্লাসটি টেবিল থেকে পড়তে চলেছে।"
+            }
+        ]
+    },
+    "40": {
+        "key": "〜し〜し",
+        "meaning_en": "① Parallel description: \"and besides\" An expression where multiple things are listed together. It includes the speaker's feeling of \"furthermore\" or \"moreover.\" It is commonly used when evaluating people or things.<br/>② Enumeration of reasons: \"because A and B\" An expression where multiple reasons are listed, followed by a conclusion. This structure can be used even when stating only one reason, implying that there are other reasons not mentioned.",
+        "meaning_bd": "① সমান্তরাল বর্ণনা: \"এবং আরও\" যেখানে একাধিক জিনিস একসাথে তালিকাভুক্ত করা হয় এমন একটি প্রকাশ। এটি বক্তার \"আরও\" বা \"এছাড়াও\" অনুভূতি অন্তর্ভুক্ত করে। এটি সাধারণত মানুষ বা জিনিস মূল্যায়নের সময় ব্যবহৃত হয়।<br/>② কারণের তালিকা: \"A এবং B কারণ\" যেখানে একাধিক কারণ তালিকাভুক্ত করা হয়, এবং তারপরে একটি উপসংহার দেওয়া হয়। শুধুমাত্র একটি কারণ উল্লেখ করার সময়ও এটি ব্যবহার করা যেতে পারে, তবে অন্য কারণগুলিও আছে যা উল্লেখ করা হয়নি।",
+        "form": "V（普通形）+ し<br/>イA（普通形） +　し<br/>ナA（普通形） +　し<br/>N（普通形） +　し",
+        "exampleSentence": [
+            {
+                "jp": "トムさんは、 <ruby>面白<rt>おもしろ</rt></ruby>い<h>し</h>、 <ruby>親切<rt>しんせつ</rt></ruby>だ<h>し</h>、 <ruby>サッカー<rt></rt></ruby>も <ruby>上手<rt>じょうず</rt></ruby>です。",
+                "en": "Tom is funny, kind, and good at soccer.",
+                "bd": "টম মজার, দয়ালু, এবং ফুটবলেও ভালো।"
+            },
+            {
+                "jp": "<ruby>漢字<rt>かんじ</rt></ruby>は<ruby>多<rt>おお</rt></ruby>い<h>し</h>、 <ruby>文法<rt>ぶんぽう</rt></ruby>は<ruby>難<rt>むずか</rt></ruby>しい<h>し</h>、 <ruby>私<rt>わたし</rt></ruby>は<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>勉強<rt>べんきょう</rt></ruby>が あまり<ruby>好<rt>す</rt></ruby>きではありません。",
+                "en": "There are many kanji, grammar is difficult, and I don't really like studying Japanese.",
+                "bd": "অনেক কানজি রয়েছে, ব্যাকরণ কঠিন এবং আমি জাপানি পড়াশোনা করতে বেশি পছন্দ করি না।"
+            }
+        ]
+    },
+    "41": {
+        "key": "〜そうです（様態）",
+        "meaning_en": "\"it looks like\" Used when the speaker describes what they felt or sensed visually.",
+        "meaning_bd": "\"এটি মনে হচ্ছে\" যখন বক্তা ভিজ্যুয়ালি যা অনুভব করেছেন তা বর্ণনা করেন তখন এটি ব্যবহৃত হয়।",
+        "form": "イA + そうです<br/>イA + くなさそうです<br/>ナA + そうです<br/>ナA + じゃなさそう",
+        "exampleSentence": [
+            {
+                "jp": "このカレーは <ruby>色<rt>いろ</rt></ruby>が <ruby>少<rt>すこ</rt></ruby>し<ruby>赤<rt>あか</rt></ruby>く、 <ruby>辛<rt>から</rt></ruby><h>そうだ</h>。",
+                "en": "This curry looks a little red and seems spicy.",
+                "bd": "এই কারিটি একটু লাল দেখাচ্ছে এবং মশলাদার মনে হচ্ছে।"
+            },
+            {
+                "jp": "<ruby>彼氏<rt>かれし</rt></ruby>が <ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ってくれたが、 <ruby>見<rt>み</rt></ruby>た<ruby>目<rt>め</rt></ruby>が<ruby>悪<rt>わる</rt></ruby>く <ruby>まず</rt><h>そうだ</h>。",
+                "en": "My boyfriend cooked for me, but it looks unappetizing and seems bad.",
+                "bd": "আমার প্রেমিক আমার জন্য রান্না করেছে, তবে এটি দেখতে খারাপ এবং অখাদ্য মনে হচ্ছে।"
+            },
+            {
+                "jp": "わぁ、 おいし<h>そう</h>な <ruby>料理<rt>りょうり</rt></ruby>が たくさん。",
+                "en": "Wow, there are so many delicious-looking dishes.",
+                "bd": "ওহ্, অনেক সুস্বাদু দেখতে খাবার রয়েছে।"
+            }
+        ]
+    },
+    "42": {
+        "key": "〜も",
+        "meaning_en": "\"as many as\" Indicates a large quantity. Contains the speaker's feeling of surprise.",
+        "meaning_bd": "\"এতগুলো\" একটি বড় পরিমাণ বোঝায়। এতে বক্তার বিস্ময়ের অনুভূতি অন্তর্ভুক্ত রয়েছে।",
+        "form": "数字 + 助数詞 + も",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>土曜日<rt>どようび</rt></ruby>は １０<ruby>時間<rt>じかん</rt></ruby><h>も</h> <ruby>寝<rt>ね</rt></ruby>てしまいました。",
+                "en": "On Saturday, I ended up sleeping for as long as 10 hours.",
+                "bd": "শনিবার, আমি ১০ ঘণ্টা ঘুমিয়ে ফেললাম।"
+            },
+            {
+                "jp": "トムさんは <ruby>漫画<rt>まんが</rt></ruby>を １００<ruby>冊<rt>さつ</rt></ruby><h>も</h> <ruby>持<rt>も</rt></ruby>っています。",
+                "en": "Tom has as many as 100 manga books.",
+                "bd": "টমের ১০০টি মাঙ্গা বই রয়েছে।"
+            },
+            {
+                "jp": "メアリーさんは ５<ruby>匹<rt>ひき</rt></ruby><h>も</h> <ruby>猫<rt>ねこ</rt></ruby>を <ruby>飼<rt>か</rt></ruby>っています。",
+                "en": "Mary owns as many as 5 cats.",
+                "bd": "মেরির ৫টি বিড়াল রয়েছে।"
+            }
+        ]
+    },
+    "43": {
+        "key": "なかなか〜ない",
+        "meaning_en": "① It's not easy to ~.<br/>② It takes time to ~.",
+        "meaning_bd": "① এটা সহজ নয় ~<br/>② এটি সময় নেয় ~",
+        "form": "なかなか + V（否定形）",
+        "exampleSentence": [
+            {
+                "jp": "もう<ruby>来<rt>く</rt></ruby>る はずなんですが、 <h>なかなか</h><ruby>バス<rt></rt></ruby>が <ruby>来<rt>き</rt></ruby><h>ません</h>ね。",
+                "en": "The bus is supposed to be here by now, but it's been a while.",
+                "bd": "বাসটি এখনই আসার কথা, তবে এটি আসতে অনেক সময় লাগছে।"
+            },
+            {
+                "jp": "さっき コーヒーを <ruby>飲<rt>の</rt></ruby>んだせいで、 <h>なかなか</h> <ruby>寝<rt>ね</rt></ruby>られ<h>ません</h>。",
+                "en": "I can't sleep because I had coffee earlier.",
+                "bd": "আমি কিছুক্ষণ আগে কফি খেয়েছি বলে ঘুমাতে পারছি না।"
+            },
+            {
+                "jp": "タバコを やめたいと <ruby>思<rt>おも</rt></ruby>っているんですが、 <h>なかなか</h> <ruby>や</rt></ruby>めることができ<h>ません</h>。",
+                "en": "I've been thinking about quitting smoking, but it's hard to actually do it.",
+                "bd": "আমি ধূমপান ছাড়ার কথা ভাবছি, তবে এটি করা খুব কঠিন।"
+            }
+        ]
+    },
+    "44": {
+        "key": "〜にする",
+        "meaning_en": "\"decide on\" Used to decide on one out of the various options.",
+        "meaning_bd": "\"নির্বাচন করা\" বিভিন্ন বিকল্পের মধ্যে একটি বেছে নেওয়ার জন্য ব্যবহৃত হয়।",
+        "form": "N + にする",
+        "exampleSentence": [
+            {
+                "jp": "【<ruby>レストラン<rt></rt></ruby>で】<br/>A：う〜ん、<ruby>私<rt>わたし</rt></ruby>は<ruby>ステーキ<rt></rt></ruby>にします。<ruby>B<rt></rt></ruby>さんは？<br/>B：<ruby>私<rt>わたし</rt></ruby>は<ruby>スパゲティ<rt></rt></ruby><h>にします</h>。",
+                "en": "【In a restaurant】<br/>A: Hmm, I'll have the steak. How about Mr. B?<br/>B: I'll have spaghetti.",
+                "bd": "【রেস্তোরাঁয়】<br/>A: উম্, আমি স্টেক নেব। B সান, আপনার কী হবে?<br/>B: আমি স্প্যাগেটি নেব।"
+            },
+            {
+                "jp": "【<ruby>ホテル<rt></rt></ruby>の<ruby>受付<rt>うけつけ</rt></ruby>で】<br/>A：お<ruby>部屋<rt>へや</rt></ruby>は<ruby>ツインベッド<rt></rt></ruby>と<ruby>ダブルベッド<rt></rt></ruby>、どちらになさいますか。<br/>B：<ruby>ダブルベッド<rt></rt></ruby><h>にします</h>。",
+                "en": "【At the reception desk of the hotel】<br/>A: Would you like a twin bed or a double bed in your room?<br/>B: I'll have a double bed.",
+                "bd": "【হোটেলের রিসেপশনে】<br/>A: আপনি আপনার রুমে টুইন বেড নেবেন নাকি ডাবল বেড?<br/>B: আমি ডাবল বেড নেব।"
+            },
+            {
+                "jp": "【<ruby>服屋<rt>ふくや</rt></ruby>で】<br/>A：どっちにしようかなあ。こっちは<ruby>デザイン<rt></rt></ruby>がいいし。でも、こっちは<ruby>セール<rt></rt></ruby>で<ruby>値段<rt>ねだん</rt></ruby>が<ruby>安<rt>やす</rt></ruby>いし。<br/>B：<ruby>欲<rt>ほ</rt></ruby>しいの<h>にしたら</h>？<br/>A：うん、じゃあ<ruby>デザイン<rt></rt></ruby>がかっこいいの<h>にする</h>。",
+                "en": "【At a clothing store】<br/>A: I wonder which one I should choose. This one has a better design, but this one is on sale and has a lower price.<br/>B: Why don't you get the one you want?<br/>A: Yeah, I'll go with the one with the cool design.",
+                "bd": "【পোশাকের দোকানে】<br/>A: কোনটি নেব ভাবছি। এইটার ডিজাইন ভালো, কিন্তু এইটা বিক্রিতে রয়েছে এবং দাম কম।<br/>B: তুমি যা চাও সেটাই নাও না?<br/>A: হ্যাঁ, আমি কুল ডিজাইন করা এইটা নেব।"
+            }
+        ]
+    },
+    "45": {
+        "key": "〜まま",
+        "meaning_en": "\"while\" Used to show the same situation continues.",
+        "meaning_bd": "\"যখন\" একই অবস্থা চলতে থাকে তা বোঝাতে ব্যবহৃত হয়।",
+        "form": "V（タ形 / ナイ形） + まま<br/>イAい + まま<br/>ナAな + まま<br/>Nの + まま",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>昨日<rt>きのう</rt></ruby>は <ruby>電気<rt>でんき</rt></ruby>をつけた <h>まま</h> <ruby>寝<rt>ね</rt></ruby>てしまった。",
+                "en": "I accidentally fell asleep with the lights on yesterday.",
+                "bd": "গতকাল আমি বাতি জ্বালিয়ে ঘুমিয়ে পড়েছিলাম।"
+            },
+            {
+                "jp": "この<ruby>靴<rt>くつ</rt></ruby>は <ruby>買<rt>か</rt></ruby>ってから<ruby>一度<rt>いちど</rt></ruby>も <ruby>履<rt>は</rt></ruby>いていないので、 <ruby>新<rt>あたら</rt></ruby>しい <h>まま</h>だ。",
+                "en": "I haven't worn these shoes since I bought them, so they're still new.",
+                "bd": "এই জুতোগুলো কেনার পর থেকে একবারও পরিনি, তাই এখনও নতুন।"
+            },
+            {
+                "jp": "<ruby>私<rt>わたし</rt></ruby>の<ruby>妻<rt>つま</rt></ruby>は １０<ruby>年<rt>ねん</rt></ruby><ruby>前<rt>まえ</rt></ruby>も <ruby>今<rt>いま</rt></ruby>も <ruby>綺麗<rt>きれい</rt></ruby>な <h>まま</h>だ。",
+                "en": "My wife is as beautiful now as she was ten years ago.",
+                "bd": "আমার স্ত্রী ১০ বছর আগের মতোই এখনো সুন্দর।"
+            },
+            {
+                "jp": "<ruby>これ<rt></rt></ruby>は <ruby>生<rt>なま</rt></ruby>の<h>まま</h> でも <ruby>食<rt>た</rt></ruby>べられますか。",
+                "en": "Can I eat this raw?",
+                "bd": "আমি কি এটা কাঁচা খেতে পারি?"
+            }
+        ]
+    },
+    "46": {
+        "key": "〜ことがある / 〜こともある",
+        "meaning_en": "It's not always the case, but sometimes I do...",
+        "meaning_bd": "এটি সবসময় হয় না, তবে কখনও কখনও আমি করি...",
+        "form": "V（辞書形 / ナイ形）+ ことがある / 〜こともある",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>大学<rt>だいがく</rt></ruby>を <ruby>卒業<rt>そつぎょう</rt></ruby>してからも、 たまに<ruby>同<rt>おな</rt></ruby>じ<ruby>学部<rt>がくぶ</rt></ruby>だった <ruby>友達<rt>ともだち</rt></ruby>に<ruby>会<rt>あ</rt></ruby>う <h>ことがあります</h>。",
+                "en": "Even after graduating from college, I sometimes run into friends who were in the same department.",
+                "bd": "বিশ্ববিদ্যালয় থেকে স্নাতক শেষ করার পরও, মাঝে মাঝে একই বিভাগে থাকা বন্ধুদের সাথে দেখা হয়।"
+            },
+            {
+                "jp": "<ruby>深夜<rt>しんや</rt></ruby>に <ruby>夫<rt>おっと</rt></ruby>のいびきで、 <ruby>目<rt>め</rt></ruby>が<ruby>覚<rt>さ</rt></ruby>める <h>ことがあります</h>。",
+                "en": "Sometimes I wake up at night because of my husband's snoring.",
+                "bd": "কখনও কখনও আমি রাতে আমার স্বামীর নাক ডাকায় জেগে উঠি।"
+            },
+            {
+                "jp": "<ruby>普段<rt>ふだん</rt></ruby>は <ruby>母<rt>はは</rt></ruby>が ご<ruby>飯<rt>はん</rt></ruby>を<ruby>作<rt>つく</rt></ruby>りますが、 <ruby>私<rt>わたし</rt></ruby>が<ruby>作<rt>つく</rt></ruby>る <h>こともあります</h>。",
+                "en": "Usually, my mother cooks dinner, but sometimes I do.",
+                "bd": "সাধারণত, আমার মা রাতের খাবার রান্না করেন, তবে মাঝে মাঝে আমিও করি।"
+            }
+        ]
+    },
+    "47": {
+        "key": "〜すぎる",
+        "meaning_en": "\"too much\" Indicates that the degree exceeds the level.",
+        "meaning_bd": "\"অতিরিক্ত\" বোঝায় যে মাত্রা নির্ধারিত স্তর ছাড়িয়ে গেছে।",
+        "form": "V（ます形）ます + すぎる<br/>イAい + すぎる<br/>ナA + すぎる",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>昨日<rt>きのう</rt></ruby>は <ruby>飲<rt>の</rt></ruby>み<h>すぎて</h>、 <ruby>何度<rt>なんど</rt></ruby>も <ruby>吐<rt>は</rt></ruby>いちゃった。",
+                "en": "I drank so much yesterday and I threw up several times.",
+                "bd": "গতকাল আমি এত বেশি পান করেছি যে বেশ কয়েকবার বমি করেছি।"
+            },
+            {
+                "jp": "<ruby>田中<rt>たなか</rt></ruby><ruby>課長<rt>かちょう</rt></ruby>は <ruby>怖<rt>こわ</rt></ruby><h>すぎて</h>、 <ruby>近<rt>ちか</rt></ruby>づきがたい。",
+                "en": "Chief Tanaka is too scary and hard to approach.",
+                "bd": "প্রধান তানাকা অত্যন্ত ভীতিকর এবং তার কাছে যাওয়া কঠিন।"
+            },
+            {
+                "jp": "<ruby>東京<rt>とうきょう</rt></ruby>の<ruby>路線図<rt>ろせんず</rt></ruby>は <ruby>複雑<rt>ふくざつ</rt></ruby><h>すぎて</h>、 よく<ruby>乗<rt>の</rt></ruby>らなければいけない <ruby>電車<rt>でんしゃ</rt></ruby>を<ruby>間違<rt>まちが</rt></ruby>えます。",
+                "en": "The route map of Tokyo is too complicated, and I often make mistakes in the trains I have to take.",
+                "bd": "টোকিওর রুট মানচিত্রটি অত্যন্ত জটিল, এবং আমি প্রায়শই যে ট্রেনটিতে উঠতে হবে তা ভুল করি।"
+            }
+        ]
+    },
+    "48": {
+        "key": "〜間",
+        "meaning_en": "while / during",
+        "meaning_bd": "যখন / চলাকালীন",
+        "form": "V（普通形） + 間<br/>イAい + 間<br/>ナAな + 間<br/>Nの + 間",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>夏休<rt>なつやす</rt></ruby>みの <h><ruby>間<rt>あいだ</rt></ruby></h>、 <ruby>実家<rt>じっか</rt></ruby>で <ruby>過<rt>す</rt></ruby>ごす つもりです。",
+                "en": "I plan to spend my summer vacation at my family's home.",
+                "bd": "আমি আমার গ্রীষ্মের ছুটি আমার পরিবারের বাড়িতে কাটানোর পরিকল্পনা করছি।"
+            },
+            {
+                "jp": "<ruby>友達<rt>ともだち</rt></ruby>が <ruby>髪<rt>かみ</rt></ruby>を<ruby>切<rt>き</rt></ruby>っている <h><ruby>間<rt>あいだ</rt></ruby></h>、 <ruby>私<rt>わたし</rt></ruby>は<ruby>雑誌<rt>ざっし</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んで <ruby>待<rt>ま</rt></ruby>ちました。",
+                "en": "While my friend was getting their hair cut, I waited by reading a magazine.",
+                "bd": "আমার বন্ধু চুল কাটানোর সময়, আমি একটি ম্যাগাজিন পড়ে অপেক্ষা করেছি।"
+            },
+            {
+                "jp": "<ruby>地震<rt>じしん</rt></ruby>で <ruby>家具<rt>かぐ</rt></ruby>や<ruby>家電<rt>かでん</rt></ruby>が<ruby>揺<rt>ゆ</rt></ruby>れている <h><ruby>間<rt>あいだ</rt></ruby></h>は <ruby>机<rt>つくえ</rt></ruby>の<ruby>下<rt>した</rt></ruby>に <ruby>避難<rt>ひなん</rt></ruby>してください。",
+                "en": "During an earthquake, please take refuge under a desk while furniture and appliances are shaking.",
+                "bd": "একটি ভূমিকম্পের সময়, যখন আসবাবপত্র এবং যন্ত্রপাতি কাঁপছে তখন একটি ডেস্কের নিচে আশ্রয় নিন।"
+            }
+        ]
+    },
+    "49": {
+        "key": "〜やすい",
+        "meaning_en": "easy to do",
+        "meaning_bd": "করা সহজ",
+        "form": "V（ます形）ます + やすい",
+        "exampleSentence": [
+            {
+                "jp": "「<ruby>山<rt>やま</rt></ruby>」という<ruby>漢字<rt>かんじ</rt></ruby>は <ruby>実際<rt>じっさい</rt></ruby>の<ruby>山<rt>やま</rt></ruby>と <ruby>形<rt>かたち</rt></ruby>が<ruby>似<rt>に</rt></ruby>ているため、 <ruby>覚<rt>おぼ</rt></ruby>え<h>やすい</h>です。",
+                "en": "The kanji “山” is easy to memorize because it is similar in shape to a real mountain.",
+                "bd": "“山” নামের কানজি আসল পাহাড়ের আকারের সাথে সাদৃশ্যপূর্ণ হওয়ায় এটি মনে রাখা সহজ।"
+            },
+            {
+                "jp": "<ruby>スプーン<rt></rt></ruby>と<ruby>フォーク<rt></rt></ruby>を <ruby>使<rt>つか</rt></ruby>ったほうが <ruby>食<rt>た</rt></ruby>べ<h>やすい</h>ですよ。",
+                "en": "It's easier to eat with a spoon and fork.",
+                "bd": "চামচ এবং কাঁটাচামচ দিয়ে খাওয়া সহজ।"
+            },
+            {
+                "jp": "<ruby>野菜<rt>やさい</rt></ruby>を <ruby>食<rt>た</rt></ruby>べ<h>やすい</h> <ruby>大<rt>おお</rt></ruby>きさに <ruby>切<rt>き</rt></ruby>ってください。",
+                "en": "Please cut the vegetables into bite-sized pieces.",
+                "bd": "সবজি গুলি কামড় দেওয়ার আকারে কেটে দিন।"
+            }
+        ]
+    },
+    "50": {
+        "key": "〜ことになる",
+        "meaning_en": "something has been decided<br/>① It indicates events or plans being determined regardless of one's will.<br/>② It's also used when one wants to express something decided by their own will indirectly.",
+        "meaning_bd": "কিছু সিদ্ধান্ত নেওয়া হয়েছে<br/>① এটি এমন ঘটনা বা পরিকল্পনা নির্দেশ করে যা ব্যক্তির ইচ্ছার উপর নির্ভর করে না।<br/>② এটি তখনও ব্যবহৃত হয় যখন কেউ নিজের ইচ্ছায় নেওয়া সিদ্ধান্তকে পরোক্ষভাবে প্রকাশ করতে চায়।",
+        "form": "V（辞書形）+ことになる<br/>V（ナイ形）+ことになる",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>来月<rt>らいげつ</rt></ruby>から <ruby>長期<rt>ちょうき</rt></ruby>で <ruby>中国<rt>ちゅうごく</rt></ruby>へ <ruby>出張<rt>しゅっちょう</rt></ruby>する <h>ことになった</h>。",
+                "en": "I've been assigned to a long-term business trip to China starting next month.",
+                "bd": "আগামী মাস থেকে দীর্ঘমেয়াদী কাজের জন্য আমাকে চীনে যেতে হবে।"
+            },
+            {
+                "jp": "システムメンテナンス <ruby>作業<rt>さぎょう</rt></ruby>のため <ruby>年末<rt>ねんまつ</rt></ruby>は<ruby>出勤<rt>しゅっきん</rt></ruby>する <h>ことになりました</h>。",
+                "en": "We will be required to work over the end-of-year holidays due to system maintenance work.",
+                "bd": "সিস্টেম রক্ষণাবেক্ষণ কাজের কারণে আমাদের বছরের শেষে কাজ করতে হবে।"
+            },
+            {
+                "jp": "<ruby>親<rt>おや</rt></ruby>から <ruby>国<rt>くに</rt></ruby>へ<ruby>帰<rt>かえ</rt></ruby>ってくる ように<ruby>言<rt>い</rt></ruby>われ、 <ruby>来月<rt>らいげつ</rt></ruby><ruby>帰<rt>かえ</rt></ruby>る <h>ことになりました</h>。",
+                "en": "My parents asked me to come back home, so I will be returning next month.",
+                "bd": "আমার বাবা-মা আমাকে দেশে ফিরে আসতে বলেছেন, তাই আমি আগামী মাসে ফিরছি।"
+            }
+        ]
+    },
+    "51": {
+        "key": "〜出す",
+        "meaning_en": "① Initiating an action.<br/>② Moving out from within or from a hidden place.<br/>③ Creating or bringing into existence something that did not previously exist (creation).",
+        "meaning_bd": "① একটি ক্রিয়া শুরু করা।<br/>② ভিতর থেকে বা লুকানো জায়গা থেকে বাইরে যাওয়া।<br/>③ আগে যা ছিল না তা তৈরি করা বা বিদ্যমান করা (সৃষ্টি)।",
+        "form": "V（ます形）ます + 出す",
+        "exampleSentence": [
+            {
+                "jp": "あ〜、 <ruby>ポテトチップス<rt></rt></ruby>って <ruby>食<rt>た</rt></ruby>べ<h><ruby>出<rt>だ</rt></ruby>す</h>と どうして<ruby>止<rt>と</rt></ruby>まらないんだろう。",
+                "en": "Oh, why can't I stop eating potato chips once I start?",
+                "bd": "আহ্, কেন একবার শুরু করলে আমি পটেটো চিপস খাওয়া থামাতে পারি না?"
+            },
+            {
+                "jp": "<ruby>急<rt>きゅう</rt></ruby>に<ruby>男<rt>おとこ</rt></ruby>の<ruby>子<rt>こ</rt></ruby>が <ruby>店<rt>みせ</rt></ruby>から<ruby>飛<rt>と</rt></ruby>び<h><ruby>出<rt>だ</rt></ruby>して</h>きて、 <ruby>危<rt>あや</rt></ruby>うくひきそう になりました。",
+                "en": "Suddenly, a boy rushed out of the store and I almost hit him.",
+                "bd": "হঠাৎ একটি ছেলে দোকান থেকে বেরিয়ে এল এবং আমি প্রায় তাকে ধাক্কা মেরে ফেলছিলাম।"
+            },
+            {
+                "jp": "<ruby>素晴<rt>すば</rt></ruby>らしい<ruby>アイデア<rt></rt></ruby>を <ruby>生<rt>う</rt></ruby>み<h><ruby>出<rt>だ</rt></ruby>す</h>には <ruby>素晴<rt>すば</rt></ruby>らしい<ruby>環境<rt>かんきょう</rt></ruby>が <ruby>必要<rt>ひつよう</rt></ruby>だと<ruby>思<rt>おも</rt></ruby>います。",
+                "en": "I believe that a fantastic environment is necessary to generate brilliant ideas.",
+                "bd": "আমি বিশ্বাস করি যে উজ্জ্বল আইডিয়া তৈরি করতে একটি দুর্দান্ত পরিবেশ প্রয়োজন।"
+            }
+        ]
+    },
+    "52": {
+        "key": "〜にくい",
+        "meaning_en": "difficult to do",
+        "meaning_bd": "করা কঠিন",
+        "form": "V（ます形）ます + にくい",
+        "exampleSentence": [
+            {
+                "jp": "この<ruby>漢字<rt>かんじ</rt></ruby>は <ruby>覚<rt>おぼ</rt></ruby>え<h>にくい</h> です。",
+                "en": "It's hard to memorize this kanji.",
+                "bd": "এই কানজিটি মনে রাখা কঠিন।"
+            },
+            {
+                "jp": "<ruby>焼<rt>や</rt></ruby>き<ruby>魚<rt>さかな</rt></ruby>は <ruby>骨<rt>ほね</rt></ruby>が<ruby>多<rt>おお</rt></ruby>くて <ruby>食<rt>た</rt></ruby>べ<h>にくい</h> です。",
+                "en": "It is difficult to eat grilled fish because it has many bones.",
+                "bd": "গ্রিল করা মাছ খাওয়া কঠিন কারণ এতে অনেক হাড় রয়েছে।"
+            },
+            {
+                "jp": "<ruby>上司<rt>じょうし</rt></ruby>は <ruby>無口<rt>むくち</rt></ruby>で、 <ruby>顔<rt>かお</rt></ruby>が<ruby>怖<rt>こわ</rt></ruby>いので <ruby>話<rt>はな</rt></ruby>しかけ<h>にくい</h>です。",
+                "en": "My boss doesn't talk much and has a scary face, so it's hard for me to talk to him.",
+                "bd": "আমার বস বেশি কথা বলেন না এবং তার চেহারা ভীতিকর, তাই তার সাথে কথা বলা আমার জন্য কঠিন।"
+            }
+        ]
+    },
+    "53": {
+        "key": "〜ことにする",
+        "meaning_en": "decide to do. Used to say that you have decided to do or not to do something of your own volition.",
+        "meaning_bd": "কিছু করার সিদ্ধান্ত নেওয়া। নিজের ইচ্ছায় কিছু করা বা না করার সিদ্ধান্ত নিয়েছেন তা বলার জন্য ব্যবহৃত হয়।",
+        "form": "V（辞書形 / ナイ形）+ことにする",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>明日<rt>あした</rt></ruby>から、 <ruby>毎日<rt>まいにち</rt></ruby>１０<ruby>分<rt>ぷん</rt></ruby> <ruby>ジョギング<rt></rt></ruby>をする <h>ことにしました</h>。",
+                "en": "I've decided to start jogging for 10 minutes every day from tomorrow.",
+                "bd": "আগামীকাল থেকে প্রতিদিন ১০ মিনিট দৌড়ানোর সিদ্ধান্ত নিয়েছি।"
+            },
+            {
+                "jp": "<ruby>次<rt>つぎ</rt></ruby>の<ruby>夏休<rt>なつやす</rt></ruby>みは <ruby>国<rt>くに</rt></ruby>へ<ruby>帰<rt>かえ</rt></ruby>る <h>ことにします</h>。",
+                "en": "I'll go back to my country during the next summer vacation.",
+                "bd": "আগামী গ্রীষ্মের ছুটিতে আমি আমার দেশে ফিরে যাব।"
+            },
+            {
+                "jp": "<ruby>頭<rt>あたま</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いので、 <ruby>今日<rt>きょう</rt></ruby>は<ruby>早<rt>はや</rt></ruby>く<ruby>寝<rt>ね</rt></ruby>る <h>ことにします</h>。",
+                "en": "I have a headache, so I'm going to bed early today.",
+                "bd": "আমার মাথাব্যথা রয়েছে, তাই আজকে তাড়াতাড়ি ঘুমাতে যাচ্ছি।"
+            }
+        ]
+    },
+    "54": {
+        "key": "〜間に・・・",
+        "meaning_en": "・・・ take place, while 〜",
+        "meaning_bd": "・・・ ঘটে, যখন 〜",
+        "form": "普通形 + 間に",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>昨日<rt>きのう</rt></ruby>、 <ruby>寝<rt>ね</rt></ruby>ている <h><ruby>間<rt>あいだ</rt></ruby>に</h> <ruby>地震<rt>じしん</rt></ruby>がありました。",
+                "en": "Yesterday, there was an earthquake while I was sleeping.",
+                "bd": "গতকাল, আমি ঘুমাচ্ছিলাম যখন একটি ভূমিকম্প হয়েছিল।"
+            },
+            {
+                "jp": "<ruby>娘<rt>むすめ</rt></ruby>が <ruby>出<rt>で</rt></ruby>かけている <h><ruby>間<rt>あいだ</rt></ruby>に</h> <ruby>晩御飯<rt>ばんごはん</rt></ruby>を <ruby>作<rt>つく</rt></ruby>りました。",
+                "en": "I cooked dinner while my daughter was out.",
+                "bd": "আমার মেয়ে বাইরে থাকার সময় আমি রাতের খাবার রান্না করেছি।"
+            },
+            {
+                "jp": "<ruby>日本<rt>にほん</rt></ruby>に <ruby>住<rt>す</rt></ruby>んでいる <h><ruby>間<rt>あいだ</rt></ruby>に</h> <ruby>一度<rt>いちど</rt></ruby>でいいから <ruby>歌舞伎<rt>かぶき</rt></ruby>を<ruby>見<rt>み</rt></ruby>てみたいです。",
+                "en": "While I'm living in Japan, I want to see Kabuki at least once.",
+                "bd": "আমি যখন জাপানে থাকি, আমি অন্তত একবার কাবুকি দেখতে চাই।"
+            }
+        ]
+    },
+    "55": {
+        "key": "〜ほど〜ない",
+        "meaning_en": "X is not as ~ as Y.",
+        "meaning_bd": "X তেমন ~ নয় যতটা Y।",
+        "form": "N + ほど〜ない",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>トム<rt></rt></ruby>さんは <ruby>ジョン<rt></rt></ruby>さん <h>ほど</h> <ruby>背<rt>せ</rt></ruby>が <ruby>高<rt>たか</rt></ruby>く<h>ない</h>です。",
+                "en": "Mr. Tom is not as tall as Mr. John.",
+                "bd": "টম সান জন সানের মতো লম্বা নয়।"
+            },
+            {
+                "jp": "<ruby>私<rt>わたし</rt></ruby>が <ruby>ラーメン<rt></rt></ruby>が<ruby>好<rt>す</rt></ruby>きだが、 お<ruby>好<rt>こ</rt></ruby>のみ<ruby>焼<rt>や</rt></ruby>き <h>ほど</h> <ruby>好<rt>す</rt></ruby>き<h>じゃありません</h>。",
+                "en": "I like ramen, but I don't like it as much as okonomiyaki.",
+                "bd": "আমি রামেন পছন্দ করি, কিন্তু ওকোনোমিয়াকির মতো তেমনটা নয়।"
+            },
+            {
+                "jp": "<ruby>今年<rt>ことし</rt></ruby>は <ruby>去年<rt>きょねん</rt></ruby> <h>ほど</h> <ruby>寒<rt>さむ</rt></ruby>く<h>ない</h>ですね。",
+                "en": "It's not as cold this year as last year.",
+                "bd": "এবছর গত বছরের মতো ঠান্ডা নয়।"
+            }
+        ]
+    },
+    "56": {
+        "key": "〜終わる",
+        "meaning_en": "\"finish doing\" Indicates the end of an action.",
+        "meaning_bd": "\"করা শেষ\" একটি ক্রিয়ার সমাপ্তি নির্দেশ করে।",
+        "form": "V（ます形）ます + 終わる",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>今日<rt>きょう</rt></ruby>は もう<ruby>勉強<rt>べんきょう</rt></ruby>し <h><ruby>終<rt>お</rt></ruby>わった</h>ので、 ゆっくり<ruby>映画<rt>えいが</rt></ruby>でも <ruby>見<rt>み</rt></ruby>ます。",
+                "en": "I've finished studying today, so I'm going to watch a movie.",
+                "bd": "আজ আমি পড়া শেষ করেছি, তাই একটি সিনেমা দেখতে যাচ্ছি।"
+            },
+            {
+                "jp": "この<ruby>本<rt>ほん</rt></ruby> <ruby>読<rt>よ</rt></ruby>み<h><ruby>終<rt>お</rt></ruby>わった</h>んなら <ruby>借<rt>か</rt></ruby>りてもいいよね？",
+                "en": "If you've finished reading this book, I can borrow it, right?",
+                "bd": "তুমি যদি এই বইটি পড়া শেষ কর, তবে আমি এটা ধার নিতে পারি, ঠিক আছে?"
+            },
+            {
+                "jp": "<ruby>作文<rt>さくぶん</rt></ruby>が <ruby>書<rt>か</rt></ruby>き<h><ruby>終<rt>お</rt></ruby>わった</h><ruby>人<rt>ひと</rt></ruby>から <ruby>帰<rt>かえ</rt></ruby>ってもいいです。",
+                "en": "The person who has finished writing the essay can go home first.",
+                "bd": "যিনি রচনা লেখা শেষ করেছেন তিনি প্রথমে বাড়ি যেতে পারেন।"
+            }
+        ]
+    },
+    "57": {
+        "key": "〜はじめる",
+        "meaning_en": "\"start to / begin to\" Indicates the beginning of an action or phenomenon.",
+        "meaning_bd": "\"শুরু করা\" একটি ক্রিয়া বা ঘটনার শুরু নির্দেশ করে।",
+        "form": "V（ます形）ます + 始める",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>来週<rt>らいしゅう</rt></ruby>から <ruby>英会話<rt>えいかいわ</rt></ruby><ruby>教室<rt>きょうしつ</rt></ruby>に <ruby>通<rt>かよ</rt></ruby>い<h> <ruby>始<rt>はじ</rt></ruby>めます</h>。",
+                "en": "I'm going to start taking English conversation classes next week.",
+                "bd": "আমি আগামী সপ্তাহ থেকে ইংরেজি কথোপকথনের ক্লাস নিতে শুরু করব।"
+            },
+            {
+                "jp": "まだ、 みんな<ruby>揃<rt>そろ</rt></ruby>ってないですが、 <ruby>先<rt>さき</rt></ruby>に <ruby>食<rt>た</rt></ruby>べ<h><ruby>始<rt>はじ</rt></ruby>めましょう</h>。",
+                "en": "We're not all here yet, but let's start eating first.",
+                "bd": "আমরা সবাই এখনও এখানে নেই, তবে চলুন প্রথমে খাওয়া শুরু করি।"
+            },
+            {
+                "jp": "チャイムが <ruby>鳴<rt>な</rt></ruby>って、 <ruby>学生<rt>がくせい</rt></ruby>が <ruby>椅子<rt>いす</rt></ruby>に <ruby>座<rt>すわ</rt></ruby>り<h><ruby>始<rt>はじ</rt></ruby>めた</h>。",
+                "en": "The chime rang, and the students began to sit on their chairs.",
+                "bd": "ঘণ্টা বাজল, এবং শিক্ষার্থীরা তাদের চেয়ারে বসতে শুরু করল।"
+            }
+        ]
+    },
+    "58": {
+        "key": "〜てみる",
+        "meaning_en": "try doing something. Used to check if something is suitable or satisfactory by actually doing it.",
+        "meaning_bd": "কিছু করার চেষ্টা করা। এটি কিছু করা ঠিক আছে কিনা তা যাচাই করতে ব্যবহার করা হয়।",
+        "form": "V（て形）+ みる",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>似合<rt>にあ</rt></ruby>うかどうか わからないので、 <ruby>履<rt>は</rt></ruby>い<h>てみます</h>。",
+                "en": "I don't know if it suits me, so I'll try it on.",
+                "bd": "আমার জন্য মানানসই কিনা জানি না, তাই আমি এটি পরে দেখব।"
+            },
+            {
+                "jp": "<ruby>サイズ<rt></rt></ruby>が <ruby>合<rt>あ</rt></ruby>うかどうか わからないので、 <ruby>着<rt>き</rt></ruby><h>てみます</h>。",
+                "en": "I don't know if it fits, so I'll try it on.",
+                "bd": "এটি আমার মাপের কিনা জানি না, তাই আমি এটি পরে দেখব।"
+            },
+            {
+                "jp": "<ruby>美味<rt>おい</rt></ruby>しい かどうか わからないので、<ruby>試<rt>ため</rt></ruby>しに <ruby>食<rt>た</rt></ruby>べ<h>てみます</h>。",
+                "en": "I don't know if it tastes good, so I'll try it.",
+                "bd": "এটি সুস্বাদু কিনা জানি না, তাই আমি এটি চেষ্টা করে দেখব।"
+            }
+        ]
+    },
+    "59": {
+        "key": "〜ために",
+        "meaning_en": "\"in order to / so that / for\" A way of saying the purpose of an action.",
+        "meaning_bd": "\"যেন / জন্য\" একটি কাজের উদ্দেশ্য বলার উপায়।",
+        "form": "V（辞書形） + ために<br/>Nの + ために",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>日本<rt>にほん</rt></ruby>の <ruby>会社<rt>かいしゃ</rt></ruby>で <ruby>働<rt>はたら</rt></ruby>く<h>ために</h>、 <ruby>今<rt>いま</rt></ruby><ruby>日本語<rt>にほんご</rt></ruby>を <ruby>勉強<rt>べんきょう</rt></ruby>しています。",
+                "en": "I am currently studying Japanese in order to work at a Japanese company.",
+                "bd": "জাপানি কোম্পানিতে কাজ করার জন্য আমি বর্তমানে জাপানি ভাষা শিখছি।"
+            },
+            {
+                "jp": "<ruby>将来<rt>しょうらい</rt></ruby>、 <ruby>自分<rt>じぶん</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>を <ruby>買<rt>か</rt></ruby>う<h>ために</h> <ruby>貯金<rt>ちょきん</rt></ruby>しています。",
+                "en": "I am saving money to buy my own house in the future.",
+                "bd": "ভবিষ্যতে নিজের বাড়ি কেনার জন্য আমি সঞ্চয় করছি।"
+            },
+            {
+                "jp": "<ruby>彼女<rt>かのじょ</rt></ruby>を <ruby>喜<rt>よろこ</rt></ruby>ばせる<h>ために</h>、 <ruby>プレゼント<rt></rt></ruby>を <ruby>買<rt>か</rt></ruby>いました。",
+                "en": "I bought a gift to make my girlfriend happy.",
+                "bd": "আমার বান্ধবীকে খুশি করার জন্য আমি একটি উপহার কিনেছি।"
+            }
+        ]
+    },
+    "60": {
+        "key": "〜そうです（伝聞）",
+        "meaning_en": "\"I heard\" Expressions used to convey information you have seen or heard from others.",
+        "meaning_bd": "\"আমি শুনেছি\" অন্যদের কাছ থেকে দেখা বা শোনা তথ্য প্রদান করতে ব্যবহৃত হয়।",
+        "form": "普通形 + そうです",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>さっき<rt></rt></ruby>、 <ruby>北海道<rt>ほっかいどう</rt></ruby>で <ruby>地震<rt>じしん</rt></ruby>があった <h>そうです</h>よ。",
+                "en": "I heard there was an earthquake in Hokkaido earlier.",
+                "bd": "আমি শুনেছি একটু আগে হোক্কাইডোতে ভূমিকম্প হয়েছিল।"
+            },
+            {
+                "jp": "<ruby>トム<rt></rt></ruby>さんの <ruby>情報<rt>じょうほう</rt></ruby>によると、 <ruby>アメリカ<rt></rt></ruby>は<ruby>今<rt>いま</rt></ruby>、 とっても<ruby>暑<rt>あつ</rt></ruby>い <h>そうです</h>。",
+                "en": "According to Tom's information, it is very hot in America right now.",
+                "bd": "টমের তথ্য অনুযায়ী, এখন আমেরিকাতে খুব গরম।"
+            },
+            {
+                "jp": "<ruby>田中<rt>たなか</rt></ruby>さんの<ruby>家族<rt>かぞく</rt></ruby>は <ruby>色々<rt>いろいろ</rt></ruby><ruby>問題<rt>もんだい</rt></ruby>があって、 <ruby>今<rt>いま</rt></ruby>とても<ruby>大変<rt>たいへん</rt></ruby>だ <h>そうです</h>。",
+                "en": "I heard that Tanaka's family is going through a lot of problems and it's very tough for them right now.",
+                "bd": "আমি শুনেছি তানাকা পরিবারের অনেক সমস্যা চলছে এবং তাদের জন্য এখন সময়টা খুব কঠিন।"
+            },
+            {
+                "jp": "<ruby>トム<rt></rt></ruby>さんの お<ruby>父<rt>とう</rt></ruby>さん、 <ruby>実<rt>じつ</rt></ruby>は<ruby>日本人<rt>にほんじん</rt></ruby>だ <h>そうです</h>。",
+                "en": "I heard that Tom's father is actually Japanese.",
+                "bd": "আমি শুনেছি টমের বাবা আসলে জাপানি।"
+            }
+        ]
+    },
+    "61": {
+        "key": "〜はずだ",
+        "meaning_en": "must / be supposed to be the case",
+        "meaning_bd": "অবশ্যই / এমন হওয়ার কথা",
+        "form": "V（普通形）+ はずだ<br/>イA（普通形）+ はずだ<br/>ナA（普通形） + はずだ ※ ナAな + はずだ / ナAである + はずだ<br/>N（普通形）+はずだ ※ Nの + はずだ / Nである + はずだ",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>高<rt>たか</rt></ruby>いし、 <ruby>人<rt>ひと</rt></ruby>が<ruby>多<rt>おお</rt></ruby>いし、 この<ruby>レストラン<rt></rt></ruby>の <ruby>料理<rt>りょうり</rt></ruby>は <ruby>美味<rt>おい</rt></ruby>しい<h>はずです</h>。",
+                "en": "It's expensive and crowded, so the food in this restaurant must be good.",
+                "bd": "এটি দামি এবং ভিড় রয়েছে, তাই এই রেস্টুরেন্টের খাবার অবশ্যই ভালো হওয়া উচিত।"
+            },
+            {
+                "jp": "<ruby>今日<rt>きょう</rt></ruby>は <ruby>日曜日<rt>にちようび</rt></ruby>だから、 <ruby>銀行<rt>ぎんこう</rt></ruby>は <ruby>閉<rt>し</rt></ruby>まっている<h>はずだ</h>。",
+                "en": "It's Sunday, so the banks must be closed.",
+                "bd": "আজ রবিবার, তাই ব্যাংকগুলি অবশ্যই বন্ধ থাকবে।"
+            },
+            {
+                "jp": "<ruby>田中<rt>たなか</rt></ruby>さんは <ruby>東京大学<rt>とうきょうだいがく</rt></ruby>を <ruby>卒業<rt>そつぎょう</rt></ruby>したから、 <ruby>頭<rt>あたま</rt></ruby>がいい <h>はずです</h>。",
+                "en": "Mr. Tanaka graduated from Tokyo University, so he must be very smart.",
+                "bd": "তানাকা সান টোকিও বিশ্ববিদ্যালয় থেকে স্নাতক, তাই তিনি অবশ্যই খুব মেধাবী।"
+            }
+        ]
+    },
+    "62": {
+        "key": "Vてくる（変化・移動）",
+        "meaning_en": "① Used to show, based on the present situation, how things have changed from before until now.<br/>② Used to indicate that the direction of V is towards the speaker.",
+        "meaning_bd": "① বর্তমান পরিস্থিতির উপর ভিত্তি করে, আগের থেকে এখন পর্যন্ত পরিবর্তন বোঝাতে ব্যবহৃত হয়।<br/>② V এর দিকটি বক্তার দিকে নির্দেশ করতে ব্যবহৃত হয়।",
+        "form": "V（て形） + くる",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>日本<rt>にほん</rt></ruby>を<ruby>訪<rt>おとず</rt></ruby>れる <ruby>外国人<rt>がいこくじん</rt></ruby><ruby>旅行者<rt>りょこうしゃ</rt></ruby>の<ruby>数<rt>かず</rt></ruby>は <ruby>年々<rt>ねんねん</rt></ruby><ruby>多<rt>おお</rt></ruby>く なっ<h>てきました</h>。",
+                "en": "The number of foreign tourists visiting Japan has been increasing every year.",
+                "bd": "জাপান ভ্রমণকারী বিদেশি পর্যটকদের সংখ্যা প্রতি বছর বাড়ছে।"
+            },
+            {
+                "jp": "<ruby>知ら<rt>し</rt></ruby>ない <ruby>男<rt>おとこ</rt></ruby>が、 <ruby>私<rt>わたし</rt></ruby>のほうへ <ruby>走<rt>はし</rt></ruby>っ<h>てきた</h>。",
+                "en": "A stranger ran towards me.",
+                "bd": "একজন অচেনা লোক আমার দিকে দৌড়ে এল।"
+            }
+        ]
+    },
+    "63": {
+        "key": "〜ように（目標・期待）",
+        "meaning_en": "so that / in order to",
+        "meaning_bd": "যেন / করার জন্য",
+        "form": "V（辞書形） + ように<br/>V（ナイ形）+ ように",
+        "exampleSentence": [
+            {
+                "jp": "JLPTに <ruby>合格<rt>ごうかく</rt></ruby>できる<h>ように</h>、 <ruby>勉強<rt>べんきょう</rt></ruby>した<ruby>単語<rt>たんご</rt></ruby>や <ruby>文法<rt>ぶんぽう</rt></ruby>を <ruby>復習<rt>ふくしゅう</rt></ruby>します。",
+                "en": "I will review the vocabulary and grammar I have studied so that I can pass the JLPT.",
+                "bd": "আমি JLPT পাশ করার জন্য পড়া শব্দভাণ্ডার এবং ব্যাকরণ পর্যালোচনা করব।"
+            },
+            {
+                "jp": "<ruby>ホワイトボード<rt></rt></ruby>の<ruby>字<rt>じ</rt></ruby>が よく<ruby>見<rt>み</rt></ruby>える<h>ように</h>、 <ruby>前<rt>まえ</rt></ruby>の<ruby>席<rt>せき</rt></ruby>に <ruby>座<rt>すわ</rt></ruby>ります。",
+                "en": "I will sit by the front so that I can see the characters on the whiteboard clearly.",
+                "bd": "আমি সাদা বোর্ডের অক্ষরগুলি পরিষ্কারভাবে দেখতে সামনের আসনে বসব।"
+            },
+            {
+                "jp": "<ruby>日本語<rt>にほんご</rt></ruby>を <ruby>上手<rt>じょうず</rt></ruby>に<ruby>話<rt>はな</rt></ruby>せる<h>ように</h>、 <ruby>毎日<rt>まいにち</rt></ruby><ruby>シャドーイング<rt></rt></ruby>を しています。",
+                "en": "I do shadowing every day so that I can speak Japanese well.",
+                "bd": "আমি প্রতিদিন শ্যাডোইং করি যাতে আমি ভালোভাবে জাপানি বলতে পারি।"
+            }
+        ]
+    },
+    "64": {
+        "key": "〜ておく",
+        "meaning_en": "① To prepare or do something in advance for a specific purpose.<br/>② To leave something as it is without doing anything (neglect or maintain the current state).",
+        "meaning_bd": "① নির্দিষ্ট উদ্দেশ্যে অগ্রিম কিছু প্রস্তুত করা বা করা।<br/>② কিছু না করে সেটিকে যেমন আছে তেমন রাখা (অবহেলা বা বর্তমান অবস্থার রক্ষণাবেক্ষণ)।",
+        "form": "V（て形） + おく",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>来月<rt>らいげつ</rt></ruby>、 <ruby>北海道<rt>ほっかいどう</rt></ruby>に<ruby>行<rt>い</rt></ruby>くから、 <ruby>ホテル<rt></rt></ruby>を<ruby>予約<rt>よやく</rt></ruby> し<h>ておきます</h>。",
+                "en": "I'll book a hotel since I'm going to Hokkaido next month.",
+                "bd": "আগামী মাসে হোক্কাইডো যাব, তাই হোটেলটি অগ্রিম বুক করব।"
+            },
+            {
+                "jp": "<ruby>先生<rt>せんせい</rt></ruby>、 <ruby>ホワイトボード<rt></rt></ruby>は<ruby>消<rt>け</rt></ruby>さずに そのままにし<h>ておいて</h>ください。",
+                "en": "Teacher, please leave the whiteboard as it is.",
+                "bd": "শিক্ষক, দয়া করে সাদা বোর্ডটি যেমন আছে তেমনই রাখুন।"
+            }
+        ]
+    },
+    "65": {
+        "key": "〜てくる",
+        "meaning_en": "To leave somewhere temporarily for a trivial purpose.",
+        "meaning_bd": "সামান্য উদ্দেশ্যে সাময়িকভাবে কোথাও যাওয়া।",
+        "form": "Vて + くる",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>が<ruby>無<rt>な</rt></ruby>いですね。 ちょっと、 <ruby>コンビニ<rt></rt></ruby>まで<ruby>買<rt>か</rt></ruby>いに <ruby>行<rt>い</rt></ruby>っ<h>てきます</h>。",
+                "en": "We're out of milk. I'll go buy some at the convenience store real quick.",
+                "bd": "দুধ নেই। আমি দ্রুত কনভেনিয়েন্স স্টোর থেকে কিছু কিনে আসব।"
+            },
+            {
+                "jp": "ちょっと <ruby>トイレ<rt></rt></ruby>に <ruby>行<rt>い</rt></ruby>っ<h>てきます</h>。",
+                "en": "I'll be back in a minute, just going to the restroom.",
+                "bd": "আমি এক মিনিটের মধ্যে ফিরে আসব, শুধু বাথরুমে যাচ্ছি।"
+            },
+            {
+                "jp": "あら、 <ruby>スプーン<rt></rt></ruby>が <ruby>無<rt>な</rt></ruby>いですね。 ちょっと<ruby>取<rt>と</rt></ruby>っ<h>てきます</h>。",
+                "en": "Oops, we seem to be missing some spoons. I'll go get some.",
+                "bd": "ওহ্, আমাদের কিছু চামচ নেই। আমি কিছু আনব।"
+            }
+        ]
+    },
+    "66": {
+        "key": "させてください",
+        "meaning_en": "\"Please let me do\" An expression used to ask someone, 'Please let me do 〜'. This is often used with confidence that the other person will allow it.",
+        "meaning_bd": "\"আমাকে করতে দিন\" কাউকে অনুরোধ করতে ব্যবহৃত একটি অভিব্যক্তি, 'আমাকে ~ করতে দিন'। এটি প্রায়ই আত্মবিশ্বাসের সাথে ব্যবহৃত হয় যে অন্য ব্যক্তি এটি অনুমোদন করবেন।",
+        "form": "V（使役形のて形） + ください",
+        "exampleSentence": [
+            {
+                "jp": "この<ruby>仕事<rt>しごと</rt></ruby>、 ぜひ<ruby>私<rt>わたし</rt></ruby>に <ruby>や</rt></ruby><h>らせてください。</h>",
+                "en": "Please let me do this job.",
+                "bd": "এই কাজটি আমাকে করতে দিন।"
+            },
+            {
+                "jp": "すみません。 <ruby>写真<rt>しゃしん</rt></ruby>を <ruby>撮<rt>と</rt></ruby><h>らせてください</h>。",
+                "en": "Excuse me. Please let me take your picture.",
+                "bd": "মাফ করবেন। আমাকে আপনার ছবি তুলতে দিন।"
+            },
+            {
+                "jp": "<ruby>コピー<rt></rt></ruby> を と<h>らせてください</h>。",
+                "en": "Please let me make a copy.",
+                "bd": "আমাকে একটি কপি করতে দিন।"
+            }
+        ]
+    },
+    "67": {
+        "key": "〜って",
+        "meaning_en": "named / called",
+        "meaning_bd": "নামকরণ / বলা হয়",
+        "form": "N + って",
+        "exampleSentence": [
+            {
+                "jp": "リュウさん、 さっき<ruby>田中<rt>たなか</rt></ruby>さん<h>って</h><ruby>人<rt>ひと</rt></ruby> が<ruby>探<rt>さが</rt></ruby>してたよ。",
+                "en": "Mr. Ryu, a man named Mr. Tanaka was looking for you earlier.",
+                "bd": "মি. রিউ, একটু আগে মি. তানাকা নামে একজন আপনাকে খুঁজছিলেন।"
+            },
+            {
+                "jp": "これは <ruby>たこ焼<rt>や</rt></ruby>き<h>って</h>いう <ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>だよ。",
+                "en": "This food is called takoyaki.",
+                "bd": "এই খাবারটিকে তাকোয়াকি বলা হয়।"
+            },
+            {
+                "jp": "<ruby>夏目漱石<rt>なつめそうせき</rt></ruby><h>って</h><ruby>人<rt>ひと</rt></ruby>が <ruby>書<rt>か</rt></ruby>いた<ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>んだけど、 とても<ruby>難<rt>むずか</rt></ruby>しくてわからなかった。",
+                "en": "I read a book written by a man named Soseki Natsume, but it was very difficult to understand.",
+                "bd": "আমি সোসে নাতসুমে নামে একজন ব্যক্তি দ্বারা লিখিত একটি বই পড়েছি, কিন্তু এটি বোঝা খুব কঠিন ছিল।"
+            }
+        ]
+    },
+    "68": {
+        "key": "〜つづける",
+        "meaning_en": "\"keep on / continue to do\" Indicates the continuation of an action or habit.",
+        "meaning_bd": "\"চালিয়ে যাওয়া\" একটি ক্রিয়া বা অভ্যাসের ধারাবাহিকতা নির্দেশ করে।",
+        "form": "V（ます形）ます + つづける",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>母<rt>はは</rt></ruby>からもらった <ruby>万年筆<rt>まんねんひつ</rt></ruby>を <ruby>今<rt>いま</rt></ruby>も <ruby>使<rt>つか</rt></ruby>い<h><ruby>続<rt>つづ</rt></ruby>けています</h>。",
+                "en": "I'm still using the fountain pen that my mother gave me.",
+                "bd": "আমি এখনও আমার মায়ের দেওয়া ফাউন্টেন কলমটি ব্যবহার করছি।"
+            },
+            {
+                "jp": "<ruby>私<rt>わたし</rt></ruby>は この<ruby>鞄<rt>かばん</rt></ruby>を １０<ruby>年以上<rt>ねんいじょう</rt></ruby>も <ruby>使<rt>つか</rt></ruby>い<h><ruby>続<rt>つづ</rt></ruby>けています</h>。",
+                "en": "I've been using this bag for over 10 years.",
+                "bd": "আমি এই ব্যাগটি ১০ বছরেরও বেশি সময় ধরে ব্যবহার করছি।"
+            },
+            {
+                "jp": "どんなに <ruby>大変<rt>たいへん</rt></ruby>だったとしても、 やり<h><ruby>続<rt>つづ</rt></ruby>ける</h>ことが <ruby>大切<rt>たいせつ</rt></ruby>です。",
+                "en": "No matter how difficult it is, it's important to keep going.",
+                "bd": "এটি যতই কঠিন হোক না কেন, চালিয়ে যাওয়া গুরুত্বপূর্ণ।"
+            }
+        ]
+    },
+    "69": {
+        "key": "Vたらいいですか",
+        "meaning_en": "Used when the speaker seeks instructions from the listener",
+        "meaning_bd": "শ্রোতার কাছ থেকে নির্দেশনা চাইতে ব্যবহৃত হয়",
+        "form": "疑問詞 + V（タ）+ らいいですか。",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>ホテル<rt></rt></ruby>の <ruby>予約<rt>よやく</rt></ruby>をキャンセル したいんですが、 どうし<h>たらいいですか</h>。",
+                "en": "I want to cancel my hotel reservation. What should I do?",
+                "bd": "আমি আমার হোটেল রিজার্ভেশন বাতিল করতে চাই। আমাকে কী করতে হবে?"
+            },
+            {
+                "jp": "<ruby>財布<rt>さいふ</rt></ruby>を <ruby>落<rt>お</rt></ruby>としてしまったんですが、 どうし<h>たらいいですか</h>。",
+                "en": "I lost my wallet. What should I do?",
+                "bd": "আমি আমার মানিব্যাগ হারিয়ে ফেলেছি। আমাকে কী করতে হবে?"
+            },
+            {
+                "jp": "<ruby>駅<rt>えき</rt></ruby>まで <ruby>行<rt>い</rt></ruby>きたいんですが、 どう<ruby>行<rt>い</rt></ruby>っ<h>たらいいですか</h>。",
+                "en": "I want to go to the station. How should I get there?",
+                "bd": "আমি স্টেশনে যেতে চাই। আমি কীভাবে সেখানে পৌঁছাবো?"
+            }
+        ]
+    },
+    "70": {
+        "key": "〜たらどうですか",
+        "meaning_en": "\"Why don't you ~ / how about if you ~\" A way of suggesting that the other person do a certain action. A more direct suggestion than '～たほうがいい'.",
+        "meaning_bd": "\"কেন তুমি ~ / তুমি কি করবে না ~\" অন্য ব্যক্তিকে একটি নির্দিষ্ট কাজ করার পরামর্শ দেওয়ার একটি উপায়। '～たほうがいい' এর চেয়ে সরাসরি পরামর্শ।",
+        "form": "V（タ形）+ らどうですか。",
+        "exampleSentence": [
+            {
+                "jp": "A：<ruby>最近<rt>さいきん</rt></ruby>、<ruby>体<rt>からだ</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>がよくないんです。<br>B：そうですか。じゃあ、<ruby>病院<rt>びょういん</rt></ruby>で<ruby>見<rt>み</rt></ruby>てもらっ<h>たらどうですか</h>。",
+                "en": "A: I haven't been feeling well lately.<br>B: I see. Then why don't you go to the hospital for a checkup?",
+                "bd": "A: আমি সম্প্রতি ভালো অনুভব করছি না।<br>B: তাই? তাহলে আপনি হাসপাতালে চেকআপ করতে যান কেন?"
+            },
+            {
+                "jp": "A：<ruby>将来<rt>しょうらい</rt></ruby>、<ruby>システムエンジニア<rt></rt></ruby>になりたいと<ruby>思<rt>おも</rt></ruby>っているんですが。<br>B：じゃあ、<ruby>大学<rt>だいがく</rt></ruby>で<ruby>コンピューター<rt></rt></ruby>の<ruby>勉強<rt>べんきょう</rt></ruby>をし<h>たらどうですか</h>。",
+                "en": "A: I'd like to be a system engineer in the future.<br>B: Then why don't you study computer science at the university?",
+                "bd": "A: ভবিষ্যতে আমি একজন সিস্টেম ইঞ্জিনিয়ার হতে চাই।<br>B: তাহলে কেন বিশ্ববিদ্যালয়ে কম্পিউটার সায়েন্স পড়া শুরু করবেন না?"
+            }
+        ]
+    },
+    "71": {
+        "key": "〜ようになる / 〜なくなる",
+        "meaning_en": "\"become such that\" Expressing changes in situations or abilities.",
+        "meaning_bd": "\"এমন হওয়া\" পরিস্থিতি বা ক্ষমতার পরিবর্তন বোঝানো।",
+        "form": "V（辞書形）+ ようになる<br/>V（ない形）なくなる",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>最近<rt>さいきん</rt></ruby>、 <ruby>納豆<rt>なっとう</rt></ruby>が <ruby>食<rt>た</rt></ruby>べられる <h>ようになりました</h>。",
+                "en": "I recently acquired the ability to eat natto (fermented soybeans).",
+                "bd": "সম্প্রতি আমি নাত্তো খাওয়ার ক্ষমতা অর্জন করেছি।"
+            },
+            {
+                "jp": "<ruby>学校<rt>がっこう</rt></ruby>を <ruby>卒業<rt>そつぎょう</rt></ruby>してからは、 もう<ruby>英語<rt>えいご</rt></ruby>を <ruby>勉強<rt>べんきょう</rt></ruby>していないので、 <ruby>話<rt>はな</rt></ruby>せ<h>なくなりました</h>。",
+                "en": "Since I graduated from school, I haven't studied English anymore, so I can't speak it anymore.",
+                "bd": "স্কুল থেকে স্নাতক হওয়ার পর, আমি আর ইংরেজি পড়িনি, তাই আমি আর এটি বলতে পারি না।"
+            }
+        ]
+    },
+    "72": {
+        "key": "Nらしい",
+        "meaning_en": "Acts just like~ is / typical of ~ / an epitome of. An expression that denotes \"having the typical characteristics of that thing.\"",
+        "meaning_bd": "\"যেমন হওয়া উচিত\" / ~ এর বৈশিষ্ট্য / উদাহরণ। এটি বোঝায় যে নির্দিষ্ট জিনিসের সাধারণ বৈশিষ্ট্য ধারণ করছে।",
+        "form": "N + らしい<br/>N + らしく",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>子供<rt>こども</rt></ruby>は <ruby>子供<rt>こども</rt></ruby><h>らしく</h>、 <ruby>外<rt>そと</rt></ruby>で <ruby>遊<rt>あそ</rt></ruby>んだほうがいい。",
+                "en": "Children should play outside like children should.",
+                "bd": "শিশুদের উচিত শিশুর মতো বাইরে খেলা করা।"
+            },
+            {
+                "jp": "<ruby>今日<rt>きょう</rt></ruby>は <ruby>夏<rt>なつ</rt></ruby><h>らしい</h> <ruby>日<rt>ひ</rt></ruby>だ。",
+                "en": "Today is a typical summer day.",
+                "bd": "আজকের দিনটি একটি সাধারণ গ্রীষ্মের দিন।"
+            },
+            {
+                "jp": "<ruby>今日<rt>きょう</rt></ruby>は <ruby>少<rt>すこ</rt></ruby>し<ruby>暖<rt>あたた</rt></ruby>かく、 <ruby>春<rt>はる</rt></ruby><h>らしい</h><ruby>天気<rt>てんき</rt></ruby> となるでしょう。",
+                "en": "It will be a little warm today, and the weather seems spring-like.",
+                "bd": "আজ একটু উষ্ণ হবে এবং আবহাওয়া বসন্তময় মনে হচ্ছে।"
+            }
+        ]
+    },
+    "73": {
+        "key": "〜ほうがいい",
+        "meaning_en": "\"had better\" Expresses advice or recommendation. Used to advise or give a warning that something bad may happen if not followed.",
+        "meaning_bd": "\"ভালো হবে\" পরামর্শ বা সুপারিশ প্রকাশ করে। যদি এটি অনুসরণ না করা হয় তবে কিছু খারাপ হতে পারে বলে পরামর্শ বা সতর্কতা দেওয়ার জন্য ব্যবহৃত হয়।",
+        "form": "V（た形） + ほうがいい<br/>V（ナイ形） + ほうがいい",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>疲<rt>つか</rt></ruby>れているとき、 <ruby>早<rt>はや</rt></ruby>く<ruby>寝<rt>ね</rt></ruby>た <h>ほうがいい</h>よ。",
+                "en": "You should go to bed early when you're tired.",
+                "bd": "আপনি ক্লান্ত হলে তাড়াতাড়ি ঘুমাতে যাওয়া উচিত।"
+            },
+            {
+                "jp": "<ruby>大切<rt>たいせつ</rt></ruby>な <ruby>試験<rt>しけん</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>は <ruby>早<rt>はや</rt></ruby>く<ruby>家<rt>いえ</rt></ruby>を <ruby>出<rt>で</rt></ruby>た<h>ほうがいい</h>。",
+                "en": "You should leave home early on the day of an important exam.",
+                "bd": "গুরুত্বপূর্ণ পরীক্ষার দিনে তাড়াতাড়ি বাড়ি থেকে বের হওয়া উচিত।"
+            },
+            {
+                "jp": "<ruby>健康<rt>けんこう</rt></ruby>のために、 できるだけ <ruby>運動<rt>うんどう</rt></ruby>した <h>ほうがいい</h>。",
+                "en": "For your health, you should exercise as much as possible.",
+                "bd": "আপনার স্বাস্থ্যের জন্য, যতটা সম্ভব ব্যায়াম করা উচিত।"
+            }
+        ]
+    },
+    "74": {
+        "key": "〜たばかり",
+        "meaning_en": "\"have just done\"",
+        "meaning_bd": "\"সবে কিছু করা হয়েছে\"",
+        "form": "V（タ形） + ばかり",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>入社<rt>にゅうしゃ</rt></ruby>し<h>たばかり</h> なのに、 <ruby>毎日<rt>まいにち</rt></ruby>とても <ruby>忙<rt>いそが</rt></ruby>しいです。",
+                "en": "I just joined the company, but I am very busy every day.",
+                "bd": "আমি সবে কোম্পানিতে যোগ দিয়েছি, কিন্তু প্রতিদিন খুব ব্যস্ত আছি।"
+            },
+            {
+                "jp": "<ruby>日本<rt>にほん</rt></ruby>に<ruby>来<rt>き</rt></ruby><h>たばかり</h> なので、 まだ<ruby>日本語<rt>にほんご</rt></ruby>は <ruby>全然<rt>ぜんぜん</rt></ruby><ruby>わか</rt>りません。",
+                "en": "I just came to Japan, so I don't understand Japanese at all yet.",
+                "bd": "আমি সবে জাপানে এসেছি, তাই এখনও জাপানি মোটেও বুঝি না।"
+            },
+            {
+                "jp": "<ruby>起<rt>お</rt></ruby>き<h>たばかり</h> なので、 <ruby>何<rt>なに</rt></ruby>も <ruby>食<rt>た</rt></ruby>べたくない。",
+                "en": "I don't want to eat anything because I just woke up.",
+                "bd": "আমি সবে ঘুম থেকে উঠেছি, তাই কিছু খেতে ইচ্ছা করছে না।"
+            }
+        ]
+    },
+    "75": {
+        "key": "Nがする",
+        "meaning_en": "\"can hear / see / smell etc (noun)\" Used to express the notion that the speaker can perceive a sound, voice, taste, smell, fragrance or feeling.",
+        "meaning_bd": "\"শোনা / দেখা / গন্ধ পাওয়া যায় ইত্যাদি (বিশেষ্য)\" এটি এমন একটি অনুভূতি প্রকাশ করতে ব্যবহৃত হয় যা বক্তা অনুভব করতে পারেন যেমন শব্দ, গন্ধ বা স্বাদ।",
+        "form": "N + がします",
+        "exampleSentence": [
+            {
+                "jp": "どこかで いい<ruby>匂<rt>にお</rt></ruby>い<h>が します</h>ね。",
+                "en": "There's a good smell somewhere.",
+                "bd": "কোথাও একটি ভালো গন্ধ পাওয়া যাচ্ছে।"
+            },
+            {
+                "jp": "<ruby>キッチン<rt></rt></ruby>から、 <ruby>カレー<rt></rt></ruby>の <ruby>匂<rt>にお</rt></ruby>い<h>がして</h>きます。",
+                "en": "I can smell the curry cooking in the kitchen.",
+                "bd": "আমি রান্নাঘর থেকে কারির গন্ধ পাচ্ছি।"
+            },
+            {
+                "jp": "<ruby>ジェシー<rt></rt></ruby>さんの <ruby>髪<rt>かみ</rt></ruby>から シャンプーのいい<ruby>匂<rt>にお</rt></ruby>い <h>がします</h>。",
+                "en": "I can smell the shampoo from Mr. Jesse's hair.",
+                "bd": "মি. জেসির চুল থেকে শ্যাম্পুর একটি সুন্দর গন্ধ পাচ্ছি।"
+            }
+        ]
+    },
+    "76": {
+        "key": "〜のは〜だ",
+        "meaning_en": "\"It is 〜 that 〜. / The reason 〜 is because 〜\" Emphatic construction. An expression used to strongly emphasize the content of the latter clause, intensifying the overall assertion of the sentence.",
+        "meaning_bd": "\"এটি ~ যে ~। / কারণ ~ হল যে ~\" জোরালো কাঠামো। বাক্যের শেষ অংশকে জোর দিতে ব্যবহৃত হয়, যা বাক্যের সামগ্রিক দাবি শক্তিশালী করে।",
+        "form": "V(普通形) + のは<br/>N + なのは<br/>イA + のは<br/>ナAな + のは",
+        "exampleSentence": [
+            {
+                "jp": "<ruby>地震<rt>じしん</rt></ruby>が <ruby>起<rt>お</rt></ruby>きたとき、 <ruby>一番<rt>いちばん</rt></ruby><ruby>大切<rt>たいせつ</rt></ruby>な<h>のは</h> <ruby>慌<rt>あわ</rt></ruby>てないこと<h>だ</h>。",
+                "en": "When an earthquake occurs, the most important thing is not to panic.",
+                "bd": "ভূমিকম্প হলে সবচেয়ে গুরুত্বপূর্ণ বিষয়টি হল আতঙ্কিত না হওয়া।"
+            },
+            {
+                "jp": "<ruby>日本語<rt>にほんご</rt></ruby>を <ruby>勉強<rt>べんきょう</rt></ruby>するとき、 <ruby>一番<rt>いちばん</rt></ruby><ruby>難<rt>むずか</rt></ruby>しい<h>のは</h> <ruby>漢字<rt>かんじ</rt></ruby><h>だ</h>。",
+                "en": "When studying Japanese, the most difficult thing is kanji.",
+                "bd": "জাপানি পড়ার সময় সবচেয়ে কঠিন জিনিসটি হল কানজি।"
+            },
+            {
+                "jp": "<ruby>問題<rt>もんだい</rt></ruby>な<h>のは</h> <ruby>物価<rt>ぶっか</rt></ruby>が <ruby>高<rt>たか</rt></ruby>いこと<h>だ</h>。",
+                "en": "The problem is that the cost of living is high.",
+                "bd": "সমস্যাটি হল যে জীবনের ব্যয় বেশি।"
+            }
+        ]
+    }
+}

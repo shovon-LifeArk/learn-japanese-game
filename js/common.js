@@ -27,3 +27,7 @@ function shuffle(array) {
     }
     return array;
 }
+
+function removeRubyTag(text) {
+    return text.replace(/<rt>.*?<\/rt>/g, '').replace(/<\/?ruby>/g, '');
+}

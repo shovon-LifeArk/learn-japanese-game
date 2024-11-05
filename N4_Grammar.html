@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Shovon Hasan">
+    <meta name="copyright" content="©2024 株式会社LifeArk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeArk Japanese education: N4 Grammar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/game.css">
+    <style>
+        #words_list-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #words_list-container td {
+            vertical-align: top;
+            position: relative;
+        }
+        #words_list-container h4 {
+            margin: 0px;
+            margin-top: 20px;
+        }
+        #words_list-container ul {
+            margin: 0px;
+            padding-left: 20px;
+        }
+        #words_list-container li {
+            margin-bottom: 10px;
+        }
+        .word-highlight {
+            height: 30px;
+            padding: 0px 10px;
+            border-radius: 15px;
+            background-color: #00ff00;
+            font-weight: bold;
+            text-align: center;
+            line-height: 150%;
+        }
+        #words_list-container .word-num {
+            height: 30px;
+            padding: 0px 7px;
+            border-radius: 12px;
+            background-color: grey;
+            color: white;
+            text-align: center;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="words_list-container">
+            <div class="header-image">
+                <img src="assets/image/LifeArk_Nihongo_logo.png" />
+                <h2 style="text-align: center; margin: 0px;">N4 ব্যাকরণ</h2>
+            </div>
+            <button class="play-button" onclick="playGame_type1('N4 Grammar: Rearrange words')">Play Game (Rearrange)</button>
+            <button class="play-button" onclick="playGame_type2('N4 Grammar: Particles')">Play Game (MCQ)</button>
+            <button class="play-button" onclick="playGame_type3('N4 Grammar: Word in position')">Play Game (Fill Blank)</button>
+        </div>
+        <div id="range_selection-container">
+            <h3 style="text-align: center;">Choose the question range</h3>
+            <div style="text-align: center;">
+                <input type="number" id="range-from" placeholder="from"> ~ <input type="number" id="range-to" placeholder="to">
+                <br><br>
+                <span class="alert" id="range-alert"></span>
+                <br>
+            </div>
+            <div class="button-container">
+                <button class="back-button" onclick="showPage('words_list')">←</button>
+                <button class="play-button" style="flex-grow: 1;" onclick="startRearrangeGame();">Start Game!</button>
+            </div>
+        </div>
+        <div id="question-container">
+            <div class="button-container">
+                <div id="question-number"></div>
+                <button id="next-button" onclick="nextQuestion()" disabled>&#10132;</button>
+            </div>
+            <div id="question-holder">
+                <div id="mcq-question">
+                    <div>
+                        <div id="question-text"></div>
+                    </div>
+                    <div id="options">
+                        <div class="option" onclick="checkAnswer(0)"></div>
+                        <div class="option" onclick="checkAnswer(1)"></div>
+                        <div class="option" onclick="checkAnswer(2)"></div>
+                        <div class="option" onclick="checkAnswer(3)"></div>
+                    </div>
+                </div>
+                <div id="rearrange-question">
+                    <span>বাক্য গঠনের জন্য শব্দগুলোর সঠিক ক্রম নির্বাচন কর:</span>
+                    <div id="rearrange-sentence" class="rearrange-sentence-holder"></div>
+                    <div id="rearrange-answer" class="rearrange-answer-holder"></div>
+                    <button class="play-button" id="rearrange-submit-btn" onclick="checkRearrangeAnswer()">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div id="result-container">
+            <div id="score"></div>
+            <button class="play-button" onclick="replayGame()">Replay</button>
+            <button class="link-button" onclick="showPage('words_list')">Grammar List</button>
+            <div></div>
+                <h3>Submit your Score:</h3>
+                <div id="score-submit-form">
+                    <input type="text" id="player_userID" placeholder="User ID" value=""/>
+                    <button class="play-button" id="score-submit-button" onclick="submitScore()">Submit Score</button>
+                </div>
+                <div id="score-submit-response"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/game_rangeSelection.js"></script>
+    <script src="js/game_mcq.js"></script>
+    <script src="js/game_result.js"></script>
+    <script>
+
+        let itemsData = {};
+        let itemCounter = null;
+
+        let quizData = {};
+        let type1_GameData = null;
+        let type2_GameData = null;
+        let type3_GameData = null;
+        let dataItemToRearrangeGameItemNumberMapping = {
+            'from': {},
+            'to': {}
+        };
+
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
+        
+        function createGrammarList() {
+            const container = document.getElementById('words_list-container');
+
+            const hr = document.createElement('hr');
+            container.appendChild(hr);
+
+            itemCounter = 1;
+            
+            Object.keys(itemsData).forEach(index => {
+                const item = itemsData[index];
+                const table = document.createElement('table');
+
+                // Create top row with image and text
+                const topRow = document.createElement('tr');
+                const textCell = document.createElement('td');
+                textCell.innerHTML = `<span class="word-highlight">${item.key}</span>`;
+                const numCell = document.createElement('td');
+                numCell.innerHTML = `<span class="word-num">${itemCounter}</span>`;
+                numCell.style.textAlign = "right";
+
+                topRow.appendChild(textCell);
+                topRow.appendChild(numCell);
+                table.appendChild(topRow);
+
+                // Create bottom row with example sentences
+                const bottomRow = document.createElement('tr');
+                const explanationCell = document.createElement('td');
+                explanationCell.colSpan = 2;
+                explanationCell.style.padding = "10px 0px";
+
+                const explanation = document.createElement('span');
+                explanation.innerHTML = item.meaning_bd;
+
+                const formHeader = document.createElement('h4');
+                formHeader.innerText = "বাক্যে রূপ:"
+
+                const form = document.createElement('span');
+                form.innerHTML = item.form;
+
+                const exampleHeader = document.createElement('h4');
+                exampleHeader.innerText = "উদাহরণ:"
+
+                const list = document.createElement('ul');
+                item.exampleSentence.forEach(example => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `${example.jp}<br/>${example.bd}`;
+                    list.appendChild(listItem);
+                });
+
+                explanationCell.appendChild(explanation);
+                explanationCell.appendChild(formHeader);
+                explanationCell.appendChild(form);
+                explanationCell.appendChild(exampleHeader);
+                explanationCell.appendChild(list);
+
+                bottomRow.appendChild(explanationCell);
+                table.appendChild(bottomRow);
+                container.appendChild(table);
+
+                const hr = document.createElement('hr');
+                container.appendChild(hr);
+
+                itemCounter++;
+            });
+
+            // decrease 1 to match total number
+            itemCounter -= 1;
+        }
+
+        function playGame_type1(lessonType) {
+            gameLessonType = lessonType;
+            gameData = type1_GameData;
+            gameType = "rearrange";
+
+            showPage('range_selection');
+        }
+
+        function playGame_type2(lessonType) {
+            gameLessonType = lessonType;
+            gameData = type2_GameData;
+            gameType = "mcq";
+
+            gameFromIndex = 0;
+            gameToIndex = Object.keys(gameData).length-1;
+
+            replayGame();
+        }
+
+        function playGame_type3(lessonType) {
+            gameLessonType = lessonType;
+            gameData = type3_GameData;
+            gameType = "mcq";
+
+            gameFromIndex = 0;
+            gameToIndex = Object.keys(gameData).length-1;
+
+            replayGame();
+        }
+
+        function startRearrangeGame() {
+            const params = {
+                'rangeType': 'mapped_number',
+                'rangeMapping': dataItemToRearrangeGameItemNumberMapping
+            };
+            startGame(params);
+        }
+
+        function prepareRearrangeGameData() {
+            // prepare type-1 game data
+            type1_GameData = {};
+            let index = 0;
+            Object.keys(itemsData).forEach(key => {
+                // store range start item num mapping
+                dataItemToRearrangeGameItemNumberMapping.from[key] = index;
+
+                const dataItem = itemsData[key];
+                dataItem.exampleSentence.forEach(sentence => {
+                    const questionSentence = removeRubyTag(sentence.jp);
+
+                    if (questionSentence.includes("：")) return;
+                    
+                    type1_GameData[index] = {};
+                    type1_GameData[index].question = {};
+                    type1_GameData[index].question.words = questionSentence.replace(/<\/?h>|<br\s*\/?>|。$/g, '').split(" ");
+                    type1_GameData[index].answer = questionSentence.replace(/<\/?h>|<br\s*\/?>|。$/g, '');
+
+                    index++;
+                });
+                // store range end item num mapping
+                dataItemToRearrangeGameItemNumberMapping.to[key] = index-1;
+            });
+        }
+
+        function prepareMCQgameData() {
+            // prepare type-2 game data
+            type2_GameData = {};
+            let index = 0;
+            Object.keys(quizData.type_1).forEach(key => {
+                const dataItem = quizData.type_1[key];
+                type2_GameData[index] = {};
+                type2_GameData[index].question = {};
+                type2_GameData[index].question.text = dataItem.question;
+                type2_GameData[index].answer = dataItem.answer;
+                type2_GameData[index].options = dataItem.options;
+
+                index++;
+            });
+
+            // prepare type-3 game data
+            type3_GameData = {};
+            index = 0;
+            Object.keys(quizData.type_2).forEach(key => {
+                const dataItem = quizData.type_2[key];
+                type3_GameData[index] = {};
+                type3_GameData[index].question = {};
+                type3_GameData[index].question.text = dataItem.question;
+                type3_GameData[index].answer = dataItem.answer;
+                type3_GameData[index].options = dataItem.options;
+
+                index++;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/grammar_N4.json')
+                .then(response => response.json())
+                .then(data => {
+                    itemsData = data;
+                    // display words list
+                    createGrammarList();
+                    showPage('words_list');
+
+                    setGameRangeSelection();
+                    prepareRearrangeGameData();
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+
+            // fetch quiz data too
+            fetch('data/grammar_N4_quiz.json')
+                .then(response => response.json())
+                .then(data => {
+                    quizData = data;
+
+                    prepareMCQgameData();
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        });
+
+    </script>
+</body>
+</html>
