@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Shovon Hasan">
+    <meta name="copyright" content="©2024 株式会社LifeArk">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeArk Japanese education: N4 Kanji</title>
+    <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/game.css">
+    <style>
+        #words_list-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #words_list-container td {
+            padding: 10px;
+            vertical-align: top;
+            position: relative;
+        }
+        #words_list-container .image-cell {
+            width: 100px;
+            font-size: 5.5em;
+            line-height: 100%;
+        }
+        #words_list-container .kanji-meaning {
+            font-size: 1.5em;
+        }
+        #words_list-container .sample-words {
+            table-layout: fixed;
+            margin-bottom: 20px;;
+        }
+        #words_list-container .sample-words th,
+        #words_list-container .sample-words td {
+            border: 1px solid black;
+        }
+        #words_list-container .kanji-num {
+            position: absolute;
+            top: 10px;
+            right: 0px;
+            height: 30px;
+            padding: 0px 10px;
+            border-radius: 15px;
+            background-color: grey;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+        }
+        #range_selection-container input {
+            width: 80px;
+            padding: 10px;
+            font-size: 1.5em;;
+            text-align: center;
+        }
+        #question-text {
+            font-size: 4em !important;
+            text-align: center !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="words_list-container">
+            <div class="header-image">
+                <img src="assets/image/LifeArk_Nihongo_logo.png" />
+                <h2 style="text-align: center; margin: 0px;">N4 Kanji</h2>
+            </div>
+            <button class="play-button" onclick="playWritingGame('N4 Kanji: words writing')">Play Writing Game</button>
+            <button class="play-button" onclick="playReadingGame('N4 Kanji: words reading')">Play Reading Game</button>
+        </div>
+        <div id="range_selection-container">
+            <h3 style="text-align: center;">Choose the question range</h3>
+            <div style="text-align: center;">
+                <input type="number" id="range-from" placeholder="from"> ~ <input type="number" id="range-to" placeholder="to">
+                <br><br>
+                <span class="alert" id="range-alert"></span>
+                <br>
+            </div>
+            <div class="button-container">
+                <button class="back-button" onclick="showPage('words_list')">←</button>
+                <button class="play-button" style="flex-grow: 1;" onclick="startKanjiGame()">Start Game!</button>
+            </div>
+        </div>
+        <div id="question-container">
+            <div class="button-container">
+                <div id="question-number"></div>
+                <button id="next-button" onclick="nextQuestion()" disabled>&#10132;</button>
+            </div>
+            <div id="question-holder">
+                <div id="mcq-question">
+                    <div>
+                        <div id="question-text"></div>
+                        <div id="question-caption"></div>
+                    </div>
+                    <div id="options">
+                        <div class="option" onclick="checkAnswer(0)"></div>
+                        <div class="option" onclick="checkAnswer(1)"></div>
+                        <div class="option" onclick="checkAnswer(2)"></div>
+                        <div class="option" onclick="checkAnswer(3)"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="result-container">
+            <div id="score"></div>
+            <button class="play-button" onclick="replayGame()">Replay</button>
+            <button class="link-button" onclick="showPage('words_list')">Kanji List</button>
+            <div>
+                <h3>Submit your Score:</h3>
+                <div id="score-submit-form">
+                    <input type="text" id="player_userID" placeholder="User ID" value=""/>
+                    <button class="play-button" id="score-submit-button" onclick="submitScore()">Submit Score</button>
+                </div>
+                <div id="score-submit-response"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/game_rangeSelection.js"></script>
+    <script src="js/game_mcq.js"></script>
+    <script src="js/game_result.js"></script>
+    <script>
+        let itemsData = null;
+        let itemCounter = null;
+
+        let readingGameData = null;
+        let writingGameData = null;
+        let dataItemToGameItemNumberMapping = {
+            'from': {},
+            'to': {}
+        };
+
+        global_rangeOffset = 104;
+
+        function showPage(pageName) {
+            const gameContainer = document.getElementById('game-container');
+            // hide all page
+            Array.from(gameContainer.children).forEach(child => {
+                child.style.display = 'none';
+            });
+            // display specific page
+            document.getElementById(`${pageName}-container`).style.display = 'flex';
+        }
+
+        function createKanjiList() {
+            const container = document.getElementById('words_list-container');
+            itemCounter = 1;
+
+            Object.keys(itemsData).forEach(key => {
+                const item = itemsData[key];
+                const table1 = document.createElement('table');
+
+                // Create top row with image and text
+                const topRow = document.createElement('tr');
+                const imageCell = document.createElement('td');
+                imageCell.className = 'image-cell';
+                imageCell.textContent = item.kanji;
+                const textCell = document.createElement('td');
+                textCell.innerHTML = `<span class="kanji-meaning">${item.meaning_bd}</span><br/>
+                                        音読み：${item.onyomi}<br/>
+                                        訓読み：${item.kunyomi}
+                                        <div class="kanji-num">${global_rangeOffset+itemCounter}</div>`;
+
+                topRow.appendChild(imageCell);
+                topRow.appendChild(textCell);
+                table1.appendChild(topRow);
+
+                container.appendChild(table1);
+
+                const table2 = document.createElement('table');
+                table2.className = 'sample-words';
+                item.words.forEach(word => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td style="width: 80px;">${word[0]}</td><td>${word[1]}</td><td>${word[2]}</td>`;
+                    table2.appendChild(row);
+                });
+
+                container.appendChild(table2);
+
+                itemCounter++;
+            });
+
+            // decrease 1 to match total number
+            itemCounter -= 1;
+        }
+
+        function playWritingGame(lessonType) {
+            gameLessonType = lessonType;
+            gameData = writingGameData;
+            showPage('range_selection');
+
+            // Change option design
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.classList.add('option-container_circle');
+            optionsEl.forEach(optionItem => {
+                optionItem.classList.remove('option');
+                if (!optionItem.classList.contains('option-circle')) {
+                    optionItem.classList.add('option-circle');
+                }
+            });
+        }
+
+        function playReadingGame(lessonType) {
+            gameLessonType = lessonType;
+            gameData = readingGameData;
+            showPage('range_selection');
+
+            // Change option design
+            const optionsContainer = document.getElementById('options');
+            optionsContainer.classList.remove('option-container_circle');
+            optionsEl.forEach(optionItem => {
+                optionItem.classList.remove('option-circle');
+                if (!optionItem.classList.contains('option')) {
+                    optionItem.classList.add('option');
+                }
+            });
+        }
+
+        function startKanjiGame() {
+            const params = {
+                'rangeType': 'mapped_number',
+                'rangeMapping': dataItemToGameItemNumberMapping
+            };
+            startGame(params);
+        }
+
+        function prepareMCQgameData() {
+            readingGameData = {};
+            writingGameData = {};
+
+            let index = 0;
+            Object.keys(itemsData).forEach(key => {
+                // store range start item num mapping
+                dataItemToGameItemNumberMapping.from[key] = index;
+                
+                const dataItem = itemsData[key];
+                dataItem.words.forEach(word => {
+                    // preparing Kanji reading game data
+                    readingGameData[index] = {};
+                    readingGameData[index].question = {};
+                    readingGameData[index].question.text = word[0];
+                    readingGameData[index].question.caption = word[2];
+                    readingGameData[index].answer = word[1];
+
+                    // preparing Kanji writing game data
+                    writingGameData[index] = {};
+                    writingGameData[index].question = {};
+                    writingGameData[index].question.text = word[0].replace(dataItem.kanji, "◯");
+                    writingGameData[index].question.caption = word[1];
+                    writingGameData[index].answer = dataItem.kanji;
+
+                    index++;
+                });
+                // store range end item num mapping
+                dataItemToGameItemNumberMapping.to[key] = index-1;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data/kanji_N4.json')
+                .then(response => response.json())
+                .then(data => {
+                    itemsData = data;
+                    createKanjiList();
+                    showPage('words_list');
+
+                    setGameRangeSelection();
+                    prepareMCQgameData();
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        });
+
+    </script>
+
+</body>

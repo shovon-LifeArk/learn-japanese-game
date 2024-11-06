@@ -1,20 +1,23 @@
+// control range if the range does not start from 1
+let global_rangeOffset = 0;
+
 function setGameRangeSelection() {
     const rangeFromEl = document.getElementById("range-from");
     const rangeToEl = document.getElementById("range-to");
 
-    rangeFromEl.min = 1;
-    rangeFromEl.max = itemCounter - totalQuestions + 1;
+    rangeFromEl.min = global_rangeOffset + 1;
+    rangeFromEl.max = global_rangeOffset + itemCounter - totalQuestions + 1;
 
-    rangeToEl.min = totalQuestions;
-    rangeToEl.max = itemCounter;
+    rangeToEl.min = global_rangeOffset + totalQuestions;
+    rangeToEl.max = global_rangeOffset + itemCounter;
 }
 
 function isValidRange_number() {
     const rangeFrom = parseInt(document.getElementById("range-from").value);
     const rangeTo = parseInt(document.getElementById("range-to").value);
 
-    let min = 1;
-    let max = itemCounter;
+    let min = global_rangeOffset + 1;
+    let max = global_rangeOffset + itemCounter;
 
     let alertMsg = "";
     if (!rangeFrom || rangeFrom < min) {
