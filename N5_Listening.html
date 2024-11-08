@@ -122,9 +122,9 @@
                 numCell.innerText = itemCounter;
 
                 const textCell = document.createElement('td');
-                let dispHtml = `<audio controls src="assets/N5_Listening/${dataItem.audio_path}"></audio>`;
+                let dispHtml = `<audio controls src="assets/audio/N5_Listening/${dataItem.audio_path}"></audio>`;
                 if (dataItem?.image_path) {
-                    dispHtml += `<br/><img width="100%" src="assets/N5_Listening/${dataItem.image_path}" >`;
+                    dispHtml += `<br/><img width="100%" src="assets/audio/N5_Listening/${dataItem.image_path}" >`;
                 }
                 textCell.innerHTML = dispHtml;
 
@@ -171,9 +171,9 @@
                 const dataItem = itemsData[key];
                 gameData[index] = {};
                 gameData[index].question = {};
-                gameData[index].question.soundUrl = `assets/N5_Listening/${dataItem.audio_path}`;
+                gameData[index].question.soundUrl = `assets/audio/N5_Listening/${dataItem.audio_path}`;
                 if (dataItem?.image_path) {
-                    gameData[index].question.imageUrl = `assets/N5_Listening/${dataItem.image_path}`;
+                    gameData[index].question.imageUrl = `assets/audio/N5_Listening/${dataItem.image_path}`;
                 }
                 gameData[index].staticOptions = ["1", "2", "3", "4"];
                 gameData[index].answer = dataItem.answer;
