@@ -5,7 +5,7 @@
     <meta name="author" content="Shovon Hasan">
     <meta name="copyright" content="©2024 株式会社LifeArk">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LifeArk Japanese education: N5 Adjectives</title>
+    <title>LifeArk Japanese education: N5・N4 Adjectives</title>
     <link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/game.css">
@@ -49,10 +49,10 @@
         <div id="words_list-container">
             <div class="header-image">
                 <img src="assets/image/LifeArk_Nihongo_logo.png" />
-                <h2 style="text-align: center; margin: 0px;">N5 বিশেষণ</h2>
+                <h2 style="text-align: center; margin: 0px;">N5・N4 বিশেষণ</h2>
             </div>
-            <button class="play-button" onclick="playWordMeaningGame('N5 Adjectives: word meaning')">Play Game (word meaning)</button>
-            <button class="play-button" onclick="playFillBlankGame('N5 Adjectives: fill blank')">Play Game (fill blank)</button>
+            <button class="play-button" onclick="playWordMeaningGame('N5・N4 Adjectives: word meaning')">Play Game (word meaning)</button>
+            <button class="play-button" onclick="playFillBlankGame('N5・N4 Adjectives: fill blank')">Play Game (fill blank)</button>
         </div>
         <div id="range_selection-container">
             <h3 style="text-align: center;">Choose the question range</h3>
@@ -110,7 +110,8 @@
         let itemsData = {};
         let itemCounter = null;
 
-        let quizData = {};
+        let quizData_N5 = {};
+        let quizData_N4 = {};
         let wordMeaning_GameData = {};
         let fillBlank_GameData = {};
 
@@ -216,11 +217,11 @@
         }
 
         function prepareFillBlankGameData() {
-            let index = 0;
+            const mergedQuizDataArray = [...Object.values(quizData_N5), ...Object.values(quizData_N4)];
 
-            Object.keys(quizData).forEach(key => {
-                const quizItem = quizData[key];
-                if (quizItem.category === 'adjective' || quizItem.category === 'adverb') {
+            let index = 0;
+            mergedQuizDataArray.forEach(quizItem => {
+                if (quizItem.category === 'adjective') {
                     fillBlank_GameData[index] = {};
                     fillBlank_GameData[index].question = {};
                     fillBlank_GameData[index].question.text = quizItem.question;
@@ -233,7 +234,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('data/adjectives_N5.json')
+            fetch('data/adjectives_N5-N4.json')
                 .then(response => response.json())
                 .then(data => {
                     itemsData = data;
@@ -249,7 +250,13 @@
             fetch('data/vocabulary_N5_quiz.json')
                 .then(response => response.json())
                 .then(data => {
-                    quizData = data;
+                    quizData_N5 = data;
+
+                    return fetch('data/vocabulary_N4_quiz.json');
+                })
+                .then(response => response.json())
+                .then(data => {
+                    quizData_N4 = data;
 
                     prepareFillBlankGameData();
                 })
