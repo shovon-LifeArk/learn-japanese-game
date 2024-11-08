@@ -242,7 +242,7 @@
 
             Object.keys(quizData).forEach(key => {
                 const quizItem = quizData[key];
-                if (quizItem.category === 'noun' || quizItem.category === 'phrase') {
+                if (quizItem.category !== 'verb' && quizItem.category !== 'adjective') {
                     fillBlank_GameData[index] = {};
                     fillBlank_GameData[index].question = {};
                     fillBlank_GameData[index].question.text = quizItem.question;
@@ -269,7 +269,7 @@
                 .catch(error => console.error('Error loading JSON:', error));
 
             // fetch quiz data too
-            fetch('data/vocabulary_N5_quiz.json')
+            fetch('data/vocabulary_N4_quiz.json')
                 .then(response => response.json())
                 .then(data => {
                     quizData = data;
