@@ -1,0 +1,2566 @@
+{
+    "0": {
+      "kana": "かぞく",
+      "kanji": "家族",
+      "english": "family",
+      "bangla": "পরিবার",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>家族<rt>かぞく</rt></ruby>は<ruby>大切<rt>たいせつ</rt></ruby>なものです。",
+        "<ruby>家族<rt>かぞく</rt></ruby>で<ruby>旅行<rt>りょこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。"
+      ]
+    },
+    "1": {
+      "kana": "あに",
+      "kanji": "兄",
+      "english": "(my) older brother",
+      "bangla": "বড় ভাই",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>兄<rt>あに</rt></ruby>は<ruby>大学<rt>だいがく</rt></ruby>に<ruby>通<rt>かよ</rt></ruby>っています。",
+        "<ruby>兄<rt>あに</rt></ruby>は<ruby>本<rt>ほん</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。"
+      ]
+    },
+    "2": {
+      "kana": "おにいさん",
+      "kanji": "お兄さん",
+      "english": "(someone else's) older brother",
+      "bangla": "বড় ভাই",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>お兄<rt>おにい</rt></ruby>さんは<ruby>背<rt>せ</rt></ruby>が<ruby>高<rt>たか</rt></ruby>いですね。",
+        "<ruby>お兄<rt>おにい</rt></ruby>さんと<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>遊<rt>あそ</rt></ruby>びました。"
+      ]
+    },
+    "3": {
+      "kana": "あね",
+      "kanji": "姉",
+      "english": "(my) older sister",
+      "bangla": "বড় বোন",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>姉<rt>あね</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>です。",
+        "<ruby>姉<rt>あね</rt></ruby>は<ruby>仕事<rt>しごと</rt></ruby>が<ruby>忙<rt>いそが</rt></ruby>しいです。"
+      ]
+    },
+    "4": {
+      "kana": "おねえさん",
+      "kanji": "お姉さん",
+      "english": "(someone else's) older sister",
+      "bangla": "বড় বোন",
+      "category": "family",
+      "exampleSentence": [
+        "お<ruby>姉<rt>ねえ</rt></ruby>さんは<ruby>優<rt>やさ</rt></ruby>しいです。",
+        "お<ruby>姉<rt>ねえ</rt></ruby>さんと<ruby>話<rt>はな</rt></ruby>しました。"
+      ]
+    },
+    "5": {
+      "kana": "おとうと",
+      "kanji": "弟",
+      "english": "younger brother",
+      "bangla": "ছোট ভাই",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>弟<rt>おとうと</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>に<ruby>通<rt>かよ</rt></ruby>っています。",
+        "<ruby>弟<rt>おとうと</rt></ruby>は<ruby>ゲーム<rt>げーむ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。"
+      ]
+    },
+    "6": {
+      "kana": "いもうと",
+      "kanji": "妹",
+      "english": "younger sister",
+      "bangla": "ছোট বোন",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>妹<rt>いもうと</rt></ruby>は<ruby>勉強<rt>べんきょう</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。",
+        "<ruby>妹<rt>いもうと</rt></ruby>と<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ました。"
+      ]
+    },
+    "7": {
+      "kana": "おや",
+      "kanji": "親",
+      "english": "parent",
+      "bangla": "পিতামাতা",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>親<rt>おや</rt></ruby>の<ruby>助<rt>たす</rt></ruby>けが<ruby>大切<rt>たいせつ</rt></ruby>です。",
+        "<ruby>親<rt>おや</rt></ruby>と<ruby>話<rt>はな</rt></ruby>します。"
+      ]
+    },
+    "8": {
+      "kana": "りょうしん",
+      "kanji": "両親",
+      "english": "parents",
+      "bangla": "পিতামাতা",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>両親<rt>りょうしん</rt></ruby>は<ruby>私<rt>わたし</rt></ruby>にとって<ruby>大事<rt>だいじ</rt></ruby>です。",
+        "<ruby>両親<rt>りょうしん</rt></ruby>と<ruby>旅行<rt>りょこう</rt></ruby>します。"
+      ]
+    },
+    "9": {
+      "kana": "ははおや",
+      "kanji": "母親",
+      "english": "mother",
+      "bangla": "মা",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>母親<rt>ははおや</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>です。",
+        "<ruby>母親<rt>ははおや</rt></ruby>と<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。"
+      ]
+    },
+    "10": {
+      "kana": "ちちおや",
+      "kanji": "父親",
+      "english": "father",
+      "bangla": "বাবা",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>父親<rt>ちちおや</rt></ruby>は<ruby>仕事<rt>しごと</rt></ruby>で<ruby>忙<rt>いそが</rt></ruby>しいです。",
+        "<ruby>父親<rt>ちちおや</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>散歩<rt>さんぽ</rt></ruby>します。"
+      ]
+    },
+    "11": {
+      "kana": "おっと",
+      "kanji": "夫",
+      "english": "husband",
+      "bangla": "স্বামী",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>夫<rt>おっと</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>です。",
+        "<ruby>夫<rt>おっと</rt></ruby>と<ruby>旅行<rt>りょこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>きました。"
+      ]
+    },
+    "12": {
+      "kana": "ごしゅじん",
+      "kanji": "ご主人",
+      "english": "(someone else's) husband",
+      "bangla": "স্বামী",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>ご主人<rt>ごしゅじん</rt></ruby>は<ruby>親切<rt>しんせつ</rt></ruby>な<ruby>方<rt>かた</rt></ruby>です。",
+        "<ruby>ご主人<rt>ごしゅじん</rt></ruby>が<ruby>手伝<rt>てつだ</rt></ruby>ってくれました。"
+      ]
+    },
+    "13": {
+      "kana": "つま",
+      "kanji": "妻",
+      "english": "wife",
+      "bangla": "স্ত্রী",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>妻<rt>つま</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>が<ruby>得意<rt>とくい</rt></ruby>です。",
+        "<ruby>妻<rt>つま</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ます。"
+      ]
+    },
+    "14": {
+      "kana": "おくさん",
+      "kanji": "奥さん",
+      "english": "(someone else's) wife",
+      "bangla": "স্ত্রী",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>奥<rt>おく</rt></ruby>さんは<ruby>優<rt>やさ</rt></ruby>しい<ruby>人<rt>ひと</rt></ruby>です。",
+        "<ruby>奥<rt>おく</rt></ruby>さんと<ruby>話<rt>はな</rt></ruby>しました。"
+      ]
+    },
+    "15": {
+      "kana": "むすこ",
+      "kanji": "息子",
+      "english": "son",
+      "bangla": "ছেলে",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>息子<rt>むすこ</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>で<ruby>勉強<rt>べんきょう</rt></ruby>しています。",
+        "<ruby>息子<rt>むすこ</rt></ruby>が<ruby>成長<rt>せいちょう</rt></ruby>しました。"
+      ]
+    },
+    "16": {
+      "kana": "むすめ",
+      "kanji": "娘",
+      "english": "daughter",
+      "bangla": "মেয়ে",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>娘<rt>むすめ</rt></ruby>は<ruby>絵<rt>え</rt></ruby>を<ruby>描<rt>か</rt></ruby>くのが<ruby>好き<rt>すき</rt></ruby>です。",
+        "<ruby>娘<rt>むすめ</rt></ruby>と<ruby>遊<rt>あそ</rt></ruby>びます。"
+      ]
+    },
+    "17": {
+      "kana": "おじ",
+      "kanji": "伯父",
+      "english": "uncle",
+      "bangla": "চাচা/মামা",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>伯父<rt>おじ</rt></ruby>が<ruby>来<rt>き</rt></ruby>ました。",
+        "<ruby>伯父<rt>おじ</rt></ruby>は<ruby>親切<rt>しんせつ</rt></ruby>です。"
+      ]
+    },
+    "18": {
+      "kana": "おば",
+      "kanji": "伯母",
+      "english": "aunt",
+      "bangla": "চাচি/মামী",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>伯母<rt>おば</rt></ruby>が<ruby>訪<rt>おとず</rt></ruby>れました。",
+        "<ruby>伯母<rt>おば</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>が<ruby>得意<rt>とくい</rt></ruby>です。"
+      ]
+    },
+    "19": {
+      "kana": "まご",
+      "kanji": "孫",
+      "english": "grandchild",
+      "bangla": "নাতি/নাতনি",
+      "category": "family",
+      "exampleSentence": [
+        "<ruby>孫<rt>まご</rt></ruby>が<ruby>遊<rt>あそ</rt></ruby>びに<ruby>来<rt>き</rt></ruby>ました。",
+        "<ruby>孫<rt>まご</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>遊<rt>あそ</rt></ruby>びます。"
+      ]
+    },
+    "20": {
+      "kana": "せんぱい",
+      "kanji": "先輩",
+      "english": "senior (colleague/coworker)",
+      "bangla": "সিনিয়র (সহকর্মী/সহযোগী)",
+      "category": "people",
+      "exampleSentence": [
+        "<ruby>先輩<rt>せんぱい</rt></ruby>は<ruby>仕事<rt>しごと</rt></ruby>が<ruby>得意<rt>とくい</rt></ruby>です。",
+        "<ruby>先輩<rt>せんぱい</rt></ruby>に<ruby>質問<rt>しつもん</rt></ruby>しました。"
+      ]
+    },
+    "21": {
+      "kana": "こうはい",
+      "kanji": "後輩",
+      "english": "junior (colleague/coworker)",
+      "bangla": "জুনিয়র (সহকর্মী/সহযোগী)",
+      "category": "people",
+      "exampleSentence": [
+        "<ruby>後輩<rt>こうはい</rt></ruby>が<ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>入り<rt>はい</rt></ruby>ました。",
+        "<ruby>後輩<rt>こうはい</rt></ruby>に<ruby>教<rt>おし</rt></ruby>えてあげました。"
+      ]
+    },
+    "22": {
+      "kana": "だんせい",
+      "kanji": "男性",
+      "english": "man",
+      "bangla": "পুরুষ",
+      "category": "people",
+      "exampleSentence": [
+        "<ruby>男性<rt>だんせい</rt></ruby>が<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>出席<rt>しゅっせき</rt></ruby>しています。",
+        "<ruby>男性<rt>だんせい</rt></ruby>は<ruby>高<rt>たか</rt></ruby>い<ruby>声<rt>こえ</rt></ruby>で<ruby>話<rt>はな</rt></ruby>しました。"
+      ]
+    },
+    "23": {
+      "kana": "じょせい",
+      "kanji": "女性",
+      "english": "woman",
+      "bangla": "মহিলা",
+      "category": "people",
+      "exampleSentence": [
+        "<ruby>女性<rt>じょせい</rt></ruby>が<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>をしています。",
+        "<ruby>女性<rt>じょせい</rt></ruby>が<ruby>仕事<rt>しごと</rt></ruby>に<ruby>専念<rt>せんねん</rt></ruby>しています。"
+      ]
+    },
+    "24": {
+      "kana": "こくみん",
+      "kanji": "国民",
+      "english": "nation",
+      "bangla": "জাতি",
+      "category": "people",
+      "exampleSentence": [
+        "<ruby>国民<rt>こくみん</rt></ruby>は<ruby>皆<rt>みな</rt></ruby>で<ruby>協力<rt>きょうりょく</rt></ruby>します。",
+        "<ruby>国民<rt>こくみん</rt></ruby>の<ruby>意識<rt>いしき</rt></ruby>が<ruby>重要<rt>じゅうよう</rt></ruby>です。"
+      ]
+    },
+    "25": {
+      "kana": "しみん",
+      "kanji": "市民",
+      "english": "citizen",
+      "bangla": "নাগরিক",
+      "category": "people",
+      "exampleSentence": [
+        "<ruby>市民<rt>しみん</rt></ruby>が<ruby>選挙<rt>せんきょ</rt></ruby>に<ruby>参加<rt>さんか</rt></ruby>しました。",
+        "<ruby>市民<rt>しみん</rt></ruby>として<ruby>責任<rt>せきにん</rt></ruby>があります。"
+      ]
+    },
+    "26": {
+      "kana": "からだ",
+      "kanji": "体",
+      "english": "body",
+      "bangla": "শরীর",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>体<rt>からだ</rt></ruby>は<ruby>大切<rt>たいせつ</rt></ruby>です。",
+        "<ruby>健康<rt>けんこう</rt></ruby>な<ruby>体<rt>からだ</rt></ruby>が<ruby>重要<rt>じゅうよう</rt></ruby>です。"
+      ]
+    },
+    "27": {
+      "kana": "あたま",
+      "kanji": "頭",
+      "english": "head",
+      "bangla": "মাথা",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>頭<rt>あたま</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。",
+        "<ruby>頭<rt>あたま</rt></ruby>を<ruby>冷<rt>ひ</rt></ruby>やしてください。"
+      ]
+    },
+    "28": {
+      "kana": "かお",
+      "kanji": "顔",
+      "english": "face",
+      "bangla": "মুখ",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>顔<rt>かお</rt></ruby>が<ruby>赤<rt>あか</rt></ruby>いですね。",
+        "その<ruby>顔<rt>かお</rt></ruby>を<ruby>覚<rt>おぼ</rt></ruby>えています。"
+      ]
+    },
+    "29": {
+      "kana": "かみ",
+      "kanji": "髪",
+      "english": "hair",
+      "bangla": "চুল",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>髪<rt>かみ</rt></ruby>が<ruby>長<rt>なが</rt></ruby>いです。",
+        "<ruby>髪<rt>かみ</rt></ruby>の<ruby>色<rt>いろ</rt></ruby>が<ruby>綺麗<rt>きれい</rt></ruby>ですね。"
+      ]
+    },
+    "30": {
+      "kana": "ひげ",
+      "kanji": "髭",
+      "english": "beard",
+      "bangla": "দাঁড়ি",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>髭<rt>ひげ</rt></ruby>を<ruby>剃<rt>そ</rt></ruby>ります。",
+        "<ruby>髭<rt>ひげ</rt></ruby>が<ruby>立派<rt>りっぱ</rt></ruby>ですね。"
+      ]
+    },
+    "31": {
+      "kana": "はな",
+      "kanji": "鼻",
+      "english": "nose",
+      "bangla": "নাক",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>鼻<rt>はな</rt></ruby>が<ruby>詰<rt>つ</rt></ruby>まっています。",
+        "<ruby>鼻<rt>はな</rt></ruby>が<ruby>高<rt>たか</rt></ruby>いですね。"
+      ]
+    },
+    "32": {
+      "kana": "くび",
+      "kanji": "首",
+      "english": "neck",
+      "bangla": "গলা",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>首<rt>くび</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。",
+        "<ruby>首<rt>くび</rt></ruby>にマフラーを<ruby>巻<rt>ま</rt></ruby>いています。"
+      ]
+    },
+    "33": {
+      "kana": "のど",
+      "kanji": "喉",
+      "english": "throat",
+      "bangla": "কণ্ঠনালী",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>喉<rt>のど</rt></ruby>が<ruby>渇<rt>かわ</rt></ruby>きました。",
+        "<ruby>喉<rt>のど</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。"
+      ]
+    },
+    "34": {
+      "kana": "うで",
+      "kanji": "腕",
+      "english": "arm",
+      "bangla": "বাহু",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>腕<rt>うで</rt></ruby>を<ruby>伸<rt>の</rt></ruby>ばしてください。",
+        "<ruby>腕<rt>うで</rt></ruby>が<ruby>疲<rt>つか</rt></ruby>れました。"
+      ]
+    },
+    "35": {
+      "kana": "ゆび",
+      "kanji": "指",
+      "english": "finger",
+      "bangla": "আঙ্গুল",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>指<rt>ゆび</rt></ruby>を<ruby>使<rt>つか</rt></ruby>ってください。",
+        "<ruby>指<rt>ゆび</rt></ruby>が<ruby>冷<rt>つめ</rt></ruby>たいです。"
+      ]
+    },
+    "36": {
+      "kana": "むね",
+      "kanji": "胸",
+      "english": "chest",
+      "bangla": "বুক",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>胸<rt>むね</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。",
+        "<ruby>胸<rt>むね</rt></ruby>に手を<ruby>当<rt>あ</rt></ruby>ててください。"
+      ]
+    },
+    "37": {
+      "kana": "おなか",
+      "kanji": "お腹",
+      "english": "stomach",
+      "bangla": "পেট",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>お腹<rt>おなか</rt></ruby>が<ruby>空<rt>す</rt></ruby>きました。",
+        "<ruby>お腹<rt>おなか</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。"
+      ]
+    },
+    "38": {
+      "kana": "こし",
+      "kanji": "腰",
+      "english": "lower back",
+      "bangla": "কোমর",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>腰<rt>こし</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。",
+        "<ruby>腰<rt>こし</rt></ruby>を<ruby>伸<rt>の</rt></ruby>ばしてください。"
+      ]
+    },
+    "39": {
+      "kana": "おしり",
+      "kanji": "お尻",
+      "english": "butt",
+      "bangla": "নিতম্ব",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>お尻<rt>おしり</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。",
+        "<ruby>お尻<rt>おしり</rt></ruby>を座ってください。"
+      ]
+    },
+    "40": {
+      "kana": "せなか",
+      "kanji": "背中",
+      "english": "back",
+      "bangla": "পিঠ",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>背中<rt>せなか</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。",
+        "<ruby>背中<rt>せなか</rt></ruby>を<ruby>伸<rt>の</rt></ruby>ばしてください。"
+      ]
+    },
+    "41": {
+      "kana": "ほね",
+      "kanji": "骨",
+      "english": "bone",
+      "bangla": "হাড়",
+      "category": "bodyParts",
+      "exampleSentence": [
+        "<ruby>骨<rt>ほね</rt></ruby>が<ruby>折<rt>お</rt></ruby>れました。",
+        "<ruby>骨<rt>ほね</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。"
+      ]
+    },
+    "42": {
+      "kana": "しごと",
+      "kanji": "仕事",
+      "english": "work",
+      "bangla": "কাজ",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>仕事<rt>しごと</rt></ruby>が<ruby>忙<rt>いそが</rt></ruby>しいです。",
+        "<ruby>仕事<rt>しごと</rt></ruby>を<ruby>終<rt>お</rt></ruby>わらせましょう。"
+      ]
+    },
+    "43": {
+      "kana": "しゃちょう",
+      "kanji": "社長",
+      "english": "company president",
+      "bangla": "কোম্পানির প্রধান",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>社長<rt>しゃちょう</rt></ruby>と<ruby>話<rt>はな</rt></ruby>します。",
+        "<ruby>社長<rt>しゃちょう</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しいです。"
+      ]
+    },
+    "44": {
+      "kana": "ぶちょう",
+      "kanji": "部長",
+      "english": "general manager",
+      "bangla": "জেনারেল ম্যানেজার",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>部長<rt>ぶちょう</rt></ruby>に<ruby>報告<rt>ほうこく</rt></ruby>します。",
+        "<ruby>部長<rt>ぶちょう</rt></ruby>が<ruby>会議<rt>かいぎ</rt></ruby>を<ruby>開<rt>ひら</rt></ruby>きます。"
+      ]
+    },
+    "45": {
+      "kana": "かちょう",
+      "kanji": "課長",
+      "english": "section manager",
+      "bangla": "সেকশন ম্যানেজার",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>課長<rt>かちょう</rt></ruby>が<ruby>指示<rt>しじ</rt></ruby>を<ruby>出<rt>だ</rt></ruby>します。",
+        "<ruby>課長<rt>かちょう</rt></ruby>と<ruby>相談<rt>そうだん</rt></ruby>しました。"
+      ]
+    },
+    "46": {
+      "kana": "どうりょう",
+      "kanji": "同僚",
+      "english": "colleague",
+      "bangla": "সহকর্মী",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>同僚<rt>どうりょう</rt></ruby>と一緒に<ruby>仕事<rt>しごと</rt></ruby>をします。",
+        "<ruby>同僚<rt>どうりょう</rt></ruby>が<ruby>助<rt>たす</rt></ruby>けてくれました。"
+      ]
+    },
+    "47": {
+      "kana": "はいしゃ",
+      "kanji": "歯医者",
+      "english": "dentist",
+      "bangla": "ডেন্টিস্ট",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>歯医者<rt>はいしゃ</rt></ruby>に行きます。",
+        "<ruby>歯医者<rt>はいしゃ</rt></ruby>で<ruby>治療<rt>ちりょう</rt></ruby>を受けます。"
+      ]
+    },
+    "48": {
+      "kana": "けいさつ",
+      "kanji": "警察",
+      "english": "police",
+      "bangla": "পুলিশ",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>警察<rt>けいさつ</rt></ruby>に<ruby>通報<rt>つうほう</rt></ruby>します。",
+        "<ruby>警察<rt>けいさつ</rt></ruby>が来ました。"
+      ]
+    },
+    "49": {
+      "kana": "てんいん",
+      "kanji": "店員",
+      "english": "shop clerk",
+      "bangla": "দোকানের কর্মচারী",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>店員<rt>てんいん</rt></ruby>が<ruby>商品<rt>しょうひん</rt></ruby>を<ruby>案内<rt>あんない</rt></ruby>します。",
+        "<ruby>店員<rt>てんいん</rt></ruby>に<ruby>質問<rt>しつもん</rt></ruby>しました。"
+      ]
+    },
+    "50": {
+      "kana": "えきいん",
+      "kanji": "駅員",
+      "english": "station staff",
+      "bangla": "স্টেশনের কর্মী",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>駅員<rt>えきいん</rt></ruby>に<ruby>道<rt>みち</rt></ruby>を<ruby>尋<rt>たず</rt></ruby>ねます。",
+        "<ruby>駅員<rt>えきいん</rt></ruby>が<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>します。"
+      ]
+    },
+    "51": {
+      "kana": "かいしゃいん",
+      "kanji": "会社員",
+      "english": "company employee",
+      "bangla": "কোম্পানির কর্মচারী",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>会社員<rt>かいしゃいん</rt></ruby>として<ruby>働<rt>はたら</rt></ruby>いています。",
+        "<ruby>会社員<rt>かいしゃいん</rt></ruby>が<ruby>多<rt>おお</rt></ruby>いです。"
+      ]
+    },
+    "52": {
+      "kana": "ぎんこういん",
+      "kanji": "銀行員",
+      "english": "bank clerk",
+      "bangla": "ব্যাঙ্ক কর্মচারী",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>銀行員<rt>ぎんこういん</rt></ruby>が<ruby>対応<rt>たいおう</rt></ruby>します。",
+        "<ruby>銀行員<rt>ぎんこういん</rt></ruby>に<ruby>相談<rt>そうだん</rt></ruby>します。"
+      ]
+    },
+    "53": {
+      "kana": "うんてんしゅ",
+      "kanji": "運転手",
+      "english": "driver",
+      "bangla": "চালক",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>運転手<rt>うんてんしゅ</rt></ruby>がバスを<ruby>運転<rt>うんてん</rt></ruby>します。",
+        "<ruby>運転手<rt>うんてんしゅ</rt></ruby>と<ruby>話<rt>はな</rt></ruby>しました。"
+      ]
+    },
+    "54": {
+      "kana": "かしゅ",
+      "kanji": "歌手",
+      "english": "singer",
+      "bangla": "গায়ক",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>歌手<rt>かしゅ</rt></ruby>が<ruby>歌<rt>うた</rt></ruby>を<ruby>歌<rt>うた</rt></ruby>います。",
+        "<ruby>歌手<rt>かしゅ</rt></ruby>のコンサートに<ruby>行<rt>い</rt></ruby>きました。"
+      ]
+    },
+    "55": {
+      "kana": "アルバイト",
+      "kanji": "-",
+      "english": "part-time job",
+      "bangla": "পার্টটাইম কাজ",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>彼<rt>かれ</rt></ruby>は<ruby>大学生<rt>だいがくせい</rt></ruby>で、毎日レストランでアルバイトをしています。",
+        "アルバイトの<ruby>シフト</ruby>を<ruby>来週<rt>らいしゅう</rt></ruby>の<ruby>月曜日<rt>げつようび</rt></ruby>までに決めてください。"
+      ]
+    },
+    "56": {
+      "kana": "めんせつ",
+      "kanji": "面接",
+      "english": "interview",
+      "bangla": "ভাইভা ইন্তারভিউ",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>彼<rt>かれ</rt></ruby>は<ruby>面接<rt>めんせつ</rt></ruby>に<ruby>成功<rt>せいこう</rt></ruby>しました。",
+        "<ruby>面接<rt>めんせつ</rt></ruby>のために<ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きました。"
+      ]
+    },
+    "57": {
+      "kana": "りれきしょ",
+      "kanji": "履歴書",
+      "english": "resume",
+      "bangla": "বায়োডাটা",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>履歴書<rt>りれきしょ</rt></ruby>を<ruby>準備<rt>じゅんび</rt></ruby>しました。",
+        "<ruby>彼<rt>かれ</rt></ruby>の<ruby>履歴書<rt>りれきしょ</rt></ruby>はとても<ruby>詳<rt>くわ</rt></ruby>しいです。"
+      ]
+    },
+    "58": {
+      "kana": "しょるい",
+      "kanji": "書類",
+      "english": "documents",
+      "bangla": "কাগজপত্র",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>書類<rt>しょるい</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>しました。",
+        "<ruby>新<rt>あたら</rt></ruby>しい<ruby>書類<rt>しょるい</rt></ruby>が<ruby>届<rt>とど</rt></ruby>きました。"
+      ]
+    },
+    "59": {
+      "kana": "きゅうりょう",
+      "kanji": "給料",
+      "english": "salary",
+      "bangla": "বেতন",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>給料<rt>きゅうりょう</rt></ruby>が<ruby>上<rt>あ</rt></ruby>がりました。",
+        "<ruby>来月<rt>らいげつ</rt></ruby>の<ruby>給料<rt>きゅうりょう</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>しました。"
+      ]
+    },
+    "60": {
+      "kana": "しゅっちょう",
+      "kanji": "出張",
+      "english": "business trip",
+      "bangla": "বিজনেস ট্রিপ",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>来週<rt>らいしゅう</rt></ruby>に<ruby>出張<rt>しゅっちょう</rt></ruby>があります。",
+        "<ruby>出張<rt>しゅっちょう</rt></ruby>の<ruby>準備<rt>じゅんび</rt></ruby>を<ruby>始<rt>はじ</rt></ruby>めました。"
+      ]
+    },
+    "61": {
+      "kana": "かいぎ",
+      "kanji": "会議",
+      "english": "meeting",
+      "bangla": "মিটিং",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>会議<rt>かいぎ</rt></ruby>が<ruby>長<rt>なが</rt></ruby>かったです。",
+        "<ruby>今日<rt>きょう</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>で<ruby>話<rt>はな</rt></ruby>した<ruby>内容<rt>ないよう</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>しました。"
+      ]
+    },
+    "62": {
+      "kana": "さんぎょう",
+      "kanji": "産業",
+      "english": "industry",
+      "bangla": "উৎপাদনশিল্প",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>日本<rt>にほん</rt></ruby>の<ruby>工業<rt>こうぎょう</rt></ruby>は<ruby>発展<rt>はってん</rt></ruby>しています。",
+        "<ruby>産業<rt>さんぎょう</rt></ruby>の<ruby>成長<rt>せいちょう</rt></ruby>が<ruby>注目<rt>ちゅうもく</rt></ruby>されています。"
+      ]
+    },
+    "63": {
+      "kana": "ぼうえき",
+      "kanji": "貿易",
+      "english": "trade",
+      "bangla": "বাণিজ্য",
+      "category": "work",
+      "exampleSentence": [
+        "<ruby>貿易<rt>ぼうえき</rt></ruby>が<ruby>盛<rt>さか</rt></ruby>んになっています。",
+        "<ruby>国際<rt>こくさい</rt></ruby>の<ruby>貿易<rt>ぼうえき</rt></ruby>が<ruby>増加<rt>ぞうか</rt></ruby>しました。"
+      ]
+    },
+    "64": {
+      "kana": "たべもの",
+      "kanji": "食べ物",
+      "english": "food",
+      "bangla": "খাবার",
+      "category": "food",
+      "exampleSentence": [
+        "スーパーでたくさんの<ruby>食<rt>た</rt>べ物</ruby>を買いました。",
+        "<ruby>食<rt>た</rt>べ物</ruby>は新鮮なものがいいです。"
+      ]
+    },
+    "65": {
+      "kana": "のみもの",
+      "kanji": "飲み物",
+      "english": "beverage",
+      "bangla": "পানীয়",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>冷<rt>つめ</rt></ruby>たい<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>が<ruby>飲<rt>の</rt></ruby>みたいです。",
+        "<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>のメニューを<ruby>見<rt>み</rt></ruby>せてください。"
+      ]
+    },
+    "66": {
+      "kana": "りょうり",
+      "kanji": "料理",
+      "english": "cuisine",
+      "bangla": "রান্না",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>母<rt>はは</rt></ruby>は<ruby>日本<rt>にほん</rt></ruby><ruby>料理<rt>りょうり</rt></ruby>が<ruby>得意<rt>とくい</rt></ruby>です。",
+        "<ruby>料理<rt>りょうり</rt></ruby>の<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みました。"
+      ]
+    },
+    "67": {
+      "kana": "やさい",
+      "kanji": "野菜",
+      "english": "vegetable",
+      "bangla": "সবজি",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>新鮮<rt>しんせん</rt></ruby>な<ruby>野菜<rt>やさい</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。",
+        "<ruby>野菜<rt>やさい</rt></ruby>は<ruby>体<rt>からだ</rt></ruby>に良いです。"
+      ]
+    },
+    "68": {
+      "kana": "たまねぎ",
+      "kanji": "玉ねぎ",
+      "english": "onion",
+      "bangla": "পেঁয়াজ",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>玉<rt>たま</rt></ruby>ねぎを<ruby>切<rt>き</rt></ruby>りました。",
+        "<ruby>料理<rt>りょうり</rt></ruby>に<ruby>玉<rt>たま</rt></ruby>ねぎを<ruby>使<rt>つか</rt></ruby>います。"
+      ]
+    },
+    "69": {
+      "kana": "にんじん",
+      "kanji": "人参",
+      "english": "carrot",
+      "bangla": "গাজর",
+      "category": "food",
+      "exampleSentence": [
+        "サラダに<ruby>人参<rt>にんじん</rt></ruby>を入れます。",
+        "<ruby>人参<rt>にんじん</rt></ruby>はオレンジ色です。"
+      ]
+    },
+    "70": {
+      "kana": "なす",
+      "kanji": "茄子",
+      "english": "eggplant",
+      "bangla": "বেগুন",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>畑<rt>はたけ</rt></ruby>で<ruby>茄子<rt>なす</rt></ruby>を<ruby>育<rt>そだ</rt></ruby>てています。",
+        "<ruby>茄子<rt>なす</rt></ruby>は<ruby>焼<rt>や</rt></ruby>いて<ruby>食<rt>た</rt></ruby>べます。"
+      ]
+    },
+    "71": {
+      "kana": "こめ",
+      "kanji": "米",
+      "english": "rice",
+      "bangla": "চাল",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>米<rt>こめ</rt></ruby>は<ruby>主食<rt>しゅしょく</rt></ruby>です。",
+        "日本では<ruby>米<rt>こめ</rt></ruby>をよく<ruby>食<rt>た</rt></ruby>べます。"
+      ]
+    },
+    "72": {
+      "kana": "ちょうしょく",
+      "kanji": "朝食",
+      "english": "breakfast",
+      "bangla": "নাস্তা",
+      "category": "food",
+      "exampleSentence": [
+        "朝は必ず<ruby>朝食<rt>ちょうしょく</rt></ruby>を食べます。",
+        "<ruby>朝食<rt>ちょうしょく</rt></ruby>にパンを食べました。"
+      ]
+    },
+    "73": {
+      "kana": "ちゅうしょく",
+      "kanji": "昼食",
+      "english": "lunch",
+      "bangla": "দুপুরের খাবার",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>昼食<rt>ちゅうしょく</rt></ruby>に<ruby>お弁当<rt>おべんとう</rt></ruby>を<ruby>持<rt>も</rt></ruby>ってきました。",
+        "<ruby>会社<rt>かいしゃ</rt></ruby>で<ruby>昼食<rt>ちゅうしょく</rt></ruby>を<ruby>食<rt>た</rt></ruby>べました。"
+      ]
+    },
+    "74": {
+      "kana": "ゆうしょく",
+      "kanji": "夕食",
+      "english": "dinner",
+      "bangla": "রাতের খাবার",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>夕食<rt>ゆうしょく</rt></ruby>に<ruby>魚<rt>さかな</rt></ruby>を<ruby>食<rt>た</rt></ruby>べました。",
+        "<ruby>家族<rt>かぞく</rt></ruby>と<ruby>夕食<rt>ゆうしょく</rt></ruby>を<ruby>楽<rt>たの</rt></ruby>しみました。"
+      ]
+    },
+    "75": {
+      "kana": "にく",
+      "kanji": "肉",
+      "english": "meat",
+      "bangla": "মাংস",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>肉<rt>にく</rt></ruby>を<ruby>焼<rt>や</rt></ruby>いて<ruby>食<rt>た</rt></ruby>べました。",
+        "<ruby>好<rt>す</rt></ruby>きな<ruby>肉<rt>にく</rt></ruby><ruby>料理<rt>りょうり</rt></ruby>はステーキです。"
+      ]
+    },
+    "76": {
+      "kana": "ぎゅうにく",
+      "kanji": "牛肉",
+      "english": "beef",
+      "bangla": "গরুর মাংস",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>牛肉<rt>ぎゅうにく</rt></ruby>を買いました。",
+        "<ruby>牛肉<rt>ぎゅうにく</rt></ruby>を<ruby>煮<rt>に</rt></ruby>込みます。"
+      ]
+    },
+    "77": {
+      "kana": "ぶたにく",
+      "kanji": "豚肉",
+      "english": "pork",
+      "bangla": "শূকরের মাংস",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>豚肉<rt>ぶたにく</rt></ruby>を<ruby>炒<rt>いた</rt></ruby>めました。",
+        "スープに<ruby>豚肉<rt>ぶたにく</rt></ruby>を使います。"
+      ]
+    },
+    "78": {
+      "kana": "とりにく",
+      "kanji": "鶏肉",
+      "english": "chicken",
+      "bangla": "মুরগির মাংস",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>鶏肉<rt>とりにく</rt></ruby>はおいしいです。",
+        "スーパーで<ruby>鶏肉<rt>とりにく</rt></ruby>を買いました。"
+      ]
+    },
+    "79": {
+      "kana": "スープ",
+      "kanji": "-",
+      "english": "soup",
+      "bangla": "সুপ",
+      "category": "food",
+      "exampleSentence": [
+        "おいしいスープを<ruby>飲<rt>の</rt></ruby>みました。",
+        "スープは<ruby>体<rt>からだ</rt></ruby>にいいです。"
+      ]
+    },
+    "80": {
+      "kana": "サンドイッチ",
+      "kanji": "-",
+      "english": "sandwich",
+      "bangla": "স্যান্ডউইচ",
+      "category": "food",
+      "exampleSentence": [
+"サンドイッチを<ruby>作<rt>つく</rt></ruby>りました。",
+"<ruby>朝<rt>あさ</rt></ruby>ごはんにサンドイッチを<ruby>食<rt>た</rt></ruby>べました。"
+      ]
+    },
+    "81": {
+      "kana": "サラダ",
+      "kanji": "-",
+      "english": "salad",
+      "bangla": "সালাদ",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>新鮮<rt>しんせん</rt></ruby>なサラダを<ruby>食<rt>た</rt>べました</ruby>。",
+        "サラダは<ruby>健康<rt>けんこう</rt></ruby>に<ruby>良<rt>よ</rt>い</ruby>です。"
+      ]
+    },
+    "82": {
+      "kana": "スパゲッティ",
+      "kanji": "-",
+      "english": "spaghetti",
+      "bangla": "স্প্যাগেটি",
+      "category": "food",
+      "exampleSentence": [
+        "スパゲッティが<ruby>大好き<rt>だいすき</rt></ruby>です。",
+        "<ruby>夕食<rt>ゆうしょく</rt></ruby>にスパゲッティを<ruby>食<rt>た</rt></ruby>べました。"
+      ]
+    },
+    "83": {
+      "kana": "ケーキ",
+      "kanji": "-",
+      "english": "cake",
+      "bangla": "কেক",
+      "category": "food",
+      "exampleSentence": [
+        "おいしいケーキを<ruby>食<rt>た</rt></ruby>べました。",
+        "<ruby>誕生日<rt>たんじょうび</rt></ruby>にケーキを買いました。"
+      ]
+    },
+    "84": {
+      "kana": "おさけ",
+      "kanji": "お酒",
+      "english": "liquor / sake",
+      "bangla": "ওসাকে",
+      "category": "beverage",
+      "exampleSentence": [
+        "<ruby>お酒<rt>おさけ</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みません。",
+        "<ruby>友達<rt>ともだち</rt></ruby>と<ruby>お酒<rt>おさけ</rt></ruby>を<ruby>楽<rt>たの</rt></ruby>しみました。"
+      ]
+    },
+    "85": {
+      "kana": "おちゃ",
+      "kanji": "お茶",
+      "english": "tea",
+      "bangla": "ওচা",
+      "category": "beverage",
+      "exampleSentence": [
+        "<ruby>お茶<rt>おちゃ</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みましょう。",
+        "午後に<ruby>お茶<rt>おちゃ</rt></ruby>を<ruby>楽<rt>たの</rt></ruby>しみました。"
+      ]
+    },
+    "86": {
+      "kana": "おゆ",
+      "kanji": "お湯",
+      "english": "hot water",
+      "bangla": "ওইউ",
+      "category": "beverage",
+      "exampleSentence": [
+        "<ruby>お湯<rt>おゆ</rt></ruby>を<ruby>沸<rt>わ</rt></ruby>かしました。",
+        "朝に<ruby>お湯<rt>おゆ</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みました。"
+      ]
+    },
+    "87": {
+      "kana": "ワイン",
+      "kanji": "",
+      "english": "wine",
+      "bangla": "ওয়াইন",
+      "category": "beverage",
+      "exampleSentence": [
+        "友達とワインを飲みました。",
+        "ワインが好きです。"
+      ]
+    },
+    "88": {
+      "kana": "ジュース",
+      "kanji": "",
+      "english": "juice",
+      "bangla": "জুস",
+      "category": "beverage",
+      "exampleSentence": [
+        "ジュースを買いました。",
+        "朝ごはんにジュースを飲みました。"
+      ]
+    },
+    "89": {
+      "kana": "わしょく",
+      "kanji": "和食",
+      "english": "Japanese food",
+      "bangla": "জাপানিজ খাবার",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>和食<rt>わしょく</rt></ruby>が好きです。",
+        "<ruby>和食<rt>わしょく</rt></ruby>を食べました。"
+      ]
+    },
+    "90": {
+      "kana": "ようしょく",
+      "kanji": "洋食",
+      "english": "western food",
+      "bangla": "পশ্চিমা খাবার",
+      "category": "food",
+      "exampleSentence": [
+        "<ruby>洋食<rt>ようしょく</rt></ruby>を作りました。",
+        "<ruby>洋食<rt>ようしょく</rt></ruby>はおいしいです。"
+      ]
+    },
+    "91": {
+      "kana": "のりもの",
+      "kanji": "乗り物",
+      "english": "vehicle",
+      "bangla": "যানবাহন",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>乗<rt>の</rt>り<rt>もの</rt></ruby>はどこですか？",
+        "<ruby>乗<rt>の</rt>り<rt>もの</rt></ruby>にのるのは楽しいです。"
+      ]
+    },
+    "92": {
+      "kana": "じてんしゃ",
+      "kanji": "自転車",
+      "english": "bicycle",
+      "bangla": "বাইসাইকেল",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>自<rt>じ</rt>転<rt>てん</rt>車<rt>しゃ</rt></ruby>で行きましょう。",
+        "<ruby>自<rt>じ</rt>転<rt>てん</rt>車<rt>しゃ</rt></ruby>が好きです。"
+      ]
+    },
+    "93": {
+      "kana": "じどうしゃ",
+      "kanji": "自動車",
+      "english": "car",
+      "bangla": "গাড়ি",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>自<rt>じ</rt>動<rt>どう</rt>車<rt>しゃ</rt></ruby>を買いました。",
+        "<ruby>自<rt>じ</rt>動<rt>どう</rt>車<rt>しゃ</rt></ruby>が好きです。"
+      ]
+    },
+    "94": {
+      "kana": "タクシー",
+      "kanji": "-",
+      "english": "taxi",
+      "bangla": "ট্যাক্সি",
+      "category": "transportation",
+      "exampleSentence": [
+        "タクシーで行きます。",
+        "タクシーを待っています。"
+      ]
+    },
+    "95": {
+      "kana": "ひこうき",
+      "kanji": "飛行機",
+      "english": "airplane",
+      "bangla": "উড়োজাহাজ",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>飛<rt>ひ</rt>行<rt>こう</rt>機<rt>き</rt></ruby>に乗ります。",
+        "<ruby>飛<rt>ひ</rt>行<rt>こう</rt>機<rt>き</rt></ruby>が好きです。"
+      ]
+    },
+    "96": {
+      "kana": "ふね",
+      "kanji": "船",
+      "english": "ship",
+      "bangla": "জাহাজ",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>船<rt>ふね</rt></ruby>で旅行します。",
+        "<ruby>船<rt>ふね</rt></ruby>は大きいです。"
+      ]
+    },
+    "97": {
+      "kana": "きゅうきゅうしゃ",
+      "kanji": "救急車",
+      "english": "ambulance",
+      "bangla": "এ্যাম্বুলেন্স",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>救<rt>きゅう</rt>急<rt>きゅう</rt>車<rt>しゃ</rt></ruby>が来ます。",
+        "<ruby>救<rt>きゅう</rt>急<rt>きゅう</rt>車<rt>しゃ</rt></ruby>を呼びましょう。"
+      ]
+    },
+    "98": {
+      "kana": "しょうぼうしゃ",
+      "kanji": "消防車",
+      "english": "fire engine",
+      "bangla": "অগ্নিনির্বাপক গাড়ি",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>消<rt>しょう</rt>防<rt>ぼう</rt>車<rt>しゃ</rt></ruby>が来ました。",
+        "<ruby>消<rt>しょう</rt>防<rt>ぼう</rt>車<rt>しゃ</rt></ruby>に水をかけます。"
+      ]
+    },
+    "99": {
+      "kana": "しんかんせん",
+      "kanji": "新幹線",
+      "english": "bullet train",
+      "bangla": "বুলেট ট্রেন",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>で旅行します。",
+        "<ruby>新<rt>しん</rt>幹<rt>かん</rt>線<rt>せん</rt></ruby>は速いです。"
+      ]
+    },
+    "100": {
+      "kana": "ふつう",
+      "kanji": "普通",
+      "english": "local train",
+      "bangla": "লোকাল (ট্রেন)",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>普<rt>ふ</rt>通<rt>つう</rt>電<rt>でん</rt>車<rt>しゃ</rt></ruby>に乗ります。",
+        "<ruby>普<rt>ふ</rt>通<rt>つう</rt>電<rt>でん</rt>車<rt>しゃ</rt></ruby>は便利です。"
+      ]
+    },
+    "101": {
+      "kana": "きゅうこう",
+      "kanji": "急行",
+      "english": "express train",
+      "bangla": "এক্সপ্রেস (ট্রেন)",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>急<rt>きゅう</rt>行<rt>こう</rt>電<rt>でん</rt>車<rt>しゃ</rt></ruby>に乗ります。",
+        "<ruby>急<rt>きゅう</rt>行<rt>こう</rt>電<rt>でん</rt>車<rt>しゃ</rt></ruby>は速いです。"
+      ]
+    },
+    "102": {
+      "kana": "とっきゅう",
+      "kanji": "特急）",
+      "english": "limited-express train",
+      "bangla": "স্পেশাল এক্সপ্রেস (ট্রেন)",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>特<rt>とっ</rt>急<rt>きゅう</rt>電<rt>でん</rt>車<rt>しゃ</rt></ruby>に乗ります。",
+        "<ruby>特<rt>とっ</rt>急<rt>きゅう</rt>電<rt>でん</rt>車<rt>しゃ</rt></ruby>は速いです。"
+      ]
+    },
+    "103": {
+      "kana": "ちかてつ",
+      "kanji": "地下鉄",
+      "english": "subway",
+      "bangla": "পাতাল রেল",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>地<rt>ち</rt>下<rt>か</rt>鉄<rt>てつ</rt></ruby>に乗ります。",
+        "<ruby>地<rt>ち</rt>下<rt>か</rt>鉄<rt>てつ</rt></ruby>が便利です。("
+      ]
+    },
+    "104": {
+      "kana": "しんごう",
+      "kanji": "信号",
+      "english": "traffic light",
+      "bangla": "ট্রাফিক সিগনাল",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>信<rt>しん</rt>号<rt>ごう</rt></ruby>が青になりました",
+        "<ruby>信<rt>しん</rt>号<rt>ごう</rt></ruby>を見てください。"
+     ]
+    },
+    "105": {
+      "kana": "どうろ",
+      "kanji": "道路",
+      "english": "road",
+      "bangla": "রাস্তা",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>道路<rt>どうろ</rt></ruby>を渡る。",
+        "<ruby>道路<rt>どうろ</rt></ruby>が混雑している。"
+      ]
+    },
+    "106": {
+      "kana": "こうつう",
+      "kanji": "交通",
+      "english": "transportation",
+      "bangla": "পরিবহন",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>交通<rt>こうつう</rt></ruby>の便利さ。",
+        "<ruby>交通<rt>こうつう</rt></ruby>が発展している。"
+      ]
+    },
+    "107": {
+      "kana": "こうつうじゅうたい",
+      "kanji": "交通渋滞",
+      "english": "traffic jam",
+      "bangla": "যানজট",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>交通渋滞<rt>こうつうじゅうたい</rt></ruby>がひどい。",
+        "<ruby>交通渋滞<rt>こうつうじゅうたい</rt></ruby>で遅れた。"
+      ]
+    },
+    "108": {
+      "kana": "こうじちゅう",
+      "kanji": "工事中",
+      "english": "under construction",
+      "bangla": "নির্মাণাধীন",
+      "category": "transportation",
+      "exampleSentence": [
+        "<ruby>工事中<rt>こうじちゅう</rt></ruby>の道路。",
+        "<ruby>工事中<rt>こうじちゅう</rt></ruby>で通行止め。"
+      ]
+    },
+    "109": {
+      "kana": "ふく",
+      "kanji": "服",
+      "english": "clothes",
+      "bangla": "কাপড়",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>服<rt>ふく</rt></ruby>を買いました。",
+        "赤い色の<ruby>服<rt>ふく</rt></ruby>が好きです。"
+      ]
+    },
+    "110": {
+      "kana": "ようふく",
+      "kanji": "洋服",
+      "english": "western-style clothes",
+      "bangla": "পশ্চিমী ধরণের কাপড়",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>洋服<rt>ようふく</rt></ruby>を着ています。",
+        "<ruby>洋服<rt>ようふく</rt></ruby>が好きです。"
+      ]
+    },
+    "111": {
+      "kana": "わふく",
+      "kanji": "和服",
+      "english": "Japanese-style clothes",
+      "bangla": "জাপানি ধরণের কাপড়",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>和服<rt>わふく</rt></ruby>を着ています。",
+        "<ruby>和服<rt>わふく</rt></ruby>はとてもきれいです。"
+      ]
+    },
+    "112": {
+      "kana": "きもの",
+      "kanji": "着物",
+      "english": "kimono",
+      "bangla": "কিমোনো",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>着物<rt>きもの</rt></ruby>を着て、祭りに行きました。",
+        "<ruby>着物<rt>きもの</rt></ruby>はとても高価です。"
+      ]
+    },
+    "113": {
+      "kana": "コート",
+      "kanji": "-",
+      "english": "coat",
+      "bangla": "কোট",
+      "category": "clothes",
+      "exampleSentence": [
+        "寒いので、コートを着ました。",
+        "コートが新しいです。"
+      ]
+    },
+    "114": {
+      "kana": "スカート",
+      "kanji": "-",
+      "english": "skirt",
+      "bangla": "স্কার্ট",
+      "category": "clothes",
+      "exampleSentence": [
+        "赤いスカートを買いました。",
+        "スカートは短いです。"
+      ]
+    },
+    "115": {
+      "kana": "セーター",
+      "kanji": "-",
+      "english": "sweater",
+      "bangla": "সুইটার",
+      "category": "clothes",
+      "exampleSentence": [
+        "寒いのでセーターを着ています。",
+        "セーターは暖かいです。"
+      ]
+    },
+    "116": {
+      "kana": "マフラー",
+      "kanji": "-",
+      "english": "winter scarf",
+      "bangla": "মাফলার",
+      "category": "clothes",
+      "exampleSentence": [
+        "冬にはマフラーを使います。",
+        "マフラーは長いです。"
+      ]
+    },
+    "117": {
+      "kana": "ぼうし",
+      "kanji": "帽子",
+      "english": "cap / hat",
+      "bangla": "টুপি / টুপি",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>帽子<rt>ぼうし</rt></ruby>をかぶっています。",
+        "<ruby>帽子<rt>ぼうし</rt></ruby>がかわいいです。"
+      ]
+    },
+    "118": {
+      "kana": "スーツ",
+      "kanji": "-",
+      "english": "suit",
+      "bangla": "সুট",
+      "category": "clothes",
+      "exampleSentence": [
+        "彼はスーツを着ています。",
+        "スーツは高いです。"
+      ]
+    },
+    "119": {
+      "kana": "ドレス",
+      "kanji": "-",
+      "english": "dress",
+      "bangla": "ড্রেস",
+      "category": "clothes",
+      "exampleSentence": [
+        "彼女はドレスを着ています。",
+        "ドレスはとてもきれいです。"
+      ]
+    },
+    "120": {
+      "kana": "ゆびわ",
+      "kanji": "指輪",
+      "english": "ring",
+      "bangla": "যাওয়া",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>指輪<rt>ゆびわ</rt></ruby>をはめる。",
+        "彼女は<ruby>指輪<rt>ゆびわ</rt></ruby>を持っている。"
+      ]
+    },
+    "121": {
+      "kana": "てぶくろ",
+      "kanji": "手袋",
+      "english": "gloves",
+      "bangla": "গ্লাভস",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>手袋<rt>てぶくろ</rt></ruby>をつける。",
+        "寒いから、<ruby>手袋<rt>てぶくろ</rt></ruby>を取っておいた。"
+      ]
+    },
+    "122": {
+      "kana": "うわぎ",
+      "kanji": "上着",
+      "english": "jacket",
+      "bangla": "জ্যাকেট",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>上着<rt>うわぎ</rt></ruby>を脱ぐ。",
+        "彼は新しい<ruby>ジャケット<rt>ジャケット</rt></ruby>を買った。"
+      ]
+    },
+    "123": {
+      "kana": "したぎ",
+      "kanji": "下着",
+      "english": "underwear",
+      "bangla": "অন্তর্বাস",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>下着<rt>したぎ</rt></ruby>を着る。",
+        "彼女は新しい<ruby>下着<rt>したぎ</rt></ruby>を買った。"
+      ]
+    },
+    "124": {
+      "kana": "ネクタイ",
+      "kanji": "ネクタイ",
+      "english": "necktie",
+      "bangla": "টাই",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>ネクタイ<rt>ネクタイ</rt></ruby>を締める。",
+        "彼は青い<ruby>ネクタイ<rt>ネクタイ</rt></ruby>を選んだ。"
+      ]
+    },
+    "125": {
+      "kana": "ズボン",
+      "kanji": "-",
+      "english": "pants",
+      "bangla": "প্যান্ট",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>ズボン<rt>ズボン</rt></ruby>を履く。",
+        "彼は新しい<ruby>ズボン<rt>ズボン</rt></ruby>を買った。"
+      ]
+    },
+    "126": {
+      "kana": "ブーツ",
+      "kanji": "-",
+      "english": "boots",
+      "bangla": "বুট",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>ブーツ<rt>ブーツ</rt></ruby>を履く。",
+        "冬は<ruby>ブーツ<rt>ブーツ</rt></ruby>を履かなければならない。"
+      ]
+    },
+    "127": {
+      "kana": "スニーカー",
+      "kanji": "-",
+      "english": "sneaker",
+      "bangla": "স্নিকার",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>スニーカー<rt>スニーカー</rt></ruby>を履いて走る。",
+        "彼は新しい<ruby>スニーカー<rt>スニーカー</rt></ruby>を買った。"
+      ]
+    },
+    "128": {
+      "kana": "ハイヒール",
+      "kanji": "-",
+      "english": "high heels",
+      "bangla": "হাই হিল",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>ハイヒール<rt>ハイヒール</rt></ruby>を履いて歩く。",
+        "彼女は<ruby>ハイヒール<rt>ハイヒール</rt></ruby>を履くのが好きだ。"
+      ]
+    },
+    "129": {
+      "kana": "サンダル",
+      "kanji": "-",
+      "english": "sandals",
+      "bangla": "স্যান্ডেল",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>サンダル<rt>サンダル</rt></ruby>を履く。",
+        "夏には<ruby>サンダル<rt>サンダル</rt></ruby>が便利だ。"
+      ]
+    },
+    "130": {
+      "kana": "くつした",
+      "kanji": "靴下",
+      "english": "socks",
+      "bangla": "মোজা",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>靴下<rt>くつした</rt></ruby>を履く。",
+        "寒いので<ruby>靴下<rt>くつした</rt></ruby>を履きました。"
+      ]
+    },
+    "131": {
+      "kana": "ポケット",
+      "kanji": "-",
+      "english": "pocket",
+      "bangla": "পকেট",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>ポケット<rt>ポケット</rt></ruby>に手を入れる。",
+        "ジャケットの<ruby>ポケット<rt>ポケット</rt></ruby>にスマホを入れた。"
+      ]
+    },
+    "132": {
+      "kana": "アクセサリー",
+      "kanji": "-",
+      "english": "accessory",
+      "bangla": "অ্যাকসেসরি",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>アクセサリー<rt>アクセサリー</rt></ruby>をつける。",
+        "彼女は多くの<ruby>アクセサリー<rt>アクセサリー</rt></ruby>を持っている。"
+      ]
+    },
+    "133": {
+      "kana": "めがね",
+      "kanji": "眼鏡",
+      "english": "glasses",
+      "bangla": "চশমা",
+      "category": "clothes",
+      "exampleSentence": [
+        "<ruby>眼鏡<rt>めがね</rt></ruby>をかける。",
+        "彼は<ruby>眼鏡<rt>めがね</rt></ruby>をかけている。"
+      ]
+    },
+    "134": {
+      "kana": "きた",
+      "kanji": "北",
+      "english": "north",
+      "bangla": "উত্তর",
+      "category": "directions",
+      "exampleSentence": [
+        "今日はきたから風が強いです。",
+        "北の方角に行くと、雪山があります。"
+      ]
+    },
+    "135": {
+      "kana": "みなみ",
+      "kanji": "南",
+      "english": "south",
+      "bangla": "দক্ষিণ",
+      "category": "directions",
+      "exampleSentence": [
+        "みなみの空には夕日がきれいに見えます。",
+        "南の道を歩くと、海が見えます。"
+      ]
+    },
+    "136": {
+      "kana": "ひがし",
+      "kanji": "東",
+      "english": "east",
+      "bangla": "পূর্ব",
+      "category": "directions",
+      "exampleSentence": [
+        "ひがしから朝日が昇ります。",
+        "東の方向に向かって進んでください。"
+      ]
+    },
+    "137": {
+      "kana": "にし",
+      "kanji": "西",
+      "english": "west",
+      "bangla": "পশ্চিম",
+      "category": "directions",
+      "exampleSentence": [
+        "にしの空には星が輝いています。",
+        "西の道を行くと、駅があります。"
+      ]
+    },
+    "138": {
+      "kana": "ほくとう",
+      "kanji": "北東",
+      "english": "northeast",
+      "bangla": "উত্তর-পূর্ব",
+      "category": "directions",
+      "exampleSentence": [
+        "ほくとうの方向に向かってください。",
+        "北東の風が吹いています。"
+      ]
+    },
+    "139": {
+      "kana": "ほくせい",
+      "kanji": "北西",
+      "english": "northwest",
+      "bangla": "উত্তর-পশ্চিম",
+      "category": "directions",
+      "exampleSentence": [
+        "ほくせいからの風が冷たいです。",
+        "北西の山には雪が積もっています。"
+      ]
+    },
+    "140": {
+      "kana": "なんとう",
+      "kanji": "南東",
+      "english": "southeast",
+      "bangla": "দক্ষিণ-পূর্ব",
+      "category": "directions",
+      "exampleSentence": [
+        "なんとうの海はきれいです。",
+        "南東に進んで、右折してください。"
+      ]
+    },
+    "141": {
+      "kana": "なんせい",
+      "kanji": "南西",
+      "english": "southwest",
+      "bangla": "দক্ষিণ-পশ্চিম",
+      "category": "directions",
+      "exampleSentence": [
+        "なんせいの空に雲が広がっています。",
+        "南西の道を歩くと、街が見えてきます。"
+      ]
+    },
+    "142": {
+      "kana": "せかい",
+      "kanji": "世界",
+      "english": "world",
+      "bangla": "বিশ্ব",
+      "category": "world",
+      "exampleSentence": [
+        "<ruby>世界<rt>せかい</rt></ruby>は広いです。",
+        "<ruby>世界<rt>せかい</rt></ruby>の国々は多様です。"
+      ]
+    },
+    "143": {
+      "kana": "アジア",
+      "kanji": "-",
+      "english": "Asia",
+      "bangla": "এশিয়া",
+      "category": "world",
+      "exampleSentence": [
+        "<ruby>アジア<rt>あじあ</rt></ruby>には多くの国があります。",
+        "<ruby>アジア<rt>あじあ</rt></ruby>は文化的に豊かです。"
+      ]
+    },
+    "144": {
+      "kana": "ヨーロッパ",
+      "kanji": "-",
+      "english": "Europe",
+      "bangla": "ইউরোপ",
+      "category": "world",
+      "exampleSentence": [
+        "<ruby>ヨーロッパ<rt>よーろっぱ</rt></ruby>に旅行したいです。",
+        "<ruby>ヨーロッパ<rt>よーろっぱ</rt></ruby>の歴史は長いです。"
+      ]
+    },
+    "145": {
+      "kana": "きたアメリカ",
+      "kanji": "北アメリカ",
+      "english": "North America",
+      "bangla": "উত্তর আমেরিকা",
+      "category": "world",
+      "exampleSentence": [
+        "<ruby>北アメリカ<rt>きたあめりか</rt></ruby>にはカナダとアメリカがあります。",
+        "<ruby>北アメリカ<rt>きたあめりか</rt></ruby>は大きな大陸です。"
+      ]
+    },
+    "146": {
+      "kana": "みなみアメリカ",
+      "kanji": "南アメリカ",
+      "english": "South America",
+      "bangla": "দক্ষিণ আমেরিকা",
+      "category": "world",
+      "exampleSentence": [
+        "<ruby>南アメリカ<rt>みなみあめりか</rt></ruby>にはブラジルがあります。",
+        "<ruby>南アメリカ<rt>みなみあめりか</rt></ruby>の文化は多様です。"
+      ]
+    },
+    "147": {
+      "kana": "アフリカ",
+      "kanji": "-",
+      "english": "Africa",
+      "bangla": "আফ্রিকা",
+      "category": "world",
+      "exampleSentence": [
+        "<ruby>アフリカ<rt>あふりか</rt></ruby>にはサハラ砂漠があります。",
+        "<ruby>アフリカ<rt>あふりか</rt></ruby>の動物たちはユニークです。"
+      ]
+    },
+    "148": {
+      "kana": "くに",
+      "kanji": "国",
+      "english": "country",
+      "bangla": "দেশ",
+      "category": "world",
+      "exampleSentence": [
+        "<ruby>国<rt>くに</rt></ruby>を旅行するのが好きです。",
+        "<ruby>国<rt>くに</rt></ruby>の文化を学びたいです。"
+      ]
+    },
+    "149": {
+      "kana": "にほん",
+      "kanji": "日本",
+      "english": "Japan",
+      "bangla": "জাপান",
+      "category": "world",
+      "exampleSentence": [
+        "<ruby>日本<rt>にほん</rt></ruby>には四季があります。",
+        "<ruby>日本<rt>にほん</rt></ruby>の食べ物はおいしいです。"
+      ]
+    },
+    "150": {
+      "kana": "かんこく",
+      "kanji": "韓国",
+      "english": "Korea",
+      "bangla": "কোরিয়া",
+      "category": "world",
+      "exampleSentence": [
+        "<ruby>韓国<rt>かんこく</rt></ruby>の音楽は人気があります。",
+        "<ruby>韓国<rt>かんこく</rt></ruby>料理は辛いです。"
+      ]
+    },
+    "151": {
+      "kana": "ちゅうごく",
+      "kanji": "中国",
+      "english": "China",
+      "bangla": "চীন",
+      "category": "world",
+      "exampleSentence": [
+        "<ruby>中国<rt>ちゅうごく</rt></ruby>は広大な国です。",
+        "<ruby>中国<rt>ちゅうごく</rt></ruby>の歴史はとても古いです。"
+      ]
+    },
+    "152": {
+      "kana": "アメリカ",
+      "kanji": "-",
+      "english": "America",
+      "bangla": "আমেরিকা",
+      "category": "world",
+      "exampleSentence": [
+        "<ruby>アメリカ<rt>あめりか</rt></ruby>は多くの国から人々が集まっています。",
+        "<ruby>アメリカ<rt>あめりか</rt></ruby>の映画は世界中で人気があります。"
+      ]
+    },
+    "153": {
+      "kana": "カナダ",
+      "kanji": "-",
+      "english": "Canada",
+      "bangla": "কানাডা",
+      "category": "world",
+      "exampleSentence": [
+        "<ruby>カナダ<rt>かなだ</rt></ruby>には美しい自然があります。",
+        "<ruby>カナダ<rt>かなだ</rt></ruby>の人々は親切です。"
+      ]
+    },
+    "154": {
+      "kana": "ブラジル",
+      "kanji": "-",
+      "english": "Brazil",
+      "bangla": "ব্রাজিল",
+      "category": "world",
+      "exampleSentence": [
+        "<ruby>ブラジル<rt>ぶらじる</rt></ruby>はサッカーが盛んな国です。",
+        "<ruby>ブラジル<rt>ぶらじる</rt></ruby>のアマゾンは世界最大の熱帯雨林です。"
+      ]
+    },
+    "155": {
+      "kana": "オーストラリア",
+      "kanji": "-",
+      "english": "Australia",
+      "bangla": "অস্ট্রেলিয়া",
+      "category": "world",
+      "exampleSentence": [
+        "オーストラリアに行きたいです。",
+        "オーストラリアは広い国です。"
+      ]
+    },
+    "156": {
+      "kana": "フランス",
+      "kanji": "-",
+      "english": "France",
+      "bangla": "ফ্রান্স",
+      "category": "world",
+      "exampleSentence": [
+        "フランスの料理は美味しいです。",
+        "フランスは美しい国です。"
+      ]
+    },
+    "157": {
+      "kana": "ドイツ",
+      "kanji": "-",
+      "english": "Germany",
+      "bangla": "জার্মানি",
+      "category": "world",
+      "exampleSentence": [
+        "ドイツの自動車は高品質です。",
+        "ドイツは有名な観光地があります。"
+      ]
+    },
+    "158": {
+      "kana": "イギリス",
+      "kanji": "-",
+      "english": "The United Kingdom",
+      "bangla": "যুক্তরাজ্য",
+      "category": "world",
+      "exampleSentence": [
+        "イギリスは紅茶で有名です。",
+        "イギリスの歴史はとても興味深いです。"
+      ]
+    },
+    "159": {
+      "kana": "ロシア",
+      "kanji": "-",
+      "english": "Russia",
+      "bangla": "রাশিয়া",
+      "category": "world",
+      "exampleSentence": [
+        "ロシアは広大な国です。",
+        "ロシアには美しい風景があります。"
+      ]
+    },
+    "160": {
+      "kana": "フィリピン",
+      "kanji": "-",
+      "english": "Philippines",
+      "bangla": "ফিলিপাইন",
+      "category": "world",
+      "exampleSentence": [
+        "フィリピンは美しいビーチがあります。",
+        "フィリピンはアジアの国です。"
+      ]
+    },
+    "161": {
+      "kana": "タイ",
+      "kanji": "-",
+      "english": "Thailand",
+      "bangla": "থাইল্যান্ড",
+      "category": "world",
+      "exampleSentence": [
+        "タイ料理は辛いですが美味しいです。",
+        "タイは観光地が豊富です。"
+      ]
+    },
+    "162": {
+      "kana": "インドネシア",
+      "kanji": "-",
+      "english": "Indonesia",
+      "bangla": "ইন্দোনেশিয়া",
+      "category": "world",
+      "exampleSentence": [
+        "インドネシアには多くの島があります。",
+        "インドネシアの文化は豊かです。"
+      ]
+    },
+    "163": {
+      "kana": "インド",
+      "kanji": "-",
+      "english": "India",
+      "bangla": "ভারত",
+      "category": "world",
+      "exampleSentence": [
+        "インドは多様な文化を持つ国です。",
+        "インドの食べ物は香辛料が豊富です。"
+      ]
+    },
+    "164": {
+      "kana": "エジプト",
+      "kanji": "-",
+      "english": "Egypt",
+      "bangla": "মিসর",
+      "category": "world",
+      "exampleSentence": [
+        "エジプトにはピラミッドがあります。",
+        "エジプトの歴史はとても古いです。"
+      ]
+    },
+    "165": {
+      "kana": "いろ",
+      "kanji": "色",
+      "english": "color",
+      "bangla": "রং",
+      "category": "colors",
+      "exampleSentence": [
+        "このいろはとてもきれいです。",
+        "この色はとてもきれいです。"
+      ]
+    },
+    "166": {
+      "kana": "あおいろ",
+      "kanji": "青色",
+      "english": "blue",
+      "bangla": "নীল",
+      "category": "colors",
+      "exampleSentence": [
+        "あおいろの空が広がっています。",
+        "青色の空が広がっています。"
+      ]
+    },
+    "167": {
+      "kana": "あかいろ",
+      "kanji": "赤色",
+      "english": "red",
+      "bangla": "লাল",
+      "category": "colors",
+      "exampleSentence": [
+        "あかいろの花が咲いています。",
+        "赤色の花が咲いています。"
+      ]
+    },
+    "168": {
+      "kana": "くろいろ",
+      "kanji": "黒色",
+      "english": "black",
+      "bangla": "কালো",
+      "category": "colors",
+      "exampleSentence": [
+        "くろいろの服が好きです。",
+        "黒色の服が好きです。"
+      ]
+    },
+    "169": {
+      "kana": "しろいろ",
+      "kanji": "白色",
+      "english": "white",
+      "bangla": "সাদা",
+      "category": "colors",
+      "exampleSentence": [
+        "しろいろの雪が降っています。",
+        "白色の雪が降っています。"
+      ]
+    },
+    "170": {
+      "kana": "きいろ",
+      "kanji": "黄色",
+      "english": "yellow",
+      "bangla": "হলুদ",
+      "category": "colors",
+      "exampleSentence": [
+        "きいろいろの花が咲いています。",
+        "黄色い色の花が咲いています。"
+      ]
+    },
+    "171": {
+      "kana": "ちゃいろ",
+      "kanji": "茶色",
+      "english": "brown",
+      "bangla": "বাদামী",
+      "category": "colors",
+      "exampleSentence": [
+        "ちゃいろの木の葉が落ちています。",
+        "茶色の木の葉が落ちています。"
+      ]
+    },
+    "172": {
+      "kana": "ぎんいろ",
+      "kanji": "銀色",
+      "english": "silver",
+      "bangla": "রূপালী",
+      "category": "colors",
+      "exampleSentence": [
+        "ぎんいろの指輪を持っています。",
+        "銀色の指輪を持っています。"
+      ]
+    },
+    "173": {
+      "kana": "びょうき",
+      "kanji": "病気",
+      "english": "illness",
+      "bangla": "অসুখ",
+      "category": "illness",
+      "exampleSentence": [
+        "<ruby>病気<rt>びょうき</rt></ruby>が治るのを待っています。",
+        "<ruby>病気<rt>びょうき</rt></ruby>で学校を休んでいます。"
+      ]
+    },
+    "174": {
+      "kana": "かぜ",
+      "kanji": "風邪",
+      "english": "cold",
+      "bangla": "সর্দি",
+      "category": "illness",
+      "exampleSentence": [
+        "<ruby>風邪<rt>かぜ</rt></ruby>をひいてしまいました。",
+        "<ruby>風邪<rt>かぜ</rt></ruby>が治ったら学校に行きます。"
+      ]
+    },
+    "175": {
+      "kana": "ねつ",
+      "kanji": "熱",
+      "english": "fever",
+      "bangla": "জ্বর",
+      "category": "illness",
+      "exampleSentence": [
+        "<ruby>熱<rt>ねつ</rt></ruby>が高くて寝ています。",
+        "<ruby>熱<rt>ねつ</rt></ruby>があるので、今日は休みます。"
+      ]
+    },
+    "176": {
+      "kana": "せき",
+      "kanji": "咳",
+      "english": "cough",
+      "bangla": "কাশি",
+      "category": "illness",
+      "exampleSentence": [
+        "<ruby>咳<rt>せき</rt></ruby>が止まりません。",
+        "<ruby>咳<rt>せき</rt></ruby>をしているので、マスクをつけます。"
+      ]
+    },
+    "177": {
+      "kana": "じこ",
+      "kanji": "事故",
+      "english": "accident",
+      "bangla": "দুর্ঘটনা",
+      "category": "accident",
+      "exampleSentence": [
+        "<ruby>事故<rt>じこ</rt></ruby>が起きました。",
+        "<ruby>事故<rt>じこ</rt></ruby>で負傷しました。"
+      ]
+    },
+    "178": {
+      "kana": "けが",
+      "kanji": "怪我",
+      "english": "injury",
+      "bangla": "আঘাত",
+      "category": "accident",
+      "exampleSentence": [
+        "<ruby>怪我<rt>けが</rt></ruby>をしました。",
+        "<ruby>怪我<rt>けが</rt></ruby>が治るのに時間がかかります。"
+      ]
+    },
+    "179": {
+      "kana": "かじ",
+      "kanji": "火事",
+      "english": "fire / burning",
+      "bangla": "অগ্নিকাণ্ড",
+      "category": "accident",
+      "exampleSentence": [
+        "<ruby>火事<rt>かじ</rt></ruby>が発生しました。",
+        "<ruby>火事<rt>かじ</rt></ruby>による煙が立ち上っています。"
+      ]
+    },
+    "180": {
+      "kana": "けしき",
+      "kanji": "景色",
+      "english": "scenery",
+      "bangla": "দৃশ্য",
+      "category": "nature",
+      "exampleSentence": [
+        "<ruby>景色<rt>けしき</rt></ruby>がとてもきれいです。",
+        "湖の<ruby>景色<rt>けしき</rt></ruby>は素晴らしいです。"
+      ]
+    },
+    "181": {
+      "kana": "くうき",
+      "kanji": "空気",
+      "english": "air",
+      "bangla": "বায়ু",
+      "category": "nature",
+      "exampleSentence": [
+        "<ruby>空気<rt>くうき</rt></ruby>が新鮮です。",
+        "山の<ruby>空気<rt>くうき</rt></ruby>は清々しいです。"
+      ]
+    },
+    "182": {
+      "kana": "みずうみ",
+      "kanji": "湖",
+      "english": "lake",
+      "bangla": "হ্রদ",
+      "category": "nature",
+      "exampleSentence": [
+        "<ruby>湖<rt>みずうみ</rt></ruby>で泳ぎました。",
+        "<ruby>湖<rt>みずうみ</rt></ruby>の周りを歩くのは楽しいです。"
+      ]
+    },
+    "183": {
+      "kana": "かぜ",
+      "kanji": "風",
+      "english": "wind",
+      "bangla": "হাওয়া",
+      "category": "nature",
+      "exampleSentence": [
+        "<ruby>風<rt>かぜ</rt></ruby>が強く吹いています。",
+        "涼しい<ruby>風<rt>かぜ</rt></ruby>が吹いてきました。"
+      ]
+    },
+    "184": {
+      "kana": "うみ",
+      "kanji": "海",
+      "english": "sea",
+      "bangla": "সাগর",
+      "category": "nature",
+      "exampleSentence": [
+        "<ruby>海<rt>うみ</rt></ruby>は静かです。",
+        "日本の<ruby>海<rt>うみ</rt></ruby>はとてもきれいです。"
+      ]
+    },
+    "185": {
+      "kana": "はやし",
+      "kanji": "林",
+      "english": "woods / small forest",
+      "bangla": "বন",
+      "category": "nature",
+      "exampleSentence": [
+        "<ruby>林<rt>はやし</rt></ruby>の中を歩きました。",
+        "<ruby>林<rt>はやし</rt></ruby>には鳥の声が響いています。"
+      ]
+    },
+    "186": {
+      "kana": "もり",
+      "kanji": "森",
+      "english": "forest",
+      "bangla": "জঙ্গল",
+      "category": "nature",
+      "exampleSentence": [
+        "<ruby>森<rt>もり</rt></ruby>の中を探検しました。",
+        "夜の<ruby>森<rt>もり</rt></ruby>はとても怖いです。"
+      ]
+    },
+    "187": {
+      "kana": "いけ",
+      "kanji": "池",
+      "english": "pond",
+      "bangla": "পুকুর",
+      "category": "nature",
+      "exampleSentence": [
+        "<ruby>池<rt>いけ</rt></ruby>のそばで釣りをしました。",
+        "公園の<ruby>池<rt>いけ</rt></ruby>には鯉が泳いでいます。"
+      ]
+    },
+    "188": {
+      "kana": "ひかり",
+      "kanji": "光",
+      "english": "light",
+      "bangla": "আলো",
+      "category": "nature",
+      "exampleSentence": [
+        "<ruby>光<rt>ひかり</rt></ruby>が窓から差し込んでいます。",
+        "<ruby>光<rt>ひかり</rt></ruby>がとても明るいです。"
+      ]
+    },
+    "189": {
+      "kana": "おと",
+      "kanji": "音",
+      "english": "sound",
+      "bangla": "শব্দ",
+      "category": "nature",
+      "exampleSentence": [
+        "<ruby>音<rt>おと</rt></ruby>が大きすぎます。",
+        "<ruby>音<rt>おと</rt></ruby>がとてもきれいです。"
+      ]
+    },
+    "190": {
+      "kana": "たいよう",
+      "kanji": "太陽",
+      "english": "sun",
+      "bangla": "সূর্য",
+      "category": "nature",
+      "exampleSentence": [
+        "<ruby>太陽<rt>たいよう</rt></ruby>が昇ってきました。",
+        "<ruby>太陽<rt>たいよう</rt></ruby>は今日も輝いています。"
+      ]
+    },
+    "191": {
+      "kana": "くも",
+      "kanji": "雲",
+      "english": "cloud",
+      "bangla": "মেঘ",
+      "category": "nature",
+      "exampleSentence": [
+        "<ruby>雲<rt>くも</rt></ruby>が空に広がっています。",
+        "<ruby>雲<rt>くも</rt></ruby>が形を変えていきました。"
+      ]
+    },
+    "192": {
+      "kana": "きせつ",
+      "kanji": "季節",
+      "english": "season",
+      "bangla": "ঋতু",
+      "category": "weather",
+      "exampleSentence": [
+        "<ruby>季節<rt>きせつ</rt></ruby>が変わる。",
+        "<ruby>季節<rt>きせつ</rt></ruby>ごとのイベントが楽しみです。"
+      ]
+    },
+    "193": {
+      "kana": "てんき",
+      "kanji": "天気",
+      "english": "weather",
+      "bangla": "আবহাওয়া",
+      "category": "weather",
+      "exampleSentence": [
+        "<ruby>天気<rt>てんき</rt></ruby>がいいですね。",
+        "<ruby>天気<rt>てんき</rt></ruby>が悪くなりそうです。"
+      ]
+    },
+    "194": {
+      "kana": "てんきよほう",
+      "kanji": "天気予報",
+      "english": "weather forecast",
+      "bangla": "আবহাওয়া পূর্বাভাস",
+      "category": "weather",
+      "exampleSentence": [
+        "<ruby>天気予報<rt>てんきよほう</rt></ruby>によると、明日は雨です。",
+        "<ruby>天気予報<rt>てんきよほう</rt></ruby>をチェックしましたか？"
+      ]
+    },
+    "195": {
+      "kana": "つゆ",
+      "kanji": "梅雨",
+      "english": "rainy season",
+      "bangla": "বর্ষাকাল",
+      "category": "weather",
+      "exampleSentence": [
+        "<ruby>梅雨<rt>つゆ</rt></ruby>はとても湿気が多いです。",
+        "<ruby>梅雨<rt>つゆ</rt></ruby>が早く終わるといいですね。"
+      ]
+    },
+    "196": {
+      "kana": "しゅみ",
+      "kanji": "趣味",
+      "english": "hobby",
+      "bangla": "শখ",
+      "category": "hobbies",
+      "exampleSentence": [
+        "私のしゅみは読書です。",
+        "彼のしゅみは音楽を聴くことです。"
+      ]
+    },
+    "197": {
+      "kana": "かいもの",
+      "kanji": "買い物",
+      "english": "shopping",
+      "bangla": "শপিং",
+      "category": "hobbies",
+      "exampleSentence": [
+        "買い物に行きたい。",
+        "昨日、買い物をしました。"
+      ]
+    },
+    "198": {
+      "kana": "しゃしん",
+      "kanji": "写真",
+      "english": "picture",
+      "bangla": "ছবি",
+      "category": "hobbies",
+      "exampleSentence": [
+        "写真を撮るのが好きです。",
+        "彼は素敵な写真を撮りました。"
+      ]
+    },
+    "199": {
+      "kana": "えいが",
+      "kanji": "映画",
+      "english": "movie",
+      "bangla": "চলচ্চিত্র",
+      "category": "hobbies",
+      "exampleSentence": [
+        "私は映画を見るのが好きです。",
+        "新しい映画が公開されました。"
+      ]
+    },
+    "200": {
+      "kana": "りょこう",
+      "kanji": "旅行",
+      "english": "travel",
+      "bangla": "ভ্রমণ",
+      "category": "hobbies",
+      "exampleSentence": [
+        "旅行に行くのが楽しみです。",
+        "去年はヨーロッパへ旅行しました。"
+      ]
+    },
+    "201": {
+      "kana": "ゲーム",
+      "kanji": "ゲーム",
+      "english": "game",
+      "bangla": "গেম",
+      "category": "hobbies",
+      "exampleSentence": [
+        "私はゲームが好きです。",
+        "子供たちはゲームをしています。"
+      ]
+    },
+    "202": {
+      "kana": "アニメ",
+      "kanji": "アニメ",
+      "english": "anime",
+      "bangla": "এনিমে",
+      "category": "hobbies",
+      "exampleSentence": [
+        "アニメを見るのが趣味です。",
+        "彼はアニメを毎日見ています。"
+      ]
+    },
+    "203": {
+      "kana": "まんが",
+      "kanji": "漫画",
+      "english": "comic",
+      "bangla": "কমিক",
+      "category": "hobbies",
+      "exampleSentence": [
+        "私は漫画を読むのが好きです。",
+        "日本の漫画はとても面白いです。"
+      ]
+    },
+    "204": {
+      "kana": "テニス",
+      "kanji": "",
+      "english": "tennis",
+      "bangla": "টেনিস",
+      "category": "sports",
+      "exampleSentence": [
+        "<ruby>テニス<rt>てにす</rt></ruby>は楽しいです。",
+        "<ruby>テニス<rt>てにす</rt></ruby>が大好きです。"
+      ]
+    },
+    "205": {
+      "kana": "サッカー",
+      "kanji": "",
+      "english": "soccer",
+      "bangla": "সকার",
+      "category": "sports",
+      "exampleSentence": [
+        "<ruby>サッカー<rt>さっかー</rt></ruby>は人気があります。",
+        "<ruby>サッカー<rt>さっかー</rt></ruby>の試合を見ました。"
+      ]
+    },
+    "206": {
+      "kana": "バスケットボール",
+      "kanji": "",
+      "english": "basketball",
+      "bangla": "বাস্কেটবল",
+      "category": "sports",
+      "exampleSentence": [
+        "<ruby>バスケットボール<rt>ばすけっとぼーる</rt></ruby>は楽しいスポーツです。",
+        "<ruby>バスケットボール<rt>ばすけっとぼーる</rt></ruby>をしています。"
+      ]
+    },
+    "207": {
+      "kana": "ゴルフ",
+      "kanji": "",
+      "english": "golf",
+      "bangla": "গলফ",
+      "category": "sports",
+      "exampleSentence": [
+        "<ruby>ゴルフ<rt>ごるふ</rt></ruby>を始めました。",
+        "<ruby>ゴルフ<rt>ごるふ</rt></ruby>が好きです。"
+      ]
+    },
+    "208": {
+      "kana": "やきゅう",
+      "kanji": "野球",
+      "english": "baseball",
+      "bangla": "বেসবল",
+      "category": "sports",
+      "exampleSentence": [
+        "<ruby>やきゅう<rt>やきゅう</rt></ruby>は日本の人気のスポーツです。",
+        "<ruby>やきゅう<rt>やきゅう</rt></ruby>を見に行きます。"
+      ]
+    },
+    "209": {
+      "kana": "たっきゅう",
+      "kanji": "卓球",
+      "english": "table tennis",
+      "bangla": "টেবিল টেনিস",
+      "category": "sports",
+      "exampleSentence": [
+        "<ruby>卓球<rt>たっきゅう</rt></ruby>は室内スポーツです。",
+        "<ruby>卓球<rt>たっきゅう</rt></ruby>を楽しんでいます。"
+      ]
+    },
+    "210": {
+      "kana": "おんがく",
+      "kanji": "音楽",
+      "english": "music",
+      "bangla": "সংগীত",
+      "category": "music",
+      "exampleSentence": [
+        "<ruby>音楽<rt>おんがく</rt></ruby>は楽しいです。",
+        "<ruby>音楽<rt>おんがく</rt></ruby>が好きです。"
+      ]
+    },
+    "211": {
+      "kana": "うた",
+      "kanji": "歌",
+      "english": "song",
+      "bangla": "গান",
+      "category": "music",
+      "exampleSentence": [
+        "<ruby>歌<rt>うた</rt></ruby>を歌うのが好きです。",
+        "<ruby>歌<rt>うた</rt></ruby>は心を癒します。"
+      ]
+    },
+    "212": {
+      "kana": "カラオケ",
+      "kanji": "カラオケ",
+      "english": "karaoke",
+      "bangla": "ক্যারাওকি",
+      "category": "music",
+      "exampleSentence": [
+        "カラオケで歌うのは楽しいです。",
+        "週末にカラオケに行きます。"
+      ]
+    },
+    "213": {
+      "kana": "ピアノ",
+      "kanji": "ピアノ",
+      "english": "piano",
+      "bangla": "পিয়ানো",
+      "category": "music",
+      "exampleSentence": [
+        "ピアノを弾くのが得意です。",
+        "彼女はピアノの先生です。"
+      ]
+    },
+    "214": {
+      "kana": "ギター",
+      "kanji": "ギター",
+      "english": "guitar",
+      "bangla": "গিটার",
+      "category": "music",
+      "exampleSentence": [
+        "ギターを弾きながら歌います。",
+        "彼はギターを持ってきました。"
+      ]
+    },
+    "215": {
+      "kana": "バイオリン",
+      "kanji": "バイオリン",
+      "english": "violin",
+      "bangla": "ভায়োলিন",
+      "category": "music",
+      "exampleSentence": [
+        "バイオリンを弾くのが好きです。",
+        "彼女はバイオリンを習っています。"
+      ]
+    },
+    "216": {
+      "kana": "ロック",
+      "kanji": "ロック",
+      "english": "rock music",
+      "bangla": "রক মিউজিক",
+      "category": "music",
+      "exampleSentence": [
+        "ロック音楽をよく聴きます。",
+        "彼はロックバンドのメンバーです。"
+      ]
+    },
+    "217": {
+      "kana": "ジャズ",
+      "kanji": "ジャズ",
+      "english": "jazz music",
+      "bangla": "জ্যাজ মিউজিক",
+      "category": "music",
+      "exampleSentence": [
+        "ジャズを聴くのが好きです。",
+        "ジャズバンドで演奏しています。"
+      ]
+    },
+    "218": {
+      "kana": "どうぶつ",
+      "kanji": "動物",
+      "english": "animal",
+      "bangla": "প্রাণী",
+      "category": "animals",
+      "exampleSentence": [
+        "<ruby>動物<rt>どうぶつ</rt></ruby>はすばらしいです。",
+        "<ruby>動物<rt>どうぶつ</rt></ruby>が好きです。"
+      ]
+    },
+    "219": {
+      "kana": "いぬ",
+      "kanji": "犬",
+      "english": "dog",
+      "bangla": "কুকুর",
+      "category": "animals",
+      "exampleSentence": [
+        "<ruby>犬<rt>いぬ</rt></ruby>は私の友達です。",
+        "<ruby>犬<rt>いぬ</rt></ruby>が庭で遊んでいます。"
+      ]
+    },
+    "220": {
+      "kana": "こいぬ",
+      "kanji": "子犬",
+      "english": "puppy",
+      "bangla": "কুকুরছানা",
+      "category": "animals",
+      "exampleSentence": [
+        "<ruby>子犬<rt>こいぬ</rt></ruby>はとてもかわいいです。",
+        "<ruby>子犬<rt>こいぬ</rt></ruby>が元気に走っています。"
+      ]
+    },
+    "221": {
+      "kana": "ねこ",
+      "kanji": "猫",
+      "english": "cat",
+      "bangla": "বিড়াল",
+      "category": "animals",
+      "exampleSentence": [
+        "<ruby>猫<rt>ねこ</rt></ruby>はお昼寝をしています。",
+        "<ruby>猫<rt>ねこ</rt></ruby>が家の中を歩いています。"
+      ]
+    },
+    "222": {
+      "kana": "こねこ",
+      "kanji": "子猫",
+      "english": "kitten",
+      "bangla": "বাচ্চা বিড়াল",
+      "category": "animals",
+      "exampleSentence": [
+        "<ruby>子猫<rt>こねこ</rt></ruby>は小さくてかわいらしいです。",
+        "<ruby>子猫<rt>こねこ</rt></ruby>が母猫と一緒にいます。"
+      ]
+    },
+    "223": {
+      "kana": "とり",
+      "kanji": "鳥",
+      "english": "bird",
+      "bangla": "পাখি",
+      "category": "animals",
+      "exampleSentence": [
+        "<ruby>鳥<rt>とり</rt></ruby>が空を飛んでいます。",
+        "<ruby>鳥<rt>とり</rt></ruby>のさえずりが聞こえます。"
+      ]
+    },
+    "224": {
+      "kana": "ことり",
+      "kanji": "小鳥",
+      "english": "small bird",
+      "bangla": "ছোট পাখি",
+      "category": "animals",
+      "exampleSentence": [
+        "<ruby>小鳥<rt>ことり</rt></ruby>が木の上にとまっています。",
+        "<ruby>小鳥<rt>ことり</rt></ruby>が朝にさえずりをしています。"
+      ]
+    },
+    "225": {
+      "kana": "てんらんかい",
+      "kanji": "展覧会",
+      "english": "exhibition",
+      "bangla": "প্রদর্শনী",
+      "category": "events",
+      "exampleSentence": [
+        "<ruby>展覧会<rt>てんらんかい</rt></ruby>に行きました。",
+        "<ruby>展覧会<rt>てんらんかい</rt></ruby>はとても楽しかったです。"
+      ]
+    },
+    "226": {
+      "kana": "コンサート",
+      "kanji": "",
+      "english": "concert",
+      "bangla": "কনসার্ট",
+      "category": "events",
+      "exampleSentence": [
+        "<ruby>コンサート<rt>こんさーと</rt></ruby>に行きます。",
+        "昨日、<ruby>コンサート<rt>こんさーと</rt></ruby>に行きました。"
+      ]
+    },
+    "227": {
+      "kana": "けっこんしき",
+      "kanji": "結婚式",
+      "english": "wedding ceremony",
+      "bangla": "বিবাহ অনুষ্ঠান",
+      "category": "events",
+      "exampleSentence": [
+        "<ruby>結婚式<rt>けっこんしき</rt></ruby>に参加しました。",
+        "<ruby>結婚式<rt>けっこんしき</rt></ruby>は華やかでした。"
+      ]
+    },
+    "228": {
+      "kana": "うんどうかい",
+      "kanji": "運動会",
+      "english": "sports day",
+      "bangla": "খেলাধুলার দিন",
+      "category": "events",
+      "exampleSentence": [
+        "<ruby>運動会<rt>うんどうかい</rt></ruby>は来週です。",
+        "<ruby>運動会<rt>うんどうかい</rt></ruby>が楽しみです。"
+      ]
+    },
+    "229": {
+      "kana": "はなみ",
+      "kanji": "花見",
+      "english": "cherry blossom viewing",
+      "bangla": "ফুল দেখতে যাওয়া",
+      "category": "events",
+      "exampleSentence": [
+        "<ruby>花見<rt>はなみ</rt></ruby>に行きます。",
+        "<ruby>花見<rt>はなみ</rt></ruby>は春の楽しみです。"
+      ]
+    },
+    "230": {
+      "kana": "おまつり",
+      "kanji": "お祭り",
+      "english": "festival",
+      "bangla": "উৎসব",
+      "category": "events",
+      "exampleSentence": [
+        "<ruby>お祭り<rt>おまつり</rt></ruby>に行きました。",
+        "<ruby>お祭り<rt>おまつり</rt></ruby>は賑やかでした。"
+      ]
+    },
+    "231": {
+      "kana": "はなびたいかい",
+      "kanji": "花火大会",
+      "english": "firework festival",
+      "bangla": "আতশবাজি উৎসব",
+      "category": "events",
+      "exampleSentence": [
+        "<ruby>花火大会<rt>はなびたいかい</rt></ruby>を見に行きました。",
+        "<ruby>花火大会<rt>はなびたいかい</rt></ruby>はとても美しかったです。"
+      ]
+    },
+    "232": {
+      "kana": "クリスマス",
+      "kanji": "",
+      "english": "Christmas",
+      "bangla": "ক্রিসমাস",
+      "category": "events",
+      "exampleSentence": [
+        "今年のクリスマスは家族と過ごします。",
+        "クリスマスの時期が好きです。"
+      ]
+    }
+}
+  
