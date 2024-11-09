@@ -42,10 +42,30 @@
             height: 30px;
             padding: 0px 7px;
             border-radius: 12px;
-            background-color: grey;
+            background-color: #3399ff;
             color: white;
             text-align: center;
             font-size: 0.8em;
+        }
+        #words_list-container .furigana-button-container {
+            font-family: sans-serif !important;
+            text-align: right;
+            font-size: 0.7em;
+            font-weight: bold;
+            color: #737373;
+            padding-bottom: 10px;
+        }
+        #words_list-container .furigana-toggle-button {
+            background-color: white;
+            border: 1px solid green;
+            border-radius: 5px;
+            width: 40px;
+            padding: 5px 0px;
+            color: green;
+        }
+        #words_list-container .toggle-off {
+            border-color: red;
+            color: red;
         }
         #reading-question {
             padding-bottom: 40px;
@@ -135,6 +155,25 @@
             // display specific page
             document.getElementById(`${pageName}-container`).style.display = 'flex';
         }
+
+        function toggleFurigana(passageIndex) {
+            const toggleButton = document.getElementById(`toggleFuriganaButton_${passageIndex}`);
+            const toggleStatus = toggleButton.getAttribute('toggleStatus');
+
+            const passageContainer = document.getElementById(`passageDisp_${passageIndex}`);
+
+            if (toggleStatus === 'on') {
+                toggleButton.setAttribute('toggleStatus', 'off');
+                toggleButton.classList.add('toggle-off');
+                toggleButton.textContent = "OFF";
+                passageContainer.innerHTML = removeRubyTag(itemsData[passageIndex].passage);
+            } else {
+                toggleButton.setAttribute('toggleStatus', 'on');
+                toggleButton.classList.remove('toggle-off');
+                toggleButton.textContent = "ON";
+                passageContainer.innerHTML = itemsData[passageIndex].passage;
+            }
+        }
         
         function createReadingList() {
             const container = document.getElementById('words_list-container');
@@ -148,17 +187,26 @@
                 const item = itemsData[index];
                 const table = document.createElement('table');
 
-                // Create top row with number and text
+                // Create top row with number and toggle button
                 const topRow = document.createElement('tr');
-                const textCell = document.createElement('td');
-                textCell.innerHTML = item.passage;
                 const numCell = document.createElement('td');
                 numCell.innerHTML = `<span class="word-num">${itemCounter}</span>`;
-                numCell.style.textAlign = "right";
+                const furiganaButtonCell = document.createElement('td');
+                furiganaButtonCell.classList.add('furigana-button-container');
+                furiganaButtonCell.innerHTML = `ふりがな <button class="furigana-toggle-button" id="toggleFuriganaButton_${index}" onclick="toggleFurigana(${index})" toggleStatus="on">ON</button>`;
 
-                topRow.appendChild(textCell);
                 topRow.appendChild(numCell);
+                topRow.appendChild(furiganaButtonCell);
+
+                const textRow = document.createElement('tr');
+                const textCell = document.createElement('td');
+                textCell.setAttribute('id', `passageDisp_${index}`);
+                textCell.colSpan = 2;
+                textCell.innerHTML = item.passage;
+                textRow.appendChild(textCell);
+
                 table.appendChild(topRow);
+                table.appendChild(textRow);
 
                 container.appendChild(table);
 
